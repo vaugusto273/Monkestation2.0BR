@@ -36,6 +36,9 @@
 	for(var/mob/living/to_check in GLOB.player_list)
 		if(HAS_TRAIT(to_check, TRAIT_TIME_STOP_IMMUNE))
 			immune[to_check] = TRUE
+	for(var/mob/living/to_check in GLOB.player_list)
+		if((locate(/obj/item/badmin_stone) in to_check) || (locate(/obj/item/badmin_gauntlet) in to_check))
+			immune[to_check] = TRUE
 	for(var/mob/living/basic/guardian/stand in GLOB.parasites)
 		if(stand.summoner && HAS_TRAIT(stand.summoner, TRAIT_TIME_STOP_IMMUNE)) //It would only make sense that a person's stand would also be immune.
 			immune[stand] = TRUE

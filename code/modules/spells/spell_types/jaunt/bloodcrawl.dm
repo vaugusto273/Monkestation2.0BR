@@ -91,7 +91,8 @@
 
 	RegisterSignal(holder, COMSIG_MOVABLE_MOVED, PROC_REF(update_status_on_signal))
 	if(equip_blood_hands && iscarbon(jaunter))
-		jaunter.drop_all_held_items()
+		if(!jaunter.bloodcrawl_allow_items)
+			jaunter.drop_all_held_items()
 		// Give them some bloody hands to prevent them from doing things
 		var/obj/item/bloodcrawl/left_hand = new(jaunter)
 		var/obj/item/bloodcrawl/right_hand = new(jaunter)
