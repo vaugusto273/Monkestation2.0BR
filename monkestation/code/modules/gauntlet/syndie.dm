@@ -19,19 +19,19 @@
 	. = ..()
 	martial_art = new
 
-/obj/item/badmin_stone/syndie/HelpEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/syndie/help_act(atom/target, mob/living/user, proximity_flag)
 	if(ishuman(user) && ishuman(target) && proximity_flag)
 		martial_art.help_act(user, target)
 
-/obj/item/badmin_stone/syndie/DisarmEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/syndie/disarm_act(atom/target, mob/living/user, proximity_flag)
 	if(ishuman(user) && ishuman(target) && proximity_flag)
 		martial_art.disarm_act(user, target)
 
-/obj/item/badmin_stone/syndie/HarmEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/syndie/harm_act(atom/target, mob/living/user, proximity_flag)
 	if(ishuman(user) && ishuman(target) && proximity_flag)
 		martial_art.harm_act(user, target)
 
-/obj/item/badmin_stone/syndie/GrabEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/syndie/grab_act(atom/target, mob/living/user, proximity_flag)
 	if(ishuman(user) && ishuman(target) && proximity_flag)
 		martial_art.grab_act(user, target)
 

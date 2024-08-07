@@ -15,7 +15,7 @@
 	stone_type = LAG_STONE
 	var/turf/teleport_point
 
-/obj/item/badmin_stone/lag/HelpEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/lag/help_act(atom/target, mob/living/user, proximity_flag)
 	var/turf/T = get_turf(target)
 	if(T == teleport_point)
 		to_chat(user, "<span class='notice'>You unset [T] as your teleportation point.</span>")
@@ -32,7 +32,7 @@
 		user.Paralyze(450)
 		user.heal_overall_damage(45, 45, 45, null, TRUE)
 
-/obj/item/badmin_stone/lag/GrabEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/lag/grab_act(atom/target, mob/living/user, proximity_flag)
 	if(!isliving(target))
 		to_chat(user, "<span class='notice'>You can only switch places with living targets!</span>")
 		return
@@ -45,7 +45,7 @@
 	FireProjectile(/obj/item/projectile/magic/arcane_barrage, us)
 	user.changeNext_move(CLICK_CD_RANGE)
 
-/obj/item/badmin_stone/lag/DisarmEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/lag/disarm_act(atom/target, mob/living/user, proximity_flag)
 	FireProjectile(/obj/item/projectile/magic/lag_stone, target)
 	user.changeNext_move(CLICK_CD_RANGE)
 

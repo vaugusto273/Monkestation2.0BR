@@ -26,14 +26,14 @@
 		monkey_stockpile = min(3, monkey_stockpile + 1)
 		next_monkey = world.time + 25 SECONDS
 
-/obj/item/badmin_stone/clown/HelpEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/clown/help_act(atom/target, mob/living/user, proximity_flag)
 	var/obj/item/reagent_containers/food/snacks/pie/cream/pie = new(get_turf(user))
 	pie.throw_at(target, 30, 3, user, TRUE)
 	playsound(src, 'sound/magic/staff_animation.ogg', 50, 1)
 	new /obj/effect/temp_visual/dir_setting/firing_effect/magic(get_turf(src))
 	user.changeNext_move(CLICK_CD_RANGE)
 
-/obj/item/badmin_stone/clown/GrabEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/clown/grab_act(atom/target, mob/living/user, proximity_flag)
 	if(next_traps > world.time)
 		to_chat(user, "<span class='danger'>You need to wait [DisplayTimeText(next_traps - world.time)] to summon more traps!</span>")
 		return
@@ -52,7 +52,7 @@
 		QDEL_IN(TR, 900) // they last 90 seconds
 	next_traps = world.time + 15 SECONDS
 
-/obj/item/badmin_stone/clown/DisarmEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/clown/disarm_act(atom/target, mob/living/user, proximity_flag)
 	if(monkey_stockpile < 1)
 		to_chat(user, "<span class='warning'>\The [src] is out of monkeys!</span>")
 		return

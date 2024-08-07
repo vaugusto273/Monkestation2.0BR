@@ -374,14 +374,14 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		return
 	switch(user.a_intent)
 		if(INTENT_DISARM)
-			IS.DisarmEvent(target, user, proximity_flag)
+			IS.disarm_act(target, user, proximity_flag)
 		if(INTENT_HARM) // there's no harm intent on the stones anyways
 			if(proximity_flag && !AttackThing(user, target))
-				IS.HarmEvent(target, user, proximity_flag)
+				IS.harm_act(target, user, proximity_flag)
 		if(INTENT_GRAB)
-			IS.GrabEvent(target, user, proximity_flag)
+			IS.grab_act(target, user, proximity_flag)
 		if(INTENT_HELP)
-			IS.HelpEvent(target, user, proximity_flag)
+			IS.help_act(target, user, proximity_flag)
 
 /obj/item/badmin_gauntlet/attack_self(mob/living/user)
 	if(!istype(user))

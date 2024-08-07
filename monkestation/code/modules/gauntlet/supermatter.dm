@@ -16,17 +16,17 @@
 		"Use on a material to use 25 sheets of it for a golem. 2 minute cooldown!")
 	var/next_golem = 0
 
-/obj/item/badmin_stone/supermatter/DisarmEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/supermatter/disarm_act(atom/target, mob/living/user, proximity_flag)
 	if(!HandleGolem(user, target))
 		FireProjectile(/obj/item/projectile/forcefire, target)
 		user.changeNext_move(6)
 
-/obj/item/badmin_stone/supermatter/GrabEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/supermatter/grab_act(atom/target, mob/living/user, proximity_flag)
 	if(!proximity_flag || !HandleGolem(user, target))
 		FireProjectile(/obj/item/projectile/voltray, target)
 		user.changeNext_move(CLICK_CD_RAPID)
 
-/obj/item/badmin_stone/supermatter/HelpEvent(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/supermatter/help_act(atom/target, mob/living/user, proximity_flag)
 	if(!proximity_flag || !HandleGolem(user, target))
 		FireProjectile(/obj/item/projectile/supermatter_stone, target)
 		user.changeNext_move(CLICK_CD_RANGE)
