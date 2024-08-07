@@ -63,7 +63,7 @@
 	else
 		revert_cast()
 
-/datum/action/spell/targeted/ethereal_jaunt/bluespace_stone // un-stuns you so you can move
+/datum/action/spell/targeted/ethereal_jaunt/bluespace_stone //Un-stuns you so you can move
 	name = "Bluespace Stone: Bluespace Jaunt"
 	clothes_req = FALSE
 	human_req = FALSE

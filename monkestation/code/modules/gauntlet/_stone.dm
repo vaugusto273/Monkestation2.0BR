@@ -54,10 +54,10 @@
 /obj/item/badmin_stone/pickup(mob/user)
 	. = ..()
 	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.dna && H.dna.check_mutation(CLUWNEMUT))
-			to_chat(H, "<span class='danger'>\The [src] pulses in your hands, sending a spasm of pain and forcing you to drop it!</span>")
-			addtimer(CALLBACK(src, .proc/NoPickingMeUp, H), 5)
+		var/mob/living/carbon/human/human_user = user
+		if(human_user.dna && human_user.dna.check_mutation(CLUWNEMUT))
+			to_chat(human_user, "<span class='danger'>\The [src] pulses in your hands, sending a spasm of pain and forcing you to drop it!</span>")
+			addtimer(CALLBACK(src, PROC_REF(NoPickingMeUp, human_user)), 5)
 
 /obj/item/badmin_stone/proc/NoPickingMeUp(mob/user)
 	user.dropItemToGround(src, TRUE)
@@ -68,28 +68,22 @@
 		to_chat(user, "<span class='notice'>[A]</span>")
 
 /obj/item/badmin_stone/proc/GiveAbilities(mob/living/L, gauntlet = FALSE)
-	for(var/datum/action/cooldown/spell/A in spells)
-		L.mob_spell_list += A
-		A.action.Grant(L)
+	for(var/datum/action/spell/A in spells)
+		A.Grant(L)
 	if(gauntlet)
-		for(var/datum/action/cooldown/spell/A in gauntlet_spells)
-			L.mob_spell_list += A
-			A.action.Grant(L)
+		for(var/datum/action/spell/A in gauntlet_spells)
+			A.Grant(L)
 	else
-		for(var/datum/action/cooldown/spell/A in stone_spells)
-			L.mob_spell_list += A
+		for(var/datum/action/spell/A in stone_spells)
 			A.action.Grant(L)
 
 /obj/item/badmin_stone/proc/RemoveAbilities(mob/living/L, gauntlet = FALSE)
-	for(var/datum/action/cooldown/spell/A in spells)
-		L.mob_spell_list -= A
-		A.action.Remove(L)
-	for(var/datum/action/cooldown/spell/A in stone_spells)
-		L.mob_spell_list -= A
-		A.action.Remove(L)
-	for(var/datum/action/cooldown/spell/A in gauntlet_spells)
-		L.mob_spell_list -= A
-		A.action.Remove(L)
+	for(var/datum/action/spell/A in spells)
+		A.Remove(L)
+	for(var/datum/action/spell/A in stone_spells)
+		A.Remove(L)
+	for(var/datum/action/spell/A in gauntlet_spells)
+		A.Remove(L)
 
 /obj/item/badmin_stone/proc/GiveVisualEffects(mob/living/L)
 	L.add_overlay(aura_overlay)
@@ -206,7 +200,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-/datum/action/cooldown/spell/self/infinity
+/datum/action/spell/self/infinity
 	action_icon = 'hippiestation/icons/obj/infinity.dmi'
 	human_req = FALSE //Because a monkey with an infinity stone is funny
 	clothes_req = FALSE
@@ -214,7 +208,7 @@
 	antimagic_allowed = TRUE
 	invocation_type = INVOCATION_NONE
 
-/datum/action/cooldown/spell/targeted/infinity //Copypaste from shadowling
+/datum/action/spell/targeted/infinity //Copypaste from shadowling
 	action_icon = 'hippiestation/icons/obj/infinity.dmi'
 	ranged_mousepointer = 'icons/effects/cult_target.dmi'
 	human_req = FALSE
@@ -226,16 +220,16 @@
 	var/mob/living/user
 	var/mob/living/target
 
-/datum/action/cooldown/spell/targeted/infinity/New(linked_stone)
+/datum/action/spell/targeted/infinity/New(linked_stone)
 	. = ..()
 	stone = linked_stone
 
-/datum/action/cooldown/spell/targeted/infinity/proc/Finished()
+/datum/action/spell/targeted/infinity/proc/Finished()
 	charge_counter = 0
 	start_recharge()
 	remove_ranged_ability()
 
-/datum/action/cooldown/spell/targeted/infinity/Click()
+/datum/action/spell/targeted/infinity/Click()
 	var/mob/living/user = usr
 	if(!istype(user))
 		return
@@ -253,7 +247,7 @@
 		action.UpdateButtonIcon()
 
 
-/datum/action/cooldown/spell/targeted/infinity/InterceptClickOn(mob/living/caller, params, atom/t)
+/datum/action/spell/targeted/infinity/InterceptClickOn(mob/living/caller, params, atom/t)
 	if(!isliving(t))
 		to_chat(caller, "<span class='warning'>You may only use this ability on living things!</span>")
 		revert_cast()
@@ -265,13 +259,13 @@
 		return FALSE
 	return TRUE
 
-/datum/action/cooldown/spell/targeted/infinity/revert_cast()
+/datum/action/spell/targeted/infinity/revert_cast()
 	. = ..()
 	remove_ranged_ability()
 	user = null
 	target = null
 
-/datum/action/cooldown/spell/targeted/infinity/start_recharge()
+/datum/action/spell/targeted/infinity/start_recharge()
 	. = ..()
 	if(action)
 		action.UpdateButtonIcon()
