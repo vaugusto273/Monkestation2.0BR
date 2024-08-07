@@ -8,13 +8,13 @@
 		"DISARM INTENT: Fire a bolt that scales based on how many ghosts orbit you.")
 	stone_type = GHOST_STONE
 	spell_types = list(
-		/datum/action/spell/targeted/infinity/cluwne_rise_up,
-		/datum/action/spell/self/infinity/scrying_orb,
-		/datum/action/spell/self/infinity/fortress,
-		/datum/action/spell/targeted/conjure_item/spellpacket/sandmans_dust)
+		/datum/action/cooldown/spell/targeted/infinity/cluwne_rise_up,
+		/datum/action/cooldown/spell/infinity/scrying_orb,
+		/datum/action/cooldown/spell/infinity/fortress,
+		/datum/action/cooldown/spell/targeted/conjure_item/spellpacket/sandmans_dust)
 	gauntlet_spell_types = list(
-		/datum/action/spell/self/infinity/soulscreech,
-		/datum/action/spell/targeted/infinity/chariot)
+		/datum/action/cooldown/spell/infinity/soulscreech,
+		/datum/action/cooldown/spell/targeted/infinity/chariot)
 	var/summon_cooldown = 0
 	var/next_pull = 0
 	var/list/mob/dead/observer/spirits = list()
@@ -131,7 +131,7 @@
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/datum/action/spell/targeted/infinity/chariot
+/datum/action/cooldown/spell/targeted/infinity/chariot
 	name = "Ghost Stone: The Chariot"
 	desc = "Open up an unconscious soul to ghosts, ripe for the stealing!"
 	button_icon_state = "chariot"
@@ -139,7 +139,7 @@
 	background_icon_state = "ghost"
 	charge_max = 200
 
-/datum/action/spell/targeted/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/t)
+/datum/action/cooldown/spell/targeted/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/t)
 	. = ..()
 	if(!.)
 		revert_cast()
@@ -189,7 +189,7 @@
 		return TRUE
 	return FALSE
 
-/datum/action/spell/self/infinity/fortress
+/datum/action/cooldown/spell/infinity/fortress
 	name = "Ghost Stone: Heaven's Fortress"
 	desc = "Summon a massive fortress to keep people in, and keep them out."
 	button_icon_state = "fortress"
@@ -197,13 +197,13 @@
 	background_icon_state = "ghost"
 	charge_max = 1200
 
-/datum/action/spell/self/infinity/fortress/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/fortress/cast(list/targets, mob/user)
 	var/fortress = range(5, user) - range(4, user)
 	user.visible_message("<span class='danger bold'>[user] summons Heaven's Fortress!</span>")
 	for(var/turf/T in fortress)
 		new /obj/effect/forcefield/heaven(get_turf(T), user)
 
-/datum/action/spell/self/infinity/soulscreech
+/datum/action/cooldown/spell/infinity/soulscreech
 	name = "Ghost Stone: Soulscreech"
 	desc = "A loud screech that interacts with people's souls in varying ways."
 	button_icon_state = "reeeeee"
@@ -212,7 +212,7 @@
 	charge_max = 900
 	sound = 'monkestation/sound/effects/horror_scream.ogg'
 
-/datum/action/spell/self/infinity/soulscreech/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/soulscreech/cast(list/targets, mob/user)
 	. = ..()
 	user.visible_message("<span class='danger bold'>[user] lets out a horrifying screech!</span>")
 	for(var/mob/living/L in get_hearers_in_view(6, user))
@@ -244,19 +244,19 @@
 			if(6)
 				L.Unconscious(100)
 
-/datum/action/spell/self/infinity/scrying_orb
+/datum/action/cooldown/spell/infinity/scrying_orb
 	name = "Ghost Stone: Scrying Detachment"
 	desc = "Detach your soul from your body, going into the realm of the ghosts."
 	button_icon_state = "scrying"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
 
-/datum/action/spell/self/infinity/scrying_orb/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/scrying_orb/cast(list/targets, mob/user)
 	. = ..()
 	user.visible_message("<span class='notice'>[user] stares into the Ghost Stone, and the Ghost Stone stares back.</span>")
 	user.ghostize(TRUE)
 
-/datum/action/spell/targeted/infinity/cluwne_rise_up
+/datum/action/cooldown/spell/targeted/infinity/cluwne_rise_up
 	name = "Ghost Stone: Cluwne Rise"
 	desc = "Rise a corpse as a subservient, magical cluwne. You may only have 1 magical cluwne alive."
 	button_icon_state = "cluwnerise"
@@ -265,7 +265,7 @@
 	charge_max = 900
 	var/list/cluwnes = list() // one cluwne per user
 
-/datum/action/spell/targeted/infinity/cluwne_rise_up/InterceptClickOn(mob/living/caller, params, atom/t)
+/datum/action/cooldown/spell/targeted/infinity/cluwne_rise_up/InterceptClickOn(mob/living/caller, params, atom/t)
 	. = ..()
 	if(!.)
 		return FALSE
@@ -286,9 +286,9 @@
 		H.add_memory("<b>[caller] is your master. Follow their orders at all costs.</b>")
 		H.bloodcrawl = BLOODCRAWL_EAT
 		H.bloodcrawl_allow_items = TRUE
-		H.AddSpell(new /datum/action/spell/targeted/turf_teleport/blink/infinity_cluwne)
-		H.AddSpell(new /datum/action/spell/targeted/ethereal_jaunt/shift/infinity_cluwne)
-		H.AddSpell(new /datum/action/spell/bloodcrawl)
+		H.AddSpell(new /datum/action/cooldown/spell/targeted/turf_teleport/blink/infinity_cluwne)
+		H.AddSpell(new /datum/action/cooldown/spell/targeted/ethereal_jaunt/shift/infinity_cluwne)
+		H.AddSpell(new /datum/action/cooldown/spell/bloodcrawl)
 		var/obj/item/kitchen/knife/butcher/BK = new(get_turf(H))
 		ADD_TRAIT(BK, TRAIT_NODROP, "ghost_stone_cluwne")
 		BK.name = "cluwne's cursed knife"
@@ -299,7 +299,7 @@
 	else
 		revert_cast()
 
-/datum/action/spell/targeted/conjure_item/spellpacket/sandmans_dust
+/datum/action/cooldown/spell/targeted/conjure_item/spellpacket/sandmans_dust
 	name = "Ghost Stone: Sandman's Dust"
 	desc = "Gives you dust capable of knocking out most people."
 	button_icon = 'monkestation/icons/obj/infinity.dmi'
@@ -316,13 +316,13 @@
 	antimagic_allowed = TRUE
 	sound = 'monkestation/sound/effects/pocketsand.ogg'
 
-/datum/action/spell/targeted/turf_teleport/blink/infinity_cluwne
+/datum/action/cooldown/spell/targeted/turf_teleport/blink/infinity_cluwne
 	name = "Cluwne Blink"
 	clothes_req = FALSE
 	human_req = FALSE
 	staff_req = FALSE
 
-/datum/action/spell/targeted/ethereal_jaunt/shift/infinity_cluwne // un-stuns you so you can move
+/datum/action/cooldown/spell/targeted/ethereal_jaunt/shift/infinity_cluwne // un-stuns you so you can move
 	name = "Cluwne Jaunt"
 	clothes_req = FALSE
 	human_req = FALSE
@@ -347,7 +347,7 @@
 			if(locate(/obj/item/badmin_gauntlet) in M)
 				to_chat("<span class='danger'>[src] hits you, and you feel dizzy...</span>")
 				M.set_dizziness(75)
-				for(var/datum/action/spell/S in M.mob_spell_list)
+				for(var/datum/action/cooldown/spell/S in M.mob_spell_list)
 					S.charge_counter = 0
 					S.start_recharge()
 					S.action.UpdateButtonIcon()

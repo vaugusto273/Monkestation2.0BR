@@ -68,21 +68,21 @@
 		to_chat(user, "<span class='notice'>[A]</span>")
 
 /obj/item/badmin_stone/proc/GiveAbilities(mob/living/L, gauntlet = FALSE)
-	for(var/datum/action/spell/A in spells)
+	for(var/datum/action/cooldown/spell/A in spells)
 		A.Grant(L)
 	if(gauntlet)
-		for(var/datum/action/spell/A in gauntlet_spells)
+		for(var/datum/action/cooldown/spell/A in gauntlet_spells)
 			A.Grant(L)
 	else
-		for(var/datum/action/spell/A in stone_spells)
+		for(var/datum/action/cooldown/spell/A in stone_spells)
 			A.action.Grant(L)
 
 /obj/item/badmin_stone/proc/RemoveAbilities(mob/living/L, gauntlet = FALSE)
-	for(var/datum/action/spell/A in spells)
+	for(var/datum/action/cooldown/spell/A in spells)
 		A.Remove(L)
-	for(var/datum/action/spell/A in stone_spells)
+	for(var/datum/action/cooldown/spell/A in stone_spells)
 		A.Remove(L)
-	for(var/datum/action/spell/A in gauntlet_spells)
+	for(var/datum/action/cooldown/spell/A in gauntlet_spells)
 		A.Remove(L)
 
 /obj/item/badmin_stone/proc/GiveVisualEffects(mob/living/L)
@@ -200,16 +200,16 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-/datum/action/spell/self/infinity
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
+/datum/action/cooldown/spell/infinity
+	button_icon = 'hippiestation/icons/obj/infinity.dmi'
 	human_req = FALSE //Because a monkey with an infinity stone is funny
 	clothes_req = FALSE
 	staff_req = FALSE
 	antimagic_allowed = TRUE
 	invocation_type = INVOCATION_NONE
 
-/datum/action/spell/targeted/infinity //Copypaste from shadowling
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
+/datum/action/cooldown/spell/targeted/infinity //Copypaste from shadowling
+	button_icon = 'hippiestation/icons/obj/infinity.dmi'
 	ranged_mousepointer = 'icons/effects/cult_target.dmi'
 	human_req = FALSE
 	clothes_req = FALSE
@@ -220,16 +220,16 @@
 	var/mob/living/user
 	var/mob/living/target
 
-/datum/action/spell/targeted/infinity/New(linked_stone)
+/datum/action/cooldown/spell/targeted/infinity/New(linked_stone)
 	. = ..()
 	stone = linked_stone
 
-/datum/action/spell/targeted/infinity/proc/Finished()
+/datum/action/cooldown/spell/targeted/infinity/proc/Finished()
 	charge_counter = 0
 	start_recharge()
 	remove_ranged_ability()
 
-/datum/action/spell/targeted/infinity/Click()
+/datum/action/cooldown/spell/targeted/infinity/Click()
 	var/mob/living/user = usr
 	if(!istype(user))
 		return
@@ -247,7 +247,7 @@
 		action.UpdateButtonIcon()
 
 
-/datum/action/spell/targeted/infinity/InterceptClickOn(mob/living/caller, params, atom/t)
+/datum/action/cooldown/spell/targeted/infinity/InterceptClickOn(mob/living/caller, params, atom/t)
 	if(!isliving(t))
 		to_chat(caller, "<span class='warning'>You may only use this ability on living things!</span>")
 		revert_cast()
@@ -259,13 +259,13 @@
 		return FALSE
 	return TRUE
 
-/datum/action/spell/targeted/infinity/revert_cast()
+/datum/action/cooldown/spell/targeted/infinity/revert_cast()
 	. = ..()
 	remove_ranged_ability()
 	user = null
 	target = null
 
-/datum/action/spell/targeted/infinity/start_recharge()
+/datum/action/cooldown/spell/targeted/infinity/start_recharge()
 	. = ..()
 	if(action)
 		action.UpdateButtonIcon()

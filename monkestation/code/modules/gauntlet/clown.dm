@@ -9,13 +9,13 @@
 		"GRAB INTENT: Spawn the Traps!",
 		"DISARM INTENT: Throw an angry monkey that will hunt whatever you target!")
 	spell_types = list(
-		/datum/action/spell/self/infinity/pranksters_delusion,
-		/datum/action/spell/self/infinity/cake)
+		/datum/action/cooldown/spell/infinity/pranksters_delusion,
+		/datum/action/cooldown/spell/infinity/cake)
 	stone_spell_types = list(
-		/datum/action/spell/self/infinity/honksong,
-		/datum/action/spell/self/infinity/party_popper)
+		/datum/action/cooldown/spell/infinity/honksong,
+		/datum/action/cooldown/spell/infinity/party_popper)
 	gauntlet_spell_types = list(
-		/datum/action/spell/self/infinity/thanoscar_thanoscar)
+		/datum/action/cooldown/spell/infinity/thanoscar_thanoscar)
 	var/next_traps = 0
 	var/monkey_stockpile = 3
 	var/next_monkey = 0
@@ -68,7 +68,7 @@
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/datum/action/spell/self/infinity/party_popper
+/datum/action/cooldown/spell/infinity/party_popper
 	name = "Clown Stone: Party Popper"
 	desc = "Gib yourself and heal <b>everyone</b> around you, even the dead."
 	button_icon_state = "partypop"
@@ -76,7 +76,7 @@
 	background_icon_state = "clown"
 	charge_max = 0
 
-/datum/action/spell/self/infinity/party_popper/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/party_popper/cast(list/targets, mob/user)
 	var/prompt = alert("Are you sure you'd like to pop? There's no way to be revived!", "Confirm", "Yes", "No")
 	if(prompt != "Yes")
 		revert_cast()
@@ -93,7 +93,7 @@
 		to_chat(L, "<span class='notice'>You feel amazing!</span>")
 	user.gib(TRUE, TRUE, TRUE)
 
-/datum/action/spell/self/infinity/pranksters_delusion
+/datum/action/cooldown/spell/infinity/pranksters_delusion
 	name = "Clown Stone: Prankster's Delusion"
 	desc = "Causes those around you to see others as a clumsy clown (or maybe a gondola)! Now how will they know who is who?"
 	button_icon_state = "prankstersdelusion"
@@ -101,7 +101,7 @@
 	background_icon_state = "clown"
 	charge_max = 750
 
-/datum/action/spell/self/infinity/pranksters_delusion/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/pranksters_delusion/cast(list/targets, mob/user)
 	for(var/mob/living/carbon/C in view(7, user))
 		if(C == user)
 			continue
@@ -111,7 +111,7 @@
 		else
 			new /datum/hallucination/delusion(C, TRUE, "custom", 600, 0, "gondola", 'icons/mob/gondolas.dmi')
 
-/datum/action/spell/self/infinity/honksong
+/datum/action/cooldown/spell/infinity/honksong
 	name = "Clown Stone: Honksong"
 	desc = "Summon a 6x6 dance floor, and dance to heal everyone around you (but yourself)!"
 	charge_max = 1000
@@ -127,7 +127,7 @@
 	var/list/sparkles = list()
 	var/sparkles_setup = FALSE
 
-/datum/action/spell/self/infinity/honksong/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/honksong/cast(list/targets, mob/user)
 	var/obj/item/badmin_stone/clown/clown_stone = locate() in user
 	if(!clown_stone)
 		to_chat(user, "<span class='notice'>How are you casting this without the clown stone wtf?</span>")
@@ -186,7 +186,7 @@
 				T.ChangeTurf(dancefloor_turfs_types[k])
 
 
-/datum/action/spell/self/infinity/honksong/proc/dance_setup(mob/living/user)
+/datum/action/cooldown/spell/infinity/honksong/proc/dance_setup(mob/living/user)
 	var/turf/cen = get_turf(user)
 	FOR_DVIEW(var/turf/t, 3, get_turf(user),INVISIBILITY_LIGHTING)
 		if(t.x == cen.x && t.y > cen.y)
@@ -248,7 +248,7 @@
 		continue
 	FOR_DVIEW_END
 
-/datum/action/spell/self/infinity/honksong/proc/setup_sparkles(mob/living/user)
+/datum/action/cooldown/spell/infinity/honksong/proc/setup_sparkles(mob/living/user)
 	for(var/i in 1 to 25)
 		if(QDELETED(src) || QDELETED(user) || !dancefloor_exists || user.loc != initial_loc)
 			return
@@ -269,7 +269,7 @@
 	for(var/obj/reveal in sparkles)
 		reveal.alpha = 255
 
-/datum/action/spell/self/infinity/honksong/proc/lights_spin(mob/living/user)
+/datum/action/cooldown/spell/infinity/honksong/proc/lights_spin(mob/living/user)
 	for(var/obj/item/flashlight/spotlight/glow in spotlights) // The multiples reflects custom adjustments to each colors after dozens of tests
 		if(QDELETED(src) || QDELETED(user) || !dancefloor_exists || QDELETED(glow) || user.loc != initial_loc)
 			return
@@ -313,7 +313,7 @@
 			glow.light_range = glow.range * (rand(85, 115)*0.01)
 			glow.update_light()
 
-/datum/action/spell/self/infinity/cake
+/datum/action/cooldown/spell/infinity/cake
 	name = "Clown Stone: Let There Be Cake!"
 	desc = "Summon a powerful cake at your feet, capable of healing those who eat it, and injuring those who are hit by it. <b>Only 2 cakes can exist at the same time.</span>"
 	button_icon_state = "cake"
@@ -322,14 +322,14 @@
 	charge_max = 350
 	var/list/cakes = list()
 
-/datum/action/spell/self/infinity/cake/proc/CountCakes()
+/datum/action/cooldown/spell/infinity/cake/proc/CountCakes()
 	var/amt = 0
 	for(var/obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity/cake in cakes)
 		if(!QDELETED(cake) && cake && istype(cake))
 			amt++
 	return amt
 
-/datum/action/spell/self/infinity/cake/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/cake/cast(list/targets, mob/user)
 	if(CountCakes() >= 2)
 		to_chat(user, "<span class='danger'>Only 2 cakes can exist at the same time!</span>")
 		return
@@ -353,7 +353,7 @@
 		L.IgniteMob()
 		qdel(src)
 
-/datum/action/spell/self/infinity/thanoscar_thanoscar
+/datum/action/cooldown/spell/infinity/thanoscar_thanoscar
 	name = "Clown Stone: THANOS CAR"
 	desc = "Summon the legendary THANOS CAR!"
 	button_icon_state = "_thanoscar"
@@ -363,7 +363,7 @@
 	invocation = "THANOS CAR THANOS CAR"
 	charge_max = 1300
 
-/datum/action/spell/self/infinity/thanoscar_thanoscar/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/thanoscar_thanoscar/cast(list/targets, mob/user)
 	user.visible_message("<span class='danger bold'>[user] summons the THANOS CAR!</span>")
 	var/obj/vehicle/sealed/car/thanos/thanos_car = new(get_turf(user))
 	thanos_car.mob_forced_enter(user, TRUE)

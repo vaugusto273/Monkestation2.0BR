@@ -8,11 +8,11 @@
 	stone_type = SYNDIE_STONE
 	ability_text = list("ALL INTENTS: PLACEHOLDER MARTIAL ART")
 	spell_types = list(
-		/datum/action/spell/self/infinity/regenerate,
-		/datum/action/spell/self/infinity/syndie_bullcharge,
-		/datum/action/spell/self/infinity/syndie_jump)
+		/datum/action/cooldown/spell/infinity/regenerate,
+		/datum/action/cooldown/spell/infinity/syndie_bullcharge,
+		/datum/action/cooldown/spell/infinity/syndie_jump)
 	gauntlet_spell_types = list(
-		/datum/action/spell/self/infinity/shockwave/syndie_stone)
+		/datum/action/cooldown/spell/infinity/shockwave/syndie_stone)
 	var/datum/martial_art/cqc/martial_art
 
 /obj/item/badmin_stone/syndie/Initialize()
@@ -51,13 +51,13 @@
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/datum/action/spell/self/infinity/shockwave/syndie_stone
+/datum/action/cooldown/spell/infinity/shockwave/syndie_stone
 	name = "Syndie Stone: Shockwave"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "syndie"
 	range = 8
 
-/datum/action/spell/self/infinity/regenerate
+/datum/action/cooldown/spell/infinity/regenerate
 	name = "Syndie Stone: Regenerate"
 	desc = "Regenerate 4 health per second. Requires you to stand still."
 	button_icon_state = "regenerate"
@@ -65,7 +65,7 @@
 	background_icon_state = "syndie"
 	stat_allowed = TRUE
 
-/datum/action/spell/self/infinity/regenerate/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/regenerate/cast(list/targets, mob/user)
 	if(isliving(user))
 		var/mob/living/L = user
 		if(L.on_fire)
@@ -85,7 +85,7 @@
 				to_chat(user, "<span class='notice'>You are fully healed.</span>")
 				return
 
-/datum/action/spell/self/infinity/syndie_bullcharge
+/datum/action/cooldown/spell/infinity/syndie_bullcharge
 	name = "Syndie Stone: Bull Charge"
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone or anything in your way!"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
@@ -93,7 +93,7 @@
 	charge_max = 200
 	sound = 'sound/magic/repulse.ogg'
 
-/datum/action/spell/self/infinity/syndie_bullcharge/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/cast(list/targets, mob/user)
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		ADD_TRAIT(C, TRAIT_STUNIMMUNE, YEET_TRAIT)
@@ -104,7 +104,7 @@
 		user.visible_message("<span class='danger'>[user] charges!</span>")
 		addtimer(CALLBACK(src, .proc/done, C), 50)
 
-/datum/action/spell/self/infinity/syndie_bullcharge/proc/done(mob/living/carbon/user)
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/proc/done(mob/living/carbon/user)
 	user.mario_star = FALSE
 	user.super_mario_star = FALSE
 	user.move_force = initial(user.move_force)
@@ -112,7 +112,7 @@
 	REMOVE_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
 	user.visible_message("<span class='danger'>[user] relaxes...</span>")
 
-/datum/action/spell/self/infinity/syndie_jump
+/datum/action/cooldown/spell/infinity/syndie_jump
 	name = "Syndie Stone: Super Jump"
 	desc = "Leap across the station to wherever you'd like!"
 	button_icon_state = "jump"
@@ -120,7 +120,7 @@
 	background_icon_state = "syndie"
 	charge_max = 300
 
-/datum/action/spell/self/infinity/syndie_jump/revert_cast(mob/user)
+/datum/action/cooldown/spell/infinity/syndie_jump/revert_cast(mob/user)
 	. = ..()
 	user.opacity = FALSE
 	user.mouse_opacity = FALSE
@@ -128,14 +128,14 @@
 	user.alpha = 255
 
 //I really hope this never runtimes
-/datum/action/spell/self/infinity/syndie_jump/cast(list/targets, mob/user)
-	if(istype(get_area(user), /area/wizard_station) || istype(get_area(user), /area/hippie/thanos_farm))
+/datum/action/cooldown/spell/infinity/syndie_jump/cast(list/targets, mob/user)
+	if(istype(get_area(user), /area/centcom/wizard_station) || istype(get_area(user), /area/thanos_farm))
 		to_chat(user, "<span class='warning'>You can't jump here!</span>")
 		revert_cast(user)
 		return
 	INVOKE_ASYNC(src, .proc/do_jaunt, user)
 
-/datum/action/spell/self/infinity/syndie_jump/proc/do_jaunt(mob/living/target)
+/datum/action/cooldown/spell/infinity/syndie_jump/proc/do_jaunt(mob/living/target)
 	target.notransform = TRUE
 	var/turf/mobloc = get_turf(target)
 	var/obj/effect/dummy/phased_mob/spell_jaunt/infinity/holder = new(mobloc)

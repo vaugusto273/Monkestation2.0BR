@@ -8,10 +8,10 @@
 		"GRAB INTENT: Swap places with the victim, and then fire a projectile!",
 		"DISARM INTENT: Shoot a disorienting projectile")
 	spell_types = list(
-		/datum/action/spell/self/infinity/doppelgangers,
-		/datum/action/spell/self/infinity/shuffle)
+		/datum/action/cooldown/spell/infinity/doppelgangers,
+		/datum/action/cooldown/spell/infinity/shuffle)
 	gauntlet_spell_types = list(
-		/datum/action/spell/aoe_turf/conjure/timestop/lag_stone)
+		/datum/action/cooldown/spell/aoe_turf/conjure/timestop/lag_stone)
 	stone_type = LAG_STONE
 	var/turf/teleport_point
 
@@ -53,7 +53,7 @@
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/datum/action/spell/self/infinity/doppelgangers
+/datum/action/cooldown/spell/infinity/doppelgangers
 	name = "Lag Stone: Doppelgangers"
 	desc = "Summon a bunch of (harmless) look-alikes of you!"
 	button_icon_state = "doppelganger"
@@ -62,7 +62,7 @@
 	charge_max = 1800
 	var/amt = 4
 
-/datum/action/spell/self/infinity/doppelgangers/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/doppelgangers/cast(list/targets, mob/user)
 	for(var/i = 1 to amt)
 		var/mob/living/simple_animal/hostile/illusion/doppelganger/E = new(user.loc)
 		E.setDir(user.dir)
@@ -79,14 +79,14 @@
 	environment_smash = ENVIRONMENT_SMASH_NONE
 
 
-/datum/action/spell/self/infinity/shuffle
+/datum/action/cooldown/spell/infinity/shuffle
 	name = "Lag Stone: The Shuffle"
 	desc = "Swap everyone in your view's position!"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "lag"
 	charge_max = 750
 
-/datum/action/spell/self/infinity/shuffle/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/shuffle/cast(list/targets, mob/user)
 	var/list/mobs = list()
 	var/list/moblocs = list()
 	for(var/mob/living/L in view(7, user))
@@ -100,7 +100,7 @@
 		L.forceMove(moblocs[moblocs.len])
 		moblocs.len -= 1
 
-/datum/action/spell/aoe_turf/conjure/timestop/lag_stone
+/datum/action/cooldown/spell/aoe_turf/conjure/timestop/lag_stone
 	name = "Lag Stone: Summon Lag"
 	desc = "Summon a large bout of lag within a 5-tile radius. Very infuriating. Badmin Stone holders are immune, however."
 	button_icon = 'monkestation/icons/obj/infinity.dmi'

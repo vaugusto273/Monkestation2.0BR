@@ -69,10 +69,10 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	martial_art = new
 	flashy_aura = mutable_appearance('monkestation/icons/obj/infinity.dmi', "aura", -MUTATIONS_LAYER)
 	update_icon()
-	spells += new /datum/action/spell/self/infinity/regenerate_gauntlet
-	spells += new /datum/action/spell/self/infinity/shockwave
-	spells += new /datum/action/spell/self/infinity/gauntlet_bullcharge
-	spells += new /datum/action/spell/self/infinity/gauntlet_jump
+	spells += new /datum/action/cooldown/spell/infinity/regenerate_gauntlet
+	spells += new /datum/action/cooldown/spell/infinity/shockwave
+	spells += new /datum/action/cooldown/spell/infinity/gauntlet_bullcharge
+	spells += new /datum/action/cooldown/spell/infinity/gauntlet_jump
 
 /obj/item/badmin_gauntlet/Destroy()
 	. = ..()
@@ -197,7 +197,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	return "#DC143C" //crimson by default
 
 /obj/item/badmin_gauntlet/proc/OnEquip(mob/living/user)
-	for(var/datum/action/spell/A in spells)
+	for(var/datum/action/cooldown/spell/A in spells)
 		user.mob_spell_list += A
 		A.Grant(user)
 	user.AddComponent(/datum/component/stationloving)
@@ -216,7 +216,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	GET_COMPONENT_FROM(stationloving, /datum/component/stationloving, user)
 	if(stationloving)
 		user.TakeComponent(stationloving)
-	for(var/datum/action/spell/A in spells)
+	for(var/datum/action/cooldown/spell/A in spells)
 		user.mob_spell_list -= A
 		A.action.Remove(user)
 	user.move_resist = initial(user.move_resist)
@@ -239,7 +239,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		IS.RemoveAbilities(user, TRUE)
 		IS.TakeVisualEffects(user)
 		IS.TakeStatusEffect(user)
-	for(var/datum/action/spell/A in spells)
+	for(var/datum/action/cooldown/spell/A in spells)
 		user.mob_spell_list -= A
 		A.action.Remove(user)
 	if(ishuman(user))
@@ -249,7 +249,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /obj/item/badmin_gauntlet/proc/GiveAbilities(mob/living/user)
 	var/obj/item/badmin_stone/syndie = GetStone(SYNDIE_STONE)
 	if(!syndie)
-		for(var/datum/action/spell/A in spells)
+		for(var/datum/action/cooldown/spell/A in spells)
 			user.mob_spell_list += A
 			A.action.Grant(user)
 	if(ishuman(user))
@@ -627,7 +627,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 			UpdateAbilities(user)
 			update_icon()
 			if(FullyAssembled() && !GLOB.gauntlet_snapped)
-				user.AddSpell(new /datum/action/spell/self/infinity/snap)
+				user.AddSpell(new /datum/action/cooldown/spell/infinity/snap)
 				user.visible_message("<span class='userdanger'>A massive surge of power courses through [user]. You feel as though your very existence is in danger!</span>",
 					"<span class='danger bold'>You have fully assembled the Badmin Gauntlet. You can use all stone abilities no matter the mode, and can SNAP using the ability.</span>")
 			return
@@ -646,7 +646,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /////////////////////////////////////////////
 //Weaker versions of Syndie Stone spells
 
-/datum/action/spell/self/infinity/shockwave
+/datum/action/cooldown/spell/infinity/shockwave
 	name = "Badmin Gauntlet: Shockwave"
 	desc = "Stomp down and send out a slow-moving shockwave that is capable of knocking people down."
 	charge_max = 250
@@ -657,11 +657,11 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	range = 5
 	sound = 'sound/effects/bang.ogg'
 
-/datum/action/spell/self/infinity/shockwave/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/shockwave/cast(list/targets, mob/user)
 	user.visible_message("<span class='danger'>[user] stomps down!</span>")
 	INVOKE_ASYNC(src, .proc/shockwave, user, get_turf(user))
 
-/datum/action/spell/self/infinity/shockwave/proc/shockwave(mob/user, turf/center)
+/datum/action/cooldown/spell/infinity/shockwave/proc/shockwave(mob/user, turf/center)
 	for(var/i = 1 to range)
 		var/to_hit = range(center, i) - range(center, i-1)
 		for(var/turf/T in to_hit)
@@ -679,14 +679,14 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 			L.Paralyze(17.5)
 		sleep(2)
 
-/datum/action/spell/self/infinity/regenerate_gauntlet
+/datum/action/cooldown/spell/infinity/regenerate_gauntlet
 	name = "Badmin Gauntlet: Regenerate"
 	desc = "Regenerate 2 health per second. Requires you to stand still."
 	button_icon_state = "regenerate"
 	background_icon_state = "bg_default"
 	stat_allowed = TRUE
 
-/datum/action/spell/self/infinity/regenerate_gauntlet/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/regenerate_gauntlet/cast(list/targets, mob/user)
 	if(isliving(user))
 		var/mob/living/L = user
 		if(L.on_fire)
@@ -706,14 +706,14 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 				to_chat(user, "<span class='notice'>You are fully healed.</span>")
 				return
 
-/datum/action/spell/self/infinity/gauntlet_bullcharge
+/datum/action/cooldown/spell/infinity/gauntlet_bullcharge
 	name = "Badmin Gauntlet: Bull Charge"
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone in your way!"
 	background_icon_state = "bg_default"
 	charge_max = 250
 	sound = 'sound/magic/repulse.ogg'
 
-/datum/action/spell/self/infinity/gauntlet_bullcharge/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/cast(list/targets, mob/user)
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		C.mario_star = TRUE
@@ -722,20 +722,20 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		user.visible_message("<span class='danger'>[user] charges!</span>")
 		addtimer(CALLBACK(src, .proc/done, C), 50)
 
-/datum/action/spell/self/infinity/gauntlet_bullcharge/proc/done(mob/living/carbon/user)
+/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/proc/done(mob/living/carbon/user)
 	user.mario_star = FALSE
 	user.super_mario_star = FALSE
 	REMOVE_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
 	user.visible_message("<span class='danger'>[user] relaxes...</span>")
 
-/datum/action/spell/self/infinity/gauntlet_jump
+/datum/action/cooldown/spell/infinity/gauntlet_jump
 	name = "Badmin Gauntlet: Super Jump"
 	desc = "With a bit of startup time, leap across the station to wherever you'd like!"
 	background_icon_state = "bg_default"
 	button_icon_state = "jump"
 	charge_max = 300
 
-/datum/action/spell/self/infinity/gauntlet_jump/revert_cast(mob/user)
+/datum/action/cooldown/spell/infinity/gauntlet_jump/revert_cast(mob/user)
 	. = ..()
 	user.opacity = initial(user.opacity)
 	user.mouse_opacity = initial(user.mouse_opacity)
@@ -743,14 +743,14 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	user.alpha = 255
 
 // i really hope this never runtimes
-/datum/action/spell/self/infinity/gauntlet_jump/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/gauntlet_jump/cast(list/targets, mob/user)
 	if(istype(get_area(user), /area/wizard_station) || istype(get_area(user), /area/hippie/thanos_farm))
 		to_chat(user, "<span class='warning'>You can't jump here!</span>")
 		revert_cast(user)
 		return
 	INVOKE_ASYNC(src, .proc/do_jaunt, user)
 
-/datum/action/spell/self/infinity/gauntlet_jump/proc/do_jaunt(mob/living/target)
+/datum/action/cooldown/spell/infinity/gauntlet_jump/proc/do_jaunt(mob/living/target)
 	target.notransform = TRUE
 	var/turf/mobloc = get_turf(target)
 	var/obj/effect/dummy/phased_mob/spell_jaunt/infinity/holder = new(mobloc)
@@ -853,13 +853,13 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		return
 	return ..()
 
-/datum/action/spell/self/infinity/snap
+/datum/action/cooldown/spell/infinity/snap
 	name = "SNAP"
 	desc = "Snap the Badmin Gauntlet, erasing half the life in the universe."
 	button_icon_state = "gauntlet"
 	stat_allowed = TRUE
 
-/datum/action/spell/self/infinity/snap/cast(list/targets, mob/living/user)
+/datum/action/cooldown/spell/infinity/snap/cast(list/targets, mob/living/user)
 	var/obj/item/badmin_gauntlet/IG = locate() in user
 	if(!IG || !istype(IG))
 		return
