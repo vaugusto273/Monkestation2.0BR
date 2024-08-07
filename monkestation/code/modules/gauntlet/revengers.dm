@@ -26,7 +26,7 @@
 /obj/item/clothing/suit/space/hardsuit/nano/nanoguy
 	name = "Nanotrasen Nanotech Suit"
 	desc = "A state-of-the-art nanotechnology-powered suit."
-	worn_icon = 'hippiestation/icons/mob/nanoguy.dmi'
+	worn_icon = 'monkestation/icons/mob/nanoguy.dmi'
 	icon_state = "ngsuit"
 	outfit = /datum/outfit/nanosuit/nanoguy
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/nano/nanoguy
@@ -34,8 +34,8 @@
 /obj/item/clothing/head/helmet/space/hardsuit/nano/nanoguy
 	name = "Nanotrasen Nanotech Helmet"
 	desc = "A state-of-the-art nanotechnology-powered helmet."
-	icon = 'hippiestation/icons/obj/nanoguy.dmi'
-	worn_icon = 'hippiestation/icons/mob/nanoguy.dmi'
+	icon = 'monkestation/icons/obj/nanoguy.dmi'
+	worn_icon = 'monkestation/icons/mob/nanoguy.dmi'
 	icon_state = "nghelmet"
 
 /////////////////////////
@@ -45,9 +45,9 @@
 /obj/item/twohanded/required/nanoshield
 	name = "Nano Shield"
 	desc = "A powerful shield, powered by nanotechnology"
-	icon = 'hippiestation/icons/obj/nanoguy.dmi'
-	lefthand_file = 'hippiestation/icons/mob/inhands/equipment/shields_lefthand.dmi'
-	righthand_file = 'hippiestation/icons/mob/inhands/equipment/shields_righthand.dmi'
+	icon = 'monkestation/icons/obj/nanoguy.dmi'
+	lefthand_file = 'monkestation/icons/mob/inhands/equipment/shields_lefthand.dmi'
+	righthand_file = 'monkestation/icons/mob/inhands/equipment/shields_righthand.dmi'
 	icon_state = "ngshield"
 	force = 20
 	block_chance = 60
@@ -99,14 +99,14 @@
 
 /obj/item/gun/energy/laser/mounted/nanoguy
 	name = "nanotech laser gun"
-	icon = 'hippiestation/icons/obj/items_and_weapons.dmi'
+	icon = 'monkestation/icons/obj/items_and_weapons.dmi'
 	icon_state = "nanolaser"
 
 /obj/item/nano_punch
 	name = "nanotech battering ram"
-	icon = 'hippiestation/icons/obj/items_and_weapons.dmi'
-	lefthand_file = 'hippiestation/icons/mob/inhands/lefthand.dmi'
-	righthand_file = 'hippiestation/icons/mob/inhands/righthand.dmi'
+	icon = 'monkestation/icons/obj/items_and_weapons.dmi'
+	lefthand_file = 'monkestation/icons/mob/inhands/lefthand.dmi'
+	righthand_file = 'monkestation/icons/mob/inhands/righthand.dmi'
 	icon_state = "nanoram"
 	force = 35
 
@@ -122,8 +122,8 @@
 /obj/item/clothing/suit/armor/thor
 	name = "Thor's Armor"
 	desc = "Armor worthy of the gods... literally."
-	worn_icon = 'hippiestation/icons/mob/suit.dmi'
-	icon = 'hippiestation/icons/obj/clothing/suits.dmi'
+	worn_icon = 'monkestation/icons/mob/suit.dmi'
+	icon = 'monkestation/icons/obj/clothing/suits.dmi'
 	icon_state = "thor"
 	armor_type = /datum/armor/thor_armor
 

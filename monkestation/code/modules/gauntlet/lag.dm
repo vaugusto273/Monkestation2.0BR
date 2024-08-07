@@ -56,9 +56,9 @@
 /datum/action/spell/self/infinity/doppelgangers
 	name = "Lag Stone: Doppelgangers"
 	desc = "Summon a bunch of (harmless) look-alikes of you!"
-	action_icon_state = "doppelganger"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "lag"
+	button_icon_state = "doppelganger"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "lag"
 	charge_max = 1800
 	var/amt = 4
 
@@ -82,8 +82,8 @@
 /datum/action/spell/self/infinity/shuffle
 	name = "Lag Stone: The Shuffle"
 	desc = "Swap everyone in your view's position!"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "lag"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "lag"
 	charge_max = 750
 
 /datum/action/spell/self/infinity/shuffle/cast(list/targets, mob/user)
@@ -103,10 +103,10 @@
 /datum/action/spell/aoe_turf/conjure/timestop/lag_stone
 	name = "Lag Stone: Summon Lag"
 	desc = "Summon a large bout of lag within a 5-tile radius. Very infuriating. Badmin Stone holders are immune, however."
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_icon_state = "lagfield"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "lag"
+	button_icon = 'monkestation/icons/obj/infinity.dmi'
+	button_icon_state = "lagfield"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "lag"
 	summon_type = list(/obj/effect/timestop/wizard/lag_stone)
 	clothes_req = FALSE
 	staff_req = FALSE
@@ -122,7 +122,7 @@
 	duration = 175
 	pixel_x = -64
 	pixel_y = -64
-	start_sound = 'hippiestation/sound/effects/unnatural_clock_noises.ogg'
+	start_sound = 'monkestation/sound/effects/unnatural_clock_noises.ogg'
 
 /obj/effect/timestop/wizard/lag_stone/Initialize(mapload, radius, time, list/immune_atoms, start)
 	. = ..()

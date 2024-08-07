@@ -71,9 +71,9 @@
 /datum/action/spell/self/infinity/party_popper
 	name = "Clown Stone: Party Popper"
 	desc = "Gib yourself and heal <b>everyone</b> around you, even the dead."
-	action_icon_state = "partypop"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "clown"
+	button_icon_state = "partypop"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "clown"
 	charge_max = 0
 
 /datum/action/spell/self/infinity/party_popper/cast(list/targets, mob/user)
@@ -96,9 +96,9 @@
 /datum/action/spell/self/infinity/pranksters_delusion
 	name = "Clown Stone: Prankster's Delusion"
 	desc = "Causes those around you to see others as a clumsy clown (or maybe a gondola)! Now how will they know who is who?"
-	action_icon_state = "prankstersdelusion"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "clown"
+	button_icon_state = "prankstersdelusion"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "clown"
 	charge_max = 750
 
 /datum/action/spell/self/infinity/pranksters_delusion/cast(list/targets, mob/user)
@@ -115,9 +115,9 @@
 	name = "Clown Stone: Honksong"
 	desc = "Summon a 6x6 dance floor, and dance to heal everyone around you (but yourself)!"
 	charge_max = 1000
-	action_icon_state = "honksong"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "clown"
+	button_icon_state = "honksong"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "clown"
 	var/list/dancefloor_turfs
 	var/list/dancefloor_turfs_types
 	var/dancefloor_exists = FALSE
@@ -316,9 +316,9 @@
 /datum/action/spell/self/infinity/cake
 	name = "Clown Stone: Let There Be Cake!"
 	desc = "Summon a powerful cake at your feet, capable of healing those who eat it, and injuring those who are hit by it. <b>Only 2 cakes can exist at the same time.</span>"
-	action_icon_state = "cake"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "clown"
+	button_icon_state = "cake"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "clown"
 	charge_max = 350
 	var/list/cakes = list()
 
@@ -356,9 +356,9 @@
 /datum/action/spell/self/infinity/thanoscar_thanoscar
 	name = "Clown Stone: THANOS CAR"
 	desc = "Summon the legendary THANOS CAR!"
-	action_icon_state = "_thanoscar"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "clown"
+	button_icon_state = "_thanoscar"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "clown"
 	invocation_type = "shout"
 	invocation = "THANOS CAR THANOS CAR"
 	charge_max = 1300
@@ -377,7 +377,7 @@
 /obj/vehicle/sealed/car/thanos
 	name = "THANOS CAR"
 	desc = "THANOS CAR THANOS CAR"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'monkestation/icons/obj/infinity.dmi'
 	icon_state = "thanoscar"
 	color = "#6F3C89"
 	max_integrity = 45

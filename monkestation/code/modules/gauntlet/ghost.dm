@@ -134,9 +134,9 @@
 /datum/action/spell/targeted/infinity/chariot
 	name = "Ghost Stone: The Chariot"
 	desc = "Open up an unconscious soul to ghosts, ripe for the stealing!"
-	action_icon_state = "chariot"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "ghost"
+	button_icon_state = "chariot"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "ghost"
 	charge_max = 200
 
 /datum/action/spell/targeted/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/t)
@@ -192,9 +192,9 @@
 /datum/action/spell/self/infinity/fortress
 	name = "Ghost Stone: Heaven's Fortress"
 	desc = "Summon a massive fortress to keep people in, and keep them out."
-	action_icon_state = "fortress"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "ghost"
+	button_icon_state = "fortress"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "ghost"
 	charge_max = 1200
 
 /datum/action/spell/self/infinity/fortress/cast(list/targets, mob/user)
@@ -206,11 +206,11 @@
 /datum/action/spell/self/infinity/soulscreech
 	name = "Ghost Stone: Soulscreech"
 	desc = "A loud screech that interacts with people's souls in varying ways."
-	action_icon_state = "reeeeee"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "ghost"
+	button_icon_state = "reeeeee"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "ghost"
 	charge_max = 900
-	sound = 'hippiestation/sound/effects/horror_scream.ogg'
+	sound = 'monkestation/sound/effects/horror_scream.ogg'
 
 /datum/action/spell/self/infinity/soulscreech/cast(list/targets, mob/user)
 	. = ..()
@@ -247,9 +247,9 @@
 /datum/action/spell/self/infinity/scrying_orb
 	name = "Ghost Stone: Scrying Detachment"
 	desc = "Detach your soul from your body, going into the realm of the ghosts."
-	action_icon_state = "scrying"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "ghost"
+	button_icon_state = "scrying"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "ghost"
 
 /datum/action/spell/self/infinity/scrying_orb/cast(list/targets, mob/user)
 	. = ..()
@@ -259,9 +259,9 @@
 /datum/action/spell/targeted/infinity/cluwne_rise_up
 	name = "Ghost Stone: Cluwne Rise"
 	desc = "Rise a corpse as a subservient, magical cluwne. You may only have 1 magical cluwne alive."
-	action_icon_state = "cluwnerise"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "ghost"
+	button_icon_state = "cluwnerise"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "ghost"
 	charge_max = 900
 	var/list/cluwnes = list() // one cluwne per user
 
@@ -302,10 +302,10 @@
 /datum/action/spell/targeted/conjure_item/spellpacket/sandmans_dust
 	name = "Ghost Stone: Sandman's Dust"
 	desc = "Gives you dust capable of knocking out most people."
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_icon_state = "sandman"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "ghost"
+	button_icon = 'monkestation/icons/obj/infinity.dmi'
+	button_icon_state = "sandman"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "ghost"
 	invocation = "POCKET SAND"
 	invocation_type = "shout"
 	charge_max = 200
@@ -314,7 +314,7 @@
 	human_req = FALSE
 	staff_req = FALSE
 	antimagic_allowed = TRUE
-	sound = 'hippiestation/sound/effects/pocketsand.ogg'
+	sound = 'monkestation/sound/effects/pocketsand.ogg'
 
 /datum/action/spell/targeted/turf_teleport/blink/infinity_cluwne
 	name = "Cluwne Blink"

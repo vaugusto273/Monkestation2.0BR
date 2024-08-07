@@ -53,16 +53,16 @@
 
 /datum/action/spell/self/infinity/shockwave/syndie_stone
 	name = "Syndie Stone: Shockwave"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "syndie"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "syndie"
 	range = 8
 
 /datum/action/spell/self/infinity/regenerate
 	name = "Syndie Stone: Regenerate"
 	desc = "Regenerate 4 health per second. Requires you to stand still."
-	action_icon_state = "regenerate"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "syndie"
+	button_icon_state = "regenerate"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "syndie"
 	stat_allowed = TRUE
 
 /datum/action/spell/self/infinity/regenerate/cast(list/targets, mob/user)
@@ -88,8 +88,8 @@
 /datum/action/spell/self/infinity/syndie_bullcharge
 	name = "Syndie Stone: Bull Charge"
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone or anything in your way!"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "syndie"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "syndie"
 	charge_max = 200
 	sound = 'sound/magic/repulse.ogg'
 
@@ -115,9 +115,9 @@
 /datum/action/spell/self/infinity/syndie_jump
 	name = "Syndie Stone: Super Jump"
 	desc = "Leap across the station to wherever you'd like!"
-	action_icon_state = "jump"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "syndie"
+	button_icon_state = "jump"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "syndie"
 	charge_max = 300
 
 /datum/action/spell/self/infinity/syndie_jump/revert_cast(mob/user)

@@ -53,8 +53,8 @@
 	name = "Bluespace Stone: Portal Shield"
 	desc = "Summon a portal shield which sends all projectiles into nullspace. Lasts for 15 seconds, or 5 hits."
 	charge_max = 200
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "bluespace"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "bluespace"
 
 /datum/action/spell/self/infinity/bluespace_stone_shield/cast(list/targets, mob/user = usr)
 	var/obj/item/shield/bluespace_stone/BS = new
@@ -71,8 +71,8 @@
 	antimagic_allowed = TRUE
 	jaunt_duration = 100
 	invocation_type = "none"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
-	action_background_icon_state = "bluespace"
+	background_icon = 'monkestation/icons/obj/infinity.dmi'
+	background_icon_state = "bluespace"
 
 /datum/action/spell/targeted/ethereal_jaunt/bluespace_stone/cast(list/targets,mob/user = usr)
 	for(var/mob/living/target in targets)
@@ -85,7 +85,7 @@
 
 /obj/item/shield/bluespace_stone
 	name = "bluespace energy shield"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'monkestation/icons/obj/infinity.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	icon_state = "portalshield"

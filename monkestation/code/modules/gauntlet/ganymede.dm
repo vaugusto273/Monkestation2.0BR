@@ -16,7 +16,7 @@
 /obj/item/clothing/head/ganymedian
 	name = "Ganymedian Helmet"
 	desc = "A robust-looking helmet from Ganymede."
-	worn_icon = 'hippiestation/icons/mob/large-worn-icons/64x64/head.dmi'
+	worn_icon = 'monkestation/icons/mob/large-worn-icons/64x64/head.dmi'
 	icon_state = "ganymede"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
@@ -75,7 +75,7 @@
 /obj/item/tank/jetpack/ganypack
 	name = "Ganypack"
 	desc = "An alien-made jetpack, capable of infinite spaceflight."
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'monkestation/icons/obj/infinity.dmi'
 	icon_state = "ganypack"
 	gas_type = null
 	actions_types = list(/datum/action/item_action/toggle_jetpack, /datum/action/item_action/jetpack_stabilization)

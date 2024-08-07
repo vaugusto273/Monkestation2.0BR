@@ -43,9 +43,9 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 /obj/item/badmin_gauntlet
 	name = "Badmin Gauntlet"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
-	lefthand_file = 'hippiestation/icons/mob/inhands/lefthand.dmi'
-	righthand_file = 'hippiestation/icons/mob/inhands/righthand.dmi'
+	icon = 'monkestation/icons/obj/infinity.dmi'
+	lefthand_file = 'monkestation/icons/mob/inhands/lefthand.dmi'
+	righthand_file = 'monkestation/icons/mob/inhands/righthand.dmi'
 	icon_state = "gauntlet"
 	force = 25
 	armour_penetration = 70
@@ -67,7 +67,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	START_PROCESSING(SSobj, src)
 	AddComponent(/datum/component/spell_catalyst)
 	martial_art = new
-	flashy_aura = mutable_appearance('hippiestation/icons/obj/infinity.dmi', "aura", -MUTATIONS_LAYER)
+	flashy_aura = mutable_appearance('monkestation/icons/obj/infinity.dmi', "aura", -MUTATIONS_LAYER)
 	update_icon()
 	spells += new /datum/action/spell/self/infinity/regenerate_gauntlet
 	spells += new /datum/action/spell/self/infinity/shockwave
@@ -115,12 +115,12 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /obj/item/badmin_gauntlet/proc/DoSnap(mob/living/snapee)
 	var/dust_time = rand(5 SECONDS, 10 SECONDS)
 	var/dust_sound = pick(
-		'hippiestation/sound/effects/snap/snap1.wav',
-		'hippiestation/sound/effects/snap/snap2.wav',
-		'hippiestation/sound/effects/snap/snap3.wav',
-		'hippiestation/sound/effects/snap/snap4.wav',
-		'hippiestation/sound/effects/snap/snap5.wav',
-		'hippiestation/sound/effects/snap/snap6.wav')
+		'monkestation/sound/effects/snap/snap1.wav',
+		'monkestation/sound/effects/snap/snap2.wav',
+		'monkestation/sound/effects/snap/snap3.wav',
+		'monkestation/sound/effects/snap/snap4.wav',
+		'monkestation/sound/effects/snap/snap5.wav',
+		'monkestation/sound/effects/snap/snap6.wav')
 	if(prob(25))
 		addtimer(CALLBACK(GLOBAL_PROC, .proc/to_chat, snapee, "<span class='danger'>You don't feel so good...</span>"), dust_time - 3 SECONDS)
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, snapee, dust_sound, 100, TRUE), dust_time-2.5)
@@ -275,14 +275,14 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /obj/item/badmin_gauntlet/update_icon()
 	cut_overlays()
 	var/index = 1
-	var/image/veins = image(icon = 'hippiestation/icons/obj/infinity.dmi', icon_state = "glow-overlay")
+	var/image/veins = image(icon = 'monkestation/icons/obj/infinity.dmi', icon_state = "glow-overlay")
 	veins.color = GetStoneColor(stone_mode)
 	add_overlay(veins)
 	for(var/obj/item/badmin_stone/IS in stones)
 		var/I = index
 		if(IS.stone_type == stone_mode)
 			I = 0
-		var/image/O = image(icon = 'hippiestation/icons/obj/infinity.dmi', icon_state = "[I]-stone")
+		var/image/O = image(icon = 'monkestation/icons/obj/infinity.dmi', icon_state = "[I]-stone")
 		O.color = IS.color
 		add_overlay(O)
 		index++
@@ -424,7 +424,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 						We've allocated a large amount of resources to you, for protecting the Stones:\n\
 						Cargo has been given $50k to spend\n\
 						Science has been given 50k techpoints, and a large amount of minerals.\n\
-						In addition, we've moved your Artifical Intelligence unit to your Bridge, and reinforced your telecommunications machinery.", title = "Declaration of War", sound = 'hippiestation/sound/misc/wizard_wardec.ogg')
+						In addition, we've moved your Artifical Intelligence unit to your Bridge, and reinforced your telecommunications machinery.", title = "Declaration of War", sound = 'monkestation/sound/misc/wizard_wardec.ogg')
 					// give cargo/sci money
 					var/datum/bank_account/cargo_moneys = SSeconomy.get_dep_account(ACCOUNT_CAR)
 					var/datum/bank_account/sci_moneys = SSeconomy.get_dep_account(ACCOUNT_SCI)
@@ -513,7 +513,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		IM.color = I.color
 		gauntlet_radial[I.stone_type] = IM
 	if(!GetStone(SYNDIE_STONE))
-		gauntlet_radial["none"] = image(icon = 'hippiestation/icons/obj/infinity.dmi', icon_state = "none")
+		gauntlet_radial["none"] = image(icon = 'monkestation/icons/obj/infinity.dmi', icon_state = "none")
 	var/chosen = show_radial_menu(user, src, gauntlet_radial, custom_check = CALLBACK(src, .proc/check_menu, user))
 	if(!check_menu(user))
 		return
@@ -653,7 +653,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	clothes_req = FALSE
 	human_req = FALSE
 	staff_req = FALSE
-	action_background_icon_state = "bg_default"
+	background_icon_state = "bg_default"
 	range = 5
 	sound = 'sound/effects/bang.ogg'
 
@@ -682,8 +682,8 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /datum/action/spell/self/infinity/regenerate_gauntlet
 	name = "Badmin Gauntlet: Regenerate"
 	desc = "Regenerate 2 health per second. Requires you to stand still."
-	action_icon_state = "regenerate"
-	action_background_icon_state = "bg_default"
+	button_icon_state = "regenerate"
+	background_icon_state = "bg_default"
 	stat_allowed = TRUE
 
 /datum/action/spell/self/infinity/regenerate_gauntlet/cast(list/targets, mob/user)
@@ -709,7 +709,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /datum/action/spell/self/infinity/gauntlet_bullcharge
 	name = "Badmin Gauntlet: Bull Charge"
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone in your way!"
-	action_background_icon_state = "bg_default"
+	background_icon_state = "bg_default"
 	charge_max = 250
 	sound = 'sound/magic/repulse.ogg'
 
@@ -731,8 +731,8 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /datum/action/spell/self/infinity/gauntlet_jump
 	name = "Badmin Gauntlet: Super Jump"
 	desc = "With a bit of startup time, leap across the station to wherever you'd like!"
-	action_background_icon_state = "bg_default"
-	action_icon_state = "jump"
+	background_icon_state = "bg_default"
+	button_icon_state = "jump"
 	charge_max = 300
 
 /datum/action/spell/self/infinity/gauntlet_jump/revert_cast(mob/user)
@@ -828,7 +828,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 /obj/effect/dummy/phased_mob/spell_jaunt/infinity
 	name = "shadow"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'monkestation/icons/obj/infinity.dmi'
 	icon_state = "shadow"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	invisibility = 0
@@ -856,7 +856,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /datum/action/spell/self/infinity/snap
 	name = "SNAP"
 	desc = "Snap the Badmin Gauntlet, erasing half the life in the universe."
-	action_icon_state = "gauntlet"
+	button_icon_state = "gauntlet"
 	stat_allowed = TRUE
 
 /datum/action/spell/self/infinity/snap/cast(list/targets, mob/living/user)
@@ -869,7 +869,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 			user.say("You should've gone for the head...")
 		user.visible_message("<span class='userdanger'>[user] raises their Badmin Gauntlet into the air, and... <i>snap.</i></span>")
 		for(var/mob/M in GLOB.mob_list)
-			SEND_SOUND(M, 'hippiestation/sound/voice/snap.ogg')
+			SEND_SOUND(M, 'monkestation/sound/voice/snap.ogg')
 			if(isliving(M))
 				var/mob/living/L = M
 				L.flash_act()
