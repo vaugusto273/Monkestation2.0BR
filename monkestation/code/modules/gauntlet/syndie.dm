@@ -199,7 +199,7 @@
 		passenger.opacity = initial(passenger.opacity)
 		passenger.mouse_opacity = initial(passenger.mouse_opacity)
 	for(var/mob/living/L in mobloc)
-		if(L.stat == DEAD || L.InCritical())
+		if(L.stat == DEAD || HAS_TRAIT(L, TRAIT_CRITICAL_CONDITION))
 			L.visible_message("<span class='danger bold'>[L] is pancaked by [target]'s slam!</span>")
 			new /obj/item/reagent_containers/food/snacks/pancakes(mobloc)
 			L.gib()
