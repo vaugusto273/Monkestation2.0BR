@@ -5,9 +5,11 @@
 	desc = "Don't touch, it's hot! Oh yeah, and it bends reality."
 	stone_type = SUPERMATTER_STONE
 	color = "#ECF332"
-	spell_types = list (/obj/effect/proc_holder/spell/spacetime_dist/supermatter_stone)
-	gauntlet_spell_types = list(/obj/effect/proc_holder/spell/targeted/tesla/supermatter_stone,
-		/obj/effect/proc_holder/spell/targeted/infinity/delamination)
+	spell_types = list (
+		/datum/action/spell/spacetime_dist/supermatter_stone)
+	gauntlet_spell_types = list(
+		/datum/action/spell/targeted/tesla/supermatter_stone,
+		/datum/action/spell/targeted/infinity/delamination)
 	ability_text = list("HELP INTENT: Fire a short-range, burning-hot crystal spray",
 		"GRAB INTENT: Fire a long-range, rapid, but low damage volt ray",
 		"DISARM INTENT: Fire a short-range fire blast that knocks people back.",
@@ -79,7 +81,7 @@
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/obj/effect/proc_holder/spell/spacetime_dist/supermatter_stone
+/datum/action/spell/spacetime_dist/supermatter_stone
 	name = "Supermatter Stone: Reality Distortion"
 	desc = "Bend reality until it's unrecognizable for a short time."
 	action_icon = 'hippiestation/icons/obj/infinity.dmi'
@@ -91,13 +93,13 @@
 	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
 	action_background_icon_state = "sm"
 
-/obj/effect/proc_holder/spell/targeted/infinity/delamination
+/datum/action/spell/targeted/infinity/delamination
 	name = "Supermatter Stone: Delamination!"
 	desc = "After 3 seconds, put a marker on someone, which will EXPLODE after 15 seconds!"
 	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
 	action_background_icon_state = "sm"
 
-/obj/effect/proc_holder/spell/targeted/infinity/delamination/InterceptClickOn(mob/living/caller, params, atom/t)
+/datum/action/spell/targeted/infinity/delamination/InterceptClickOn(mob/living/caller, params, atom/t)
 	. = ..()
 	if(!.)
 		revert_cast()
@@ -186,7 +188,7 @@
 				L.Paralyze(4)
 			AM.throw_at(get_edge_target_turf(AM, get_dir(src, AM)), knockback, 4)
 
-/obj/effect/proc_holder/spell/targeted/tesla/supermatter_stone
+/datum/action/spell/targeted/tesla/supermatter_stone
 	name = "Supermatter Blast"
 	desc = "Charge up an arc of supermatter-amped electricity"
 	action_icon = 'icons/obj/supermatter.dmi'
@@ -199,7 +201,7 @@
 	antimagic_allowed = TRUE
 	invocation_type = "none"
 
-/obj/effect/proc_holder/spell/targeted/tesla/supermatter_stone/cast(list/targets, mob/user = usr)
+/datum/action/spell/targeted/tesla/supermatter_stone/cast(list/targets, mob/user = usr)
 	ready = FALSE
 	var/mob/living/carbon/target = targets[1]
 	Snd=sound(null, repeat = 0, wait = 1, channel = Snd.channel) //byond, why you suck?
@@ -215,7 +217,7 @@
 	Bolt(user,target,40,10,user)
 	Reset(user)
 
-/obj/effect/proc_holder/spell/targeted/tesla/supermatter_stone/Bolt(mob/origin,mob/target,bolt_energy,bounces,mob/user = usr)
+/datum/action/spell/targeted/tesla/supermatter_stone/Bolt(mob/origin,mob/target,bolt_energy,bounces,mob/user = usr)
 	origin.Beam(target,icon_state="nzcrentrs_power",time=5)
 	var/mob/living/carbon/current = target
 	if(bounces < 1)

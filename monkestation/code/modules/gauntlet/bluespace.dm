@@ -8,8 +8,9 @@
 	ability_text = list("HELP INTENT: teleport target to safe location. Only works every 75 seconds.",
 		"GRAB INTENT: teleport to specified location",
 		"DISARM INTENT: steal item someone is holding")
-	spell_types = list(/obj/effect/proc_holder/spell/self/infinity/bluespace_stone_shield,
-		/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/bluespace_stone)
+	spell_types = list(
+		/datum/action/spell/self/infinity/bluespace_stone_shield,
+		/datum/action/spell/targeted/ethereal_jaunt/bluespace_stone)
 	var/next_help = 0
 
 /obj/item/badmin_stone/bluespace/DisarmEvent(atom/target, mob/living/user, proximity_flag)
@@ -48,21 +49,21 @@
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/obj/effect/proc_holder/spell/self/infinity/bluespace_stone_shield
+/datum/action/spell/self/infinity/bluespace_stone_shield
 	name = "Bluespace Stone: Portal Shield"
 	desc = "Summon a portal shield which sends all projectiles into nullspace. Lasts for 15 seconds, or 5 hits."
 	charge_max = 200
 	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
 	action_background_icon_state = "bluespace"
 
-/obj/effect/proc_holder/spell/self/infinity/bluespace_stone_shield/cast(list/targets, mob/user = usr)
+/datum/action/spell/self/infinity/bluespace_stone_shield/cast(list/targets, mob/user = usr)
 	var/obj/item/shield/bluespace_stone/BS = new
 	if(user.put_in_hands(BS, TRUE))
 		user.visible_message("<span class='danger'>A portal manifests in [user]'s hands!</span>")
 	else
 		revert_cast()
 
-/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/bluespace_stone // un-stuns you so you can move
+/datum/action/spell/targeted/ethereal_jaunt/bluespace_stone // un-stuns you so you can move
 	name = "Bluespace Stone: Bluespace Jaunt"
 	clothes_req = FALSE
 	human_req = FALSE
@@ -73,7 +74,7 @@
 	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
 	action_background_icon_state = "bluespace"
 
-/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/bluespace_stone/cast(list/targets,mob/user = usr)
+/datum/action/spell/targeted/ethereal_jaunt/bluespace_stone/cast(list/targets,mob/user = usr)
 	for(var/mob/living/target in targets)
 		target.SetAllImmobility(0)
 	return ..()

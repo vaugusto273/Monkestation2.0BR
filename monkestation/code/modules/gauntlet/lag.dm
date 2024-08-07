@@ -7,9 +7,11 @@
 	ability_text = list("HELP INTENT: Set a point on the station, or if a point is already set, teleport back to it. Stuns you for a while, but heals you alot.",
 		"GRAB INTENT: Swap places with the victim, and then fire a projectile!",
 		"DISARM INTENT: Shoot a disorienting projectile")
-	spell_types = list(/obj/effect/proc_holder/spell/self/infinity/doppelgangers,
-		/obj/effect/proc_holder/spell/self/infinity/shuffle)
-	gauntlet_spell_types = list(/obj/effect/proc_holder/spell/aoe_turf/conjure/timestop/lag_stone)
+	spell_types = list(
+		/datum/action/spell/self/infinity/doppelgangers,
+		/datum/action/spell/self/infinity/shuffle)
+	gauntlet_spell_types = list(
+		/datum/action/spell/aoe_turf/conjure/timestop/lag_stone)
 	stone_type = LAG_STONE
 	var/turf/teleport_point
 
@@ -51,7 +53,7 @@
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/obj/effect/proc_holder/spell/self/infinity/doppelgangers
+/datum/action/spell/self/infinity/doppelgangers
 	name = "Lag Stone: Doppelgangers"
 	desc = "Summon a bunch of (harmless) look-alikes of you!"
 	action_icon_state = "doppelganger"
@@ -60,7 +62,7 @@
 	charge_max = 1800
 	var/amt = 4
 
-/obj/effect/proc_holder/spell/self/infinity/doppelgangers/cast(list/targets, mob/user)
+/datum/action/spell/self/infinity/doppelgangers/cast(list/targets, mob/user)
 	for(var/i = 1 to amt)
 		var/mob/living/simple_animal/hostile/illusion/doppelganger/E = new(user.loc)
 		E.setDir(user.dir)
@@ -77,14 +79,14 @@
 	environment_smash = ENVIRONMENT_SMASH_NONE
 
 
-/obj/effect/proc_holder/spell/self/infinity/shuffle
+/datum/action/spell/self/infinity/shuffle
 	name = "Lag Stone: The Shuffle"
 	desc = "Swap everyone in your view's position!"
 	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
 	action_background_icon_state = "lag"
 	charge_max = 750
 
-/obj/effect/proc_holder/spell/self/infinity/shuffle/cast(list/targets, mob/user)
+/datum/action/spell/self/infinity/shuffle/cast(list/targets, mob/user)
 	var/list/mobs = list()
 	var/list/moblocs = list()
 	for(var/mob/living/L in view(7, user))
@@ -98,7 +100,7 @@
 		L.forceMove(moblocs[moblocs.len])
 		moblocs.len -= 1
 
-/obj/effect/proc_holder/spell/aoe_turf/conjure/timestop/lag_stone
+/datum/action/spell/aoe_turf/conjure/timestop/lag_stone
 	name = "Lag Stone: Summon Lag"
 	desc = "Summon a large bout of lag within a 5-tile radius. Very infuriating. Badmin Stone holders are immune, however."
 	action_icon = 'hippiestation/icons/obj/infinity.dmi'

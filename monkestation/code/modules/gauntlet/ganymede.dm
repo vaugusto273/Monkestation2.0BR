@@ -4,7 +4,7 @@
 /datum/species/ganymede
 	name = "Ganymedian"
 	id = "ganymede"
-	species_traits = list(NOTRANSSTING, NOZOMBIE, NO_DNA_COPY, NOEYESPRITES, AGENDER, NO_UNDERWEAR)
+	species_traits = list(NOTRANSSTING, NOZOMBIE, NO_DNA_COPY, NOEYESPRITES, AGENDER, NO_UNDERWEAR, MUTCOLORS)
 	inherent_traits = list(TRAIT_NOBREATH, TRAIT_NOHUNGER, TRAIT_RESISTCOLD, TRAIT_RESISTHEAT, TRAIT_NOLIMBDISABLE, TRAIT_NODISMEMBER, TRAIT_RESISTHIGHPRESSURE,
 		TRAIT_RESISTLOWPRESSURE, TRAIT_STABLEHEART, TRAIT_VIRUSIMMUNE, TRAIT_STUNIMMUNE, TRAIT_SLEEPIMMUNE, TRAIT_PUSHIMMUNE, TRAIT_NOGUNS, TRAIT_PIERCEIMMUNE,
 		TRAIT_SHOCKIMMUNE, TRAIT_RADIMMUNE)
@@ -16,6 +16,7 @@
 /obj/item/clothing/head/ganymedian
 	name = "Ganymedian Helmet"
 	desc = "A robust-looking helmet from Ganymede."
+	worn_icon = 'hippiestation/icons/mob/large-worn-icons/64x64/head.dmi'
 	icon_state = "ganymede"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
