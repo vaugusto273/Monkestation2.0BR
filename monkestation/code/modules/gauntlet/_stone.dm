@@ -149,6 +149,12 @@
 	playsound(src, fire_sound, 50, TRUE)
 	new /obj/effect/temp_visual/dir_setting/firing_effect/magic(get_turf(src))
 
+/datum/action/cooldown/spell/infinity
+	button_icon = 'monkestation/icons/obj/infinity.dmi'
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	invocation_type = INVOCATION_NONE
+
 /datum/action/cooldown/spell/pointed/infinity
 	button_icon = 'monkestation/icons/obj/infinity.dmi'
 	ranged_mousepointer = 'icons/effects/cult_target.dmi'

@@ -70,11 +70,6 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "bluespace"
 
-/datum/action/cooldown/spell/targeted/ethereal_jaunt/bluespace_stone/cast(list/targets,mob/user = usr)
-	for(var/mob/living/target in targets)
-		target.SetAllImmobility(0)
-	return ..()
-
 /////////////////////////////////////////////
 /////////////////// ITEMS ///////////////////
 /////////////////////////////////////////////

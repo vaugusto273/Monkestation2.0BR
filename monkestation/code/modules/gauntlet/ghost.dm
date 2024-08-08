@@ -4,82 +4,86 @@
 	name = "Ghost Stone"
 	desc = "Salts your food very well."
 	color = "#e429f2"
-	ability_text = list("HELP INTENT: Transmutate ghosts into a random simplemob.",
+	ability_text = list(
+		"HELP INTENT: Transmutate ghosts into a random simplemob.",
 		"DISARM INTENT: Fire a bolt that scales based on how many ghosts orbit you.")
 	stone_type = GHOST_STONE
 	spell_types = list(
-		/datum/action/cooldown/spell/targeted/infinity/cluwne_rise_up,
+		/datum/action/cooldown/spell/pointed/infinity/clown_rise_up,
 		/datum/action/cooldown/spell/infinity/scrying_orb,
 		/datum/action/cooldown/spell/infinity/fortress,
-		/datum/action/cooldown/spell/targeted/conjure_item/spellpacket/sandmans_dust)
+		/datum/action/cooldown/spell/conjure_item/spellpacket/sandmans_dust)
 	gauntlet_spell_types = list(
 		/datum/action/cooldown/spell/infinity/soulscreech,
-		/datum/action/cooldown/spell/targeted/infinity/chariot)
+		/datum/action/cooldown/spell/pointed/infinity/chariot)
 	var/summon_cooldown = 0
 	var/next_pull = 0
 	var/list/mob/dead/observer/spirits = list()
 
 /obj/item/badmin_stone/ghost/help_act(atom/target, mob/living/user, proximity_flag)
 	if(!isobserver(target))
-		to_chat(user, "<span class='notice'>You can only transmutate ghosts!</span>")
+		to_chat(user, span_notice("You can only transmutate ghosts!"))
 		return
-	var/mob/dead/observer/O = target
-	var/simplemob = pick(/mob/living/simple_animal/hostile/carp,
-		/mob/living/simple_animal/hostile/bear,
-		/mob/living/simple_animal/hostile/mushroom,
-		/mob/living/simple_animal/hostile/retaliate/bat,
-		/mob/living/simple_animal/hostile/retaliate/goat,
-		/mob/living/simple_animal/parrot,
-		/mob/living/simple_animal/pet/dog/corgi,
-		/mob/living/simple_animal/crab,
-		/mob/living/simple_animal/pet/dog/pug,
+	var/mob/dead/observer/ghost_target = target
+	var/mob = pick(
+		/mob/living/basic/carp,
+		/mob/living/basic/bear,
+		/mob/living/basic/mushroom,
+		/mob/living/basic/bat,
+		/mob/living/basic/goat,
+		/mob/living/basic/parrot,
+		/mob/living/basic/pet/dog/corgi,
+		/mob/living/basic/crab,
+		/mob/living/basic/pet/dog/pug,
 		/mob/living/simple_animal/pet/cat,
-		/mob/living/simple_animal/mouse,
-		/mob/living/simple_animal/chicken,
-		/mob/living/simple_animal/cow,
-		/mob/living/simple_animal/hostile/lizard,
-		/mob/living/simple_animal/pet/fox,
-		/mob/living/simple_animal/butterfly,
+		/mob/living/basic/mouse,
+		/mob/living/basic/chicken,
+		/mob/living/basic/cow,
+		/mob/living/basic/lizard,
+		/mob/living/basic/pet/fox,
+		/mob/living/basic/butterfly,
 		/mob/living/simple_animal/pet/cat/cak,
-		/mob/living/simple_animal/chick)
-	var/mob/living/simple_animal/SA = new simplemob(get_turf(O))
-	O.visible_message("<span class='danger'>The ghost of [O] turns into [SA]!</span>")
-	SA.ckey = O.ckey
-	to_chat(SA, "<span class='userdanger'>[user] is your master. Protect them at all costs.</span>")
-	SA.add_memory("<b>[user] is your master. Protect them at all costs</b>")
-	qdel(O)
-
+		/mob/living/basic/chick)
+	var/mob/living/mob = new mob(get_turf(O))
+	ghost_target.visible_message(span_danger("The ghost of [ghost_target] turns into [mob]!"))
+	mob.ckey = ghost_target.ckey
+	to_chat(mob, span_userdanger("[user] is your master. Protect them at all costs."))
+	var/atom/movable/screen/alert/mind_control/mind_alert = mob.throw_alert(ALERT_MIND_CONTROL, /atom/movable/screen/alert/mind_control)
+	mind_alert.command = "<b>[user] is your master. Protect them at all costs</b>"
+	qdel(ghost_target)
 
 /obj/item/badmin_stone/ghost/disarm_act(atom/target, mob/living/user, proximity_flag)
 	var/total_spirits = ghost_check()
-	FireProjectile(/obj/item/projectile/spirit_fist, target, CLAMP(total_spirits*2.5, 3, 25))
+	fire_projectile(/obj/projectile/spirit_fist, target, clamp(total_spirits * 2.5, 3, 25))
 	user.changeNext_move(CLICK_CD_RANGE)
 
 
-/obj/item/badmin_stone/ghost/GiveAbilities(mob/living/L, gauntlet = FALSE)
+/obj/item/badmin_stone/ghost/give_abilities(mob/living/living_mob, gauntlet)
 	. = ..()
-	ADD_TRAIT(L, TRAIT_SIXTHSENSE, GHOST_STONE_TRAIT)
-	ADD_TRAIT(L, TRAIT_XRAY_VISION, GHOST_STONE_TRAIT)
-	L.see_invisible = SEE_INVISIBLE_OBSERVER
-	L.update_sight()
+	ADD_TRAIT(living_mob, TRAIT_SIXTHSENSE, GHOST_STONE_TRAIT)
+	ADD_TRAIT(living_mob, TRAIT_XRAY_VISION, GHOST_STONE_TRAIT)
+	living_mob.see_invisible = SEE_INVISIBLE_OBSERVER
+	living_mob.update_sight()
 
-/obj/item/badmin_stone/ghost/RemoveAbilities(mob/living/L, gauntlet = FALSE)
+/obj/item/badmin_stone/ghost/remove_abilities(mob/living/living_mob)
 	. = ..()
-	REMOVE_TRAIT(L, TRAIT_SIXTHSENSE, GHOST_STONE_TRAIT)
-	REMOVE_TRAIT(L, TRAIT_XRAY_VISION, GHOST_STONE_TRAIT)
-	L.see_invisible = initial(L.see_invisible)
-	L.update_sight()
+	REMOVE_TRAIT(living_mob, TRAIT_SIXTHSENSE, GHOST_STONE_TRAIT)
+	REMOVE_TRAIT(living_mob, TRAIT_XRAY_VISION, GHOST_STONE_TRAIT)
+	living_mob.see_invisible = initial(living_mob.see_invisible)
+	living_mob.update_sight()
 
-// Spectral Sword Copypaste
 /obj/item/badmin_stone/ghost/Initialize()
 	. = ..()
-	notify_ghosts("The Ghost Stone has been formed!",
-		enter_link="<a href=?src=[REF(src)];orbit=1>(Click to orbit)</a>",
-		source = src, action=NOTIFY_ORBIT, ignore_key = POLL_IGNORE_SPECTRAL_BLADE)
+	notify_ghosts(
+		"The Ghost Stone has been formed!",
+		enter_link = "<a href=?src=[REF(src)];orbit=1>(Click to orbit)</a>",
+		source = src,
+		action = NOTIFY_ORBIT,
+		ignore_key = POLL_IGNORE_SPECTRAL_BLADE)
 
 /obj/item/badmin_stone/ghost/Destroy()
-	for(var/mob/dead/observer/G in spirits)
-		G.invisibility = GLOB.observer_default_invisibility
+	for(var/mob/dead/observer/ghost in spirits)
+		ghost.invisibility = GLOB.observer_default_invisibility
 	return ..()
 
 /obj/item/badmin_stone/ghost/attack_self(mob/user)
@@ -87,9 +91,12 @@
 		to_chat(user, "You just recently called out for aid. You don't want to annoy the spirits.")
 		return
 	to_chat(user, "You call out for aid, attempting to summon spirits to your side.")
-	notify_ghosts("[user] is clenching [user.p_their()] [src], calling for your help!",
-		enter_link="<a href=?src=[REF(src)];orbit=1>(Click to help)</a>",
-		source = user, action=NOTIFY_ORBIT, ignore_key = POLL_IGNORE_SPECTRAL_BLADE)
+	notify_ghosts(
+		"[user] is clenching [user.p_their()] [src], calling for your help!",
+		enter_link = "<a href=?src=[REF(src)];orbit=1>(Click to help)</a>",
+		source = user,
+		action = NOTIFY_ORBIT,
+		ignore_key = POLL_IGNORE_SPECTRAL_BLADE)
 	summon_cooldown = world.time + 60 SECONDS
 
 /obj/item/badmin_stone/ghost/Topic(href, href_list)
@@ -112,16 +119,16 @@
 
 	if(!orbiters)
 		orbiters = GetComponent(/datum/component/orbiter)
-	for(var/i in orbiters?.orbiters)
-		if(!isobserver(i))
+	for(var/orbiter in orbiters?.orbiter_list)
+		if(!isobserver(orbiter))
 			continue
-		var/mob/dead/observer/G = i
+		var/mob/dead/observer/ghost = orbiter
 		ghost_counter++
-		G.invisibility = 0
-		current_spirits |= G
+		ghost.invisibility = 0
+		current_spirits |= ghost
 
-	for(var/mob/dead/observer/G in spirits - current_spirits)
-		G.invisibility = GLOB.observer_default_invisibility
+	for(var/mob/dead/observer/ghost in spirits - current_spirits)
+		ghost.invisibility = GLOB.observer_default_invisibility
 
 	spirits = current_spirits
 
@@ -131,45 +138,37 @@
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/datum/action/cooldown/spell/targeted/infinity/chariot
+/datum/action/cooldown/spell/pointed/infinity/chariot
 	name = "Ghost Stone: The Chariot"
 	desc = "Open up an unconscious soul to ghosts, ripe for the stealing!"
 	button_icon_state = "chariot"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
-	charge_max = 200
 
-/datum/action/cooldown/spell/targeted/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/target)
+/datum/action/cooldown/spell/pointed/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/target)
 	. = ..()
 	if(!.)
-		revert_cast()
 		return FALSE
-	if(!caller.Adjacent(t))
-		to_chat(caller, "<span class='notice'>You need to be next to the target!</span>")
-		revert_cast()
+	if(!caller.Adjacent(target))
+		to_chat(caller, span_notice("You need to be next to the target!"))
 		return FALSE
-	if(!isliving(t))
-		to_chat(caller, "<span class='notice'>That doesn't even have a soul.</span>")
-		revert_cast()
+	if(!isliving(target))
+		to_chat(caller, span_notice("That doesn't even have a soul."))
 		return FALSE
-	var/mob/living/L = t
-	if(L.stat == DEAD)
-		to_chat(caller, "<span class='notice'>That's dead, stupid.</span>")
-		revert_cast()
+	var/mob/living/living_target = target
+	if(living_target.stat == DEAD)
+		to_chat(caller, span_notice("That's dead, stupid."))
 		return FALSE
-	if(L.stat != UNCONSCIOUS)
-		to_chat(caller, "<span class='notice'>That's not unconscious.</span>")
-		revert_cast()
+	if(living_target.stat != UNCONSCIOUS)
+		to_chat(caller, span_notice("That's not unconscious."))
 		return FALSE
-	if(locate(/obj/item/badmin_stone) in L.GetAllContents())
-		to_chat(caller, "<span class='notice'>Something stops you from using The Chariot on that...</span>")
-		revert_cast()
+	if(locate(/obj/item/badmin_stone) in living_target.get_all_contents())
+		to_chat(caller, span_notice("Something stops you from using The Chariot on that..."))
 		return FALSE
-	log_game("[L] was kicked out of their body by The Chariot (user: [caller])")
-	to_chat(L, "<span class='danger bold'>You feel your very soul detach from your body...</span>")
-	to_chat(user, "<span class='notice bold'>You weave [L]'s soul in a way that it's open for the spirits to take...</span>")
-	offer_control(L, FALSE)
-	Finished()
+	log_game("[living_target] was kicked out of their body by The Chariot (user: [caller])")
+	to_chat(living_target, span_bolddanger("You feel your very soul detach from your body..."))
+	to_chat(caller, span_boldnotice("You weave [living_target]'s soul in a way that it's open for the spirits to take..."))
+	offer_control(living_target, FALSE)
 	return TRUE
 
 /obj/effect/forcefield/heaven
@@ -183,6 +182,7 @@
 	QDEL_IN(src, 450)
 
 /obj/effect/forcefield/heaven/CanPass(atom/movable/mover, turf/target)
+	. = ..()
 	if(mover == summoner)
 		return TRUE
 	if(locate(/obj/item/badmin_stone/bluespace) in mover)
@@ -195,13 +195,13 @@
 	button_icon_state = "fortress"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
-	charge_max = 1200
 
 /datum/action/cooldown/spell/infinity/fortress/cast(list/targets, mob/user)
+	. = ..()
 	var/fortress = range(5, user) - range(4, user)
-	user.visible_message("<span class='danger bold'>[user] summons Heaven's Fortress!</span>")
-	for(var/turf/T in fortress)
-		new /obj/effect/forcefield/heaven(get_turf(T), user)
+	user.visible_message(span_bolddanger("[user] summons Heaven's Fortress!"))
+	for(var/turf/fortress_turf in fortress)
+		new /obj/effect/forcefield/heaven(get_turf(fortress_turf), user)
 
 /datum/action/cooldown/spell/infinity/soulscreech
 	name = "Ghost Stone: Soulscreech"
@@ -209,40 +209,39 @@
 	button_icon_state = "reeeeee"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
-	charge_max = 900
 	sound = 'monkestation/sound/effects/horror_scream.ogg'
 
 /datum/action/cooldown/spell/infinity/soulscreech/cast(list/targets, mob/user)
 	. = ..()
-	user.visible_message("<span class='danger bold'>[user] lets out a horrifying screech!</span>")
-	for(var/mob/living/L in get_hearers_in_view(6, user))
-		if(L == user)
+	user.visible_message(span_bolddanger("[user] lets out a horrifying screech!"))
+	for(var/mob/living/living_in_range in get_hearers_in_view(6, user))
+		if(living_in_range == user)
 			continue
 		var/list/effects = list(1, 2, 3, 4, 6)
 		var/list/ni_effects = list(5)
-		if(!(locate(/obj/item/badmin_stone) in L.GetAllContents()) && !(L.mind && L.mind.has_antag_datum(/datum/antagonist/ert/revenger)))
+		if(!(locate(/obj/item/badmin_stone) in living_in_range.get_all_contents()) && !(living_in_range.mind && living_in_range.mind.has_antag_datum(/datum/antagonist/ert/revenger)))
 			effects += ni_effects
 		var/effect = pick(effects)
 		switch(effect)
 			if(1)
-				to_chat(L, "<span class='danger'>You feel horrid...</span>")
-				L.adjustOxyLoss(30)
-				L.cultslurring += 300
-				L.Dizzy(300)
+				to_chat(living_in_range, span_danger("You feel horrid..."))
+				living_in_range.adjustOxyLoss(30)
+				living_in_range.apply_status_effect(/datum/status_effect/speech/slurring/cult)
+				living_in_range.apply_status_effect(/datum/status_effect/dizziness)
 			if(2)
-				L.throw_at(get_edge_target_turf(L, get_dir(user, L)), 7, 5)
+				living_in_range.throw_at(get_edge_target_turf(living_in_range, get_dir(user, living_in_range)), 7, 5)
 			if(3)
-				var/turf/potential_T = find_safe_turf(extended_safety_checks = TRUE)
-				if(potential_T)
-					do_teleport(L, potential_T, channel = TELEPORT_CHANNEL_BLUESPACE)
+				var/turf/potential_turf = find_safe_turf(extended_safety_checks = TRUE)
+				if(potential_turf)
+					do_teleport(living_in_range, potential_turf, channel = TELEPORT_CHANNEL_BLUESPACE)
 			if(4)
-				to_chat(L, "<span class='danger'>You feel sick...</span>")
-				L.ForceContractDisease(new /datum/disease/vampire)
+				to_chat(living_in_range, span_danger("You feel sick..."))
+				living_in_range.ForceContractDisease(new /datum/disease/revblight)
 			if(5)
-				L.Stun(40)
-				L.petrify(3 MINUTES)
+				living_in_range.Stun(40)
+				living_in_range.petrify(3 MINUTES)
 			if(6)
-				L.Unconscious(100)
+				living_in_range.Unconscious(100)
 
 /datum/action/cooldown/spell/infinity/scrying_orb
 	name = "Ghost Stone: Scrying Detachment"
@@ -256,50 +255,49 @@
 	user.visible_message("<span class='notice'>[user] stares into the Ghost Stone, and the Ghost Stone stares back.</span>")
 	user.ghostize(TRUE)
 
-/datum/action/cooldown/spell/targeted/infinity/cluwne_rise_up
-	name = "Ghost Stone: Cluwne Rise"
+/datum/action/cooldown/spell/pointed/infinity/clown_rise_up
+	name = "Ghost Stone: Clown Rise"
 	desc = "Rise a corpse as a subservient, magical cluwne. You may only have 1 magical cluwne alive."
-	button_icon_state = "cluwnerise"
+	button_icon_state = "clownrise"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
-	charge_max = 900
-	var/list/cluwnes = list() // one cluwne per user
+	var/list/clowns = list()
 
-/datum/action/cooldown/spell/targeted/infinity/cluwne_rise_up/InterceptClickOn(mob/living/caller, params, atom/target)
+/datum/action/cooldown/spell/pointed/infinity/clown_rise_up/InterceptClickOn(mob/living/caller, params, atom/target)
 	. = ..()
 	if(!.)
 		return FALSE
-	if(ishuman(t))
-		var/mob/living/carbon/human/cluwne = cluwnes[caller]
-		if(istype(cluwne) && cluwne && cluwne.stat != DEAD && !cluwne.InCritical())
-			to_chat(caller, "<span class='danger'>You still have a magical cluwne alive.</span>")
+	if(ishuman(target))
+		var/mob/living/carbon/human/clown = clowns[caller]
+		if(istype(clown) && clown && !clown.stat >= HARD_CRIT)
+			to_chat(caller, span_danger("You still have a magical cluwne alive."))
 			return FALSE
-		var/mob/living/carbon/human/H = t
-		if(H.stat != DEAD && !H.InFullCritical())
-			to_chat(caller, "<span class='danger'>They aren't dead enough yet.</span>")
-			revert_cast()
-			return
-		H.revive(TRUE, TRUE)
-		H.grab_ghost()
-		H.cluwneify()
-		cluwnes[caller] = H
-		H.add_memory("<b>[caller] is your master. Follow their orders at all costs.</b>")
-		H.bloodcrawl = BLOODCRAWL_EAT
-		H.bloodcrawl_allow_items = TRUE
-		H.AddSpell(new /datum/action/cooldown/spell/targeted/turf_teleport/blink/infinity_cluwne)
-		H.AddSpell(new /datum/action/cooldown/spell/targeted/ethereal_jaunt/shift/infinity_cluwne)
-		H.AddSpell(new /datum/action/cooldown/spell/bloodcrawl)
-		var/obj/item/kitchen/knife/butcher/BK = new(get_turf(H))
-		ADD_TRAIT(BK, TRAIT_NODROP, "ghost_stone_cluwne")
-		BK.name = "cluwne's cursed knife"
-		H.put_in_hands(BK, TRUE)
-		H.visible_message("<span class='danger'>[H] struggles back up, now a cluwne!</span>")
-		to_chat(H, "<span class='userdanger'>You are risen from the dead as a cluwne. [caller] is your master. Follow their orders at all costs.</span>")
-		Finished()
-	else
-		revert_cast()
+		var/mob/living/carbon/human/human_target = target
+		if(human_target.stat != DEAD && human_target.stat == HARD_CRIT)
+			to_chat(caller, span_danger("They aren't dead enough yet."))
+			return FALSE
+		human_target.revive(TRUE, TRUE)
+		human_target.grab_ghost()
+		clowns[caller] = human_target
+		human_target.mind.add_memory("<b>[caller] is your master. Follow their orders at all costs.</b>")
+		var/datum/action/cooldown/spell/jaunt/bloodcrawl/clown_bloodcrawl = new
+		var/datum/action/cooldown/spell/jaunt/ethereal_jaunt/infinity_clown/clown_jaunt = new
+		var/datum/action/cooldown/spell/blink/infinity_clown/clown_blink = new
+		clown_bloodcrawl.Grant(human_target)
+		clown_jaunt.Grant(human_target)
+		clown_blink.Grant(human_target)
+		ADD_TRAIT(human_target, TRAIT_BLOODCRAWL_WITH_ITEMS, "ghost_stone_clown")
+		var/obj/item/knife/butcher/butcher_knife = new(get_turf(human_target))
+		ADD_TRAIT(butcher_knife, TRAIT_NODROP, "ghost_stone_clown")
+		butcher_knife.name = "clown's cursed knife"
+		human_target.put_in_hands(butcher_knife, TRUE)
+		var/human_target_mask = human_target.get_item_by_slot(ITEM_SLOT_MASK)
+		if(human_target.dropItemToGround(human_target_mask))
+			human_target.equip_to_slot_if_possible(new /obj/item/clothing/mask/gas/clown_hat, ITEM_SLOT_MASK)
+		human_target.visible_message(span_danger("[human_target] struggles back up, now a clown!"))
+		to_chat(human_target, span_userdanger("You are risen from the dead as a clown. [caller] is your master. Follow their orders at all costs."))
 
-/datum/action/cooldown/spell/targeted/conjure_item/spellpacket/sandmans_dust
+/datum/action/cooldown/spell/conjure_item/spellpacket/sandmans_dust
 	name = "Ghost Stone: Sandman's Dust"
 	desc = "Gives you dust capable of knocking out most people."
 	button_icon = 'monkestation/icons/obj/infinity.dmi'
@@ -308,25 +306,23 @@
 	background_icon_state = "ghost"
 	invocation = "POCKET SAND"
 	invocation_type = "shout"
-	charge_max = 200
 	item_type = /obj/item/spellpacket/sandman
-	clothes_req = FALSE
-	human_req = FALSE
-	staff_req = FALSE
-	antimagic_allowed = TRUE
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	invocation_type = INVOCATION_NONE
 	sound = 'monkestation/sound/effects/pocketsand.ogg'
 
-/datum/action/cooldown/spell/targeted/turf_teleport/blink/infinity_cluwne
+/datum/action/cooldown/spell/blink/infinity_clown
 	name = "Cluwne Blink"
-	clothes_req = FALSE
-	human_req = FALSE
-	staff_req = FALSE
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	invocation_type = INVOCATION_NONE
 
-/datum/action/cooldown/spell/targeted/ethereal_jaunt/shift/infinity_cluwne // un-stuns you so you can move
+/datum/action/cooldown/spell/jaunt/ethereal_jaunt/infinity_clown
 	name = "Cluwne Jaunt"
-	clothes_req = FALSE
-	human_req = FALSE
-	staff_req = FALSE
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	invocation_type = INVOCATION_NONE
 	jaunt_duration = 100
 
 /////////////////////////////////////////////
@@ -343,22 +339,20 @@
 /obj/item/spellpacket/sandman/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(!..())
 		if(isliving(hit_atom))
-			var/mob/living/M = hit_atom
-			if(locate(/obj/item/badmin_gauntlet) in M)
-				to_chat("<span class='danger'>[src] hits you, and you feel dizzy...</span>")
-				M.set_dizziness(75)
-				for(var/datum/action/cooldown/spell/S in M.mob_spell_list)
-					S.charge_counter = 0
-					S.start_recharge()
-					S.action.UpdateButtonIcon()
+			var/mob/living/hit_living = hit_atom
+			if(locate(/obj/item/badmin_gauntlet) in hit_living)
+				to_chat(span_danger("[src] hits you, and you feel dizzy..."))
+				hit_living.apply_status_effect(/datum/status_effect/dizziness)
+				for(var/datum/action/cooldown/spell/spell in hit_living.actions)
+					spell.StartCooldown()
+					spell.update_button_status()
 			else
-				to_chat("<span class='danger'>You're knocked out cold by [src]!</span>")
-				M.Unconscious(600)
+				to_chat(span_danger("You're knocked out cold by [src]!"))
+				hit_living.Unconscious(600)
 		qdel(src)
 
-/obj/item/projectile/spirit_fist
+/obj/projectile/spirit_fist
 	name = "spiritual fist"
-	icon_state = "bounty" // kind of looks like a hand
+	icon_state = "bounty"
 	damage = 3
 	damage_type = BRUTE
-	nodamage = FALSE

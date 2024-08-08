@@ -431,7 +431,7 @@
 		mob_exit(living_occupant, TRUE)
 		living_occupant.throw_at(get_edge_target_turf(src, dir), 7, 5)
 	visible_message(span_danger("[src] explodes!"))
-	explosion(get_turf(src), 0, 0, 2, 3, flame_range = 3)
+	explosion(get_turf(src), 0, 0, 2, 3)
 	qdel(src)
 
 /obj/vehicle/sealed/car/thanos/proc/check_crossed(atom/movable/crossed)
