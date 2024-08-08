@@ -139,7 +139,7 @@
 	background_icon_state = "ghost"
 	charge_max = 200
 
-/datum/action/cooldown/spell/targeted/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/t)
+/datum/action/cooldown/spell/targeted/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/target)
 	. = ..()
 	if(!.)
 		revert_cast()
@@ -265,7 +265,7 @@
 	charge_max = 900
 	var/list/cluwnes = list() // one cluwne per user
 
-/datum/action/cooldown/spell/targeted/infinity/cluwne_rise_up/InterceptClickOn(mob/living/caller, params, atom/t)
+/datum/action/cooldown/spell/targeted/infinity/cluwne_rise_up/InterceptClickOn(mob/living/caller, params, atom/target)
 	. = ..()
 	if(!.)
 		return FALSE

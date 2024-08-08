@@ -97,7 +97,7 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "sm"
 
-/datum/action/cooldown/spell/targeted/infinity/delamination/InterceptClickOn(mob/living/caller, params, atom/t)
+/datum/action/cooldown/spell/targeted/infinity/delamination/InterceptClickOn(mob/living/caller, params, atom/target)
 	. = ..()
 	if(!.)
 		revert_cast()
