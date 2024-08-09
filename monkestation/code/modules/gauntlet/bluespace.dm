@@ -5,12 +5,15 @@
 	desc = "Stare into the abyss, and the abyss stares back..."
 	color = "#266ef6"
 	stone_type = BLUESPACE_STONE
-	ability_text = list("HELP INTENT: teleport target to safe location. Only works every 75 seconds.",
+	ability_text = list(
+		"HELP INTENT: teleport target to safe location. Only works every 75 seconds.",
 		"GRAB INTENT: teleport to specified location",
-		"DISARM INTENT: steal item someone is holding")
+		"DISARM INTENT: steal item someone is holding"
+	)
 	spell_types = list(
 		/datum/action/cooldown/spell/infinity/bluespace_stone_shield,
-		/datum/action/cooldown/spell/targeted/ethereal_jaunt/bluespace_stone)
+		/datum/action/cooldown/spell/targeted/ethereal_jaunt/bluespace_stone
+	)
 	var/next_help = 0
 
 /obj/item/badmin_stone/bluespace/disarm_act(atom/target, mob/living/user, proximity_flag)

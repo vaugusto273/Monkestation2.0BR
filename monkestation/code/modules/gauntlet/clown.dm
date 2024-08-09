@@ -8,14 +8,19 @@
 	ability_text = list(
 		"HELP INTENT: fire banana cream pies",
 		"GRAB INTENT: Spawn the Traps!",
-		"DISARM INTENT: Throw an angry monkey that is aligned with the clown!")
+		"DISARM INTENT: Throw an angry monkey that is aligned with the clown!"
+	)
 	spell_types = list(
 		/datum/action/cooldown/spell/infinity/pranksters_delusion,
-		/datum/action/cooldown/spell/infinity/cake,
+		/datum/action/cooldown/spell/infinity/cake
+	)
+	stone_spell_types = list(
 		/datum/action/cooldown/spell/infinity/honksong,
-		/datum/action/cooldown/spell/infinity/party_popper)
+		/datum/action/cooldown/spell/infinity/party_popper
+	)
 	gauntlet_spell_types = list(
-		/datum/action/cooldown/spell/infinity/thanoscar_thanoscar)
+		/datum/action/cooldown/spell/infinity/thanoscar_thanoscar
+	)
 	var/next_traps = 0
 	var/monkey_stockpile = 3
 	var/next_monkey = 0

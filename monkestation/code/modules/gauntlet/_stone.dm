@@ -12,8 +12,10 @@
 	var/list/ability_text = list()
 	var/list/spells = list()
 	var/list/gauntlet_spells = list()
+	var/list/stone_spells = list()
 	var/list/spell_types = list()
 	var/list/gauntlet_spell_types = list()
+	var/list/stone_spell_types = list()
 	var/mutable_appearance/aura_overlay
 
 /obj/item/badmin_stone/Initialize(mapload)
@@ -22,6 +24,8 @@
 		spells += new spell_type(src)
 	for(var/gauntlet_spell_type in gauntlet_spell_types)
 		gauntlet_spells += new gauntlet_spell_type(src)
+	for(var/stone_spell_type in stone_spell_types)
+		stone_spells += new stone_spell_type(src)
 	AddComponent(/datum/component/stationloving, TRUE)
 	START_PROCESSING(SSobj, src)
 	SSpoints_of_interest.make_point_of_interest(src)
@@ -38,13 +42,7 @@
 	for(var/ability in ability_text)
 		. += span_notice("[ability]")
 
-/obj/item/badmin_stone/pickup(mob/user)
-	. = ..()
-	if(ishuman(user) && HAS_TRAIT(user, TRAIT_CLUMSY))
-		to_chat(user, span_danger("\The [src] pulses in your hands, sending a spasm of pain and forcing you to drop it!"))
-		addtimer(CALLBACK(src, PROC_REF(ForceDropStone), user), 5 SECONDS)
-
-/obj/item/badmin_stone/proc/ForceDropStone(mob/user)
+/obj/item/badmin_stone/proc/force_drop_stone(mob/user)
 	user.dropItemToGround(src, TRUE)
 	forceMove(get_turf(user))
 

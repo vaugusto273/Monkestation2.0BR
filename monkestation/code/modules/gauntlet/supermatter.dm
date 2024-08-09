@@ -5,36 +5,40 @@
 	desc = "Don't touch, it's hot! Oh yeah, and it bends reality."
 	stone_type = SUPERMATTER_STONE
 	color = "#ECF332"
-	spell_types = list (
-		/datum/action/cooldown/spell/spacetime_dist/supermatter_stone)
-	gauntlet_spell_types = list(
-		/datum/action/cooldown/spell/targeted/tesla/supermatter_stone,
-		/datum/action/cooldown/spell/targeted/infinity/delamination)
-	ability_text = list("HELP INTENT: Fire a short-range, burning-hot crystal spray",
+	ability_text = list(
+		"HELP INTENT: Fire a short-range, burning-hot crystal spray",
 		"GRAB INTENT: Fire a long-range, rapid, but low damage volt ray",
 		"DISARM INTENT: Fire a short-range fire blast that knocks people back.",
-		"Use on a material to use 25 sheets of it for a golem. 2 minute cooldown!")
+		"Use on a material to use 25 sheets of it for a golem. 2 minute cooldown!"
+	)
+	spell_types = list (
+		/datum/action/cooldown/spell/spacetime_dist/supermatter_stone
+	)
+	gauntlet_spell_types = list(
+		/datum/action/cooldown/spell/pointed/tesla/supermatter_stone,
+		/datum/action/cooldown/spell/pointed/infinity/delamination
+	)
 	var/next_golem = 0
 
 /obj/item/badmin_stone/supermatter/disarm_act(atom/target, mob/living/user, proximity_flag)
 	if(!HandleGolem(user, target))
-		FireProjectile(/obj/item/projectile/forcefire, target)
+		fire_projectile(/obj/projectile/forcefire, target)
 		user.changeNext_move(6)
 
 /obj/item/badmin_stone/supermatter/grab_act(atom/target, mob/living/user, proximity_flag)
 	if(!proximity_flag || !HandleGolem(user, target))
-		FireProjectile(/obj/item/projectile/voltray, target)
+		fire_projectile(/obj/projectile/voltray, target)
 		user.changeNext_move(CLICK_CD_RAPID)
 
 /obj/item/badmin_stone/supermatter/help_act(atom/target, mob/living/user, proximity_flag)
 	if(!proximity_flag || !HandleGolem(user, target))
-		FireProjectile(/obj/item/projectile/supermatter_stone, target)
+		fire_projectile(/obj/projectile/supermatter_stone, target)
 		user.changeNext_move(CLICK_CD_RANGE)
 
 
 /obj/item/badmin_stone/supermatter/proc/HandleGolem(mob/living/user, atom/target)
 	var/static/list/golem_shell_species_types = list(
-		/obj/item/stack/sheet/metal = /datum/species/golem,
+		/obj/item/stack/sheet/iron = /datum/species/golem,
 		/obj/item/stack/sheet/glass = /datum/species/golem/glass,
 		/obj/item/stack/sheet/plasteel = /datum/species/golem/plasteel,
 		/obj/item/stack/sheet/mineral/sandstone = /datum/species/golem/sand,
@@ -54,22 +58,24 @@
 		/obj/item/stack/sheet/cloth = /datum/species/golem/cloth,
 		/obj/item/stack/sheet/mineral/adamantine = /datum/species/golem/adamantine,
 		/obj/item/stack/sheet/plastic = /datum/species/golem/plastic,
-		/obj/item/stack/tile/brass = /datum/species/golem/clockwork,
-		/obj/item/stack/tile/bronze = /datum/species/golem/bronze,
+		/obj/item/stack/sheet/bronze = /datum/species/golem/bronze,
+		/obj/item/stack/tile/bronze = /datum/species/golem/clockwork,
 		/obj/item/stack/sheet/cardboard = /datum/species/golem/cardboard,
 		/obj/item/stack/sheet/leather = /datum/species/golem/leather,
 		/obj/item/stack/sheet/bone = /datum/species/golem/bone,
 		/obj/item/stack/sheet/durathread = /datum/species/golem/durathread,
-		/obj/item/stack/sheet/cotton/durathread = /datum/species/golem/durathread)
+		/obj/item/stack/sheet/cotton/durathread = /datum/species/golem/durathread,
+		/obj/item/stack/sheet/mineral/metal_hydrogen = /datum/species/golem/mhydrogen
+	)
 	if(istype(target, /obj/item/stack))
 		if(world.time < next_golem)
-			to_chat(user, "<span class='notice'>You need to wait [DisplayTimeText(world.time-next_golem)] before you can make another golem.</span>")
+			to_chat(user, span_notice("You need to wait [DisplayTimeText(world.time-next_golem)] before you can make another golem."))
 			return TRUE
-		var/obj/item/stack/O = target
-		var/species = golem_shell_species_types[O.merge_type]
+		var/obj/item/stack/stack_target = target
+		var/species = golem_shell_species_types[stack_target.merge_type]
 		if(species)
-			if(O.use(25))
-				to_chat(user, "<span class='notice'>You materialize a golem with 25 sheets of [O].</span>")
+			if(stack_target.use(25))
+				to_chat(user, span_notice("You materialize a golem with 25 sheets of [stack_target]."))
 				new /obj/item/golem_shell/servant(get_turf(target), species, user)
 				next_golem = world.time + 2 MINUTES
 				return TRUE
@@ -84,48 +90,41 @@
 	desc = "Bend reality until it's unrecognizable for a short time."
 	button_icon = 'monkestation/icons/obj/infinity.dmi'
 	button_icon_state = "reality"
-	clothes_req = FALSE
-	human_req = FALSE
-	staff_req = FALSE
-	invocation_type = "none"
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	invocation_type = INVOCATION_NONE
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "sm"
 
-/datum/action/cooldown/spell/targeted/infinity/delamination
+/datum/action/cooldown/spell/pointed/infinity/delamination
 	name = "Supermatter Stone: Delamination!"
 	desc = "After 3 seconds, put a marker on someone, which will EXPLODE after 15 seconds!"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "sm"
 
-/datum/action/cooldown/spell/targeted/infinity/delamination/InterceptClickOn(mob/living/caller, params, atom/target)
+/datum/action/cooldown/spell/pointed/infinity/delamination/InterceptClickOn(mob/living/caller, params, atom/target)
 	. = ..()
 	if(!.)
-		revert_cast()
 		return FALSE
-	if(!isliving(t))
-		revert_cast()
+	if(!isliving(target))
 		return FALSE
-	var/mob/living/L = t
-	if(locate(/obj/item/badmin_stone) in L.GetAllContents())
-		L.visible_message("<span class='danger bold'>[L] resists an unseen force!</span>")
-		Finished()
+	var/mob/living/living_target = target
+	if(locate(/obj/item/badmin_stone) in living_target.get_all_contents())
+		living_target.visible_message(span_bolddanger("[living_target] resists an unseen force!"))
 		return TRUE
-	remove_ranged_ability()
-	if(!caller.Adjacent(L))
-		to_chat(caller, "<span class='notice'>They're too far away!</span>")
-		revert_cast()
+	if(!caller.Adjacent(living_target))
+		to_chat(caller, span_notice("They're too far away!"))
 		return FALSE
-	if(do_after(caller, 30, target = L))
-		L.visible_message("<span class='danger bold'>[L] seems a bit hot...</span>", "<span class='userdanger'>You feel like you'll explode any second!</span>")
-		addtimer(CALLBACK(GLOBAL_PROC, .proc/explosion, L, 0, 0, 2, 3, TRUE, FALSE, 3), 150)
-	Finished()
+	if(do_after(caller, 30, target = living_target))
+		living_target.visible_message(span_bolddanger("[living_target] seems a bit hot..."), span_userdanger("You feel like you'll explode any second!"))
+		addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(explosion), living_target, 0, 0, 2, 3, TRUE, FALSE, 3), 150)
 	return TRUE
 
 /////////////////////////////////////////////
 /////////////////// STUFF ///////////////////
 /////////////////////////////////////////////
 
-/obj/item/projectile/supermatter_stone
+/obj/projectile/supermatter_stone
 	name = "burning crystal"
 	icon_state = "guardian"
 	damage = 15
@@ -134,24 +133,20 @@
 	speed = 0.95
 	armour_penetration = 100
 
-/obj/item/projectile/voltray
+/obj/projectile/voltray
 	name = "volt ray"
 	icon = 'icons/effects/beam.dmi'
-	flag = "laser"
-	nodamage = TRUE // handled in on_hit
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	tracer_type = /obj/effect/projectile/tracer/voltray
 	muzzle_type = /obj/effect/projectile/muzzle/voltray
 	impact_type = /obj/effect/projectile/impact/voltray
 	hitscan = TRUE
 
-/obj/item/projectile/voltray/on_hit(atom/target, blocked)
+/obj/projectile/voltray/on_hit(atom/target, blocked)
 	. = ..()
-	if(iscarbon(target))
-		var/mob/living/carbon/C = target
-		C.electrocute_act(7, src, 1, FALSE, FALSE, FALSE, FALSE, FALSE)
-	else if(isliving(target))
-		var/mob/living/L = target
-		L.electrocute_act(7, src, 1, FALSE, FALSE, FALSE, FALSE)
+	if(isliving(target))
+		var/mob/living/living_target = target
+		living_target.electrocute_act(7, src)
 
 /obj/effect/projectile/tracer/voltray
 	name = "volt ray"
@@ -165,7 +160,7 @@
 	name = "volt ray"
 	icon_state = "solar"
 
-/obj/item/projectile/forcefire
+/obj/projectile/forcefire
 	name = "forcefire"
 	icon_state = "plasma"
 	damage = 10
@@ -174,63 +169,49 @@
 	speed = 0.95
 	var/knockback = 3
 
-/obj/item/projectile/forcefire/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/forcefire/on_hit(atom/target, blocked, pierce_hit)
 	. = ..()
-	if(ismovableatom(target))
-		var/atom/movable/AM = target
-		if(!AM.anchored)
-			if(isliving(AM))
-				var/mob/living/L = AM
-				L.adjust_fire_stacks(2)
-				L.IgniteMob()
-				L.Paralyze(4)
-			AM.throw_at(get_edge_target_turf(AM, get_dir(src, AM)), knockback, 4)
+	if(ismovable(target))
+		var/atom/movable/atom_movable_target = target
+		if(!atom_movable_target.anchored)
+			if(isliving(atom_movable_target))
+				var/mob/living/living_target = atom_movable_target
+				living_target.adjust_fire_stacks(2)
+				living_target.ignite_mob()
+				living_target.Paralyze(4)
+			atom_movable_target.throw_at(get_edge_target_turf(atom_movable_target, get_dir(src, atom_movable_target)), knockback, 4)
 
-/datum/action/cooldown/spell/targeted/tesla/supermatter_stone
+/datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone
 	name = "Supermatter Blast"
 	desc = "Charge up an arc of supermatter-amped electricity"
 	button_icon = 'icons/obj/supermatter.dmi'
 	button_icon_state = "darkmatter_glow"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "sm"
-	human_req = FALSE
-	clothes_req = FALSE
-	staff_req = FALSE
-	antimagic_allowed = TRUE
-	invocation_type = "none"
+	cast_range = 10
+	var/bounce_range = 10
 
-/datum/action/cooldown/spell/targeted/tesla/supermatter_stone/cast(list/targets, mob/user = usr)
-	ready = FALSE
-	var/mob/living/carbon/target = targets[1]
-	Snd=sound(null, repeat = 0, wait = 1, channel = Snd.channel) //byond, why you suck?
-	playsound(get_turf(user),Snd,50,0)// Sorry MrPerson, but the other ways just didn't do it the way i needed to work, this is the only way.
-	if(get_dist(user,target)>range)
-		to_chat(user, "<span class='notice'>[target.p_theyre(TRUE)] too far away!</span>")
-		Reset(user)
-		return
+/datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone/cast(atom/cast_on)
+	. = ..()
+	var/mob/living/carbon/target = cast_on
+	bolt(owner, target, 40, 10, owner)
 
-	playsound(get_turf(user), 'sound/effects/empzap.ogg', 50, 1)
-	user.Beam(target,icon_state="nzcrentrs_power",time=5)
-
-	Bolt(user,target,40,10,user)
-	Reset(user)
-
-/datum/action/cooldown/spell/targeted/tesla/supermatter_stone/Bolt(mob/origin,mob/target,bolt_energy,bounces,mob/user = usr)
-	origin.Beam(target,icon_state="nzcrentrs_power",time=5)
-	var/mob/living/carbon/current = target
+/datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone/proc/bolt(mob/origin, mob/target, bolt_energy, bounces, mob/user = usr)
+	origin.Beam(target, icon_state = "nzcrentrs_power", time = 5)
+	var/mob/living/carbon/current_target = target
 	if(bounces < 1)
-		current.electrocute_act(bolt_energy,"SM Bolt",safety=1)
-		playsound(get_turf(current), 'sound/effects/empzap.ogg', 50, 1, -1)
+		current_target.electrocute_act(bolt_energy, SHOCK_TESLA)
+		playsound(get_turf(current_target), 'sound/effects/empzap.ogg', 50, 1, -1)
 	else
-		current.electrocute_act(bolt_energy,"SM Bolt",safety=1)
-		playsound(get_turf(current), 'sound/effects/empzap.ogg', 50, 1, -1)
+		current_target.electrocute_act(bolt_energy, SHOCK_TESLA)
+		playsound(get_turf(current_target), 'sound/effects/empzap.ogg', 50, 1, -1)
 		var/list/possible_targets = new
-		for(var/mob/living/M in view(range,target))
-			if(user == M || target == M && los_check(current,M)) // || origin == M ? Not sure double shockings is good or not
+		for(var/mob/living/viewable_living in view(bounce_range, target))
+			if(user == viewable_living || target == viewable_living && can_see(current_target, viewable_living, bounce_range))
 				continue
-			possible_targets += M
+			possible_targets += viewable_living
 		if(!possible_targets.len)
 			return
-		var/mob/living/next = pick(possible_targets)
-		if(next)
-			Bolt(current,next,max((bolt_energy-5),5),bounces-1,user)
+		var/mob/living/next_target = pick(possible_targets)
+		if(next_target)
+			bolt(current_target, next_target, max((bolt_energy - 5), 5), bounces - 1, user)

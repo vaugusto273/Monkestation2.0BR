@@ -6,16 +6,19 @@
 	color = "#e429f2"
 	ability_text = list(
 		"HELP INTENT: Transmutate ghosts into a random simplemob.",
-		"DISARM INTENT: Fire a bolt that scales based on how many ghosts orbit you.")
+		"DISARM INTENT: Fire a bolt that scales based on how many ghosts orbit you."
+	)
 	stone_type = GHOST_STONE
 	spell_types = list(
 		/datum/action/cooldown/spell/pointed/infinity/clown_rise_up,
 		/datum/action/cooldown/spell/infinity/scrying_orb,
 		/datum/action/cooldown/spell/infinity/fortress,
-		/datum/action/cooldown/spell/conjure_item/spellpacket/sandmans_dust)
+		/datum/action/cooldown/spell/conjure_item/spellpacket/sandmans_dust
+	)
 	gauntlet_spell_types = list(
 		/datum/action/cooldown/spell/infinity/soulscreech,
-		/datum/action/cooldown/spell/pointed/infinity/chariot)
+		/datum/action/cooldown/spell/pointed/infinity/chariot
+	)
 	var/summon_cooldown = 0
 	var/next_pull = 0
 	var/list/mob/dead/observer/spirits = list()
