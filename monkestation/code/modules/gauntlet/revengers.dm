@@ -21,6 +21,7 @@
 /obj/item/clothing/suit/space/hardsuit/nano/nanoguy
 	name = "Nanotrasen Nanotech Suit"
 	desc = "A state-of-the-art nanotechnology-powered suit."
+	icon = 'monkestation/icons/obj/nanoguy.dmi'
 	worn_icon = 'monkestation/icons/mob/nanoguy.dmi'
 	icon_state = "ngsuit"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/nano/nanoguy
@@ -86,12 +87,12 @@
 
 /obj/item/organ/internal/cyberimp/arm/nanoguy
 	name = "nanotech implant"
-	contents = newlist(/obj/item/twohanded/required/nanoshield, /obj/item/gun/energy/laser/mounted/nanoguy, /obj/item/nano_punch)
+	contents = newlist(/obj/item/twohanded/required/nanoshield, /obj/item/nano_punch)
 
-/obj/item/gun/energy/laser/mounted/nanoguy
-	name = "nanotech laser gun"
-	icon = 'monkestation/icons/obj/items_and_weapons.dmi'
-	icon_state = "nanolaser"
+///obj/item/gun/energy/laser/mounted/nanoguy
+//	name = "nanotech laser gun"
+//	icon = 'monkestation/icons/obj/items_and_weapons.dmi'
+//	icon_state = "nanolaser"
 
 /obj/item/nano_punch
 	name = "nanotech battering ram"
