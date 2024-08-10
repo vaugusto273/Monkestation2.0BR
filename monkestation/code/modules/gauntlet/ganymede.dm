@@ -75,6 +75,7 @@
 /obj/item/tank/jetpack/ganypack
 	name = "Ganypack"
 	desc = "An alien-made jetpack, capable of infinite spaceflight."
+	worn_icon = null
 	icon = 'monkestation/icons/obj/infinity.dmi'
 	icon_state = "ganypack"
 	gas_type = null
