@@ -6,7 +6,7 @@
 	ears = /obj/item/radio/headset/headset_cent/alt
 	back = /obj/item/storage/backpack/ert
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	id = /obj/item/card/id/ert
+	id = /obj/item/card/id/advanced/centcom/ert
 	r_pocket = /obj/item/reagent_containers/hypospray/combat
 
 /datum/outfit/revenger/post_equip(mob/living/carbon/human/H, visualsOnly)

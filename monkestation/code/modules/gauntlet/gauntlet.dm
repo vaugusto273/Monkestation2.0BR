@@ -662,15 +662,18 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 	return things
 
-/datum/action/cooldown/spell/aoe/shockwave/cast_on_thing_in_aoe(/mob/living/carbon/human/victim, atom/caster)
-	var/turf/victim_turf = get_turf(victim)
+/datum/action/cooldown/spell/aoe/shockwave/cast_on_thing_in_aoe(atom/victim, atom/caster)
+	if(!ishuman(victim))
+		return
+	var/mob/living/carbon/human/human_victim = victim
+	var/turf/victim_turf = get_turf(human_victim)
 	new /obj/effect/temp_visual/gravpush(victim_turf)
-	if(istype(victim.get_item_by_slot(ITEM_SLOT_FEET), /obj/item/clothing/shoes/magboots))
-		var/obj/item/clothing/shoes/magboots/magboots = victim.shoes
+	if(istype(human_victim.get_item_by_slot(ITEM_SLOT_FEET), /obj/item/clothing/shoes/magboots))
+		var/obj/item/clothing/shoes/magboots/magboots = human_victim.shoes
 		if(magboots.magpulse)
 			return
-	victim.visible_message(span_danger("[victim] is knocked down by a shockwave!"), span_bolddanger("A shockwave knocks you off your feet!"))
-	victim.Paralyze(17.5)
+	human_victim.visible_message(span_danger("[human_victim] is knocked down by a shockwave!"), span_bolddanger("A shockwave knocks you off your feet!"))
+	human_victim.Paralyze(17.5)
 
 /datum/action/cooldown/spell/infinity/regenerate_gauntlet
 	name = "Badmin Gauntlet: Regenerate"
@@ -856,7 +859,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 			living_caster.say("You should've gone for the head...")
 		living_caster.visible_message(span_userdanger("[living_caster] raises their Badmin Gauntlet into the air, and... <i>snap.</i>"))
 		for(var/mob/mob in GLOB.mob_list)
-			SEND_SOUND(mob, 'monkestation/sound/effects/snap/snap1.ogg')
+			SEND_SOUND(mob, 'monkestation/sound/effects/snap/snap1.wav')
 			if(isliving(mob))
 				var/mob/living/living = mob
 				living.flash_act()

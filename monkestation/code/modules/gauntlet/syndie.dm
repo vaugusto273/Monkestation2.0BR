@@ -147,14 +147,15 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "syndie"
 
-/obj/effect/proc_holder/spell/infinity/syndie_jump/cast(atom/cast_on)
+/datum/action/cooldown/spell/infinity/syndie_jump/cast(atom/cast_on)
+	. = ..()
 	if(istype(get_area(cast_on), /area/centcom/wizard_station) || istype(get_area(cast_on), /area/centcom/thanos_farm))
 		to_chat(cast_on, span_warning("You can't jump here!"))
 		return
 	if(isliving(cast_on))
 		INVOKE_ASYNC(src, PROC_REF(do_jaunt), cast_on)
 
-/obj/effect/proc_holder/spell/infinity/syndie_jump/proc/do_jaunt(mob/living/target)
+/datum/action/cooldown/spell/infinity/syndie_jump/proc/do_jaunt(mob/living/target)
 	ADD_TRAIT(target, TRAIT_NO_TRANSFORM, type)
 	var/turf/mobloc = get_turf(target)
 	var/obj/effect/dummy/phased_mob/spell_jaunt/infinity/holder = new(mobloc)

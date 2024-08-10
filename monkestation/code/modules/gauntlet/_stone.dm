@@ -137,16 +137,6 @@
 
 /obj/item/badmin_stone/proc/help_act(atom/target, mob/living/user, proximity_flag)
 
-/obj/item/badmin_stone/proc/fire_projectile(projectiletype, atom/target, damage = null, fire_sound = 'sound/magic/staff_animation.ogg')
-	var/obj/projectile/projectile = new projectiletype(get_turf(src))
-	if(damage)
-		projectile.damage = damage
-	projectile.firer = get_holder() || src
-	projectile.preparePixelProjectile(target, src)
-	projectile.fire()
-	playsound(src, fire_sound, 50, TRUE)
-	new /obj/effect/temp_visual/dir_setting/firing_effect/magic(get_turf(src))
-
 /datum/action/cooldown/spell/infinity
 	button_icon = 'monkestation/icons/obj/infinity.dmi'
 	spell_requirements = NONE

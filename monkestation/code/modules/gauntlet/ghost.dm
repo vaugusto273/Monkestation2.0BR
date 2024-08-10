@@ -47,7 +47,7 @@
 		/mob/living/basic/butterfly,
 		/mob/living/simple_animal/pet/cat/cak,
 		/mob/living/basic/chick)
-	var/mob/living/mob = new picked_mob(get_turf(O))
+	var/mob/living/mob = new picked_mob(get_turf(ghost_target))
 	ghost_target.visible_message(span_danger("The ghost of [ghost_target] turns into [mob]!"))
 	mob.ckey = ghost_target.ckey
 	to_chat(mob, span_userdanger("[user] is your master. Protect them at all costs."))
@@ -56,10 +56,8 @@
 	qdel(ghost_target)
 
 /obj/item/badmin_stone/ghost/disarm_act(atom/target, mob/living/user, proximity_flag)
-	var/total_spirits = ghost_check()
-	fire_projectile(/obj/projectile/spirit_fist, target, clamp(total_spirits * 2.5, 3, 25))
+	fire_projectile(/obj/projectile/spirit_fist, target)
 	user.changeNext_move(CLICK_CD_RANGE)
-
 
 /obj/item/badmin_stone/ghost/give_abilities(mob/living/living_mob, gauntlet)
 	. = ..()
@@ -360,3 +358,8 @@
 	icon_state = "bounty"
 	damage = 3
 	damage_type = BRUTE
+
+/obj/projectile/spirit_fist/Initialize(mapload)
+	. = ..()
+	var/total_spirits = ghost_check()
+	damage = clamp(total_spirits * 2.5, 3, 25)
