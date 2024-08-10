@@ -16,6 +16,7 @@
 /obj/item/clothing/head/ganymedian
 	name = "Ganymedian Helmet"
 	desc = "A robust-looking helmet from Ganymede."
+	icon = 'monkestation/icons/mob/large-worn-icons/64x64/head.dmi'
 	worn_icon = 'monkestation/icons/mob/large-worn-icons/64x64/head.dmi'
 	icon_state = "ganymede"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
