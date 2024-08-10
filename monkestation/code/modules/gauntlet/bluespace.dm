@@ -58,11 +58,13 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "bluespace"
 
-/datum/action/cooldown/spell/infinity/bluespace_stone_shield/cast(list/targets, mob/user = usr)
+/datum/action/cooldown/spell/infinity/bluespace_stone_shield/cast(atom/cast_on)
 	. = ..()
 	var/obj/item/shield/bluespace_stone/bluespace_shield = new
-	if(user.put_in_hands(bluespace_shield, TRUE))
-		user.visible_message(span_danger("A portal manifests in [user]'s hands!"))
+	if(isliving(cast_on))
+		var/mob/living/living_caster = cast_on
+		if(living_caster.put_in_hands(bluespace_shield, TRUE))
+			living_caster.visible_message(span_danger("A portal manifests in [cast_on]'s hands!"))
 
 /datum/action/cooldown/spell/jaunt/ethereal_jaunt/bluespace_stone
 	name = "Bluespace Stone: Bluespace Jaunt"

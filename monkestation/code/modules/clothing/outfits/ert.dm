@@ -41,6 +41,7 @@
 /datum/outfit/revenger/nano
 	name = "Nano Guy"
 	suit = /obj/item/clothing/suit/space/hardsuit/nano/nanoguy
+	implants = list(/obj/item/implant/explosive/disintegrate, /obj/item/implant/adrenalin/nanoguy)
 
 /datum/outfit/revenger/nano/post_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()

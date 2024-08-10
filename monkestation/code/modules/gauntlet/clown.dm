@@ -78,22 +78,25 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
 
-/datum/action/cooldown/spell/infinity/party_popper/cast(list/targets, mob/living/user)
+/datum/action/cooldown/spell/infinity/party_popper/cast(atom/cast_on)
 	. = ..()
+	if(!isliving(cast_on))
+		return
+	var/mob/living/living_caster = cast_on
 	var/prompt = alert("Are you sure you'd like to pop? There's no way to be revived!", "Confirm", "Yes", "No")
 	if(prompt != "Yes")
 		return
-	user.visible_message(span_boldnotice("[user] pops!"))
-	playsound(get_turf(user), 'sound/items/party_horn.ogg', 50, 1)
-	for(var/mob/living/living in view(7, user))
-		if(living == user)
+	cast_on.visible_message(span_boldnotice("[cast_on] pops!"))
+	playsound(get_turf(cast_on), 'sound/items/party_horn.ogg', 50, 1)
+	for(var/mob/living/living in view(7, cast_on))
+		if(living == cast_on)
 			continue
 		for(var/i = 1 to 5)
 			new /obj/effect/temp_visual/heal(get_turf(living))
 		living.grab_ghost()
 		living.revive(TRUE, TRUE)
 		to_chat(living, span_notice("You feel amazing!"))
-	user.gib(TRUE, TRUE, TRUE)
+	living_caster.gib(TRUE, TRUE, TRUE)
 
 /datum/action/cooldown/spell/infinity/pranksters_delusion
 	name = "Clown Stone: Prankster's Delusion"
@@ -102,12 +105,12 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
 
-/datum/action/cooldown/spell/infinity/pranksters_delusion/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/pranksters_delusion/cast(atom/cast_on)
 	. = ..()
-	for(var/mob/living/carbon/carbon in view(7, user))
-		if(carbon == user)
+	for(var/mob/living/carbon/carbon in view(7, cast_on))
+		if(carbon == cast_on)
 			continue
-		to_chat(carbon, "<span class='clown italics'>HONK.</span>")
+		to_chat(carbon, span_clown("HONK."))
 		if(prob(50))
 			new /datum/hallucination/delusion(carbon, TRUE, "custom", 600, 0, "clown", 'icons/mob/clown_mobs.dmi')
 		else
@@ -128,11 +131,14 @@
 	var/list/sparkles = list()
 	var/sparkles_setup = FALSE
 
-/datum/action/cooldown/spell/infinity/honksong/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/honksong/cast(atom/cast_on)
 	. = ..()
-	var/obj/item/badmin_stone/clown/clown_stone = locate() in user
+	var/obj/item/badmin_stone/clown/clown_stone = locate() in cast_on
+	if(!isliving(cast_on))
+		return
+	var/mob/living/living_caster = cast_on
 	if(!clown_stone)
-		to_chat(user, span_notice("How are you casting this without the clown stone wtf?"))
+		to_chat(cast_on, span_notice("How are you casting this without the clown stone wtf?"))
 		return
 	LAZYINITLIST(dancefloor_turfs)
 	LAZYINITLIST(dancefloor_turfs_types)
@@ -145,7 +151,7 @@
 				turf.ChangeTurf(dancefloor_turfs_types[i])
 		QDEL_LIST(spotlights)
 	else
-		var/list/funky_turfs = RANGE_TURFS(3, user)
+		var/list/funky_turfs = RANGE_TURFS(3, cast_on)
 		dancefloor_exists = TRUE
 		sparkles_setup = FALSE
 		var/i = 1
@@ -156,31 +162,31 @@
 			dancefloor_turfs_types[i] = open_turf.type
 			open_turf.ChangeTurf((i % 2 == 0) ? /turf/open/floor/light/colour_cycle/dancefloor_a : /turf/open/floor/light/colour_cycle/dancefloor_b)
 			i++
-		user.visible_message(span_notice("A dance floor forms around [user]!"))
-		dance_setup(user)
-		initial_loc = user.loc
+		cast_on.visible_message(span_notice("A dance floor forms around [cast_on]!"))
+		dance_setup(cast_on)
+		initial_loc = cast_on.loc
 		i = 1
-		user.spin(175, 1)
-		INVOKE_ASYNC(src, PROC_REF(setup_sparkles), user)
-		while(do_after(user, 10, target = clown_stone))
-			user.spin(20, 1)
-			user.SpinAnimation(7,1)
+		living_caster.spin(175, 1)
+		INVOKE_ASYNC(src, PROC_REF(setup_sparkles), cast_on)
+		while(do_after(cast_on, 10, target = clown_stone))
+			living_caster.spin(20, 1)
+			cast_on.SpinAnimation(7,1)
 			if(prob(75))
-				playsound(user, 'sound/items/bikehorn.ogg', 50, 1)
+				playsound(cast_on, 'sound/items/bikehorn.ogg', 50, 1)
 			else
-				playsound(user, 'sound/items/airhorn2.ogg', 50, 1)
-			lights_spin(user)
+				playsound(cast_on, 'sound/items/airhorn2.ogg', 50, 1)
+			lights_spin(cast_on)
 			for(var/dancefloor in 1 to dancefloor_turfs.len)
 				var/turf/dancefloor_turf = dancefloor_turfs[dancefloor]
 				for(var/mob/living/living_on_dancefloor in dancefloor_turf)
-					if(living_on_dancefloor == user)
+					if(living_on_dancefloor == cast_on)
 						continue
 					living_on_dancefloor.heal_overall_damage(5, 5, 5)
 					new /obj/effect/temp_visual/heal(get_turf(living_on_dancefloor))
 			i++
 		QDEL_LIST(sparkles)
 		QDEL_LIST(spotlights)
-		user.visible_message(span_notice("The dance floor reverts back to normal..."))
+		cast_on.visible_message(span_notice("The dance floor reverts back to normal..."))
 		for(var/dancefloor in 1 to dancefloor_turfs.len)
 			var/turf/dancefloor_turf = dancefloor_turfs[dancefloor]
 			if(dancefloor_turf)
@@ -316,26 +322,26 @@
 
 /datum/action/cooldown/spell/infinity/cake
 	name = "Clown Stone: Let There Be Cake!"
-	desc = "Summon a powerful cake at your feet, capable of healing those who eat it, and injuring those who are hit by it. <b>Only 2 cakes can exist at the same time.</span>"
+	desc = "Summon a powerful cake at your feet, capable of healing those who eat it, and injuring those who are hit by it. <b>Only 2 cakes can exist at the same time.</b>"
 	button_icon_state = "cake"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
 	var/list/cakes = list()
 
-/datum/action/cooldown/spell/infinity/cake/proc/CountCakes()
+/datum/action/cooldown/spell/infinity/cake/proc/count_cakes()
 	var/amount = 0
 	for(var/obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity/cake in cakes)
 		if(!QDELETED(cake) && cake && istype(cake))
 			amount++
 	return amount
 
-/datum/action/cooldown/spell/infinity/cake/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/cake/cast(atom/cast_on)
 	. = ..()
-	if(CountCakes() >= 2)
-		to_chat(user, "<span class='danger'>Only 2 cakes can exist at the same time!</span>")
+	if(count_cakes() >= 2)
+		to_chat(cast_on, span_danger("Only 2 cakes can exist at the same time!"))
 		return
-	user.visible_message("<span class='notice'>A cake appears at [user]'s feet!</span>")
-	cakes += new /obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity(get_turf(user))
+	cast_on.visible_message(span_notice("A cake appears at [cast_on]'s feet!"))
+	cakes += new /obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity(get_turf(cast_on))
 
 /obj/item/food/cake/birthday/infinity
 	name = "infinity cake"
@@ -344,7 +350,8 @@
 		/datum/reagent/consumable/nutriment = 20,
 		/datum/reagent/consumable/sprinkles = 10,
 		/datum/reagent/consumable/vitamin = 5,
-		/datum/reagent/consumable/omnizine = 40)
+		/datum/reagent/consumable/omnizine = 40
+	)
 	tastes = list("cake" = 3, "power" = 2, "sweetness" = 1)
 
 /obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity/slice(accuracy, obj/item/W, mob/user)
@@ -367,11 +374,11 @@
 	invocation_type = "shout"
 	invocation = "THANOS CAR THANOS CAR"
 
-/datum/action/cooldown/spell/infinity/thanoscar_thanoscar/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/thanoscar_thanoscar/cast(atom/cast_on)
 	. = ..()
-	user.visible_message(span_bolddanger("[user] summons the THANOS CAR!"))
-	var/obj/vehicle/sealed/car/thanos/thanos_car = new(get_turf(user))
-	thanos_car.mob_forced_enter(user, TRUE)
+	cast_on.visible_message(span_bolddanger("[cast_on] summons the THANOS CAR!"))
+	var/obj/vehicle/sealed/car/thanos/thanos_car = new(get_turf(cast_on))
+	thanos_car.mob_forced_enter(cast_on, TRUE)
 	addtimer(CALLBACK(thanos_car, TYPE_PROC_REF(/obj/vehicle/sealed/car/thanos, ByeBye)), 15 SECONDS)
 
 
@@ -413,7 +420,7 @@
 	log_combat(src, ran_over_human, "run over", null, "(DAMTYPE: [uppertext(BRUTE)])")
 	ran_over_human.visible_message(
 					span_danger("[src] drives over [ran_over_human]!"),
-					span_userdanger("[src] drives over you!</span"))
+					span_userdanger("[src] drives over you!"))
 	playsound(loc, 'sound/effects/splat.ogg', 50, 1)
 
 	var/damage = rand(1,2)

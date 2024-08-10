@@ -65,12 +65,15 @@
 	background_icon_state = "lag"
 	var/doppelganger_amount = 4
 
-/datum/action/cooldown/spell/infinity/doppelgangers/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/doppelgangers/cast(atom/cast_on)
 	. = ..()
+	if(!isliving(cast_on))
+		return
+	var/mob/living/living_caster = cast_on
 	for(var/i = 1 to doppelganger_amount)
-		var/mob/living/simple_animal/hostile/illusion/doppelganger/doppelganger = new(user.loc)
-		doppelganger.setDir(user.dir)
-		doppelganger.Copy_Parent(user, 30 SECONDS, 100)
+		var/mob/living/simple_animal/hostile/illusion/doppelganger/doppelganger = new(cast_on.loc)
+		doppelganger.setDir(cast_on.dir)
+		doppelganger.Copy_Parent(living_caster, 30 SECONDS, 100)
 		doppelganger.target = null
 		random_step(doppelganger, 5, 100)
 
@@ -89,11 +92,11 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "lag"
 
-/datum/action/cooldown/spell/infinity/shuffle/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/shuffle/cast(atom/cast_on)
 	. = ..()
 	var/list/mobs = list()
 	var/list/moblocs = list()
-	for(var/mob/living/viewable_living in view(7, user))
+	for(var/mob/living/viewable_living in view(7, cast_on))
 		moblocs += viewable_living.loc
 		mobs += viewable_living
 	shuffle_inplace(mobs)

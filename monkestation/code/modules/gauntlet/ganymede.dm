@@ -37,7 +37,7 @@
 	fire = 70
 	acid = 30
 
-/obj/item/clothing/head/hippie/ganymedian/equipped(mob/user, slot)
+/obj/item/clothing/head/ganymedian/equipped(mob/user, slot)
 	if(slot == ITEM_SLOT_HEAD)
 		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 		item_flags |= DROPDEL
@@ -66,7 +66,7 @@
 	fire = 70
 	acid = 30
 
-/obj/item/clothing/suit/hippie/ganymedian/equipped(mob/user, slot)
+/obj/item/clothing/suit/ganymedian/equipped(mob/user, slot)
 	if(slot == ITEM_SLOT_SUITSTORE)
 		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 		item_flags |= DROPDEL
@@ -128,12 +128,6 @@
 	if(slot == ITEM_SLOT_FEET)
 		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 		item_flags |= DROPDEL
-	return ..()
-
-
-/mob/living/carbon/human/ex_act(severity, target, origin)
-	if(super_leaping || isganymede(src))
-		return
 	return ..()
 
 /datum/component/chasm/droppable(atom/movable/AM)

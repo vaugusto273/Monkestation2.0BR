@@ -65,12 +65,11 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /obj/item/badmin_gauntlet/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
-	AddComponent(/datum/component/spell_catalyst)
 	martial_art = new
 	flashy_aura = mutable_appearance('monkestation/icons/obj/infinity.dmi', "aura", -MUTATIONS_LAYER)
 	update_icon()
 	spells += new /datum/action/cooldown/spell/infinity/regenerate_gauntlet
-	spells += new /datum/action/cooldown/spell/infinity/shockwave
+	spells += new /datum/action/cooldown/spell/aoe/shockwave
 	spells += new /datum/action/cooldown/spell/infinity/gauntlet_bullcharge
 	spells += new /datum/action/cooldown/spell/infinity/gauntlet_jump
 
@@ -79,40 +78,40 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	STOP_PROCESSING(SSobj, src)
 
 /obj/item/badmin_gauntlet/process()
-	if(!FullyAssembled())
+	if(!fully_assembled())
 		return
 	if(world.time < next_flash)
 		return
 	if(!iscarbon(loc))
 		return
-	var/mob/living/carbon/C = loc
-	if(last_aura_holder && C != last_aura_holder)
+	var/mob/living/carbon/carbon_loc = loc
+	if(last_aura_holder && carbon_loc != last_aura_holder)
 		last_aura_holder.cut_overlay(flashy_aura)
-	last_aura_holder = C
-	C.cut_overlay(flashy_aura)
+	last_aura_holder = carbon_loc
+	carbon_loc.cut_overlay(flashy_aura)
 	var/static/list/stone_colors = list("#ff0130", "#266ef6", "#ECF332", "#FFC0CB", "#20B2AA", "#e429f2")
 	var/index = (flash_index <= 6) ? flash_index : 1
 	flashy_aura.color = stone_colors[index]
-	C.add_overlay(flashy_aura)
+	carbon_loc.add_overlay(flashy_aura)
 	flash_index = index + 1
 	next_flash = world.time + 5
 
 /obj/item/badmin_gauntlet/examine(mob/user)
 	. = ..()
-	for(var/obj/item/badmin_stone/IS in stones)
-		to_chat(user, "<span class='bold notice'>[IS.name] mode</span>")
-		IS.ShowExamine(user)
+	for(var/obj/item/badmin_stone/stone in stones)
+		to_chat(user, span_boldnotice("[stone.name] mode"))
+		stone.examine(user)
 
 /obj/item/badmin_gauntlet/ex_act(severity, target)
 	return
 
-/obj/item/badmin_gauntlet/proc/GetStone(stone_type)
+/obj/item/badmin_gauntlet/proc/get_stone(stone_type)
 	for(var/obj/item/badmin_stone/I in stones)
 		if(I.stone_type == stone_type)
 			return I
 	return
 
-/obj/item/badmin_gauntlet/proc/DoSnap(mob/living/snapee)
+/obj/item/badmin_gauntlet/proc/do_snap(mob/living/snapee)
 	var/dust_time = rand(5 SECONDS, 10 SECONDS)
 	var/dust_sound = pick(
 		'monkestation/sound/effects/snap/snap1.wav',
@@ -122,28 +121,28 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		'monkestation/sound/effects/snap/snap5.wav',
 		'monkestation/sound/effects/snap/snap6.wav')
 	if(prob(25))
-		addtimer(CALLBACK(GLOBAL_PROC, .proc/to_chat, snapee, "<span class='danger'>You don't feel so good...</span>"), dust_time - 3 SECONDS)
-	addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, snapee, dust_sound, 100, TRUE), dust_time-2.5)
-	addtimer(CALLBACK(snapee, /mob/living.proc/dust, TRUE), dust_time)
+		addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(to_chat), snapee, span_danger("You don't feel so good...")), dust_time - 3 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(playsound), snapee, dust_sound, 100, TRUE), dust_time-2.5)
+	addtimer(CALLBACK(snapee, TYPE_PROC_REF(/mob/living, dust), TRUE), dust_time)
 
-/obj/item/badmin_gauntlet/proc/DoTheSnap()
+/obj/item/badmin_gauntlet/proc/do_the_snap()
 	var/mob/living/snapper = usr
 	var/list/players = GLOB.player_list.Copy()
 	shuffle_inplace(players)
 	var/players_to_wipe = FLOOR((players.len-1)/2, 1)
 	var/players_wiped = 0
-	to_chat(world, "<span class='userdanger italics'>You feel as if something big has happened.</span>")
-	for(var/mob/living/L in players)
+	to_chat(world, span_userdanger("You feel as if something big has happened."))
+	for(var/mob/living/living_player in players)
 		if(players_wiped >= players_to_wipe)
 			break
-		if(snapper == L || !L.ckey)
+		if(snapper == living_player || !living_player.ckey)
 			continue
-		DoSnap(L)
+		do_snap(living_player)
 		players_wiped++
 	log_game("[key_name(snapper)] snapped, wiping out [players_wiped] players.")
 	message_admins("[key_name(snapper)] snapped, wiping out [players_wiped] players.")
 
-/obj/item/badmin_gauntlet/proc/GetWeightedChances(list/job_list, list/blacklist)
+/obj/item/badmin_gauntlet/proc/get_weighted_chances(list/job_list, list/blacklist)
 	var/list/jobs = list()
 	var/list/weighted_list = list()
 	for(var/A in job_list)
@@ -153,10 +152,10 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 			weighted_list[M.current] = job_list[M.assigned_role]
 	return weighted_list
 
-/obj/item/badmin_gauntlet/proc/MakeStonekeepers(mob/living/current_user)
+/obj/item/badmin_gauntlet/proc/make_stonekeepers(mob/living/current_user)
 	var/list/has_a_stone = list(current_user)
 	for(var/stone in GLOB.badmin_stones)
-		var/list/to_get_stones = GetWeightedChances(GLOB.badmin_stone_weights[stone], has_a_stone)
+		var/list/to_get_stones = get_weighted_chances(GLOB.badmin_stone_weights[stone], has_a_stone)
 		var/mob/living/L
 		if(LAZYLEN(to_get_stones))
 			L = pick_weight(to_get_stones)
@@ -184,99 +183,94 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 			L.equip_to_slot(IS, ITEM_SLOT_BACKPACK)
 
 
-/obj/item/badmin_gauntlet/proc/FullyAssembled()
+/obj/item/badmin_gauntlet/proc/fully_assembled()
 	for(var/stone in GLOB.badmin_stones)
-		if(!GetStone(stone))
+		if(!get_stone(stone))
 			return FALSE
 	return TRUE
 
-/obj/item/badmin_gauntlet/proc/GetStoneColor(stone_type)
-	var/obj/item/badmin_stone/IS = GetStone(stone_type)
+/obj/item/badmin_gauntlet/proc/get_stone_color(stone_type)
+	var/obj/item/badmin_stone/IS = get_stone(stone_type)
 	if(IS && istype(IS))
 		return IS.color
-	return "#DC143C" //crimson by default
+	return "#DC143C"
 
 /obj/item/badmin_gauntlet/proc/OnEquip(mob/living/user)
-	for(var/datum/action/cooldown/spell/A in spells)
-		user.mob_spell_list += A
-		A.Grant(user)
+	for(var/datum/action/cooldown/spell/spell in spells)
+		spell.Grant(user)
 	user.AddComponent(/datum/component/stationloving)
-	var/datum/antagonist/wizard/W = user.mind.has_antag_datum(/datum/antagonist/wizard)
-	if(W && istype(W))
-		for(var/datum/objective/O in W.objectives)
-			W.objectives -= O
-			qdel(O)
-		W.objectives += new /datum/objective/snap
-		W.can_hijack = HIJACK_NEUTRAL
+	var/datum/antagonist/wizard/wizard = user.mind.has_antag_datum(/datum/antagonist/wizard)
+	if(wizard && istype(wizard))
+		for(var/datum/objective/objective in wizard.objectives)
+			wizard.objectives -= objective
+			qdel(objective)
+		wizard.objectives += new /datum/objective/snap
 		user.mind.announce_objectives()
 	user.move_resist = INFINITY
 
 /obj/item/badmin_gauntlet/proc/OnUnquip(mob/living/user)
 	user.cut_overlay(flashy_aura)
-	GET_COMPONENT_FROM(stationloving, /datum/component/stationloving, user)
+	var/datum/component/stationloving/stationloving = user.GetComponent(/datum/component/stationloving)
 	if(stationloving)
 		user.TakeComponent(stationloving)
-	for(var/datum/action/cooldown/spell/A in spells)
-		user.mob_spell_list -= A
-		A.action.Remove(user)
+	for(var/datum/action/cooldown/spell/spell in spells)
+		spell.Remove(user)
 	user.move_resist = initial(user.move_resist)
-	TakeAbilities(user)
+	take_abilities(user)
 
 /obj/item/badmin_gauntlet/pickup(mob/user)
 	. = ..()
 	if(locked_on && isliving(user))
 		OnEquip(user)
-		visible_message("<span class='danger'>The Badmin Gauntlet attaches to [user]'s hand!.</span>")
+		visible_message(span_danger("The Badmin Gauntlet attaches to [user]'s hand!."))
 
 /obj/item/badmin_gauntlet/dropped(mob/user)
 	. = ..()
 	if(locked_on && isliving(user))
 		OnUnquip(user)
-		visible_message("<span class='danger'>The Badmin Gauntlet falls off of [user].</span>")
+		visible_message(span_danger("The Badmin Gauntlet falls off of [user]."))
 
-/obj/item/badmin_gauntlet/proc/TakeAbilities(mob/living/user)
-	for(var/obj/item/badmin_stone/IS in stones)
-		IS.RemoveAbilities(user, TRUE)
-		IS.TakeVisualEffects(user)
-		IS.TakeStatusEffect(user)
-	for(var/datum/action/cooldown/spell/A in spells)
-		user.mob_spell_list -= A
-		A.action.Remove(user)
+/obj/item/badmin_gauntlet/proc/take_abilities(mob/living/user)
+	for(var/obj/item/badmin_stone/stone in stones)
+		stone.remove_abilities(user, TRUE)
+		stone.take_visual_effects(user)
+		stone.take_status_effect(user)
+	for(var/datum/action/cooldown/spell/spell in spells)
+		spell.Remove(user)
 	if(ishuman(user))
 		martial_art.remove(user)
 
-// warning: contains snowflake code for syndie stone
-/obj/item/badmin_gauntlet/proc/GiveAbilities(mob/living/user)
-	var/obj/item/badmin_stone/syndie = GetStone(SYNDIE_STONE)
+/obj/item/badmin_gauntlet/proc/give_abilities(mob/living/user)
+	var/obj/item/badmin_stone/syndie = get_stone(SYNDIE_STONE)
 	if(!syndie)
-		for(var/datum/action/cooldown/spell/A in spells)
-			user.mob_spell_list += A
-			A.action.Grant(user)
+		for(var/datum/action/cooldown/spell/spell in spells)
+			spell.Grant(user)
 	if(ishuman(user))
-		if(stone_mode != SYNDIE_STONE && (!GetStone(stone_mode) || !stone_mode))
+		if(stone_mode != SYNDIE_STONE && (!get_stone(stone_mode) || !stone_mode))
 			martial_art.teach(user)
 	if(syndie)
-		syndie.GiveAbilities(user, TRUE)
-	if(FullyAssembled())
-		for(var/obj/item/badmin_stone/IS in stones)
-			if(IS && istype(IS) && IS.stone_type != SYNDIE_STONE)
-				IS.GiveAbilities(user, TRUE)
+		syndie.give_abilities(user, TRUE)
+	if(fully_assembled())
+		for(var/obj/item/badmin_stone/stone in stones)
+			if(stone && istype(stone) && stone.stone_type != SYNDIE_STONE)
+				stone.give_abilities(user, TRUE)
 	else
-		var/obj/item/badmin_stone/IS = GetStone(stone_mode)
-		if(IS && istype(IS))
-			IS.GiveVisualEffects(user)
+		var/obj/item/badmin_stone/stone = get_stone(stone_mode)
+		if(stone && istype(stone))
+			stone.give_visual_effects(user)
 			if(stone_mode != SYNDIE_STONE)
-				IS.GiveAbilities(user, TRUE)
+				stone.give_abilities(user, TRUE)
 
 /obj/item/badmin_gauntlet/proc/UpdateAbilities(mob/living/user)
-	TakeAbilities(user)
-	GiveAbilities(user)
+	take_abilities(user)
+	give_abilities(user)
 
 /obj/item/badmin_gauntlet/update_icon()
+	. = ..()
 	cut_overlays()
 	var/index = 1
 	var/image/veins = image(icon = 'monkestation/icons/obj/infinity.dmi', icon_state = "glow-overlay")
-	veins.color = GetStoneColor(stone_mode)
+	veins.color = get_stone_color(stone_mode)
 	add_overlay(veins)
 	for(var/obj/item/badmin_stone/IS in stones)
 		var/I = index
@@ -288,7 +282,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		index++
 
 /obj/item/badmin_gauntlet/melee_attack_chain(mob/user, atom/target, params)
-	if(!tool_attack_chain(user, target) && pre_attack(target, user, params))
+	if(!target.tool_act(user, src) && pre_attack(target, user, params))
 		if(user == target)
 			if(target && !QDELETED(src))
 				afterattack(target, user, 1, params)
@@ -299,118 +293,120 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 /obj/item/badmin_gauntlet/proc/AttackThing(mob/user, atom/target)
 	. = FALSE
-	if(istype(target, /obj/mecha))
+	if(istype(target, /obj/vehicle/sealed/mecha))
 		. = TRUE
-		var/obj/mecha/mech = target
-		mech.take_damage(17.5) // 17.5 extra damage against mechs, because this calls AFTER hitting something
+		var/obj/vehicle/sealed/mecha/mech = target
+		mech.take_damage(17.5)
 	else if(istype(target, /obj/structure/safe))
 		. = TRUE
-		var/obj/structure/safe/S = target
-		user.visible_message("<span class='danger'>[user] begins to pry open [S]!<span>", "<span class='notice'>We begin to pry open [S]...</span>")
-		if(do_after(user, 35, target = S))
-			user.visible_message("<span class='danger'>[user] pries open [S]!<span>", "<span class='notice'>We pry open [S]!</span>")
-			S.tumbler_1_pos = S.tumbler_1_open
-			S.tumbler_2_pos = S.tumbler_2_open
-			S.open = TRUE
-			S.update_icon()
-			S.updateUsrDialog()
+		var/obj/structure/safe/safe = target
+		user.visible_message(span_danger("[user] begins to pry open [safe]!"), span_notice("We begin to pry open [safe]..."))
+		if(do_after(user, 35, target = safe))
+			user.visible_message(span_danger("[user] pries open [safe]!"), span_notice("We pry open [safe]!"))
+			safe.open = TRUE
+			safe.locked = FALSE
+			safe.update_icon()
+			safe.updateUsrDialog()
 	else if(isclosedturf(target))
-		var/turf/closed/T = target
-		if(istype(get_area(T), /area/wizard_station))
-			to_chat(user, "<span class='warning'>You know better than to violate the security of The Den, best wait until you leave to start smashing down walls.</span>")
+		var/turf/closed/target_turf = target
+		if(istype(get_area(target_turf), /area/centcom/wizard_station))
+			to_chat(user, span_warning("You know better than to violate the security of The Den, best wait until you leave to start smashing down walls."))
 			return FALSE
-		if(!GetStone(SYNDIE_STONE))
+		if(!get_stone(SYNDIE_STONE))
 			. = TRUE
-			user.visible_message("<span class='danger'>[user] begins to charge up a punch...</span>", "<span class='notice'>We begin to charge a punch...</span>")
-			if(do_after(user, 15, target = T))
-				playsound(T, 'sound/effects/bang.ogg', 50, 1)
-				user.visible_message("<span class='danger'>[user] punches down [T]!</span>")
-				T.ScrapeAway()
+			user.visible_message(span_danger("[user] begins to charge up a punch..."), span_notice("We begin to charge a punch..."))
+			if(do_after(user, 15, target = target_turf))
+				playsound(target_turf, 'sound/effects/bang.ogg', 50, 1)
+				user.visible_message(span_danger("[user] punches down [target_turf]!"))
+				target_turf.ScrapeAway()
 		else
-			playsound(T, 'sound/effects/bang.ogg', 50, 1)
-			user.visible_message("<span class='danger'>[user] punches down [T]!</span>")
-			T.ScrapeAway()
+			playsound(target_turf, 'sound/effects/bang.ogg', 50, 1)
+			user.visible_message(span_danger("[user] punches down [target_turf]!"))
+			target_turf.ScrapeAway()
 	else if(istype(target, /obj/structure/closet))
-		var/obj/structure/closet/C = target
+		var/obj/structure/closet/target_closet = target
 		. = TRUE
-		C.broken = TRUE
-		C.locked = FALSE
-		C.open()
-		C.update_icon()
-		playsound(C, 'sound/effects/bang.ogg', 50, 1)
-		user.visible_message("<span class='danger'>[user] smashes open [C]!<span>")
+		target_closet.broken = TRUE
+		target_closet.locked = FALSE
+		target_closet.open()
+		target_closet.update_icon()
+		playsound(target_closet, 'sound/effects/bang.ogg', 50, 1)
+		user.visible_message(span_danger("[user] smashes open [target_closet]!"))
 	else if(istype(target, /obj/structure/table) || istype(target, /obj/structure/window) || istype(target, /obj/structure/grille))
-		var/obj/structure/T = target
-		if(istype(get_area(T), /area/wizard_station))
-			to_chat(user, "<span class='warning'>You know better than to violate the security of The Den, best wait until you leave to start smashing down stuff.</span>")
+		var/obj/structure/target_structure = target
+		if(istype(get_area(target_structure), /area/centcom/wizard_station))
+			to_chat(user, span_warning("You know better than to violate the security of The Den, best wait until you leave to start smashing down stuff."))
 			return FALSE
 		. = TRUE
-		playsound(T, 'sound/effects/bang.ogg', 50, 1)
-		user.visible_message("<span class='danger'>[user] smashes [T]!<span>")
-		T.take_damage(INFINITY)
+		playsound(target_structure, 'sound/effects/bang.ogg', 50, 1)
+		user.visible_message(span_danger("[user] smashes [target_structure]!"))
+		target_structure.take_damage(INFINITY)
 
 /obj/item/badmin_gauntlet/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	if(!locked_on)
 		return ..()
 	if(!isliving(user))
 		return ..()
-	var/obj/item/badmin_stone/IS = GetStone(stone_mode)
-	if(!IS || !istype(IS))
-		switch(user.a_intent)
-			if(INTENT_DISARM)
+	var/obj/item/badmin_stone/stone = get_stone(stone_mode)
+	if(!stone || !istype(stone))
+		switch(user.istate)
+			if(ISTATE_SECONDARY)
 				if(ishuman(target) && ishuman(user) && proximity_flag)
 					martial_art.disarm_act(user, target)
-			if(INTENT_HARM)
+			if(ISTATE_HARM)
 				if(ishuman(target) && ishuman(user) && proximity_flag)
 					martial_art.harm_act(user, target)
 				if(proximity_flag)
 					AttackThing(user, target)
-			if(INTENT_GRAB)
+			if(ISTATE_CONTROL)
 				if(ishuman(target) && ishuman(user) && proximity_flag)
 					martial_art.grab_act(user, target)
-			if(INTENT_HELP)
+			else
 				if(ishuman(target) && ishuman(user) && proximity_flag)
 					martial_art.help_act(user, target)
 		return
-	switch(user.a_intent)
-		if(INTENT_DISARM)
-			IS.disarm_act(target, user, proximity_flag)
-		if(INTENT_HARM) // there's no harm intent on the stones anyways
+	switch(user.istate)
+		if(ISTATE_SECONDARY)
+			stone.disarm_act(target, user, proximity_flag)
+		if(ISTATE_HARM) // there's no harm intent on the stones anyways
 			if(proximity_flag && !AttackThing(user, target))
-				IS.harm_act(target, user, proximity_flag)
-		if(INTENT_GRAB)
-			IS.grab_act(target, user, proximity_flag)
-		if(INTENT_HELP)
-			IS.help_act(target, user, proximity_flag)
+				stone.harm_act(target, user, proximity_flag)
+		if(ISTATE_CONTROL)
+			stone.grab_act(target, user, proximity_flag)
+		else
+			stone.help_act(target, user, proximity_flag)
 
 /obj/item/badmin_gauntlet/attack_self(mob/living/user)
 	if(!istype(user))
 		return
 	if(!locked_on)
 		var/prompt = alert("Would you like to truly wear the Badmin Gauntlet? You will be unable to remove it!", "Confirm", "Yes", "No")
-		if (prompt == "Yes")
+		if(prompt == "Yes")
+			if(locked_on)
+				return
 			user.dropItemToGround(src)
 			if(user.put_in_hands(src))
+				locked_on = TRUE
 				if(ishuman(user))
 					var/mob/living/carbon/human/H = user
 					H.set_species(/datum/species/ganymede)
-					H.doUnEquip(H.wear_suit)
-					H.doUnEquip(H.w_uniform)
-					H.doUnEquip(H.head)
-					H.doUnEquip(H.back)
-					H.doUnEquip(H.shoes)
-					var/obj/item/clothing/head/hippie/ganymedian/GH = new(get_turf(user))
-					var/obj/item/clothing/suit/hippie/ganymedian/GS = new(get_turf(user))
-					var/obj/item/clothing/under/hippie/ganymedian/GJ = new(get_turf(user))
-					var/obj/item/clothing/shoes/ganymedian/Gs = new(get_turf(user))
-					var/obj/item/tank/jetpack/ganypack/GP = new(get_turf(user))
-					var/obj/item/teleportation_scroll/TS = new(get_turf(user))
-					H.equip_to_appropriate_slot(GJ)
-					H.equip_to_appropriate_slot(GH)
-					H.equip_to_appropriate_slot(GS)
-					H.equip_to_appropriate_slot(Gs)
-					H.equip_to_appropriate_slot(TS)
-					H.equip_to_slot(GP, SLOT_BACK)
+					H.dropItemToGround(H.wear_suit)
+					H.dropItemToGround(H.w_uniform)
+					H.dropItemToGround(H.head)
+					H.dropItemToGround(H.back)
+					H.dropItemToGround(H.shoes)
+					var/obj/item/clothing/head/ganymedian/ganymedian_helmet = new(get_turf(user))
+					var/obj/item/clothing/suit/ganymedian/ganymedian_armor = new(get_turf(user))
+					var/obj/item/clothing/under/ganymedian/ganymedian_jumpsuit = new(get_turf(user))
+					var/obj/item/clothing/shoes/ganymedian/ganymedian_shoes = new(get_turf(user))
+					var/obj/item/tank/jetpack/ganypack/ganymedian_jetpack = new(get_turf(user))
+					var/obj/item/teleportation_scroll/scroll = new(get_turf(user))
+					H.equip_to_appropriate_slot(ganymedian_helmet)
+					H.equip_to_appropriate_slot(ganymedian_armor)
+					H.equip_to_appropriate_slot(ganymedian_jumpsuit)
+					H.equip_to_appropriate_slot(ganymedian_shoes)
+					H.equip_to_appropriate_slot(scroll)
+					H.equip_to_slot(ganymedian_jetpack, ITEM_SLOT_BACK)
 				GLOB.gauntlet_equipped = TRUE
 				for(var/obj/item/spellbook/SB in world)
 					if(SB.owner == user)
@@ -419,13 +415,16 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 				if(!badmin)
 					if(LAZYLEN(GLOB.wizardstart))
 						user.forceMove(pick(GLOB.wizardstart))
-					priority_announce("A Wizard has declared that he will wipe out half the universe with the Badmin Gauntlet!\n\
+					priority_announce(
+						"A Wizard has declared that he will wipe out half the universe with the Badmin Gauntlet!\n\
 						Stones have been scattered across the station. Protect anyone who holds one!\n\
 						We've allocated a large amount of resources to you, for protecting the Stones:\n\
 						Cargo has been given $50k to spend\n\
 						Science has been given 50k techpoints, and a large amount of minerals.\n\
-						In addition, we've moved your Artifical Intelligence unit to your Bridge, and reinforced your telecommunications machinery.", title = "Declaration of War", sound = 'monkestation/sound/misc/wizard_wardec.ogg')
-					// give cargo/sci money
+						In addition, we've moved your Artifical Intelligence unit to your Bridge, and reinforced your telecommunications machinery.",
+						title = "Declaration of War",
+						sound = 'monkestation/sound/misc/wizard_wardec.ogg'
+					)
 					var/datum/bank_account/cargo_moneys = SSeconomy.get_dep_account(ACCOUNT_CAR)
 					var/datum/bank_account/sci_moneys = SSeconomy.get_dep_account(ACCOUNT_SCI)
 					if(cargo_moneys)
@@ -433,10 +432,10 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 					if(sci_moneys)
 						sci_moneys.adjust_money(50000)
 						SSresearch.science_tech.add_point_type(TECHWEB_POINT_TYPE_DEFAULT, 50000)
-					// give sci materials
 					var/obj/structure/closet/supplypod/bluespacepod/sci_pod = new()
 					sci_pod.explosionSize = list(0,0,0,0)
-					var/list/materials_to_give_science = list(/obj/item/stack/sheet/metal,
+					var/list/materials_to_give_science = list(
+						/obj/item/stack/sheet/iron,
 						/obj/item/stack/sheet/plasteel,
 						/obj/item/stack/sheet/mineral/diamond,
 						/obj/item/stack/sheet/mineral/uranium,
@@ -444,77 +443,76 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 						/obj/item/stack/sheet/mineral/gold,
 						/obj/item/stack/sheet/mineral/silver,
 						/obj/item/stack/sheet/glass,
-						/obj/item/stack/ore/bluespace_crystal/artificial)
+						/obj/item/stack/ore/bluespace_crystal/artificial
+					)
 					for(var/mat in materials_to_give_science)
-						var/obj/item/stack/sheet/S = new mat(sci_pod)
-						S.amount = 50
-						S.update_icon()
+						var/obj/item/stack/sheet/sheet = new mat(sci_pod)
+						sheet.amount = 50
+						sheet.update_icon()
 					var/list/sci_tiles = list()
-					for(var/turf/T in get_area_turfs(/area/science/lab))
-						if(!T.density)
+					for(var/turf/turf_lab in get_area_turfs(/area/station/science/lab))
+						if(!turf_lab.density)
 							var/clear = TRUE
-							for(var/obj/O in T)
+							for(var/obj/O in turf_lab)
 								if(O.density)
 									clear = FALSE
 									break
 							if(clear)
-								sci_tiles += T
+								sci_tiles += turf_lab
 					if(LAZYLEN(sci_tiles))
-						new /obj/effect/DPtarget(get_turf(pick(sci_tiles)), sci_pod)
-					// make telecomms machinery invincible
-					for(var/obj/machinery/telecomms/TC in world)
-						if(istype(get_area(TC), /area/tcommsat))
-							TC.resistance_flags |= INDESTRUCTIBLE
-					for(var/obj/machinery/power/apc/APC in world)
-						if(istype(get_area(APC), /area/tcommsat))
-							APC.resistance_flags |= INDESTRUCTIBLE
-					// move ai(s) to bridge
+						new /obj/effect/dumpeet_fall(get_turf(pick(sci_tiles)), sci_pod)
+					for(var/obj/machinery/telecomms/telecomms in world)
+						if(istype(get_area(telecomms), /area/station/tcommsat))
+							telecomms.resistance_flags |= INDESTRUCTIBLE
+					for(var/obj/machinery/power/apc/apc in world)
+						if(istype(get_area(apc), /area/station/tcommsat))
+							apc.resistance_flags |= INDESTRUCTIBLE
 					var/list/bridge_tiles = list()
-					for(var/turf/T in get_area_turfs(/area/bridge))
-						if(!T.density)
+					for(var/turf/turf_bridge in get_area_turfs(/area/station/command/bridge))
+						if(!turf_bridge.density)
 							var/clear = TRUE
-							for(var/obj/O in T)
-								if(O.density)
+							for(var/obj/obj_bridge in turf_bridge)
+								if(obj_bridge.density)
 									clear = FALSE
 									break
 							if(clear)
-								bridge_tiles += T
+								bridge_tiles += turf_bridge
 					if(LAZYLEN(bridge_tiles))
-						for(var/mob/living/silicon/ai/AI in GLOB.ai_list)
+						for(var/mob/living/silicon/ai/ai in GLOB.ai_list)
 							var/obj/structure/closet/supplypod/bluespacepod/ai_pod = new
-							AI.forceMove(ai_pod)
-							AI.move_resist = MOVE_FORCE_NORMAL
-							new /obj/effect/DPtarget(get_turf(pick(bridge_tiles)), ai_pod)
+							ai.forceMove(ai_pod)
+							ai.move_resist = MOVE_FORCE_NORMAL
+							new /obj/effect/dumpeet_fall(get_turf(pick(bridge_tiles)), ai_pod)
 					GLOB.telescroll_time = world.time + 10 MINUTES
-					addtimer(CALLBACK(GLOBAL_PROC, .proc/to_chat, user, "<span class='notice bold'>You can now teleport to the station.</span>"), 10 MINUTES)
-					addtimer(CALLBACK(src, .proc/_CallRevengers), 25 MINUTES)
-					to_chat(user, "<span class='notice bold'>You need to wait 10 minutes before teleporting to the station.</span>")
-				to_chat(user, "<span class='notice bold'>You can click on the pinpointer at the top right to track a stone.</span>")
-				to_chat(user, "<span class='notice bold'>Examine a stone/the gauntlet to see what each intent does.</span>")
-				to_chat(user, "<span class='notice bold'>You can smash walls, tables, grilles, windows, and safes on HARM intent.</span>")
-				to_chat(user, "<span class='notice bold'>Be warned -- you may be mocked if you kill innocents, that does not bring balance!</span>")
+					addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(to_chat), user, span_boldnotice("You can now teleport to the station.")), 10 MINUTES)
+					addtimer(CALLBACK(src, PROC_REF(_call_revengers)), 25 MINUTES)
+					to_chat(user, span_boldnotice("You need to wait 10 minutes before teleporting to the station."))
+				to_chat(user, span_boldnotice("You can click on the pinpointer at the top right to track a stone."))
+				to_chat(user, span_boldnotice("Examine a stone/the gauntlet to see what each intent does."))
+				to_chat(user, span_boldnotice("You can smash walls, tables, grilles, windows, and safes on HARM intent."))
+				to_chat(user, span_boldnotice("Be warned -- you may be mocked if you kill innocents, that does not bring balance!"))
 				ADD_TRAIT(src, TRAIT_NODROP, GAUNTLET_TRAIT)
-				locked_on = TRUE
-				visible_message("<span class='danger bold'>The badmin gauntlet clamps to [user]'s hand!</span>")
-				user.mind.RemoveAllSpells()
+				visible_message(span_bolddanger("The badmin gauntlet clamps to [user]'s hand!"))
+				for(var/datum/action/cooldown/spell/spell in spells)
+					spell.Remove(user)
 				UpdateAbilities(user)
 				OnEquip(user)
 				if(!badmin)
-					MakeStonekeepers(user)
+					make_stonekeepers(user)
 			else
-				to_chat(user, "<span class='danger'>You do not have an empty hand for the Badmin Gauntlet.</span>")
+				to_chat(user, span_danger("You do not have an empty hand for the Badmin Gauntlet."))
 		return
 	if(!LAZYLEN(stones))
-		to_chat(user, "<span class='danger'>You have no stones yet.</span>")
+		to_chat(user, span_danger("You have no stones yet."))
 		return
 	var/list/gauntlet_radial = list()
 	for(var/obj/item/badmin_stone/I in stones)
 		var/image/IM = image(icon = I.icon, icon_state = I.icon_state)
 		IM.color = I.color
 		gauntlet_radial[I.stone_type] = IM
-	if(!GetStone(SYNDIE_STONE))
+	if(!get_stone(SYNDIE_STONE))
 		gauntlet_radial["none"] = image(icon = 'monkestation/icons/obj/infinity.dmi', icon_state = "none")
-	var/chosen = show_radial_menu(user, src, gauntlet_radial, custom_check = CALLBACK(src, .proc/check_menu, user))
+	var/chosen = show_radial_menu(user, src, gauntlet_radial, custom_check = CALLBACK(src, PROC_REF(check_menu), user))
 	if(!check_menu(user))
 		return
 	if(chosen)
@@ -534,18 +532,18 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		log_admin_private("[key_name(usr)] cancelled the automatic Revengers ERT.")
 		ert_canceled = TRUE
 
-/obj/item/badmin_gauntlet/proc/_CallRevengers()
+/obj/item/badmin_gauntlet/proc/_call_revengers()
 	message_admins("Revengers ERT being auto-called in 15 seconds (<a href='?src=[REF(src)];cancel=1'>CANCEL</a>)")
-	addtimer(CALLBACK(src, .proc/CallRevengers), 15 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(call_revengers)), 15 SECONDS)
 
-/obj/item/badmin_gauntlet/proc/CallRevengers()
+/obj/item/badmin_gauntlet/proc/call_revengers()
 	if(ert_canceled)
 		return
 	message_admins("The Revengers ERT has been auto-called.")
 	log_game("The Revengers ERT has been auto-called.")
 
 	var/datum/ert/revengers/ertemplate = new
-	var/list/mob/dead/observer/candidates = pollGhostCandidates("Do you wish to be an Revenger?", "deathsquad", null)
+	var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates("Do you wish to be an Revenger?", "deathsquad", null)
 	var/teamSpawned = FALSE
 
 	if(candidates.len > 0)
@@ -578,7 +576,6 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 			//Spawn the body
 			var/mob/living/carbon/human/ERTOperative = new ertemplate.mobtype(spawnloc)
-			chosen_candidate.client.prefs.copy_to(ERTOperative)
 			ERTOperative.key = chosen_candidate.key
 
 			ERTOperative.set_species(/datum/species/human)
@@ -609,27 +606,30 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 				door.open()
 				CHECK_TICK
 
-/obj/item/badmin_gauntlet/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/badmin_stone))
+/obj/item/badmin_gauntlet/attackby(obj/item/attacking_item, mob/living/user, params)
+	if(istype(attacking_item, /obj/item/badmin_stone))
 		if(!locked_on)
-			to_chat(user, "<span class='notice'>You need to wear the gauntlet first.</span>")
+			to_chat(user, span_notice("You need to wear the gauntlet first."))
 			return
-		var/obj/item/badmin_stone/IS = I
-		if(!GetStone(IS.stone_type))
-			user.visible_message("<span class='danger bold'>[user] drops the [IS] into the Badmin Gauntlet.</span>")
-			if(IS.stone_type == SYNDIE_STONE)
+		var/obj/item/badmin_stone/stone = attacking_item
+		if(!get_stone(stone.stone_type))
+			user.visible_message(span_bolddanger("[user] drops the [stone] into the Badmin Gauntlet."))
+			if(stone.stone_type == SYNDIE_STONE)
 				force = 27.5
-			IS.forceMove(src)
-			stones += IS
-			var/datum/component/stationloving/stationloving = IS.GetComponent(/datum/component/stationloving)
+			stone.forceMove(src)
+			stones += stone
+			var/datum/component/stationloving/stationloving = stone.GetComponent(/datum/component/stationloving)
 			if(stationloving)
-				stationloving.RemoveComponent()
+				stationloving.RemoveComponentSource()
 			UpdateAbilities(user)
 			update_icon()
-			if(FullyAssembled() && !GLOB.gauntlet_snapped)
-				user.AddSpell(new /datum/action/cooldown/spell/infinity/snap)
-				user.visible_message("<span class='userdanger'>A massive surge of power courses through [user]. You feel as though your very existence is in danger!</span>",
-					"<span class='danger bold'>You have fully assembled the Badmin Gauntlet. You can use all stone abilities no matter the mode, and can SNAP using the ability.</span>")
+			if(fully_assembled() && !GLOB.gauntlet_snapped)
+				var/datum/action/cooldown/spell/infinity/snap/snap = new
+				snap.Grant(user)
+				user.visible_message(
+					span_userdanger("A massive surge of power courses through [user]. You feel as though your very existence is in danger!"),
+					span_bolddanger("You have fully assembled the Badmin Gauntlet. You can use all stone abilities no matter the mode, and can SNAP using the ability.")
+				)
 			return
 	return ..()
 
@@ -644,114 +644,124 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 /////////////////////////////////////////////
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
-//Weaker versions of Syndie Stone spells
 
-/datum/action/cooldown/spell/infinity/shockwave
+/datum/action/cooldown/spell/aoe/shockwave
 	name = "Badmin Gauntlet: Shockwave"
 	desc = "Stomp down and send out a slow-moving shockwave that is capable of knocking people down."
-	charge_max = 250
-	clothes_req = FALSE
-	human_req = FALSE
-	staff_req = FALSE
 	background_icon_state = "bg_default"
-	range = 5
 	sound = 'sound/effects/bang.ogg'
+	aoe_radius = 5
 
-/datum/action/cooldown/spell/infinity/shockwave/cast(list/targets, mob/user)
-	user.visible_message("<span class='danger'>[user] stomps down!</span>")
-	INVOKE_ASYNC(src, .proc/shockwave, user, get_turf(user))
+/datum/action/cooldown/spell/aoe/shockwave/get_things_to_cast_on(atom/center)
+	. = ..()
+	var/list/things = list()
+	for(var/mob/living/carbon/human/human in range(aoe_radius, center))
+		if(human == owner)
+			continue
+		things += human
 
-/datum/action/cooldown/spell/infinity/shockwave/proc/shockwave(mob/user, turf/center)
-	for(var/i = 1 to range)
-		var/to_hit = range(center, i) - range(center, i-1)
-		for(var/turf/T in to_hit)
-			new /obj/effect/temp_visual/gravpush(T)
-		for(var/mob/living/L in to_hit)
-			if(L == user)
-				continue
-			if(ishuman(L))
-				var/mob/living/carbon/human/H = L
-				if(istype(H.shoes, /obj/item/clothing/shoes/magboots))
-					var/obj/item/clothing/shoes/magboots/M = H.shoes
-					if(M.magpulse)
-						continue
-			L.visible_message("<span class='danger'>[L] is knocked down by a shockwave!</span>", "<span class='danger bold'>A shockwave knocks you off your feet!</span>")
-			L.Paralyze(17.5)
-		sleep(2)
+	return things
+
+/datum/action/cooldown/spell/aoe/shockwave/cast_on_thing_in_aoe(/mob/living/carbon/human/victim, atom/caster)
+	var/turf/victim_turf = get_turf(victim)
+	new /obj/effect/temp_visual/gravpush(victim_turf)
+	if(istype(victim.get_item_by_slot(ITEM_SLOT_FEET), /obj/item/clothing/shoes/magboots))
+		var/obj/item/clothing/shoes/magboots/magboots = victim.shoes
+		if(magboots.magpulse)
+			return
+	victim.visible_message(span_danger("[victim] is knocked down by a shockwave!"), span_bolddanger("A shockwave knocks you off your feet!"))
+	victim.Paralyze(17.5)
 
 /datum/action/cooldown/spell/infinity/regenerate_gauntlet
 	name = "Badmin Gauntlet: Regenerate"
 	desc = "Regenerate 2 health per second. Requires you to stand still."
 	button_icon_state = "regenerate"
 	background_icon_state = "bg_default"
-	stat_allowed = TRUE
 
-/datum/action/cooldown/spell/infinity/regenerate_gauntlet/cast(list/targets, mob/user)
-	if(isliving(user))
-		var/mob/living/L = user
-		if(L.on_fire)
-			to_chat(L, "<span class='notice'>The fire interferes with your regeneration!</span>")
-			revert_cast(L)
+/datum/action/cooldown/spell/infinity/regenerate_gauntlet/cast(atom/cast_on)
+	. = ..()
+	if(isliving(cast_on))
+		var/mob/living/living_caster = cast_on
+		if(living_caster.on_fire)
+			to_chat(living_caster, span_notice("The fire interferes with your regeneration!"))
+			reset_spell_cooldown()
 			return
-		if(L.stat == DEAD)
-			to_chat(L, "<span class='notice'>You can't regenerate out of death.</span>")
-			revert_cast(L)
+		if(living_caster.stat == DEAD)
+			to_chat(living_caster, span_notice("You can't regenerate out of death."))
+			reset_spell_cooldown()
 			return
-		while(do_after(L, 10, FALSE, L))
-			L.visible_message("<span class='notice'>[L]'s wounds heal!</span>")
-			L.heal_overall_damage(2, 2, 2, null, TRUE)
-			L.adjustToxLoss(-2)
-			L.adjustOxyLoss(-2)
-			if(L.getBruteLoss() + L.getFireLoss() + L.getStaminaLoss() < 1)
-				to_chat(user, "<span class='notice'>You are fully healed.</span>")
+		while(do_after(living_caster, 10, living_caster))
+			living_caster.visible_message(span_notice("[living_caster]'s wounds heal!"))
+			living_caster.heal_overall_damage(2, 2, 2, null, TRUE)
+			living_caster.adjustToxLoss(-2)
+			living_caster.adjustOxyLoss(-2)
+			if(living_caster.getBruteLoss() + living_caster.getFireLoss() < 1)
+				to_chat(cast_on, span_notice("You are fully healed."))
 				return
 
 /datum/action/cooldown/spell/infinity/gauntlet_bullcharge
 	name = "Badmin Gauntlet: Bull Charge"
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone in your way!"
 	background_icon_state = "bg_default"
-	charge_max = 250
 	sound = 'sound/magic/repulse.ogg'
+	var/mario_star = FALSE
+	var/super_mario_star = FALSE
 
-/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/cast(list/targets, mob/user)
-	if(iscarbon(user))
-		var/mob/living/carbon/C = user
-		C.mario_star = TRUE
-		C.super_mario_star = FALSE
-		ADD_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
-		user.visible_message("<span class='danger'>[user] charges!</span>")
-		addtimer(CALLBACK(src, .proc/done, C), 50)
+/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/Grant(mob/grant_to)
+	. = ..()
+	RegisterSignal(grant_to, COMSIG_ATOM_BUMPED, PROC_REF(mario_star))
+
+/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/Remove(mob/living/remove_from)
+	. = ..()
+	UnregisterSignal(remove_from, COMSIG_ATOM_BUMPED)
+
+/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/cast(atom/cast_on)
+	. = ..()
+	if(iscarbon(cast_on))
+		var/mob/living/carbon/carbon_caster = cast_on
+		ADD_TRAIT(carbon_caster, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
+		mario_star = TRUE
+		super_mario_star = FALSE
+		carbon_caster.visible_message(span_danger("[carbon_caster] charges!"))
+		addtimer(CALLBACK(src, PROC_REF(done), carbon_caster), 50)
 
 /datum/action/cooldown/spell/infinity/gauntlet_bullcharge/proc/done(mob/living/carbon/user)
-	user.mario_star = FALSE
-	user.super_mario_star = FALSE
+	mario_star = FALSE
+	super_mario_star = FALSE
 	REMOVE_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
-	user.visible_message("<span class='danger'>[user] relaxes...</span>")
+	user.visible_message(span_danger("[user] relaxes..."))
+
+/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/proc/mario_star(atom/movable/hit_object)
+	if(isliving(owner))
+		var/mob/living/carbon/carbon_owner = owner
+		if(mario_star || super_mario_star)
+			if(isliving(hit_object))
+				var/mob/living/living_hit_object = hit_object
+				carbon_owner.visible_message(span_danger("[carbon_owner] rams into [living_hit_object]!"))
+				if(super_mario_star)
+					living_hit_object.Paralyze(7.5 SECONDS)
+					living_hit_object.adjustBruteLoss(20)
+					carbon_owner.heal_overall_damage(12.5, 12.5, 12.5)
+				else
+					living_hit_object.Paralyze(5 SECONDS)
+					living_hit_object.adjustBruteLoss(12)
+					carbon_owner.heal_overall_damage(7.5, 7.5, 7.5)
 
 /datum/action/cooldown/spell/infinity/gauntlet_jump
 	name = "Badmin Gauntlet: Super Jump"
 	desc = "With a bit of startup time, leap across the station to wherever you'd like!"
 	background_icon_state = "bg_default"
 	button_icon_state = "jump"
-	charge_max = 300
 
-/datum/action/cooldown/spell/infinity/gauntlet_jump/revert_cast(mob/user)
+/datum/action/cooldown/spell/infinity/gauntlet_jump/cast(atom/cast_on)
 	. = ..()
-	user.opacity = initial(user.opacity)
-	user.mouse_opacity = initial(user.mouse_opacity)
-	user.pixel_y = 0
-	user.alpha = 255
-
-// i really hope this never runtimes
-/datum/action/cooldown/spell/infinity/gauntlet_jump/cast(list/targets, mob/user)
-	if(istype(get_area(user), /area/wizard_station) || istype(get_area(user), /area/hippie/thanos_farm))
-		to_chat(user, "<span class='warning'>You can't jump here!</span>")
-		revert_cast(user)
+	if(istype(get_area(cast_on), /area/centcom/wizard_station) || istype(get_area(cast_on), /area/centcom/thanos_farm))
+		to_chat(cast_on, span_warning("You can't jump here!"))
 		return
-	INVOKE_ASYNC(src, .proc/do_jaunt, user)
+	INVOKE_ASYNC(src, PROC_REF(do_jaunt), cast_on)
 
 /datum/action/cooldown/spell/infinity/gauntlet_jump/proc/do_jaunt(mob/living/target)
-	target.notransform = TRUE
+	ADD_TRAIT(target, TRAIT_NO_TRANSFORM, type)
 	var/turf/mobloc = get_turf(target)
 	var/obj/effect/dummy/phased_mob/spell_jaunt/infinity/holder = new(mobloc)
 
@@ -759,16 +769,13 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	if(isliving(target.pulling) && target.grab_state >= GRAB_AGGRESSIVE)
 		passenger = target.pulling
 		holder.passenger = passenger
+		ADD_TRAIT(passenger, TRAIT_NO_TRANSFORM, type)
 
-	target.visible_message("<span class='danger bold'>[target] LEAPS[passenger ? ", bringing [passenger] up with them" : ""]!</span>")
-	target.opacity = FALSE
-	target.mouse_opacity = FALSE
+	target.visible_message(span_bolddanger("[target] LEAPS[passenger ? ", bringing [passenger] up with them" : ""]!"))
 	if(iscarbon(target))
-		var/mob/living/carbon/C = target
-		C.super_leaping = TRUE
+		var/mob/living/carbon/carbon_target = target
+		ADD_TRAIT(carbon_target, TRAIT_BOMBIMMUNE, type)
 	if(passenger)
-		passenger.opacity = FALSE
-		passenger.mouse_opacity = FALSE
 		animate(passenger, pixel_y = 128, alpha = 0, time = 4.5, easing = LINEAR_EASING)
 	animate(target, pixel_y = 128, alpha = 0, time = 4.5, easing = LINEAR_EASING)
 	sleep(4.5)
@@ -776,14 +783,13 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	if(passenger)
 		passenger.forceMove(holder)
 		passenger.reset_perspective(holder)
-		passenger.notransform = FALSE
+		REMOVE_TRAIT(passenger, TRAIT_NO_TRANSFORM, type)
 	target.forceMove(holder)
 	target.reset_perspective(holder)
-	target.notransform = FALSE //mob is safely inside holder now, no need for protection.
+	REMOVE_TRAIT(target, TRAIT_NO_TRANSFORM, type)
 
 	sleep(7.5 SECONDS)
-
-	if(target.loc != holder && (passenger && passenger.loc != holder)) //mob warped out of the warp
+	if(target.loc != holder && (passenger && passenger.loc != holder))
 		qdel(holder)
 		return
 	mobloc = get_turf(target.loc)
@@ -796,10 +802,10 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		passenger.forceMove(mobloc)
 		passenger.Paralyze(50)
 		passenger.take_overall_damage(17.5)
+	target.visible_message(span_bolddanger("[target] slams down from above[passenger ? ", slamming [passenger] down to the floor" : ""]!"))
 	playsound(target, 'sound/effects/bang.ogg', 50, 1)
+	explosion(mobloc, 0, 0, 2, 3)
 	target.forceMove(mobloc)
-	target.visible_message("<span class='danger bold'>[target] slams down from above[passenger ? ", slamming [passenger] down to the floor" : ""]!</span>")
-
 	target.setDir(holder.dir)
 	animate(target, pixel_y = 0, alpha = 255, time = 4.5, easing = LINEAR_EASING)
 	if(passenger)
@@ -809,18 +815,15 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	target.opacity = initial(target.opacity)
 	target.mouse_opacity = initial(target.mouse_opacity)
 	if(iscarbon(target))
-		var/mob/living/carbon/C = target
-		C.super_leaping = FALSE
-	if(passenger)
-		passenger.opacity = initial(passenger.opacity)
-		passenger.mouse_opacity = initial(passenger.mouse_opacity)
+		var/mob/living/carbon/carbon_target = target
+		REMOVE_TRAIT(carbon_target, TRAIT_BOMBIMMUNE, type)
 	qdel(holder)
 	if(!QDELETED(target))
 		if(mobloc.density)
 			for(var/direction in GLOB.alldirs)
-				var/turf/T = get_step(mobloc, direction)
-				if(T)
-					if(target.Move(T))
+				var/turf/turf = get_step(mobloc, direction)
+				if(turf)
+					if(target.Move(turf))
 						break
 		target.mobility_flags |= MOBILITY_MOVE
 	if(!QDELETED(passenger))
@@ -834,84 +837,68 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	invisibility = 0
 	var/mob/living/passenger
 
-/obj/effect/dummy/phased_mob/spell_jaunt/infinity/relaymove(var/mob/user, direction)
-	if ((movedelay > world.time) || reappearing || !direction)
-		return
-	var/turf/newLoc = get_step(src,direction)
-	setDir(direction)
-
-	movedelay = world.time + movespeed
-
-	if(newLoc.flags_1 & NOJAUNT_1)
-		to_chat(user, "<span class='warning'>Some strange aura is blocking the way.</span>")
-		return
-
-	forceMove(newLoc)
-
-/obj/effect/dummy/phased_mob/spell_jaunt/infinity/relaymove(mob/user, direction)
-	if(user == passenger)
-		return
-	return ..()
-
 /datum/action/cooldown/spell/infinity/snap
 	name = "SNAP"
 	desc = "Snap the Badmin Gauntlet, erasing half the life in the universe."
 	button_icon_state = "gauntlet"
-	stat_allowed = TRUE
 
-/datum/action/cooldown/spell/infinity/snap/cast(list/targets, mob/living/user)
-	var/obj/item/badmin_gauntlet/IG = locate() in user
-	if(!IG || !istype(IG))
+/datum/action/cooldown/spell/infinity/snap/cast(atom/cast_on)
+	. = ..()
+	if(!isliving(cast_on))
+		return
+	var/mob/living/living_caster = cast_on
+	var/obj/item/badmin_gauntlet/gauntlet = locate() in living_caster
+	if(!gauntlet || !istype(gauntlet))
 		return
 	var/prompt = alert("Are you REALLY sure you'd like to erase half the life in the universe?", "SNAP?", "YES!", "No")
 	if(prompt == "YES!")
-		if(user.InCritical())
-			user.say("You should've gone for the head...")
-		user.visible_message("<span class='userdanger'>[user] raises their Badmin Gauntlet into the air, and... <i>snap.</i></span>")
-		for(var/mob/M in GLOB.mob_list)
-			SEND_SOUND(M, 'monkestation/sound/voice/snap.ogg')
-			if(isliving(M))
-				var/mob/living/L = M
-				L.flash_act()
+		if(living_caster.stat <= SOFT_CRIT)
+			living_caster.say("You should've gone for the head...")
+		living_caster.visible_message(span_userdanger("[living_caster] raises their Badmin Gauntlet into the air, and... <i>snap.</i>"))
+		for(var/mob/mob in GLOB.mob_list)
+			SEND_SOUND(mob, 'monkestation/sound/voice/snap.ogg')
+			if(isliving(mob))
+				var/mob/living/living = mob
+				living.flash_act()
 		GLOB.gauntlet_snapped = TRUE
-		IG.DoTheSnap()
-		user.RemoveSpell(src)
-		SSshuttle.emergencyNoRecall = TRUE
+		gauntlet.do_the_snap()
+		src.Remove(living_caster)
+		SSshuttle.emergency_no_recall = TRUE
 		SSshuttle.emergency.request(null, set_coefficient = 0.3)
 		var/list/shuttle_turfs = list()
-		for(var/turf/T in get_area_turfs(/area/shuttle/escape))
-			if(!T.density)
+		for(var/turf/turf in get_area_turfs(/area/shuttle/escape))
+			if(!turf.density)
 				var/clear = TRUE
-				for(var/obj/O in T)
+				for(var/obj/O in turf)
 					if(O.density)
 						clear = FALSE
 						break
 				if(clear)
-					shuttle_turfs+=T
+					shuttle_turfs += turf
 		for(var/i = 1 to 3)
-			var/turf/T = pick_n_take(shuttle_turfs)
-			new /obj/effect/thanos_portal(T)
+			var/turf/turf = pick_n_take(shuttle_turfs)
+			new /obj/effect/thanos_portal(turf)
 		if(LAZYLEN(GLOB.thanos_start))
-			user.forceMove(pick(GLOB.thanos_start))
+			living_caster.forceMove(pick(GLOB.thanos_start))
 
 /////////////////////////////////////////////
 /////////////////// OTHER ///////////////////
 /////////////////////////////////////////////
 
-/obj/screen/alert/status_effect/agent_pinpointer/gauntlet
+/atom/movable/screen/alert/status_effect/agent_pinpointer/gauntlet
 	name = "Badmin Stone Pinpointer"
 
-/obj/screen/alert/status_effect/agent_pinpointer/gauntlet/Click()
-	var/mob/living/L = usr
-	if(!L || !istype(L))
+/atom/movable/screen/alert/status_effect/agent_pinpointer/gauntlet/Click()
+	var/mob/living/living_user = usr
+	if(!living_user || !istype(living_user))
 		return
-	var/datum/status_effect/agent_pinpointer/gauntlet/G = attached_effect
-	if(G && istype(G))
-		var/prompt = input(L, "Choose the Badmin Stone to track.", "Track Stone") as null|anything in GLOB.badmin_stones
+	var/datum/status_effect/agent_pinpointer/gauntlet/gauntlet_effect = attached_effect
+	if(gauntlet_effect && istype(gauntlet_effect))
+		var/prompt = input(living_user, "Choose the Badmin Stone to track.", "Track Stone") as null|anything in GLOB.badmin_stones
 		if(prompt)
-			G.stone_target = prompt
-			G.scan_for_target()
-			G.point_to_target()
+			gauntlet_effect.stone_target = prompt
+			gauntlet_effect.scan_for_target()
+			gauntlet_effect.point_to_target()
 
 /datum/status_effect/agent_pinpointer/gauntlet
 	id = "badmin_stone_pinpointer"
@@ -934,8 +921,6 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 /datum/objective/snap/check_completion()
 	return GLOB.gauntlet_snapped
-
-
 
 /obj/item/badmin_gauntlet/for_badmins
 	badmin = TRUE

@@ -142,7 +142,7 @@
 	impact_type = /obj/effect/projectile/impact/voltray
 	hitscan = TRUE
 
-/obj/projectile/voltray/on_hit(atom/target, blocked)
+/obj/projectile/voltray/on_hit(atom/target, blocked, pierce_hit)
 	. = ..()
 	if(isliving(target))
 		var/mob/living/living_target = target
@@ -193,8 +193,9 @@
 
 /datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone/cast(atom/cast_on)
 	. = ..()
-	var/mob/living/carbon/target = cast_on
-	bolt(owner, target, 40, 10, owner)
+	if(iscarbon(cast_on))
+		var/mob/living/carbon/target = cast_on
+		bolt(owner, target, 40, 10, owner)
 
 /datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone/proc/bolt(mob/origin, mob/target, bolt_energy, bounces, mob/user = usr)
 	origin.Beam(target, icon_state = "nzcrentrs_power", time = 5)

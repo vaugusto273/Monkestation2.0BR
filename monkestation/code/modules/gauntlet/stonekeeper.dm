@@ -7,9 +7,9 @@
 	prevent_roundtype_conversion = FALSE
 
 /datum/antagonist/stonekeeper/greet()
-	to_chat(owner, "<span class='userdanger'>You are a stonekeeper!</span>")
-	to_chat(owner, "<span class='danger'>You have an badmin stone in your backpack. <b>Keep it safe at all costs, even if it means killing.</b></span>")
-	to_chat(owner, "<span class='danger'>You can examine your stone to see details on how to use it.</span>")
+	to_chat(owner, span_userdanger("You are a stonekeeper!"))
+	to_chat(owner, span_danger("You have an badmin stone in your backpack. <b>Keep it safe at all costs, even if it means killing.</b>"))
+	to_chat(owner, span_danger("You can examine your stone to see details on how to use it."))
 
 /datum/objective/stonekeeper
 	name = "keep badmin stone secure"

@@ -18,17 +18,11 @@
 /obj/item/implant/adrenalin/nanoguy
 	uses = 10
 
-/datum/outfit/nanosuit/nanoguy
-	name = "Nano Guy (Nanosuit)"
-	implants = list(/obj/item/implant/explosive/disintegrate, /obj/item/implant/adrenalin/nanoguy)
-	internals_slot = ITEM_SLOT_SUITSTORE
-
 /obj/item/clothing/suit/space/hardsuit/nano/nanoguy
 	name = "Nanotrasen Nanotech Suit"
 	desc = "A state-of-the-art nanotechnology-powered suit."
 	worn_icon = 'monkestation/icons/mob/nanoguy.dmi'
 	icon_state = "ngsuit"
-	outfit = /datum/outfit/nanosuit/nanoguy
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/nano/nanoguy
 
 /obj/item/clothing/head/helmet/space/hardsuit/nano/nanoguy
@@ -90,12 +84,9 @@
 		return TRUE
 	return FALSE
 
-/obj/item/organ/cyberimp/arm/nanoguy
+/obj/item/organ/internal/cyberimp/arm/nanoguy
 	name = "nanotech implant"
 	contents = newlist(/obj/item/twohanded/required/nanoshield, /obj/item/gun/energy/laser/mounted/nanoguy, /obj/item/nano_punch)
-
-/obj/item/organ/cyberimp/arm/nanoguy/l
-	zone = BODY_ZONE_L_ARM
 
 /obj/item/gun/energy/laser/mounted/nanoguy
 	name = "nanotech laser gun"

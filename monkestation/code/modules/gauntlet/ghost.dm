@@ -199,12 +199,12 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
 
-/datum/action/cooldown/spell/infinity/fortress/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/fortress/cast(atom/cast_on)
 	. = ..()
-	var/fortress = range(5, user) - range(4, user)
-	user.visible_message(span_bolddanger("[user] summons Heaven's Fortress!"))
+	var/fortress = range(5, cast_on) - range(4, cast_on)
+	cast_on.visible_message(span_bolddanger("[cast_on] summons Heaven's Fortress!"))
 	for(var/turf/fortress_turf in fortress)
-		new /obj/effect/forcefield/heaven(get_turf(fortress_turf), user)
+		new /obj/effect/forcefield/heaven(get_turf(fortress_turf), cast_on)
 
 /datum/action/cooldown/spell/infinity/soulscreech
 	name = "Ghost Stone: Soulscreech"
@@ -214,11 +214,11 @@
 	background_icon_state = "ghost"
 	sound = 'monkestation/sound/effects/horror_scream.ogg'
 
-/datum/action/cooldown/spell/infinity/soulscreech/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/soulscreech/cast(atom/cast_on)
 	. = ..()
-	user.visible_message(span_bolddanger("[user] lets out a horrifying screech!"))
-	for(var/mob/living/living_in_range in get_hearers_in_view(6, user))
-		if(living_in_range == user)
+	cast_on.visible_message(span_bolddanger("[cast_on] lets out a horrifying screech!"))
+	for(var/mob/living/living_in_range in get_hearers_in_view(6, cast_on))
+		if(living_in_range == cast_on)
 			continue
 		var/list/effects = list(1, 2, 3, 4, 6)
 		var/list/ni_effects = list(5)
@@ -232,7 +232,7 @@
 				living_in_range.apply_status_effect(/datum/status_effect/speech/slurring/cult)
 				living_in_range.apply_status_effect(/datum/status_effect/dizziness)
 			if(2)
-				living_in_range.throw_at(get_edge_target_turf(living_in_range, get_dir(user, living_in_range)), 7, 5)
+				living_in_range.throw_at(get_edge_target_turf(living_in_range, get_dir(cast_on, living_in_range)), 7, 5)
 			if(3)
 				var/turf/potential_turf = find_safe_turf(extended_safety_checks = TRUE)
 				if(potential_turf)
@@ -253,10 +253,12 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
 
-/datum/action/cooldown/spell/infinity/scrying_orb/cast(list/targets, mob/user)
+/datum/action/cooldown/spell/infinity/scrying_orb/cast(atom/cast_on)
 	. = ..()
-	user.visible_message("<span class='notice'>[user] stares into the Ghost Stone, and the Ghost Stone stares back.</span>")
-	user.ghostize(TRUE)
+	if(isliving(cast_on))
+		var/mob/living/living_caster = cast_on
+		living_caster.visible_message(span_notice("[living_caster] stares into the Ghost Stone, and the Ghost Stone stares back."))
+		living_caster.ghostize(TRUE)
 
 /datum/action/cooldown/spell/pointed/infinity/clown_rise_up
 	name = "Ghost Stone: Clown Rise"
@@ -280,7 +282,6 @@
 			to_chat(caller, span_danger("They aren't dead enough yet."))
 			return FALSE
 		human_target.revive(TRUE, TRUE)
-		human_target.grab_ghost()
 		clowns[caller] = human_target
 		human_target.mind.add_memory("<b>[caller] is your master. Follow their orders at all costs.</b>")
 		var/datum/action/cooldown/spell/jaunt/bloodcrawl/clown_bloodcrawl = new

@@ -37,27 +37,27 @@
 	if(ishuman(user) && ishuman(target) && proximity_flag)
 		martial_art.grab_act(user, target)
 
-/obj/item/badmin_stone/syndie/GiveAbilities(mob/living/L, gauntlet = FALSE)
+/obj/item/badmin_stone/syndie/give_abilities(mob/living/living_mob, gauntlet)
 	. = ..()
-	if(ishuman(L))
-		martial_art.teach(L)
-	ADD_TRAIT(L, TRAIT_THERMAL_VISION, SYNDIE_STONE_TRAIT)
+	if(ishuman(living_mob))
+		martial_art.teach(living_mob)
+	ADD_TRAIT(living_mob, TRAIT_THERMAL_VISION, SYNDIE_STONE_TRAIT)
 
-/obj/item/badmin_stone/syndie/RemoveAbilities(mob/living/L, gauntlet = FALSE)
+/obj/item/badmin_stone/syndie/remove_abilities(mob/living/living_mob)
 	. = ..()
-	if(ishuman(L))
-		martial_art.remove(L)
-	REMOVE_TRAIT(L, TRAIT_THERMAL_VISION, SYNDIE_STONE_TRAIT)
+	if(ishuman(living_mob))
+		martial_art.remove(living_mob)
+	REMOVE_TRAIT(living_mob, TRAIT_THERMAL_VISION, SYNDIE_STONE_TRAIT)
 
 /////////////////////////////////////////////
 /////////////////// SPELLS //////////////////
 /////////////////////////////////////////////
 
-/datum/action/cooldown/spell/infinity/shockwave/syndie_stone
+/datum/action/cooldown/spell/aoe/shockwave/syndie_stone
 	name = "Syndie Stone: Shockwave"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "syndie"
-	range = 8
+	aoe_radius = 8
 
 /datum/action/cooldown/spell/infinity/regenerate
 	name = "Syndie Stone: Regenerate"
@@ -65,26 +65,26 @@
 	button_icon_state = "regenerate"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "syndie"
-	stat_allowed = TRUE
 
-/datum/action/cooldown/spell/infinity/regenerate/cast(list/targets, mob/user)
-	if(isliving(user))
-		var/mob/living/L = user
-		if(L.on_fire)
-			to_chat(L, "<span class='notice'>The fire interferes with your regeneration!'</span>")
-			revert_cast(L)
+/datum/action/cooldown/spell/infinity/regenerate/cast(atom/cast_on)
+	. = ..()
+	if(isliving(cast_on))
+		var/mob/living/living_caster = cast_on
+		if(living_caster.on_fire)
+			to_chat(living_caster, span_notice("The fire interferes with your regeneration!"))
+			reset_spell_cooldown()
 			return
-		if(L.stat == DEAD)
-			to_chat(L, "<span class='notice'>You can't regenerate out of death.</span>")
-			revert_cast(L)
+		if(living_caster.stat == DEAD)
+			to_chat(living_caster, span_notice("You can't regenerate out of death."))
+			reset_spell_cooldown()
 			return
-		while(do_after(L, 10, FALSE, L))
-			L.visible_message("<span class='notice'>[L]'s wounds heal!</span>")
-			L.heal_overall_damage(4, 4, 4, null, TRUE)
-			L.adjustToxLoss(-4, forced = TRUE)
-			L.adjustOxyLoss(-4)
-			if(L.getBruteLoss() + L.getFireLoss() + L.getStaminaLoss() < 1)
-				to_chat(user, "<span class='notice'>You are fully healed.</span>")
+		while(do_after(living_caster, 10, living_caster))
+			living_caster.visible_message(span_notice("[living_caster]'s wounds heal!"))
+			living_caster.heal_overall_damage(4, 4, 4, null, TRUE)
+			living_caster.adjustToxLoss(-4, forced = TRUE)
+			living_caster.adjustOxyLoss(-4)
+			if(living_caster.getBruteLoss() + living_caster.getFireLoss() < 1)
+				to_chat(living_caster, span_notice("You are fully healed."))
 				return
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge
@@ -92,27 +92,53 @@
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone or anything in your way!"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "syndie"
-	charge_max = 200
 	sound = 'sound/magic/repulse.ogg'
+	var/mario_star = FALSE
+	var/super_mario_star = FALSE
 
-/datum/action/cooldown/spell/infinity/syndie_bullcharge/cast(list/targets, mob/user)
-	if(iscarbon(user))
-		var/mob/living/carbon/C = user
-		ADD_TRAIT(C, TRAIT_STUNIMMUNE, YEET_TRAIT)
-		ADD_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
-		C.mario_star = TRUE
-		C.super_mario_star = TRUE
-		C.move_force = INFINITY
-		user.visible_message("<span class='danger'>[user] charges!</span>")
-		addtimer(CALLBACK(src, .proc/done, C), 50)
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/Grant(mob/grant_to)
+	. = ..()
+	RegisterSignal(grant_to, COMSIG_ATOM_BUMPED, PROC_REF(mario_star))
+
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/Remove(mob/living/remove_from)
+	. = ..()
+	UnregisterSignal(remove_from, COMSIG_ATOM_BUMPED)
+
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/cast(atom/cast_on)
+	. = ..()
+	if(iscarbon(cast_on))
+		var/mob/living/carbon/carbon_caster = cast_on
+		ADD_TRAIT(carbon_caster, TRAIT_STUNIMMUNE, YEET_TRAIT)
+		ADD_TRAIT(carbon_caster, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
+		mario_star = TRUE
+		super_mario_star = TRUE
+		carbon_caster.move_force = INFINITY
+		carbon_caster.visible_message(span_danger("[carbon_caster] charges!"))
+		addtimer(CALLBACK(src, PROC_REF(done), carbon_caster), 50)
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge/proc/done(mob/living/carbon/user)
-	user.mario_star = FALSE
-	user.super_mario_star = FALSE
+	mario_star = FALSE
+	super_mario_star = FALSE
 	user.move_force = initial(user.move_force)
 	REMOVE_TRAIT(user, TRAIT_STUNIMMUNE, YEET_TRAIT)
 	REMOVE_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
-	user.visible_message("<span class='danger'>[user] relaxes...</span>")
+	user.visible_message(span_danger("[user] relaxes..."))
+
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/proc/mario_star(atom/movable/hit_object)
+	if(isliving(owner))
+		var/mob/living/carbon/carbon_owner = owner
+		if(mario_star || super_mario_star)
+			if(isliving(hit_object))
+				var/mob/living/living_hit_object = hit_object
+				carbon_owner.visible_message(span_danger("[carbon_owner] rams into [living_hit_object]!"))
+				if(super_mario_star)
+					living_hit_object.Paralyze(7.5 SECONDS)
+					living_hit_object.adjustBruteLoss(20)
+					carbon_owner.heal_overall_damage(12.5, 12.5, 12.5)
+				else
+					living_hit_object.Paralyze(5 SECONDS)
+					living_hit_object.adjustBruteLoss(12)
+					carbon_owner.heal_overall_damage(7.5, 7.5, 7.5)
 
 /datum/action/cooldown/spell/infinity/syndie_jump
 	name = "Syndie Stone: Super Jump"
@@ -120,25 +146,16 @@
 	button_icon_state = "jump"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "syndie"
-	charge_max = 300
 
-/datum/action/cooldown/spell/infinity/syndie_jump/revert_cast(mob/user)
-	. = ..()
-	user.opacity = FALSE
-	user.mouse_opacity = FALSE
-	user.pixel_y = 0
-	user.alpha = 255
-
-//I really hope this never runtimes
-/datum/action/cooldown/spell/infinity/syndie_jump/cast(list/targets, mob/user)
-	if(istype(get_area(user), /area/centcom/wizard_station) || istype(get_area(user), /area/thanos_farm))
-		to_chat(user, "<span class='warning'>You can't jump here!</span>")
-		revert_cast(user)
+/obj/effect/proc_holder/spell/infinity/syndie_jump/cast(atom/cast_on)
+	if(istype(get_area(cast_on), /area/centcom/wizard_station) || istype(get_area(cast_on), /area/centcom/thanos_farm))
+		to_chat(cast_on, span_warning("You can't jump here!"))
 		return
-	INVOKE_ASYNC(src, .proc/do_jaunt, user)
+	if(isliving(cast_on))
+		INVOKE_ASYNC(src, PROC_REF(do_jaunt), cast_on)
 
-/datum/action/cooldown/spell/infinity/syndie_jump/proc/do_jaunt(mob/living/target)
-	target.notransform = TRUE
+/obj/effect/proc_holder/spell/infinity/syndie_jump/proc/do_jaunt(mob/living/target)
+	ADD_TRAIT(target, TRAIT_NO_TRANSFORM, type)
 	var/turf/mobloc = get_turf(target)
 	var/obj/effect/dummy/phased_mob/spell_jaunt/infinity/holder = new(mobloc)
 
@@ -146,16 +163,13 @@
 	if(isliving(target.pulling) && target.grab_state >= GRAB_AGGRESSIVE)
 		passenger = target.pulling
 		holder.passenger = passenger
+		ADD_TRAIT(passenger, TRAIT_NO_TRANSFORM, type)
 
-	target.visible_message("<span class='danger bold'>[target] LEAPS[passenger ? ", bringing [passenger] up with them" : ""]!</span>")
-	target.opacity = FALSE
-	target.mouse_opacity = FALSE
+	target.visible_message(span_bolddanger("[target] LEAPS[passenger ? ", bringing [passenger] up with them" : ""]!"))
 	if(iscarbon(target))
-		var/mob/living/carbon/C = target
-		C.super_leaping = TRUE
+		var/mob/living/carbon/carbon_target = target
+		ADD_TRAIT(carbon_target, TRAIT_BOMBIMMUNE, type)
 	if(passenger)
-		passenger.opacity = FALSE
-		passenger.mouse_opacity = FALSE
 		animate(passenger, pixel_y = 128, alpha = 0, time = 4.5, easing = LINEAR_EASING)
 	animate(target, pixel_y = 128, alpha = 0, time = 4.5, easing = LINEAR_EASING)
 	sleep(4.5)
@@ -163,14 +177,13 @@
 	if(passenger)
 		passenger.forceMove(holder)
 		passenger.reset_perspective(holder)
-		passenger.notransform = FALSE
+		REMOVE_TRAIT(passenger, TRAIT_NO_TRANSFORM, type)
 	target.forceMove(holder)
 	target.reset_perspective(holder)
-	target.notransform = FALSE //mob is safely inside holder now, no need for protection.
+	REMOVE_TRAIT(target, TRAIT_NO_TRANSFORM, type)
 
 	sleep(7.5 SECONDS)
-
-	if(target.loc != holder && (passenger && passenger.loc != holder)) //mob warped out of the warp
+	if(target.loc != holder && (passenger && passenger.loc != holder))
 		qdel(holder)
 		return
 	mobloc = get_turf(target.loc)
@@ -182,7 +195,7 @@
 	if(passenger)
 		passenger.forceMove(mobloc)
 		passenger.Paralyze(75)
-	target.visible_message("<span class='danger bold'>[target] slams down from above[passenger ? ", slamming [passenger] down to the floor" : ""]!</span>")
+	target.visible_message(span_bolddanger("[target] slams down from above[passenger ? ", slamming [passenger] down to the floor" : ""]!"))
 	playsound(target, 'sound/effects/bang.ogg', 50, 1)
 	explosion(mobloc, 0, 0, 2, 3)
 	target.forceMove(mobloc)
@@ -195,53 +208,21 @@
 	target.opacity = initial(target.opacity)
 	target.mouse_opacity = initial(target.mouse_opacity)
 	if(iscarbon(target))
-		var/mob/living/carbon/C = target
-		C.super_leaping = FALSE
-	if(passenger)
-		passenger.opacity = initial(passenger.opacity)
-		passenger.mouse_opacity = initial(passenger.mouse_opacity)
-	for(var/mob/living/L in mobloc)
-		if(L.stat == DEAD || HAS_TRAIT(L, TRAIT_CRITICAL_CONDITION))
-			L.visible_message("<span class='danger bold'>[L] is pancaked by [target]'s slam!</span>")
-			new /obj/item/reagent_containers/food/snacks/pancakes(mobloc)
-			L.gib()
+		var/mob/living/carbon/carbon_target = target
+		REMOVE_TRAIT(carbon_target, TRAIT_BOMBIMMUNE, type)
+	for(var/mob/living/living in mobloc)
+		if(living.stat >= HARD_CRIT)
+			living.visible_message(span_bolddanger("[living] is pancaked by [target]'s slam!"))
+			new /obj/item/food/pancakes(mobloc)
+			living.gib()
 	qdel(holder)
 	if(!QDELETED(target))
 		if(mobloc.density)
 			for(var/direction in GLOB.alldirs)
-				var/turf/T = get_step(mobloc, direction)
-				if(T)
-					if(target.Move(T))
+				var/turf/turf = get_step(mobloc, direction)
+				if(turf)
+					if(target.Move(turf))
 						break
 		target.mobility_flags |= MOBILITY_MOVE
 	if(!QDELETED(passenger))
 		passenger.mobility_flags |= MOBILITY_MOVE
-
-/////////////////////////////////////////////
-/////////////// SNOWFLAKE CODE //////////////
-/////////////////////////////////////////////
-
-/mob/living/carbon
-	var/mario_star = FALSE
-	var/super_mario_star = FALSE
-	var/super_leaping = FALSE
-
-/mob/living/carbon/ex_act(severity, target, origin)
-	if(super_leaping)
-		return
-	return ..()
-
-/mob/living/carbon/Bump(atom/A)
-	. = ..()
-	if(mario_star || super_mario_star)
-		if(isliving(A))
-			var/mob/living/L = A
-			visible_message("<span class='danger'>[src] rams into [L]!</span>")
-			if(super_mario_star)
-				L.Paralyze(7.5 SECONDS)
-				L.adjustBruteLoss(20)
-				heal_overall_damage(12.5, 12.5, 12.5)
-			else
-				L.Paralyze(5 SECONDS)
-				L.adjustBruteLoss(12)
-				heal_overall_damage(7.5, 7.5, 7.5)
