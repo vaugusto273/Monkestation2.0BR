@@ -354,8 +354,8 @@
 	)
 	tastes = list("cake" = 3, "power" = 2, "sweetness" = 1)
 
-/obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity/slice(accuracy, obj/item/W, mob/user)
-	to_chat(user, span_notice("An invisible force stops you from cutting [src]!"))
+/obj/item/food/cake/birthday/infinity/make_processable()
+	return
 
 /obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()

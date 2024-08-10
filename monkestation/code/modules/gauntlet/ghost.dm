@@ -56,7 +56,8 @@
 	qdel(ghost_target)
 
 /obj/item/badmin_stone/ghost/disarm_act(atom/target, mob/living/user, proximity_flag)
-	fire_projectile(/obj/projectile/spirit_fist, target)
+	for(var/i in ghost_check())
+		fire_projectile(/obj/projectile/spirit_fist, target)
 	user.changeNext_move(CLICK_CD_RANGE)
 
 /obj/item/badmin_stone/ghost/give_abilities(mob/living/living_mob, gauntlet)
@@ -358,8 +359,3 @@
 	icon_state = "bounty"
 	damage = 3
 	damage_type = BRUTE
-
-/obj/projectile/spirit_fist/Initialize(mapload)
-	. = ..()
-	var/total_spirits = ghost_check()
-	damage = clamp(total_spirits * 2.5, 3, 25)

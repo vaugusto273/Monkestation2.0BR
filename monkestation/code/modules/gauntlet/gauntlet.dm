@@ -908,7 +908,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	minimum_range = 1
 	range_fuzz_factor = 0
 	tick_interval = 10
-	alert_type = /obj/screen/alert/status_effect/agent_pinpointer/gauntlet
+	alert_type = /atom/movable/screen/alert/status_effect/agent_pinpointer/gauntlet
 	var/stone_target = SYNDIE_STONE
 
 /datum/status_effect/agent_pinpointer/gauntlet/scan_for_target()
