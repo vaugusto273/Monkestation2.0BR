@@ -3,7 +3,8 @@ GLOBAL_LIST_EMPTY(thanos_portal)
 
 /area/centcom/thanos_farm
 	name = "The Garden"
-	icon_state = "yellow"
+	icon = 'monkestation/icons/area/areas_centcom.dmi'
+	icon_state = "thanos_garden"
 	requires_power = FALSE
 	area_flags = NOTELEPORT
 	has_gravity = STANDARD_GRAVITY

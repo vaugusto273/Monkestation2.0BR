@@ -52,7 +52,7 @@
 	mob.ckey = ghost_target.ckey
 	to_chat(mob, span_userdanger("[user] is your master. Protect them at all costs."))
 	var/atom/movable/screen/alert/mind_control/mind_alert = mob.throw_alert(ALERT_MIND_CONTROL, /atom/movable/screen/alert/mind_control)
-	mind_alert.command = "<b>[user] is your master. Protect them at all costs</b>"
+	mind_alert.command = "[user] is your master. Protect them at all costs"
 	qdel(ghost_target)
 
 /obj/item/badmin_stone/ghost/disarm_act(atom/target, mob/living/user, proximity_flag)
@@ -282,7 +282,7 @@
 			return FALSE
 		human_target.revive(TRUE, TRUE)
 		clowns[caller] = human_target
-		human_target.mind.add_memory("<b>[caller] is your master. Follow their orders at all costs.</b>")
+		human_target.mind.add_memory("[caller] is your master. Follow their orders at all costs.")
 		var/datum/action/cooldown/spell/jaunt/bloodcrawl/clown_bloodcrawl = new
 		var/datum/action/cooldown/spell/jaunt/ethereal_jaunt/infinity_clown/clown_jaunt = new
 		var/datum/action/cooldown/spell/blink/infinity_clown/clown_blink = new

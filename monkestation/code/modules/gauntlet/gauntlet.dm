@@ -650,6 +650,9 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	desc = "Stomp down and send out a slow-moving shockwave that is capable of knocking people down."
 	background_icon_state = "bg_default"
 	sound = 'sound/effects/bang.ogg'
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	invocation_type = INVOCATION_NONE
 	aoe_radius = 5
 
 /datum/action/cooldown/spell/aoe/shockwave/get_things_to_cast_on(atom/center)

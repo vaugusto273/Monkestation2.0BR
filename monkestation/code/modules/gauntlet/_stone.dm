@@ -29,7 +29,7 @@
 	AddComponent(/datum/component/stationloving, TRUE)
 	START_PROCESSING(SSobj, src)
 	SSpoints_of_interest.make_point_of_interest(src)
-	aura_overlay = mutable_appearance('monkestation/icons/obj/infinity.dmi', "aura", ABOVE_MOB_LAYER)
+	aura_overlay = mutable_appearance('monkestation/icons/obj/infinity.dmi', "aura", -MUTATIONS_LAYER)
 	aura_overlay.color = color
 
 /obj/item/badmin_stone/Destroy()
@@ -51,6 +51,9 @@
 		spell.Grant(living_mob)
 	if(gauntlet)
 		for(var/datum/action/cooldown/spell/spell in gauntlet_spells)
+			spell.Grant(living_mob)
+	else
+		for(var/datum/action/cooldown/spell/spell in stone_spells)
 			spell.Grant(living_mob)
 
 /obj/item/badmin_stone/proc/remove_abilities(mob/living/living_mob)

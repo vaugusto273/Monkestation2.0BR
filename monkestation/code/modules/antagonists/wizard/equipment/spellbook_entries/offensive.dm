@@ -21,9 +21,9 @@
 
 /datum/spellbook_entry/item/badmin_gauntlet
 	name = "Badmin Gauntlet"
-	desc = "A gauntlet capable of holding the Badmin Stones. <b>Wearing this will trigger a war declaration!</b>. \
+	desc = "A gauntlet capable of holding the Badmin Stones. Wearing this will trigger a war declaration!. \
 			Before you wear it, you can refund it by hitting it against the spellbook. \
-			<b>You cannot buy this if you have bought anything else!</b> \
+			You cannot buy this if you have bought anything else! \
 			Requires 27+ crew."
 	item_path = /obj/item/badmin_gauntlet
 	category = "Rituals"
@@ -34,4 +34,4 @@
 	book.uses = 0
 
 /datum/spellbook_entry/item/badmin_gauntlet/can_buy(mob/living/carbon/human/user, obj/item/spellbook/book)
-	return ..() && !book.gauntlet_flag && (GLOB.Debug2 || GLOB.joined_player_list.len >= 27)
+	return ..() && !book.gauntlet_flag && (GLOB.Debug2 || GLOB.joined_player_list.len >= 0)

@@ -43,7 +43,7 @@
 		to_chat(user, span_danger("You need to wait [DisplayTimeText(next_traps - world.time)] to summon more traps!"))
 		return
 	var/list/trap_area = view(4, user)
-	for(var/i=0,i<5,i++)
+	for(var/i = 0, i < 5, i++)
 		var/turf/T = get_turf(pick_n_take(trap_area))
 		var/trap_type = pick(list(
 			/obj/structure/trap/stun,
@@ -73,7 +73,7 @@
 
 /datum/action/cooldown/spell/infinity/party_popper
 	name = "Clown Stone: Party Popper"
-	desc = "Gib yourself and heal <b>everyone</b> around you, even the dead."
+	desc = "Gib yourself and heal everyone around you, even the dead."
 	button_icon_state = "partypop"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
@@ -322,7 +322,7 @@
 
 /datum/action/cooldown/spell/infinity/cake
 	name = "Clown Stone: Let There Be Cake!"
-	desc = "Summon a powerful cake at your feet, capable of healing those who eat it, and injuring those who are hit by it. <b>Only 2 cakes can exist at the same time.</b>"
+	desc = "Summon a powerful cake at your feet, capable of healing those who eat it, and injuring those who are hit by it. Only 2 cakes can exist at the same time."
 	button_icon_state = "cake"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
@@ -330,7 +330,7 @@
 
 /datum/action/cooldown/spell/infinity/cake/proc/count_cakes()
 	var/amount = 0
-	for(var/obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity/cake in cakes)
+	for(var/obj/item/food/cake/birthday/infinity/cake in cakes)
 		if(!QDELETED(cake) && cake && istype(cake))
 			amount++
 	return amount
@@ -341,7 +341,7 @@
 		to_chat(cast_on, span_danger("Only 2 cakes can exist at the same time!"))
 		return
 	cast_on.visible_message(span_notice("A cake appears at [cast_on]'s feet!"))
-	cakes += new /obj/item/reagent_containers/food/snacks/store/cake/birthday/infinity(get_turf(cast_on))
+	cakes += new /obj/item/food/cake/birthday/infinity(get_turf(cast_on))
 
 /obj/item/food/cake/birthday/infinity
 	name = "infinity cake"
