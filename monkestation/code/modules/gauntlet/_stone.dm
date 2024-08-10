@@ -2,7 +2,7 @@
 
 /obj/item/badmin_stone
 	name = "Generic Stone"
-	icon = 'icons/obj/infinity.dmi'
+	icon = 'monkestation/icons/obj/infinity.dmi'
 	icon_state = "stone"
 	w_class = WEIGHT_CLASS_SMALL
 	var/mob/living/current_holder
@@ -29,7 +29,7 @@
 	AddComponent(/datum/component/stationloving, TRUE)
 	START_PROCESSING(SSobj, src)
 	SSpoints_of_interest.make_point_of_interest(src)
-	aura_overlay = mutable_appearance('icons/obj/infinity.dmi', "aura", ABOVE_MOB_LAYER)
+	aura_overlay = mutable_appearance('monkestation/icons/obj/infinity.dmi', "aura", ABOVE_MOB_LAYER)
 	aura_overlay.color = color
 
 /obj/item/badmin_stone/Destroy()
@@ -155,7 +155,7 @@
 
 /datum/action/cooldown/spell/pointed/infinity
 	button_icon = 'monkestation/icons/obj/infinity.dmi'
-	ranged_mousepointer = 'icons/effects/cult_target.dmi'
+	ranged_mousepointer = 'icons/effects/mouse_pointers/cult_target.dmi'
 	spell_requirements = NONE
 	antimagic_flags = NONE
 	invocation_type = INVOCATION_NONE

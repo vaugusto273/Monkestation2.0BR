@@ -12,7 +12,7 @@
 	)
 	spell_types = list(
 		/datum/action/cooldown/spell/infinity/bluespace_stone_shield,
-		/datum/action/cooldown/spell/targeted/ethereal_jaunt/bluespace_stone
+		/datum/action/cooldown/spell/pointed/ethereal_jaunt/bluespace_stone
 	)
 	var/next_help = 0
 

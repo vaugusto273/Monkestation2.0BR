@@ -14,7 +14,7 @@
 		/datum/action/cooldown/spell/infinity/shuffle
 	)
 	gauntlet_spell_types = list(
-		/datum/action/cooldown/spell/aoe_turf/conjure/timestop/lag_stone
+		/datum/action/cooldown/spell/lag_stone_timestop
 	)
 	stone_type = LAG_STONE
 	var/turf/teleport_point

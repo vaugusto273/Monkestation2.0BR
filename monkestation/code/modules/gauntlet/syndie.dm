@@ -13,7 +13,7 @@
 		/datum/action/cooldown/spell/infinity/syndie_jump
 	)
 	gauntlet_spell_types = list(
-		/datum/action/cooldown/spell/infinity/shockwave/syndie_stone
+		/datum/action/cooldown/spell/aoe/shockwave/syndie_stone
 	)
 	var/datum/martial_art/cqc/martial_art
 

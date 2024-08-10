@@ -453,8 +453,8 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 					for(var/turf/turf_lab in get_area_turfs(/area/station/science/lab))
 						if(!turf_lab.density)
 							var/clear = TRUE
-							for(var/obj/O in turf_lab)
-								if(O.density)
+							for(var/obj/lab_obj in turf_lab)
+								if(lab_obj.density)
 									clear = FALSE
 									break
 							if(clear)
@@ -856,7 +856,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 			living_caster.say("You should've gone for the head...")
 		living_caster.visible_message(span_userdanger("[living_caster] raises their Badmin Gauntlet into the air, and... <i>snap.</i>"))
 		for(var/mob/mob in GLOB.mob_list)
-			SEND_SOUND(mob, 'monkestation/sound/voice/snap.ogg')
+			SEND_SOUND(mob, 'monkestation/sound/effects/snap/snap1.ogg')
 			if(isliving(mob))
 				var/mob/living/living = mob
 				living.flash_act()

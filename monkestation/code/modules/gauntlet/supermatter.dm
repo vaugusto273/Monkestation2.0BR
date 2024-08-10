@@ -15,7 +15,7 @@
 		/datum/action/cooldown/spell/spacetime_dist/supermatter_stone
 	)
 	gauntlet_spell_types = list(
-		/datum/action/cooldown/spell/pointed/tesla/supermatter_stone,
+		/datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone,
 		/datum/action/cooldown/spell/pointed/infinity/delamination
 	)
 	var/next_golem = 0
@@ -184,8 +184,8 @@
 /datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone
 	name = "Supermatter Blast"
 	desc = "Charge up an arc of supermatter-amped electricity"
-	button_icon = 'icons/obj/supermatter.dmi'
-	button_icon_state = "darkmatter_glow"
+	button_icon = 'icons/obj/engine/supermatter.dmi'
+	button_icon_state = "destabilizing_crystal"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "sm"
 	cast_range = 10
@@ -202,10 +202,10 @@
 	var/mob/living/carbon/current_target = target
 	if(bounces < 1)
 		current_target.electrocute_act(bolt_energy, SHOCK_TESLA)
-		playsound(get_turf(current_target), 'sound/effects/empzap.ogg', 50, 1, -1)
+		playsound(get_turf(current_target), 'sound/weapons/taser.ogg', 50, 1, -1)
 	else
 		current_target.electrocute_act(bolt_energy, SHOCK_TESLA)
-		playsound(get_turf(current_target), 'sound/effects/empzap.ogg', 50, 1, -1)
+		playsound(get_turf(current_target), 'sound/weapons/taser.ogg', 50, 1, -1)
 		var/list/possible_targets = new
 		for(var/mob/living/viewable_living in view(bounce_range, target))
 			if(user == viewable_living || target == viewable_living && can_see(current_target, viewable_living, bounce_range))

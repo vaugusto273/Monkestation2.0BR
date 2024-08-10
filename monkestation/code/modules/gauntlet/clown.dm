@@ -112,9 +112,9 @@
 			continue
 		to_chat(carbon, span_clown("HONK."))
 		if(prob(50))
-			new /datum/hallucination/delusion(carbon, TRUE, "custom", 600, 0, "clown", 'icons/mob/clown_mobs.dmi')
+			new /datum/hallucination/delusion(carbon, TRUE, "custom", 600, 0, "clown", 'icons/mob/simple/clown_mobs.dmi')
 		else
-			new /datum/hallucination/delusion(carbon, TRUE, "custom", 600, 0, "gondola", 'icons/mob/gondolas.dmi')
+			new /datum/hallucination/delusion(carbon, TRUE, "custom", 600, 0, "gondola", 'icons/mob/simple/gondolas.dmi')
 
 /datum/action/cooldown/spell/infinity/honksong
 	name = "Clown Stone: Honksong"
@@ -349,8 +349,8 @@
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 20,
 		/datum/reagent/consumable/sprinkles = 10,
-		/datum/reagent/consumable/vitamin = 5,
-		/datum/reagent/consumable/omnizine = 40
+		/datum/reagent/consumable/nutriment/vitamin = 5,
+		/datum/reagent/medicine/omnizine = 40
 	)
 	tastes = list("cake" = 3, "power" = 2, "sweetness" = 1)
 

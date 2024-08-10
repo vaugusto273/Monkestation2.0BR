@@ -28,7 +28,7 @@
 		to_chat(user, span_notice("You can only transmutate ghosts!"))
 		return
 	var/mob/dead/observer/ghost_target = target
-	var/mob = pick(
+	var/picked_mob = pick(
 		/mob/living/basic/carp,
 		/mob/living/basic/bear,
 		/mob/living/basic/mushroom,
@@ -47,7 +47,7 @@
 		/mob/living/basic/butterfly,
 		/mob/living/simple_animal/pet/cat/cak,
 		/mob/living/basic/chick)
-	var/mob/living/mob = new mob(get_turf(O))
+	var/mob/living/mob = new picked_mob(get_turf(O))
 	ghost_target.visible_message(span_danger("The ghost of [ghost_target] turns into [mob]!"))
 	mob.ckey = ghost_target.ckey
 	to_chat(mob, span_userdanger("[user] is your master. Protect them at all costs."))
@@ -212,7 +212,7 @@
 	button_icon_state = "reeeeee"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
-	sound = 'monkestation/sound/effects/horror_scream.ogg'
+	sound = 'sound/hallucinations/far_noise.ogg'
 
 /datum/action/cooldown/spell/infinity/soulscreech/cast(atom/cast_on)
 	. = ..()
@@ -336,7 +336,7 @@
 /obj/item/spellpacket/sandman
 	name = "\improper Sandman's dust"
 	desc = "Some weird sand wrapped in cloth."
-	icon = 'icons/obj/toy.dmi'
+	icon = 'icons/obj/toys/toy.dmi'
 	icon_state = "snappop"
 	w_class = WEIGHT_CLASS_TINY
 
