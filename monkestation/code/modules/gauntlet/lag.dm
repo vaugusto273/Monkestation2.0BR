@@ -120,7 +120,7 @@
 	var/timestop_range = 2
 	var/timestop_duration = 10 SECONDS
 
-/datum/action/cooldown/spell/timestop/lag_stone/cast(atom/cast_on)
+/datum/action/cooldown/spell/lag_stone_timestop/cast(atom/cast_on)
 	. = ..()
 	new /obj/effect/timestop/lag_stone(get_turf(cast_on), timestop_range, timestop_duration)
 

@@ -136,6 +136,7 @@
 /obj/projectile/voltray
 	name = "volt ray"
 	icon = 'icons/effects/beam.dmi'
+	icon_state = "volt_ray"
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	tracer_type = /obj/effect/projectile/tracer/voltray
 	muzzle_type = /obj/effect/projectile/muzzle/voltray
@@ -154,11 +155,11 @@
 
 /obj/effect/projectile/muzzle/voltray
 	name = "volt ray"
-	icon_state = "solar"
+	icon_state = "muzzle_solar"
 
 /obj/effect/projectile/impact/voltray
 	name = "volt ray"
-	icon_state = "solar"
+	icon_state = "impact_solar"
 
 /obj/projectile/forcefire
 	name = "forcefire"

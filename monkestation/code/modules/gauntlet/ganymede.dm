@@ -10,7 +10,7 @@
 		TRAIT_SHOCKIMMUNE, TRAIT_RADIMMUNE)
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
 	changesource_flags = MIRROR_BADMIN
-	mutanteyes = /obj/item/organ/eyes/night_vision/alien/ganymede
+	mutanteyes = /obj/item/organ/internal/eyes/night_vision/ganymede
 	sexes = FALSE
 
 /obj/item/clothing/head/ganymedian
