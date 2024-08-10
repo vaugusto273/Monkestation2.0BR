@@ -81,7 +81,7 @@
 
 /obj/item/shield/bluespace_stone
 	name = "bluespace energy shield"
-	worn_icon = null
+	worn_icon = ""
 	icon = 'monkestation/icons/obj/infinity.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
