@@ -6,9 +6,9 @@
 	color = "#266ef6"
 	stone_type = BLUESPACE_STONE
 	ability_text = list(
-		"HELP INTENT: teleport target to safe location. Only works every 75 seconds.",
-		"GRAB INTENT: teleport to specified location",
-		"DISARM INTENT: steal item someone is holding"
+		"HELP INTENT: Teleport target to safe location. Only works every 75 seconds.",
+		"DISARM INTENT: Steal item someone is holding.",
+		"HARM INTENT: Teleport to specified location."
 	)
 	spell_types = list(
 		/datum/action/cooldown/spell/infinity/bluespace_stone_shield,
@@ -16,7 +16,7 @@
 	)
 	var/next_help = 0
 
-/obj/item/badmin_stone/bluespace/disarm_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/bluespace/disarm_act(atom/target, mob/user, proximity_flag)
 	if(isliving(target))
 		var/mob/living/living_target = target
 		var/obj/target_object = living_target.get_active_held_item()
@@ -26,7 +26,7 @@
 			user.equip_to_slot(target_object, ITEM_SLOT_BACKPACK)
 			user.changeNext_move(CLICK_CD_CLICK_ABILITY)
 
-/obj/item/badmin_stone/bluespace/help_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/bluespace/help_act(atom/target, mob/user, proximity_flag)
 	if(next_help > world.time)
 		to_chat(span_danger("You need to wait [DisplayTimeText(next_help - world.time)] to do that again!"))
 		return
@@ -37,11 +37,13 @@
 			do_teleport(target, potential_T, channel = TELEPORT_CHANNEL_BLUESPACE)
 			next_help = world.time + 75 SECONDS
 
-/obj/item/badmin_stone/bluespace/grab_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/bluespace/harm_act(atom/target, mob/user, proximity_flag)
 	var/turf/to_teleport = get_turf(target)
 	if(do_after(user, 3, target = user))
 		var/turf/start = get_turf(user)
-		user.stamina.adjust(-15)
+		if(isliving(user))
+			var/mob/living/living_user = user
+			living_user.stamina.adjust(-15)
 		user.visible_message(span_danger("[user] warps away!"), span_notice("We warp ourselves to our desired location."))
 		user.forceMove(to_teleport)
 		start.Beam(to_teleport, "bsa_beam", time=25)

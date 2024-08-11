@@ -6,8 +6,8 @@
 	color = "#20B2AA"
 	ability_text = list(
 		"HELP INTENT: Set a point on the station, or if a point is already set, teleport back to it. Stuns you for a while, but heals you alot.",
-		"GRAB INTENT: Swap places with the victim, and then fire a projectile!",
-		"DISARM INTENT: Shoot a disorienting projectile"
+		"DISARM INTENT: Shoot a disorienting projectile.",
+		"HARM INTENT: Swap places with the victim, and then fire a projectile."
 	)
 	spell_types = list(
 		/datum/action/cooldown/spell/infinity/doppelgangers,
@@ -19,7 +19,7 @@
 	stone_type = LAG_STONE
 	var/turf/teleport_point
 
-/obj/item/badmin_stone/lag/help_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/lag/help_act(atom/target, mob/user, proximity_flag)
 	var/turf/target_turf = get_turf(target)
 	if(target_turf == teleport_point)
 		to_chat(user, span_notice("You unset [target_turf] as your teleportation point."))
@@ -33,10 +33,12 @@
 	else
 		user.visible_message(span_danger("[user] melts into the air and warps away!"), span_notice("We warp to our location, but doing so saps our strength..."))
 		do_teleport(user, teleport_point, channel = TELEPORT_CHANNEL_BLUESPACE)
-		user.Paralyze(450)
-		user.heal_overall_damage(45, 45, 45, null, TRUE)
+		if(isliving(user))
+			var/mob/living/living_user = user
+			living_user.Paralyze(450)
+			living_user.heal_overall_damage(45, 45, 45, null, TRUE)
 
-/obj/item/badmin_stone/lag/grab_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/lag/harm_act(atom/target, mob/user, proximity_flag)
 	if(!isliving(target))
 		to_chat(user, span_notice("You can only switch places with living targets!"))
 		return
@@ -49,7 +51,7 @@
 	fire_projectile(/obj/projectile/magic/arcane_barrage, user_turf)
 	user.changeNext_move(CLICK_CD_RANGE)
 
-/obj/item/badmin_stone/lag/disarm_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/lag/disarm_act(atom/target, mob/user, proximity_flag)
 	fire_projectile(/obj/projectile/magic/lag_stone, target)
 	user.changeNext_move(CLICK_CD_RANGE)
 

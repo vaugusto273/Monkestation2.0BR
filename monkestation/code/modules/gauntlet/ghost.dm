@@ -23,7 +23,7 @@
 	var/next_pull = 0
 	var/list/mob/dead/observer/spirits = list()
 
-/obj/item/badmin_stone/ghost/help_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/ghost/help_act(atom/target, mob/user, proximity_flag)
 	if(!isobserver(target))
 		to_chat(user, span_notice("You can only transmutate ghosts!"))
 		return
@@ -55,7 +55,7 @@
 	mind_alert.command = "[user] is your master. Protect them at all costs"
 	qdel(ghost_target)
 
-/obj/item/badmin_stone/ghost/disarm_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/ghost/disarm_act(atom/target, mob/user, proximity_flag)
 	for(var/i in ghost_check())
 		fire_projectile(/obj/projectile/spirit_fist, target)
 	user.changeNext_move(CLICK_CD_RANGE)

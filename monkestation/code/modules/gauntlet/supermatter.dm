@@ -6,9 +6,9 @@
 	stone_type = SUPERMATTER_STONE
 	color = "#ECF332"
 	ability_text = list(
-		"HELP INTENT: Fire a short-range, burning-hot crystal spray",
-		"GRAB INTENT: Fire a long-range, rapid, but low damage volt ray",
+		"HELP INTENT: Fire a short-range, burning-hot crystal spray.",
 		"DISARM INTENT: Fire a short-range fire blast that knocks people back.",
+		"HARM INTENT: Fire a long-range, rapid, but low damage volt ray.",
 		"Use on a material to use 25 sheets of it for a golem. 2 minute cooldown!"
 	)
 	spell_types = list (
@@ -20,23 +20,23 @@
 	)
 	var/next_golem = 0
 
-/obj/item/badmin_stone/supermatter/disarm_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/supermatter/disarm_act(atom/target, mob/user, proximity_flag)
 	if(!HandleGolem(user, target))
 		fire_projectile(/obj/projectile/forcefire, target)
 		user.changeNext_move(6)
 
-/obj/item/badmin_stone/supermatter/grab_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/supermatter/harm_act(atom/target, mob/user, proximity_flag)
 	if(!proximity_flag || !HandleGolem(user, target))
 		fire_projectile(/obj/projectile/voltray, target)
 		user.changeNext_move(CLICK_CD_RAPID)
 
-/obj/item/badmin_stone/supermatter/help_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/supermatter/help_act(atom/target, mob/user, proximity_flag)
 	if(!proximity_flag || !HandleGolem(user, target))
 		fire_projectile(/obj/projectile/supermatter_stone, target)
 		user.changeNext_move(CLICK_CD_RANGE)
 
 
-/obj/item/badmin_stone/supermatter/proc/HandleGolem(mob/living/user, atom/target)
+/obj/item/badmin_stone/supermatter/proc/HandleGolem(mob/user, atom/target)
 	var/static/list/golem_shell_species_types = list(
 		/obj/item/stack/sheet/iron = /datum/species/golem,
 		/obj/item/stack/sheet/glass = /datum/species/golem/glass,

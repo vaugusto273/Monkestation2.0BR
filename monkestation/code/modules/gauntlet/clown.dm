@@ -6,9 +6,9 @@
 	color = "#FFC0CB"
 	stone_type = CLOWN_STONE
 	ability_text = list(
-		"HELP INTENT: fire banana cream pies",
-		"GRAB INTENT: Spawn the Traps!",
-		"DISARM INTENT: Throw an angry monkey that is aligned with the clown!"
+		"HELP INTENT: fire banana cream pies.",
+		"DISARM INTENT: Throw an angry monkey that is aligned with the clown.",
+		"HARM INTENT: Spawn the Traps."
 	)
 	spell_types = list(
 		/datum/action/cooldown/spell/infinity/pranksters_delusion,
@@ -31,14 +31,14 @@
 		monkey_stockpile = min(3, monkey_stockpile + 1)
 		next_monkey = world.time + 25 SECONDS
 
-/obj/item/badmin_stone/clown/help_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/clown/help_act(atom/target, mob/user, proximity_flag)
 	var/obj/item/food/pie/cream/pie = new(get_turf(user))
 	pie.throw_at(target, 30, 3, user, TRUE)
 	playsound(src, 'sound/magic/staff_animation.ogg', 50, 1)
 	new /obj/effect/temp_visual/dir_setting/firing_effect/magic(get_turf(src))
 	user.changeNext_move(CLICK_CD_RANGE)
 
-/obj/item/badmin_stone/clown/grab_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/clown/harm_act(atom/target, mob/user, proximity_flag)
 	if(next_traps > world.time)
 		to_chat(user, span_danger("You need to wait [DisplayTimeText(next_traps - world.time)] to summon more traps!"))
 		return
@@ -57,7 +57,7 @@
 		QDEL_IN(TR, 900) // they last 90 seconds
 	next_traps = world.time + 15 SECONDS
 
-/obj/item/badmin_stone/clown/disarm_act(atom/target, mob/living/user, proximity_flag)
+/obj/item/badmin_stone/clown/disarm_act(atom/target, mob/user, proximity_flag)
 	if(monkey_stockpile < 1)
 		to_chat(user, span_warning("\The [src] is out of monkeys!"))
 		return

@@ -78,9 +78,9 @@
 /obj/item/tank/jetpack/ganypack
 	name = "Ganypack"
 	desc = "An alien-made jetpack, capable of infinite spaceflight."
-	worn_icon = ""
 	icon = 'monkestation/icons/obj/infinity.dmi'
 	icon_state = "ganypack"
+	worn_icon_state = "flightpack"
 	gas_type = null
 	actions_types = list(/datum/action/item_action/toggle_jetpack, /datum/action/item_action/jetpack_stabilization)
 
@@ -93,8 +93,6 @@
 	slowdown = 1
 
 /obj/item/tank/jetpack/ganypack/allow_thrust(num, mob/living/user)
-	if(!on)
-		return
 	return TRUE
 
 /obj/item/tank/jetpack/ganypack/ex_act(severity, target)
@@ -109,7 +107,7 @@
 /obj/item/clothing/under/ganymedian
 	name = "ganymedian jumpsuit"
 	desc = "It's uh, not actually a jumpsuit. This is, in fact, a literal placeholder!"
-	icon_state = ""
+	icon_state = "jumpsuit"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
 	has_sensor = NO_SENSORS
@@ -124,7 +122,7 @@
 /obj/item/clothing/shoes/ganymedian
 	name = "ganymedian shoes"
 	desc = "It's uh, not actually shoes. This is, in fact, a literal placeholder!"
-	icon_state = ""
+	icon_state = "sneakers"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
 

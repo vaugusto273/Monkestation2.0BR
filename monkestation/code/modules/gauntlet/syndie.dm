@@ -6,7 +6,11 @@
 	color = "#ff0130"
 	force = 30
 	stone_type = SYNDIE_STONE
-	ability_text = list("ALL INTENTS: PLACEHOLDER MARTIAL ART")
+	ability_text = list(
+		"HELP INTENT: Emag any piece of machinery.",
+		"DISARM INTENT: Let out an empulse with you as the epicenter. Only works every 75 seconds.",
+		"HARM INTENT: Fire a laser. Only works every 2.5 seconds."
+	)
 	spell_types = list(
 		/datum/action/cooldown/spell/infinity/regenerate,
 		/datum/action/cooldown/spell/infinity/syndie_bullcharge,
@@ -15,38 +19,36 @@
 	gauntlet_spell_types = list(
 		/datum/action/cooldown/spell/aoe/shockwave/syndie_stone
 	)
-	var/datum/martial_art/cqc/martial_art
+	var/next_emp = 0
+	var/next_laser = 0
 
-/obj/item/badmin_stone/syndie/Initialize()
-	. = ..()
-	martial_art = new
+/obj/item/badmin_stone/syndie/help_act(atom/target, mob/user, proximity_flag)
+	if(ismachinery(target))
+		var/obj/machinery/target_machinery = target
+		target_machinery.emag_act(user)
 
-/obj/item/badmin_stone/syndie/help_act(atom/target, mob/living/user, proximity_flag)
-	if(ishuman(user) && ishuman(target) && proximity_flag)
-		martial_art.help_act(user, target)
+/obj/item/badmin_stone/syndie/disarm_act(atom/target, mob/user, proximity_flag)
+	if(next_emp > world.time)
+		to_chat(span_danger("You need to wait [DisplayTimeText(next_emp - world.time)] to do that again!"))
+		return
+	empulse(user, 5, 3)
+	next_emp = world.time + 60 SECONDS
 
-/obj/item/badmin_stone/syndie/disarm_act(atom/target, mob/living/user, proximity_flag)
-	if(ishuman(user) && ishuman(target) && proximity_flag)
-		martial_art.disarm_act(user, target)
-
-/obj/item/badmin_stone/syndie/harm_act(atom/target, mob/living/user, proximity_flag)
-	if(ishuman(user) && ishuman(target) && proximity_flag)
-		martial_art.harm_act(user, target)
-
-/obj/item/badmin_stone/syndie/grab_act(atom/target, mob/living/user, proximity_flag)
-	if(ishuman(user) && ishuman(target) && proximity_flag)
-		martial_art.grab_act(user, target)
+/obj/item/badmin_stone/syndie/harm_act(atom/target, mob/user, proximity_flag)
+	if(!proximity_flag)
+		if(next_laser > world.time)
+			to_chat(span_danger("You need to wait [DisplayTimeText(next_laser - world.time)] to do that again!"))
+			return
+		fire_projectile(/obj/projectile/beam/laser, target)
+		user.changeNext_move(CLICK_CD_RANGE)
+		next_laser = world.time + 2.5 SECONDS
 
 /obj/item/badmin_stone/syndie/give_abilities(mob/living/living_mob, gauntlet)
 	. = ..()
-	if(ishuman(living_mob))
-		martial_art.teach(living_mob)
 	ADD_TRAIT(living_mob, TRAIT_THERMAL_VISION, SYNDIE_STONE_TRAIT)
 
 /obj/item/badmin_stone/syndie/remove_abilities(mob/living/living_mob)
 	. = ..()
-	if(ishuman(living_mob))
-		martial_art.remove(living_mob)
 	REMOVE_TRAIT(living_mob, TRAIT_THERMAL_VISION, SYNDIE_STONE_TRAIT)
 
 /////////////////////////////////////////////

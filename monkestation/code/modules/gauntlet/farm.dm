@@ -9,10 +9,6 @@ GLOBAL_LIST_EMPTY(thanos_portal)
 	area_flags = NOTELEPORT
 	has_gravity = STANDARD_GRAVITY
 
-/datum/map_template/thanos_farm
-	name = "The Garden"
-	mappath = "_maps/templates/garden.dmm"
-
 /obj/effect/thanos_portal
 	name = "bluespace rip"
 	desc = "A mysterious rip, that seems to span time, reality, bluespace, and beyond."
@@ -31,22 +27,22 @@ GLOBAL_LIST_EMPTY(thanos_portal)
 /obj/effect/thanos_portal/Bumped(atom/movable/AM)
 	if(!QDELETED(AM))
 		if(isliving(AM))
-			var/mob/living/L = AM
-			if(L.client && !L.incapacitated())
-				L.visible_message(
-				span_notice("[L] starts climbing through [src]..."),
+			var/mob/living/living = AM
+			if(living.client && !living.incapacitated())
+				living.visible_message(
+				span_notice("[living] starts climbing through [src]..."),
 				span_notice("You begin climbing through [src]...")
 				)
-				if(!do_after(L, 30, target = L))
+				if(!do_after(living, 30, target = living))
 					return
-		if(!istype(AM, /obj/effect/))
+		if(!istype(AM, /obj/effect))
 			teleportify(AM)
 
 /obj/effect/thanos_portal/proc/teleportify(atom/movable/AM)
 	if(LAZYLEN(GLOB.thanos_portal))
-		var/turf/T = get_turf(pick(GLOB.thanos_portal))
+		var/turf/thanos_portal_turf = get_turf(pick(GLOB.thanos_portal))
 		AM.visible_message(span_danger("[AM] passes through [src]!"), null, null, null, AM)
-		AM.forceMove(T)
+		AM.forceMove(thanos_portal_turf)
 		AM.visible_message(
 		span_danger("[AM] materializes from the air!"),
 		span_boldannounce("You pass through [src] and appear somewhere unfamiliar.")
@@ -54,6 +50,6 @@ GLOBAL_LIST_EMPTY(thanos_portal)
 		do_sparks(5, TRUE, src)
 		do_sparks(5, TRUE, AM)
 		if(isliving(AM))
-			var/mob/living/L = AM
-			L.overlay_fullscreen("flash", /atom/movable/screen/fullscreen/flash/static)
-			L.clear_fullscreen("flash", 5)
+			var/mob/living/living = AM
+			living.overlay_fullscreen("flash", /atom/movable/screen/fullscreen/flash/static)
+			living.clear_fullscreen("flash", 5)

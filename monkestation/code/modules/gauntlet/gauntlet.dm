@@ -100,7 +100,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	. = ..()
 	for(var/obj/item/badmin_stone/stone in stones)
 		to_chat(user, span_boldnotice("[stone.name] mode"))
-		stone.examine(user)
+		. += stone.examine(user)
 
 /obj/item/badmin_gauntlet/ex_act(severity, target)
 	return
@@ -272,24 +272,14 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	var/image/veins = image(icon = 'monkestation/icons/obj/infinity.dmi', icon_state = "glow-overlay")
 	veins.color = get_stone_color(stone_mode)
 	add_overlay(veins)
-	for(var/obj/item/badmin_stone/IS in stones)
+	for(var/obj/item/badmin_stone/stone in stones)
 		var/I = index
-		if(IS.stone_type == stone_mode)
+		if(stone.stone_type == stone_mode)
 			I = 0
 		var/image/O = image(icon = 'monkestation/icons/obj/infinity.dmi', icon_state = "[I]-stone")
-		O.color = IS.color
+		O.color = stone.color
 		add_overlay(O)
 		index++
-
-/obj/item/badmin_gauntlet/melee_attack_chain(mob/user, atom/target, params)
-	if(!target.tool_act(user, src) && pre_attack(target, user, params))
-		if(user == target)
-			if(target && !QDELETED(src))
-				afterattack(target, user, 1, params)
-		else
-			var/resolved = target.attackby(src, user, params)
-			if(!resolved && target && !QDELETED(src))
-				afterattack(target, user, 1, params)
 
 /obj/item/badmin_gauntlet/proc/AttackThing(mob/user, atom/target)
 	. = FALSE
@@ -358,9 +348,6 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 					martial_art.harm_act(user, target)
 				if(proximity_flag)
 					AttackThing(user, target)
-			if(ISTATE_CONTROL)
-				if(ishuman(target) && ishuman(user) && proximity_flag)
-					martial_art.grab_act(user, target)
 			else
 				if(ishuman(target) && ishuman(user) && proximity_flag)
 					martial_art.help_act(user, target)
@@ -368,11 +355,8 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	switch(user.istate)
 		if(ISTATE_SECONDARY)
 			stone.disarm_act(target, user, proximity_flag)
-		if(ISTATE_HARM) // there's no harm intent on the stones anyways
-			if(proximity_flag && !AttackThing(user, target))
-				stone.harm_act(target, user, proximity_flag)
-		if(ISTATE_CONTROL)
-			stone.grab_act(target, user, proximity_flag)
+		if(ISTATE_HARM)
+			stone.harm_act(target, user, proximity_flag)
 		else
 			stone.help_act(target, user, proximity_flag)
 
@@ -715,11 +699,11 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 /datum/action/cooldown/spell/infinity/gauntlet_bullcharge/Grant(mob/grant_to)
 	. = ..()
-	RegisterSignal(grant_to, COMSIG_ATOM_BUMPED, PROC_REF(mario_star))
+	RegisterSignal(grant_to, COMSIG_MOVABLE_BUMP, PROC_REF(mario_star))
 
 /datum/action/cooldown/spell/infinity/gauntlet_bullcharge/Remove(mob/living/remove_from)
 	. = ..()
-	UnregisterSignal(remove_from, COMSIG_ATOM_BUMPED)
+	UnregisterSignal(remove_from, COMSIG_MOVABLE_BUMP)
 
 /datum/action/cooldown/spell/infinity/gauntlet_bullcharge/cast(atom/cast_on)
 	. = ..()
@@ -737,20 +721,20 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	REMOVE_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
 	user.visible_message(span_danger("[user] relaxes..."))
 
-/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/proc/mario_star(atom/movable/hit_object)
-	if(isliving(owner))
+/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/proc/mario_star(atom/movable/bumped)
+	if(iscarbon(owner))
 		var/mob/living/carbon/carbon_owner = owner
 		if(mario_star || super_mario_star)
-			if(isliving(hit_object))
-				var/mob/living/living_hit_object = hit_object
-				carbon_owner.visible_message(span_danger("[carbon_owner] rams into [living_hit_object]!"))
+			if(isliving(bumped))
+				var/mob/living/living_bumped = bumped
+				carbon_owner.visible_message(span_danger("[carbon_owner] rams into [living_bumped]!"))
 				if(super_mario_star)
-					living_hit_object.Paralyze(7.5 SECONDS)
-					living_hit_object.adjustBruteLoss(20)
+					living_bumped.Paralyze(7.5 SECONDS)
+					living_bumped.adjustBruteLoss(20)
 					carbon_owner.heal_overall_damage(12.5, 12.5, 12.5)
 				else
-					living_hit_object.Paralyze(5 SECONDS)
-					living_hit_object.adjustBruteLoss(12)
+					living_bumped.Paralyze(5 SECONDS)
+					living_bumped.adjustBruteLoss(12)
 					carbon_owner.heal_overall_damage(7.5, 7.5, 7.5)
 
 /datum/action/cooldown/spell/infinity/gauntlet_jump

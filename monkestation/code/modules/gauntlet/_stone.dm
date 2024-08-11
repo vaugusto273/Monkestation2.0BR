@@ -125,16 +125,12 @@
 	switch(user.istate)
 		if(ISTATE_SECONDARY)
 			disarm_act(target, user, proximity_flag)
-		if(ISTATE_CONTROL)
-			grab_act(target, user, proximity_flag)
 		if(ISTATE_HARM)
 			harm_act(target, user, proximity_flag)
 		else
 			help_act(target, user, proximity_flag)
 
 /obj/item/badmin_stone/proc/disarm_act(atom/target, mob/living/user, proximity_flag)
-
-/obj/item/badmin_stone/proc/grab_act(atom/target, mob/living/user, proximity_flag)
 
 /obj/item/badmin_stone/proc/harm_act(atom/target, mob/living/user, proximity_flag)
 
