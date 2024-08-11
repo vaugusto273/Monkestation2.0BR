@@ -83,10 +83,13 @@
 
 /obj/item/shield/bluespace_stone
 	name = "bluespace energy shield"
+	worn_icon = 'monkestation/icons/mob/clothing/back.dmi'
 	icon = 'monkestation/icons/obj/infinity.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
+	lefthand_file = 'monkestation/icons/mob/inhands/equipment/shields_lefthand.dmi'
+	righthand_file = 'monkestation/icons/mob/inhands/equipment/shields_righthand.dmi'
 	icon_state = "portalshield"
+	worn_icon_state = "portalshield"
+	inhand_icon_state = "portalshield"
 	var/hits = 0
 
 /obj/item/shield/bluespace_stone/Initialize()
@@ -99,7 +102,7 @@
 
 /obj/item/shield/bluespace_stone/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	hits += 1
-	if (hits > 5)
+	if(hits > 5)
 		to_chat(owner, span_danger("[src] disappears!"))
 		qdel(src)
 	return FALSE

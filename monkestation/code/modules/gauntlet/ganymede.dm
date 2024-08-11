@@ -78,6 +78,7 @@
 /obj/item/tank/jetpack/ganypack
 	name = "Ganypack"
 	desc = "An alien-made jetpack, capable of infinite spaceflight."
+	worn_icon = 'monkestation/icons/mob/clothing/back.dmi'
 	icon = 'monkestation/icons/obj/infinity.dmi'
 	icon_state = "ganypack"
 	worn_icon_state = "flightpack"
@@ -104,7 +105,7 @@
 		item_flags |= DROPDEL
 	return ..()
 
-/obj/item/clothing/under/ganymedian
+/obj/item/clothing/under/color/ganymedian
 	name = "ganymedian jumpsuit"
 	desc = "It's uh, not actually a jumpsuit. This is, in fact, a literal placeholder!"
 	icon_state = "jumpsuit"
