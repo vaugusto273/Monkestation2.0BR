@@ -5,14 +5,6 @@
 	category = "Offensive"
 	cost = 2
 
-/datum/spellbook_entry/summon_mjollnir/buy_spell(mob/living/carbon/human/user, obj/item/spellbook/book, log_buy = TRUE)
-	. = ..()
-	user.worthiness += 5
-
-/datum/spellbook_entry/summon_mjollnir/refund_spell(mob/living/carbon/human/user, obj/item/spellbook/book)
-	. = ..()
-	user.worthiness -= 5
-
 /datum/spellbook_entry/smite
 	name = "Smite"
 	desc = "Allows you to call in a favor from the gods upon your foe."
@@ -27,6 +19,7 @@
 			Requires 27+ crew."
 	item_path = /obj/item/badmin_gauntlet
 	category = "Rituals"
+	refundable = TRUE
 	cost = 10
 
 /datum/spellbook_entry/item/badmin_gauntlet/buy_spell(mob/living/carbon/human/user, obj/item/spellbook/book, log_buy)

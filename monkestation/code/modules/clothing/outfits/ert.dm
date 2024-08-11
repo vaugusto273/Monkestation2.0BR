@@ -66,7 +66,6 @@
 	. = ..()
 	if(visualsOnly)
 		return
-	H.worthiness = 1
 	var/datum/martial_art/cqc/cqc = new
 	cqc.teach(H)
 
@@ -78,7 +77,6 @@
 	. = ..()
 	if(visualsOnly)
 		return
-	H.worthiness = 100
 	if(prob(50))
 		var/obj/item/reagent_containers/cup/glass/bottle/beer/beer = new(get_turf(H))
 		H.put_in_hands(beer)

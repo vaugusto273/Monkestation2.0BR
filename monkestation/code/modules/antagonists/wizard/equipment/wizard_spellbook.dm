@@ -5,9 +5,9 @@
 	if(istype(O, /obj/item/badmin_gauntlet))
 		var/obj/item/badmin_gauntlet/badmingauntlet = O
 		if(badmingauntlet.locked_on)
-			to_chat(user, "<span class='notice'>You've put the gauntlet on already. No turning back now.</span>")
+			to_chat(user, span_notice("You've put the gauntlet on already. No turning back now."))
 			return
-		to_chat(user, "<span class='notice'>On second thought, wiping out half the universe is possibly a bad idea. You refund your points.</span>")
+		to_chat(user, span_notice("On second thought, wiping out half the universe is possibly a bad idea. You refund your points."))
 		uses += 10
 		for(var/datum/spellbook_entry/item/badmin_gauntlet/badmin_gauntlet_entry in entries)
 			if(!isnull(badmin_gauntlet_entry.limit))

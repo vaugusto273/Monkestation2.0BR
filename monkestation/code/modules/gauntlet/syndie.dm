@@ -100,11 +100,11 @@
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge/Grant(mob/grant_to)
 	. = ..()
-	RegisterSignal(grant_to, COMSIG_ATOM_BUMPED, PROC_REF(mario_star))
+	RegisterSignal(grant_to, COMSIG_MOVABLE_BUMP, PROC_REF(mario_star))
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge/Remove(mob/living/remove_from)
 	. = ..()
-	UnregisterSignal(remove_from, COMSIG_ATOM_BUMPED)
+	UnregisterSignal(remove_from, COMSIG_MOVABLE_BUMP)
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge/cast(atom/cast_on)
 	. = ..()
@@ -126,7 +126,8 @@
 	REMOVE_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
 	user.visible_message(span_danger("[user] relaxes..."))
 
-/datum/action/cooldown/spell/infinity/syndie_bullcharge/proc/mario_star(atom/movable/hit_object)
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/proc/mario_star(atom/hit_object)
+	SIGNAL_HANDLER
 	if(isliving(owner))
 		var/mob/living/carbon/carbon_owner = owner
 		if(mario_star || super_mario_star)

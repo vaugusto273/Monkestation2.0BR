@@ -52,7 +52,6 @@
 ///added to structures we want the mobs to be able to target.
 #define TRAIT_MOB_DESTROYABLE "mob_destroyable"
 
-#define TRAIT_WORTHY "worthy"
 #define YEET_TRAIT "yeet_trait"
 #define BLUESPACE_STONE_TRAIT "bluespace_stone_trait"
 #define SYNDIE_STONE_TRAIT "syndie_stone_trait"
