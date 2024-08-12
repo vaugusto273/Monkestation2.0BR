@@ -19500,7 +19500,7 @@
 "cfw" = (
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "cvB" = (
 /obj/machinery/armament_station/assault_operatives,
 /turf/open/floor/iron/smooth_large,
@@ -19552,7 +19552,7 @@
 "dwO" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "dxL" = (
 /obj/machinery/vending/cigarette/syndicate,
 /obj/effect/turf_decal/bot_white,
@@ -19561,7 +19561,7 @@
 "dEG" = (
 /obj/structure/flora/tree/jungle/small/style_5,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "dEH" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -19653,7 +19653,7 @@
 /area/cruiser_dock)
 "eVj" = (
 /turf/closed/wall/mineral/wood,
-/area/space)
+/area/centcom/thanos_farm)
 "eVz" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner,
 /turf/open/floor/plating,
@@ -19663,7 +19663,7 @@
 /obj/item/melee/roastingstick,
 /obj/item/melee/roastingstick,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "fgR" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -19754,7 +19754,7 @@
 "gCV" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "gFh" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 8
@@ -19769,11 +19769,11 @@
 /obj/structure/table/wood,
 /obj/item/storage/box/beakers,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "gPO" = (
 /obj/structure/bonfire/prelit,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "gXo" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 6
@@ -19881,7 +19881,7 @@
 "ikU" = (
 /obj/structure/flora/tree/jungle/style_6,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "iDX" = (
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/cruiser_dock)
@@ -19917,7 +19917,7 @@
 "jrB" = (
 /obj/structure/closet/crate/wooden/storage_barrel,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "jvM" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 4
@@ -19947,7 +19947,7 @@
 /obj/machinery/hydroponics/soil,
 /obj/effect/landmark/start/thanos_portal,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "kqc" = (
 /turf/open/floor/iron/stairs/left{
 	dir = 4
@@ -19969,7 +19969,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/centcom/thanos_farm)
 "kUz" = (
 /turf/open/floor/iron/stairs/left{
 	dir = 1
@@ -19989,7 +19989,7 @@
 "lvG" = (
 /obj/effect/landmark/start/thanos,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "lwC" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
 	dir = 1
@@ -19998,7 +19998,7 @@
 /area/cruiser_dock)
 "lAe" = (
 /turf/closed/indestructible/riveted,
-/area/space)
+/area/centcom/thanos_farm)
 "lBd" = (
 /turf/open/floor/iron/smooth_corner,
 /area/cruiser_dock)
@@ -20069,7 +20069,7 @@
 "mjJ" = (
 /obj/structure/flora/bush/fullgrass/style_3,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "mjW" = (
 /obj/structure/sign/poster/contraband/free_drone/directional/north,
 /turf/open/floor/iron/dark/textured_half{
@@ -20091,7 +20091,7 @@
 /area/centcom/central_command_areas/evacuation/ship)
 "mZQ" = (
 /turf/closed/mineral/ash_rock,
-/area/space)
+/area/centcom/thanos_farm)
 "ncQ" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner,
 /turf/open/floor/iron/smooth,
@@ -20156,7 +20156,7 @@
 "nHP" = (
 /obj/structure/flora/tree/jungle,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "nIX" = (
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
@@ -20167,7 +20167,7 @@
 "nRB" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "nUK" = (
 /obj/docking_port/stationary{
 	dir = 8;
@@ -20194,7 +20194,7 @@
 "odY" = (
 /obj/structure/flora/tree/jungle/small/style_4,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "ofy" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 4
@@ -20288,7 +20288,7 @@
 "ppP" = (
 /obj/effect/landmark/start/thanos_portal,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "prl" = (
 /obj/item/mop,
 /obj/structure/mop_bucket,
@@ -20307,7 +20307,7 @@
 "pwI" = (
 /obj/machinery/vending/hydroseeds,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "pDQ" = (
 /obj/effect/landmark/start/assaultop,
 /obj/structure/chair/office/light{
@@ -20338,7 +20338,7 @@
 "qsm" = (
 /obj/structure/flora/tree/jungle/small/style_2,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "qwj" = (
 /turf/open/floor/iron/stairs/right{
 	dir = 1
@@ -20349,7 +20349,7 @@
 /area/cruiser_dock)
 "qAH" = (
 /turf/open/water/jungle,
-/area/space)
+/area/centcom/thanos_farm)
 "qCL" = (
 /obj/structure/closet/crate/cardboard,
 /obj/item/reagent_containers/cup/glass/bottle/champagne,
@@ -20359,7 +20359,7 @@
 /area/cruiser_dock)
 "qGo" = (
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "qKe" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 6
@@ -20425,11 +20425,11 @@
 "rtr" = (
 /obj/structure/flora/tree/jungle/style_3,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "rxQ" = (
 /obj/machinery/telecomms/relay/preset/auto,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "rye" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark,
 /obj/structure/closet/syndicate/personal,
@@ -20444,7 +20444,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/centcom/thanos_farm)
 "rHE" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 8
@@ -20461,7 +20461,7 @@
 "rPL" = (
 /obj/structure/flora/tree/jungle/small,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "rQl" = (
 /obj/structure/sign/poster/contraband/bountyhunters/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
@@ -20498,7 +20498,7 @@
 "skD" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "sms" = (
 /obj/structure/chair/sofa/bench/left{
 	dir = 4
@@ -20531,11 +20531,11 @@
 	pixel_y = 10
 	},
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "sHo" = (
 /obj/structure/flora/tree/jungle/small/style_6,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "sHO" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 8
@@ -20642,7 +20642,7 @@
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
 "tKp" = (
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "tRx" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -20785,7 +20785,7 @@
 /area/cruiser_dock)
 "vuN" = (
 /turf/open/floor/wood,
-/area/space)
+/area/centcom/thanos_farm)
 "vAz" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 4
@@ -20796,7 +20796,7 @@
 "vFI" = (
 /obj/machinery/computer/camera_advanced,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "vGi" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/structure/chair/sofa/bench/right,
@@ -20848,7 +20848,7 @@
 "vOU" = (
 /obj/structure/closet/crate/wooden,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "vPF" = (
 /obj/structure/chair/plastic{
 	dir = 4
@@ -20907,11 +20907,11 @@
 "wZy" = (
 /obj/machinery/vending/hydronutrients,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "xdQ" = (
 /obj/structure/flora/tree/jungle/style_2,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "xeu" = (
 /obj/structure/closet/crate/freezer{
 	name = "pantry crate"
@@ -20952,7 +20952,7 @@
 /obj/structure/table/wood,
 /obj/item/food/grown/watermelon,
 /turf/open/floor/carpet/black,
-/area/space)
+/area/centcom/thanos_farm)
 "xrp" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark,
 /obj/machinery/light/cold/directional/west,
@@ -20966,7 +20966,7 @@
 "xCj" = (
 /obj/structure/flora/bush/fullgrass/style_2,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "xPB" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/bot_white,
@@ -21005,7 +21005,7 @@
 "xYx" = (
 /obj/structure/flora/tree/jungle/small/style_3,
 /turf/open/floor/grass,
-/area/space)
+/area/centcom/thanos_farm)
 "xZL" = (
 /obj/effect/turf_decal/siding/purple{
 	dir = 1
