@@ -27,4 +27,4 @@
 	book.uses = 0
 
 /datum/spellbook_entry/item/badmin_gauntlet/can_buy(mob/living/carbon/human/user, obj/item/spellbook/book)
-	return ..() && !book.gauntlet_flag && (GLOB.Debug2 || GLOB.joined_player_list.len >= 0)
+	return ..() && !book.gauntlet_flag && (GLOB.Debug2 || GLOB.joined_player_list.len >= 27)

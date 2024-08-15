@@ -77,6 +77,7 @@
 	button_icon_state = "partypop"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
+	cooldown_time = 0
 
 /datum/action/cooldown/spell/infinity/party_popper/cast(atom/cast_on)
 	. = ..()
@@ -104,6 +105,7 @@
 	button_icon_state = "prankstersdelusion"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
+	cooldown_time = 75 SECONDS
 
 /datum/action/cooldown/spell/infinity/pranksters_delusion/cast(atom/cast_on)
 	. = ..()
@@ -122,6 +124,7 @@
 	button_icon_state = "honksong"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
+	cooldown_time = 100 SECONDS
 	var/list/dancefloor_turfs
 	var/list/dancefloor_turfs_types
 	var/dancefloor_exists = FALSE
@@ -326,6 +329,7 @@
 	button_icon_state = "cake"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "clown"
+	cooldown_time = 35 SECONDS
 	var/list/cakes = list()
 
 /datum/action/cooldown/spell/infinity/cake/proc/count_cakes()
@@ -373,6 +377,7 @@
 	background_icon_state = "clown"
 	invocation_type = "shout"
 	invocation = "THANOS CAR THANOS CAR"
+	cooldown_time = 130 SECONDS
 
 /datum/action/cooldown/spell/infinity/thanoscar_thanoscar/cast(atom/cast_on)
 	. = ..()
@@ -447,5 +452,6 @@
 	qdel(src)
 
 /obj/vehicle/sealed/car/thanos/proc/check_crossed(atom/movable/crossed)
+	SIGNAL_HANDLER
 	if(istype(crossed, /mob/living/carbon/human))
 		RunOver(crossed)

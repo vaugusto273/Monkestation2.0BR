@@ -15,7 +15,7 @@
 		/datum/action/cooldown/spell/spacetime_dist/supermatter_stone
 	)
 	gauntlet_spell_types = list(
-		/datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone,
+		/datum/action/cooldown/spell/pointed/infinity/tesla,
 		/datum/action/cooldown/spell/pointed/infinity/delamination
 	)
 	var/next_golem = 0
@@ -117,7 +117,7 @@
 		return FALSE
 	if(do_after(caller, 30, target = living_target))
 		living_target.visible_message(span_bolddanger("[living_target] seems a bit hot..."), span_userdanger("You feel like you'll explode any second!"))
-		addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(explosion), living_target, 0, 0, 2, 3, TRUE, FALSE, 3), 150)
+		addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(explosion), living_target, 0, 0, 2, 3, 3, FALSE), 150)
 	return TRUE
 
 /////////////////////////////////////////////
@@ -182,7 +182,7 @@
 				living_target.Paralyze(4)
 			atom_movable_target.throw_at(get_edge_target_turf(atom_movable_target, get_dir(src, atom_movable_target)), knockback, 4)
 
-/datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone
+/datum/action/cooldown/spell/pointed/infinity/tesla
 	name = "Supermatter Blast"
 	desc = "Charge up an arc of supermatter-amped electricity"
 	button_icon = 'icons/obj/engine/supermatter.dmi'
@@ -190,15 +190,16 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "sm"
 	cast_range = 10
+	cooldown_time = 30 SECONDS
 	var/bounce_range = 10
 
-/datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone/cast(atom/cast_on)
+/datum/action/cooldown/spell/pointed/infinity/tesla/cast(atom/cast_on)
 	. = ..()
 	if(iscarbon(cast_on))
 		var/mob/living/carbon/target = cast_on
 		bolt(owner, target, 40, 10, owner)
 
-/datum/action/cooldown/spell/pointed/infinity/tesla/supermatter_stone/proc/bolt(mob/origin, mob/target, bolt_energy, bounces, mob/user = usr)
+/datum/action/cooldown/spell/pointed/infinity/tesla/proc/bolt(mob/origin, mob/target, bolt_energy, bounces, mob/user = usr)
 	origin.Beam(target, icon_state = "nzcrentrs_power", time = 5)
 	var/mob/living/carbon/current_target = target
 	if(bounces < 1)

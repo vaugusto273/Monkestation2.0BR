@@ -146,6 +146,7 @@
 	button_icon_state = "chariot"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
+	cooldown_time = 20 SECONDS
 
 /datum/action/cooldown/spell/pointed/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/target)
 	. = ..()
@@ -197,6 +198,7 @@
 	button_icon_state = "fortress"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
+	cooldown_time = 120 SECONDS
 
 /datum/action/cooldown/spell/infinity/fortress/cast(atom/cast_on)
 	. = ..()
@@ -212,6 +214,7 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
 	sound = 'sound/hallucinations/far_noise.ogg'
+	cooldown_time = 90 SECONDS
 
 /datum/action/cooldown/spell/infinity/soulscreech/cast(atom/cast_on)
 	. = ..()
@@ -265,6 +268,7 @@
 	button_icon_state = "clownrise"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "ghost"
+	cooldown_time = 90 SECONDS
 	var/list/clowns = list()
 
 /datum/action/cooldown/spell/pointed/infinity/clown_rise_up/InterceptClickOn(mob/living/caller, params, atom/target)
@@ -314,6 +318,7 @@
 	antimagic_flags = NONE
 	invocation_type = INVOCATION_NONE
 	sound = 'monkestation/sound/effects/pocketsand.ogg'
+	cooldown_time = 20 SECONDS
 
 /datum/action/cooldown/spell/blink/infinity_clown
 	name = "Cluwne Blink"

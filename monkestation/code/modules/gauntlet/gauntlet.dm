@@ -638,6 +638,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	antimagic_flags = NONE
 	invocation_type = INVOCATION_NONE
 	aoe_radius = 5
+	cooldown_time = 25 SECONDS
 
 /datum/action/cooldown/spell/aoe/shockwave/get_things_to_cast_on(atom/center)
 	. = ..()
@@ -694,6 +695,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone in your way!"
 	background_icon_state = "bg_default"
 	sound = 'sound/magic/repulse.ogg'
+	cooldown_time = 25 SECONDS
 	var/mario_star = FALSE
 	var/super_mario_star = FALSE
 
@@ -722,6 +724,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	user.visible_message(span_danger("[user] relaxes..."))
 
 /datum/action/cooldown/spell/infinity/gauntlet_bullcharge/proc/mario_star(atom/movable/bumped)
+	SIGNAL_HANDLER
 	if(iscarbon(owner))
 		var/mob/living/carbon/carbon_owner = owner
 		if(mario_star || super_mario_star)
@@ -742,6 +745,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	desc = "With a bit of startup time, leap across the station to wherever you'd like!"
 	background_icon_state = "bg_default"
 	button_icon_state = "jump"
+	cooldown_time = 30 SECONDS
 
 /datum/action/cooldown/spell/infinity/gauntlet_jump/cast(atom/cast_on)
 	. = ..()

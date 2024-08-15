@@ -65,6 +65,7 @@
 	button_icon_state = "doppelganger"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "lag"
+	cooldown_time = 180 SECONDS
 	var/doppelganger_amount = 4
 
 /datum/action/cooldown/spell/infinity/doppelgangers/cast(atom/cast_on)
@@ -87,12 +88,12 @@
 	vision_range = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
 
-
 /datum/action/cooldown/spell/infinity/shuffle
 	name = "Lag Stone: The Shuffle"
 	desc = "Swap everyone in your view's position!"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "lag"
+	cooldown_time = 75 SECONDS
 
 /datum/action/cooldown/spell/infinity/shuffle/cast(atom/cast_on)
 	. = ..()
@@ -119,6 +120,7 @@
 	spell_requirements = NONE
 	antimagic_flags = NONE
 	invocation_type = INVOCATION_NONE
+	cooldown_time = 75 SECONDS
 	var/timestop_range = 2
 	var/timestop_duration = 10 SECONDS
 

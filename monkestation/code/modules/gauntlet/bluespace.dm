@@ -59,6 +59,7 @@
 	desc = "Summon a portal shield which sends all projectiles into nullspace. Lasts for 15 seconds, or 5 hits."
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "bluespace"
+	cooldown_time = 20 SECONDS
 
 /datum/action/cooldown/spell/infinity/bluespace_stone_shield/cast(atom/cast_on)
 	. = ..()

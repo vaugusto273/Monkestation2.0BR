@@ -95,6 +95,7 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "syndie"
 	sound = 'sound/magic/repulse.ogg'
+	cooldown_time = 20 SECONDS
 	var/mario_star = FALSE
 	var/super_mario_star = FALSE
 
@@ -149,6 +150,7 @@
 	button_icon_state = "jump"
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "syndie"
+	cooldown_time = 30 SECONDS
 
 /datum/action/cooldown/spell/infinity/syndie_jump/cast(atom/cast_on)
 	. = ..()
