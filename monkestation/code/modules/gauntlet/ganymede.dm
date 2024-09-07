@@ -59,16 +59,6 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	armor_type = /datum/armor/ganymedian_armor
 
-/datum/armor/ganymedian_armor
-	melee = 50
-	bullet = 65
-	laser = 65
-	energy = 45
-	bomb = 100
-	bio = 30
-	fire = 70
-	acid = 30
-
 /obj/item/clothing/suit/ganymedian/equipped(mob/user, slot)
 	if(slot == ITEM_SLOT_SUITSTORE)
 		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
