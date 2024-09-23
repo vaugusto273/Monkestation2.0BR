@@ -254,3 +254,28 @@
 	gold_core_spawnable = NO_SPAWN
 	ai_controller = /datum/ai_controller/basic_controller/
 	ckeywhitelist = list("CaptainShiba")
+
+/mob/living/basic/frog/hypnotoad
+	name = "hypnotoad"
+	desc = "All glory to the hypnotoad."
+	icon = 'monkestation/code/modules/donator/icons/mob/pets.dmi'
+	icon_state = "hypnotoad"
+	icon_living = "hypnotoad"
+	icon_dead = "hypnotoad-dead"
+	icon_gib = null
+	gold_core_spawnable = NO_SPAWN
+	ai_controller = /datum/ai_controller/basic_controller/
+	ckeywhitelist = list("Ophaq")
+
+/mob/living/basic/pet/ghastly_evil_demon
+	name = "ghastly evil demon"
+	desc = "It's so scary!"
+	icon = 'monkestation/code/modules/donator/icons/mob/pets_32x48.dmi'
+	icon_state = "ghastly_evil_demon"
+	icon_living = "ghastly_evil_demon"
+	icon_dead = "ghastly_evil_demon-dead"
+	icon_gib = null
+	gold_core_spawnable = NO_SPAWN
+	ai_controller = /datum/ai_controller/basic_controller/
+	ckeywhitelist = list("ThePooba")
+	movement_type = FLYING
