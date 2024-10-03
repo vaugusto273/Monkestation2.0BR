@@ -883,6 +883,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	name = "Badmin Stone Pinpointer"
 
 /atom/movable/screen/alert/status_effect/agent_pinpointer/gauntlet/Click()
+	. = ..()
 	var/mob/living/living_user = usr
 	if(!living_user || !istype(living_user))
 		return

@@ -148,29 +148,29 @@
 	background_icon_state = "ghost"
 	cooldown_time = 20 SECONDS
 
-/datum/action/cooldown/spell/pointed/infinity/chariot/InterceptClickOn(mob/living/caller, params, atom/target)
+/datum/action/cooldown/spell/pointed/infinity/chariot/InterceptClickOn(mob/living/user, params, atom/target)
 	. = ..()
 	if(!.)
 		return FALSE
-	if(!caller.Adjacent(target))
-		to_chat(caller, span_notice("You need to be next to the target!"))
+	if(!user.Adjacent(target))
+		to_chat(user, span_notice("You need to be next to the target!"))
 		return FALSE
 	if(!isliving(target))
-		to_chat(caller, span_notice("That doesn't even have a soul."))
+		to_chat(user, span_notice("That doesn't even have a soul."))
 		return FALSE
 	var/mob/living/living_target = target
 	if(living_target.stat == DEAD)
-		to_chat(caller, span_notice("That's dead, stupid."))
+		to_chat(user, span_notice("That's dead, stupid."))
 		return FALSE
 	if(living_target.stat != UNCONSCIOUS)
-		to_chat(caller, span_notice("That's not unconscious."))
+		to_chat(user, span_notice("That's not unconscious."))
 		return FALSE
 	if(locate(/obj/item/badmin_stone) in living_target.get_all_contents())
-		to_chat(caller, span_notice("Something stops you from using The Chariot on that..."))
+		to_chat(user, span_notice("Something stops you from using The Chariot on that..."))
 		return FALSE
-	log_game("[living_target] was kicked out of their body by The Chariot (user: [caller])")
+	log_game("[living_target] was kicked out of their body by The Chariot (user: [user])")
 	to_chat(living_target, span_bolddanger("You feel your very soul detach from your body..."))
-	to_chat(caller, span_boldnotice("You weave [living_target]'s soul in a way that it's open for the spirits to take..."))
+	to_chat(user, span_boldnotice("You weave [living_target]'s soul in a way that it's open for the spirits to take..."))
 	offer_control(living_target, FALSE)
 	return TRUE
 
@@ -271,22 +271,22 @@
 	cooldown_time = 90 SECONDS
 	var/list/clowns = list()
 
-/datum/action/cooldown/spell/pointed/infinity/clown_rise_up/InterceptClickOn(mob/living/caller, params, atom/target)
+/datum/action/cooldown/spell/pointed/infinity/clown_rise_up/InterceptClickOn(mob/living/user, params, atom/target)
 	. = ..()
 	if(!.)
 		return FALSE
 	if(ishuman(target))
-		var/mob/living/carbon/human/clown = clowns[caller]
+		var/mob/living/carbon/human/clown = clowns[user]
 		if(istype(clown) && clown && !clown.stat >= HARD_CRIT)
-			to_chat(caller, span_danger("You still have a magical cluwne alive."))
+			to_chat(user, span_danger("You still have a magical cluwne alive."))
 			return FALSE
 		var/mob/living/carbon/human/human_target = target
 		if(human_target.stat != DEAD && human_target.stat == HARD_CRIT)
-			to_chat(caller, span_danger("They aren't dead enough yet."))
+			to_chat(user, span_danger("They aren't dead enough yet."))
 			return FALSE
 		human_target.revive(TRUE, TRUE)
-		clowns[caller] = human_target
-		human_target.mind.add_memory("[caller] is your master. Follow their orders at all costs.")
+		clowns[user] = human_target
+		human_target.mind.add_memory("[user] is your master. Follow their orders at all costs.")
 		var/datum/action/cooldown/spell/jaunt/bloodcrawl/clown_bloodcrawl = new
 		var/datum/action/cooldown/spell/jaunt/ethereal_jaunt/infinity_clown/clown_jaunt = new
 		var/datum/action/cooldown/spell/blink/infinity_clown/clown_blink = new
@@ -302,7 +302,7 @@
 		if(human_target.dropItemToGround(human_target_mask))
 			human_target.equip_to_slot_if_possible(new /obj/item/clothing/mask/gas/clown_hat, ITEM_SLOT_MASK)
 		human_target.visible_message(span_danger("[human_target] struggles back up, now a clown!"))
-		to_chat(human_target, span_userdanger("You are risen from the dead as a clown. [caller] is your master. Follow their orders at all costs."))
+		to_chat(human_target, span_userdanger("You are risen from the dead as a clown. [user] is your master. Follow their orders at all costs."))
 
 /datum/action/cooldown/spell/conjure_item/spellpacket/sandmans_dust
 	name = "Ghost Stone: Sandman's Dust"

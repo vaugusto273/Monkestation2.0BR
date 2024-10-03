@@ -102,7 +102,7 @@
 	background_icon = 'monkestation/icons/obj/infinity.dmi'
 	background_icon_state = "sm"
 
-/datum/action/cooldown/spell/pointed/infinity/delamination/InterceptClickOn(mob/living/caller, params, atom/target)
+/datum/action/cooldown/spell/pointed/infinity/delamination/InterceptClickOn(mob/living/user, params, atom/target)
 	. = ..()
 	if(!.)
 		return FALSE
@@ -112,10 +112,10 @@
 	if(locate(/obj/item/badmin_stone) in living_target.get_all_contents())
 		living_target.visible_message(span_bolddanger("[living_target] resists an unseen force!"))
 		return TRUE
-	if(!caller.Adjacent(living_target))
-		to_chat(caller, span_notice("They're too far away!"))
+	if(!user.Adjacent(living_target))
+		to_chat(user, span_notice("They're too far away!"))
 		return FALSE
-	if(do_after(caller, 30, target = living_target))
+	if(do_after(user, 30, target = living_target))
 		living_target.visible_message(span_bolddanger("[living_target] seems a bit hot..."), span_userdanger("You feel like you'll explode any second!"))
 		addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(explosion), living_target, 0, 0, 2, 3, 3, FALSE), 150)
 	return TRUE
