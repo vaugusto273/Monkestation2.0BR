@@ -4,14 +4,24 @@
 /datum/species/ganymede
 	name = "Ganymedian"
 	id = "ganymede"
-	species_traits = list(NOTRANSSTING, NOZOMBIE, NO_DNA_COPY, NOEYESPRITES, AGENDER, NO_UNDERWEAR, MUTCOLORS)
-	inherent_traits = list(TRAIT_NOBREATH, TRAIT_NOHUNGER, TRAIT_RESISTCOLD, TRAIT_RESISTHEAT, TRAIT_NOLIMBDISABLE, TRAIT_NODISMEMBER, TRAIT_RESISTHIGHPRESSURE,
+	inherent_traits = list(TRAIT_NO_TRANSFORMATION_STING, TRAIT_NO_DNA_COPY, TRAIT_NO_UNDERWEAR, TRAIT_MUTANT_COLORS, TRAIT_NOBREATH, TRAIT_NOHUNGER, TRAIT_RESISTCOLD, TRAIT_RESISTHEAT, TRAIT_NOLIMBDISABLE, TRAIT_NODISMEMBER, TRAIT_RESISTHIGHPRESSURE,
 		TRAIT_RESISTLOWPRESSURE, TRAIT_STABLEHEART, TRAIT_VIRUSIMMUNE, TRAIT_STUNIMMUNE, TRAIT_SLEEPIMMUNE, TRAIT_PUSHIMMUNE, TRAIT_NOGUNS, TRAIT_PIERCEIMMUNE,
 		TRAIT_SHOCKIMMUNE, TRAIT_RADIMMUNE)
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
 	changesource_flags = MIRROR_BADMIN
 	mutanteyes = /obj/item/organ/internal/eyes/night_vision/ganymede
+	bodypart_overrides = list(
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/ganymede,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest,
+	)
 	sexes = FALSE
+
+/obj/item/bodypart/head/ganymede
+	head_flags = HEAD_HAIR | HEAD_EYEHOLES | HEAD_DEBRAIN | HEAD_EYECOLOR
 
 /obj/item/clothing/head/ganymedian
 	name = "Ganymedian Helmet"
@@ -22,9 +32,7 @@
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
 	body_parts_covered = HEAD
-	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_HELM_MAX_TEMP_PROTECT
 	armor_type = /datum/armor/ganymedian_armor
 
@@ -53,9 +61,7 @@
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
 	body_parts_covered = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
-	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	heat_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	armor_type = /datum/armor/ganymedian_armor
 
