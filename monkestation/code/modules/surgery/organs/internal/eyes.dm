@@ -46,6 +46,11 @@
 /obj/item/organ/internal/eyes/ethereal
 	eye_icon_state = "etherealeyes"
 
+/obj/item/organ/internal/eyes/moth/tundra
+	name = "tundra moth eyes"
+	eye_icon_state = "tundramotheyes"
+	icon_state = "eyeballs-tundramoth"
+
 /obj/item/organ/internal/eyes/night_vision/ganymede
 	name = "ganymedian eyes"
 	desc = "The eyes of a Ganymedian, a legendary alien race."
