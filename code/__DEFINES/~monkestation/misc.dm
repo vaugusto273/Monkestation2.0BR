@@ -12,6 +12,9 @@
 #define GHOST_STONE "ghost stone"
 #define SYNDIE_STONE "syndie stone"
 
+/// Path for the byond-memorystats dll
+#define MEMORYSTATS_DLL_PATH (world.system_type == MS_WINDOWS ? "memorystats.dll" : "./libmemorystats.so")
+
 /// File path used for the "enable tracy next round" functionality
 /// The server port is appended to the end of the filename to avoid conflicts if multiple servers share the same data folder.
 #define TRACY_ENABLE_PATH	"data/enable_tracy.[world.port]"
