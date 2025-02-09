@@ -346,6 +346,20 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/briefing)
+"aaW" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = -32
+	},
+/obj/structure/chair/office{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "aaX" = (
 /obj/effect/turf_decal/trimline/green/line,
 /obj/structure/reagent_dispensers/watertank/high,
@@ -5567,13 +5581,6 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/grass,
 /area/centcom/wizard_station)
-"apc" = (
-/obj/machinery/vending/coffee,
-/obj/effect/turf_decal/siding/thinplating_new/dark{
-	dir = 4
-	},
-/turf/open/floor/mineral/titanium,
-/area/centcom/syndicate_mothership/control)
 "apd" = (
 /obj/item/clipboard,
 /obj/item/stamp/denied{
@@ -13336,6 +13343,16 @@
 /obj/structure/flora/bush/flowers_pp/style_random,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/hall)
+"aKc" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = 32;
+	layer = 2.8
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "aKd" = (
 /obj/effect/turf_decal/trimline/green/corner{
 	dir = 1
@@ -19317,19 +19334,21 @@
 /obj/structure/flora/tree/jungle/small/style_5,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/borbop)
-"bbh" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 5
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/carpet/red,
-/area/centcom/central_command_areas/adminroom)
+"bby" = (
+/obj/structure/table/wood,
+/obj/item/food/grown/watermelon,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "bbC" = (
 /obj/machinery/corral_corner{
 	mapping_id = "13"
 	},
 /turf/open/floor/circuit/red/off,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"bdi" = (
+/obj/machinery/telecomms/relay/preset/auto,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "bdM" = (
 /obj/machinery/modular_computer/preset/id/centcom,
 /turf/open/floor/carpet/orange,
@@ -19338,11 +19357,24 @@
 /obj/effect/turf_decal/sand/plating,
 /turf/open/misc/asteroid,
 /area/centcom/central_command_areas/admin)
+"bed" = (
+/obj/machinery/modular_computer/preset/id/centcom{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "bfA" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/large/style_3,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/evacuation)
+"bfU" = (
+/obj/machinery/vending/coffee{
+	dir = 4
+	},
+/obj/effect/turf_decal/bot_white,
+/turf/open/floor/iron/dark/textured_large,
+/area/cruiser_dock)
 "bhE" = (
 /obj/structure/rack,
 /obj/item/food/canned/beans{
@@ -19476,6 +19508,14 @@
 	},
 /turf/open/floor/glass/plasma,
 /area/centcom/central_command_areas/adminroom)
+"boG" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	dir = 4;
+	name = "Pooba's Coder Closet"
+	},
+/obj/effect/mapping_helpers/airlock/access/any/admin/general,
+/turf/open/floor/plating,
+/area/centcom/central_command_areas/admin)
 "bpj" = (
 /obj/structure/chair/comfy/black{
 	dir = 1
@@ -19585,6 +19625,10 @@
 /obj/structure/chair/sofa/corp,
 /turf/open/floor/iron/dark/herringbone,
 /area/centcom/central_command_areas/evacuation)
+"bCi" = (
+/obj/effect/landmark/start/thanos_portal,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "bCO" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 4
@@ -19657,6 +19701,10 @@
 	},
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/adminroom)
+"bIV" = (
+/obj/structure/flora/tree/jungle/style_3,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "bJu" = (
 /obj/item/storage/toolbox/fishing,
 /turf/open/misc/dirt/jungle/dark/arena,
@@ -19686,10 +19734,6 @@
 "bQE" = (
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/centcom/syndicate_mothership/expansion_bulldozer)
-"bSk" = (
-/obj/machinery/hydroponics/soil,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "bTx" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 4
@@ -19785,6 +19829,9 @@
 	},
 /turf/open/floor/iron/dark/herringbone,
 /area/centcom/central_command_areas/admin)
+"caX" = (
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "cbD" = (
 /obj/effect/portal/permanent{
 	layer = 2;
@@ -19809,20 +19856,6 @@
 /obj/structure/flora/bush/pale/style_3,
 /turf/open/misc/dirt/jungle/dark/arena,
 /area/centcom/central_command_areas/admin)
-"ccR" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 9
-	},
-/obj/structure/chair{
-	dir = 8
-	},
-/turf/open/floor/carpet/green,
-/area/centcom/central_command_areas/adminroom)
-"cdj" = (
-/obj/structure/table/wood,
-/obj/item/food/grown/watermelon,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "cdN" = (
 /obj/machinery/light/directional/east{
 	dir = 1
@@ -19850,6 +19883,10 @@
 	},
 /turf/open/misc/sandy_dirt,
 /area/centcom/central_command_areas/admin)
+"cfk" = (
+/obj/structure/flora/bush/fullgrass/style_3,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "cjJ" = (
 /obj/machinery/light/floor/has_bulb,
 /turf/open/floor/circuit,
@@ -19866,6 +19903,10 @@
 	dir = 8
 	},
 /area/centcom/central_command_areas/evacuation)
+"ckk" = (
+/obj/machinery/computer/camera_advanced,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "cmN" = (
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/parquet,
@@ -19884,6 +19925,10 @@
 /obj/structure/sign/poster/quirk/engineering_slogan,
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/centcom/central_command_areas/evacuation/ship)
+"coJ" = (
+/obj/machinery/computer/camera_advanced,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "crx" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 8
@@ -19893,10 +19938,6 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/centcom/central_command_areas/admin)
-"cun" = (
-/obj/structure/flora/bush/fullgrass/style_2,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "cuK" = (
 /obj/effect/turf_decal/siding/purple{
 	dir = 1
@@ -19928,6 +19969,13 @@
 	pixel_y = 3
 	},
 /turf/open/floor/wood,
+/area/centcom/central_command_areas/admin)
+"cwv" = (
+/obj/machinery/light/directional/east{
+	dir = 1
+	},
+/obj/machinery/computer/message_monitor,
+/turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/admin)
 "cwJ" = (
 /obj/structure/closet/secure_closet/corrections_officer,
@@ -20067,19 +20115,12 @@
 	},
 /turf/open/floor/plating,
 /area/cruiser_dock)
-"cJk" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = -32;
-	layer = 2.8
+"cIl" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 5
 	},
-/obj/machinery/bomb_actualizer{
-	desc = "An advanced machine capable of releasing the normally bluespace-inhibited destructive potential of a bomb assembly... or so the sticker says. You can see burn marks and ash around its exhaust ports."
-	},
-/obj/effect/mapping_helpers/broken_floor,
-/turf/open/floor/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/adminroom)
 "cKo" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -20116,23 +20157,12 @@
 	},
 /turf/open/floor/glass/plasma,
 /area/centcom/central_command_areas/adminroom)
-"cLR" = (
-/obj/structure/flora/tree/jungle/style_2,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "cMi" = (
 /obj/structure/chair/office/light{
 	dir = 8
 	},
 /turf/open/floor/carpet/neon/simple/blue/nodots,
 /area/centcom/central_command_areas/prison)
-"cMo" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
-	},
-/obj/effect/turf_decal/siding/wood,
-/turf/open/floor/wood/tile,
-/area/centcom/central_command_areas/admin)
 "cMW" = (
 /obj/structure/railing/wooden_fence{
 	dir = 10
@@ -20187,12 +20217,54 @@
 /obj/structure/sign/poster/official/nanotrasen_logo/directional/east,
 /turf/open/floor/iron/dark/herringbone,
 /area/centcom/central_command_areas/admin)
-"cSS" = (
+"cQL" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-6";
+	pixel_y = 32;
+	layer = 2.8;
+	pixel_x = -32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = 32;
+	layer = 2.8
+	},
 /obj/structure/table/wood,
-/obj/item/melee/roastingstick,
-/obj/item/melee/roastingstick,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
+/obj/machinery/fax/messageadmins{
+	fax_name = "Wolf's Office"
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
+"cSL" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = -32;
+	layer = 2.8
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-5";
+	pixel_y = -32;
+	layer = 2.8;
+	pixel_x = -32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = -32
+	},
+/obj/machinery/photocopier/gratis,
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "cTr" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -20234,13 +20306,6 @@
 /obj/effect/spawner/random/trash/cigbutt,
 /turf/open/floor/plating/rust,
 /area/centcom/central_command_areas/adminroom)
-"cZL" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 6
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/carpet/red,
-/area/centcom/central_command_areas/adminroom)
 "dbJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Veth's Plantery"
@@ -20269,16 +20334,6 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/reinforced,
 /area/centcom/central_command_areas/admin)
-"dgA" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = -32;
-	layer = 2.8
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "dii" = (
 /obj/machinery/light/floor/has_bulb,
 /obj/structure/fluff{
@@ -20339,6 +20394,10 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/admin)
+"dow" = (
+/obj/structure/flora/tree/jungle/small/style_3,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "dpU" = (
 /obj/machinery/corral_corner{
 	mapping_id = "12"
@@ -20387,9 +20446,6 @@
 	dir = 8
 	},
 /area/cruiser_dock)
-"dsc" = (
-/turf/closed/indestructible/riveted,
-/area/centcom/thanos_farm)
 "dsU" = (
 /turf/open/floor/mineral/titanium/purple,
 /area/centcom/central_command_areas/admin)
@@ -20402,6 +20458,13 @@
 	},
 /turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/adminroom)
+"dto" = (
+/obj/structure/table/wood,
+/obj/machinery/reagentgrinder{
+	pixel_y = 10
+	},
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "dtE" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -20418,10 +20481,6 @@
 	},
 /turf/open/floor/glass/plasma,
 /area/centcom/central_command_areas/evacuation)
-"dus" = (
-/obj/structure/flora/tree/jungle/small/style_6,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "duN" = (
 /obj/structure/railing/wooden_fencing{
 	pixel_y = 16
@@ -20446,16 +20505,6 @@
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
-"dyb" = (
-/obj/structure/mineral_door/wood{
-	name = "Bedroom"
-	},
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/carpet/red,
-/area/centcom/central_command_areas/adminroom)
 "dAJ" = (
 /obj/machinery/photocopier/gratis,
 /obj/effect/turf_decal/tile/brown/anticorner/contrasted,
@@ -20555,6 +20604,21 @@
 	},
 /turf/open/floor/lowered/iron/pool/cobble,
 /area/centcom/central_command_areas/adminroom)
+"dQc" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = 32;
+	layer = 2.8
+	},
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green{
+	pixel_x = -2;
+	pixel_y = 12
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "dQy" = (
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -20562,11 +20626,6 @@
 	},
 /turf/open/floor/plastic,
 /area/centcom/central_command_areas/admin)
-"dQH" = (
-/obj/machinery/hydroponics/soil,
-/obj/effect/landmark/start/thanos_portal,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "dRe" = (
 /obj/structure/chair/sofa/middle/maroon,
 /turf/open/floor/carpet/neon/simple/green/nodots,
@@ -20611,31 +20670,6 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/adminroom)
-"dTl" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = 32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-9";
-	pixel_y = -32;
-	layer = 2.8;
-	pixel_x = 32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = -32;
-	layer = 2.8
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "dTu" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder{
@@ -20646,11 +20680,19 @@
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/wood,
 /area/centcom/central_command_areas/admin)
+"dTA" = (
+/obj/structure/closet/crate/wooden,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "dUc" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/west,
 /turf/open/water/arena,
 /area/centcom/central_command_areas/admin)
+"dUD" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "dUR" = (
 /turf/open/floor/carpet/red,
 /area/cruiser_dock)
@@ -20689,9 +20731,6 @@
 	},
 /turf/open/water/arena,
 /area/centcom/central_command_areas/admin)
-"ebu" = (
-/turf/closed/mineral/ash_rock,
-/area/centcom/thanos_farm)
 "efj" = (
 /obj/machinery/door/poddoor/shutters/indestructible/preopen{
 	id = "donutstealthisid"
@@ -20758,11 +20797,6 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
-"elw" = (
-/obj/machinery/vending/coffee,
-/obj/machinery/light/directional/north,
-/turf/open/floor/mineral/titanium/tiled/white,
-/area/centcom/central_command_areas/adminroom)
 "eru" = (
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/bed{
@@ -20843,10 +20877,6 @@
 	},
 /turf/open/floor/iron/dark/small,
 /area/centcom)
-"ezQ" = (
-/obj/machinery/vending/hydronutrients,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "ezX" = (
 /obj/structure/table/greyscale,
 /obj/machinery/computer/pod/old/syndicate{
@@ -20931,10 +20961,23 @@
 	dir = 8
 	},
 /area/centcom/central_command_areas/adminroom)
-"eNb" = (
-/obj/structure/closet/crate/wooden,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
+"eNq" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = 32
+	},
+/obj/machinery/light/small/directional/east,
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/floor/carpet/green,
+/area/centcom/central_command_areas/adminroom)
 "eNY" = (
 /turf/open/floor/lowered/iron/pool/cobble/side{
 	dir = 8
@@ -20970,19 +21013,16 @@
 	},
 /turf/closed/indestructible/fakeglass,
 /area/centcom/central_command_areas/admin)
-"eSM" = (
-/mob/living/basic/pet/cat/kitten{
-	name = "Kbity :3";
-	desc = "D'aaawwww. Fortune's best friend"
-	},
-/turf/open/floor/iron/dark/small,
-/area/centcom)
 "eTJ" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
 /turf/open/floor/sandy_dirt,
 /area/centcom/central_command_areas/admin)
+"eUr" = (
+/obj/structure/flora/tree/jungle/small/style_4,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "eVa" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/turf_decal/weather,
@@ -21033,6 +21073,31 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/centcom/central_command_areas/kitchen)
+"fan" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = 32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-9";
+	pixel_y = -32;
+	layer = 2.8;
+	pixel_x = 32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = -32;
+	layer = 2.8
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "faY" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 4
@@ -21078,10 +21143,6 @@
 	dir = 1
 	},
 /area/centcom/central_command_areas/evacuation)
-"fdS" = (
-/obj/structure/flora/tree/jungle/small/style_3,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "fex" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -21101,6 +21162,13 @@
 /obj/structure/flora/bush/fullgrass/style_2,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/retirement_yard)
+"fgm" = (
+/obj/machinery/door/airlock/gold{
+	name = "Beverly Valon's Office"
+	},
+/obj/effect/mapping_helpers/airlock/access/any/admin/general,
+/turf/open/floor/wood/tile,
+/area/centcom/central_command_areas/admin)
 "fgR" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -21125,6 +21193,15 @@
 	dir = 4
 	},
 /turf/open/water/arena,
+/area/centcom/central_command_areas/admin)
+"fmn" = (
+/obj/structure/railing/wooden_fencing{
+	pixel_y = 16
+	},
+/obj/structure/railing/wooden_fencing{
+	pixel_y = 16
+	},
+/turf/open/floor/sandy_dirt,
 /area/centcom/central_command_areas/admin)
 "fnA" = (
 /obj/effect/turf_decal/tile/purple/anticorner/contrasted,
@@ -21469,20 +21546,6 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/centcom/central_command_areas/admin)
-"glx" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = -32
-	},
-/obj/structure/chair/office{
-	dir = 4
-	},
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "gme" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -21555,6 +21618,10 @@
 	},
 /turf/open/floor/circuit,
 /area/centcom/central_command_areas/medical)
+"gpL" = (
+/obj/structure/flora/tree/jungle/style_2,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "gqw" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 1
@@ -21612,6 +21679,23 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"gvr" = (
+/mob/living/simple_animal/pet/cat/kitten{
+	name = "Kbity :3";
+	desc = "D'aaawwww. Fortune's best friend"
+	},
+/turf/open/floor/iron/dark/small,
+/area/centcom)
+"gwm" = (
+/obj/structure/mineral_door/wood{
+	name = "Bedroom"
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/adminroom)
 "gxv" = (
 /obj/effect/turf_decal/siding/wood{
 	pixel_x = -5
@@ -21696,6 +21780,15 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white/textured,
+/area/centcom/central_command_areas/admin)
+"gHt" = (
+/obj/item/bodypart/chest/ipc,
+/obj/item/bodypart/arm/left/ipc,
+/obj/item/bodypart/arm/right/ipc,
+/obj/item/bodypart/head/ipc,
+/obj/item/bodypart/leg/left/ipc,
+/obj/item/bodypart/leg/right/ipc,
+/turf/open/floor/circuit/green/anim,
 /area/centcom/central_command_areas/admin)
 "gHA" = (
 /obj/item/paper/crumpled{
@@ -21822,6 +21915,11 @@
 	},
 /turf/open/water/arena,
 /area/centcom/central_command_areas/admin)
+"gPj" = (
+/obj/item/flashlight/lamp,
+/obj/structure/table/wood/fancy,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "gPN" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4;
@@ -21907,6 +22005,9 @@
 /obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/centcom/central_command_areas/adminroom)
+"gXX" = (
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "gYo" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 1
@@ -21947,6 +22048,12 @@
 /obj/structure/sign/poster/contraband/energy_swords/directional/west,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
+"hen" = (
+/obj/structure/railing/wood{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/centcom/thanos_farm)
 "hev" = (
 /obj/structure/table/reinforced/plasmarglass,
 /obj/machinery/computer/records/security/laptop,
@@ -21967,17 +22074,6 @@
 /obj/machinery/light/cold/directional/south,
 /turf/open/misc/asteroid,
 /area/cruiser_dock)
-"hfo" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = 32;
-	layer = 2.8
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "hfw" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -22042,6 +22138,17 @@
 	},
 /turf/open/floor/wood/tile,
 /area/centcom/central_command_areas/adminroom)
+"hlg" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = 32;
+	layer = 2.8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "hln" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 10
@@ -22072,6 +22179,40 @@
 	},
 /turf/open/water/arena,
 /area/centcom/central_command_areas/admin)
+"hol" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = -32;
+	layer = 2.8
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = 32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-9";
+	pixel_y = -32;
+	layer = 2.8;
+	pixel_x = 32
+	},
+/mob/living/basic/bee{
+	faction = list("hostile","hive","neutral");
+	name = "The Poobee";
+	desc = "Somehow, you feel this bee is the only thing keeping the world intertwined."
+	},
+/obj/structure/bed/dogbed{
+	name = "The Poobee's bed";
+	desc = "I'm just saying, it looks a little bit oversized for what lives in it."
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "hor" = (
 /mob/living/basic/ggg/glerm{
 	name = "Springus";
@@ -22094,6 +22235,10 @@
 /obj/structure/flora/bush/large/style_3,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/admin)
+"hqg" = (
+/obj/structure/showcase/machinery/tv,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "hqj" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -22114,10 +22259,6 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/centcom/central_command_areas/admin)
-"hrm" = (
-/obj/structure/bonfire/prelit,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "hrv" = (
 /obj/structure/table/wood/fancy/red,
 /obj/item/paper,
@@ -22207,6 +22348,21 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
+"hAP" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = -32
+	},
+/obj/machinery/light/small/directional/west,
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/adminroom)
 "hAS" = (
 /obj/machinery/door/poddoor/shutters/indestructible/preopen{
 	id = "donutstealthisid1"
@@ -22263,6 +22419,11 @@
 	},
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
+"hDu" = (
+/obj/machinery/computer,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating,
+/area/centcom/central_command_areas/admin)
 "hDx" = (
 /obj/machinery/door/airlock/vault{
 	color = "543e27";
@@ -22278,10 +22439,6 @@
 /obj/effect/turf_decal/box/corners,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
-"hFh" = (
-/obj/structure/flora/tree/jungle/small/style_4,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "hFy" = (
 /obj/structure/railing/wood{
 	dir = 8
@@ -22368,6 +22525,11 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/blue,
+/area/centcom/central_command_areas/admin)
+"hNV" = (
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/admin)
 "hNX" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -22474,6 +22636,9 @@
 	dir = 1
 	},
 /area/centcom/central_command_areas/prison)
+"hZQ" = (
+/turf/closed/indestructible/riveted,
+/area/centcom/thanos_farm)
 "iad" = (
 /obj/machinery/light/floor/has_bulb,
 /turf/open/floor/iron/dark/herringbone,
@@ -22505,6 +22670,34 @@
 	pixel_y = 27
 	},
 /turf/open/floor/wood/tile,
+/area/centcom/central_command_areas/adminroom)
+"iew" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = 32;
+	layer = 2.8
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-10";
+	pixel_y = 32;
+	layer = 2.8;
+	pixel_x = 32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = 32
+	},
+/obj/structure/bed/double,
+/obj/item/bedsheet/centcom/double,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood,
 /area/centcom/central_command_areas/adminroom)
 "ifF" = (
 /obj/effect/landmark/start/assaultop,
@@ -22559,6 +22752,14 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark/textured_corner,
 /area/centcom/central_command_areas/evacuation)
+"ima" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/cup/glass/flask,
+/obj/item/reagent_containers/cup/glass/drinkingglass,
+/obj/item/clothing/mask/cigarette/rollie/cannabis,
+/obj/item/lighter/bright,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "imw" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/turf_decal/weather/dirt{
@@ -22573,21 +22774,6 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/centcom/central_command_areas/adminroom)
-"inB" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = -32
-	},
-/obj/machinery/light/small/directional/west,
-/obj/effect/turf_decal/siding/wood{
-	dir = 9
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/carpet/red,
-/area/centcom/central_command_areas/adminroom)
 "iow" = (
 /obj/machinery/field/generator/anchored,
 /obj/effect/turf_decal/trimline/yellow/filled/line{
@@ -22597,19 +22783,6 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/centcom/central_command_areas/admin)
-"ioX" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 8;
-	pixel_y = -5
-	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/structure/railing/wooden_fencing{
-	pixel_y = 16
-	},
-/turf/open/floor/sandy_dirt,
 /area/centcom/central_command_areas/admin)
 "ipJ" = (
 /obj/effect/mapping_helpers/airlock/access/any/admin/captain,
@@ -22645,6 +22818,10 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted,
 /turf/open/floor/plastic,
 /area/centcom/central_command_areas/admin)
+"ivi" = (
+/obj/machinery/computer/upload/ai,
+/turf/open/floor/circuit/green/anim,
+/area/centcom/central_command_areas/admin)
 "ivA" = (
 /obj/machinery/light/directional/south,
 /turf/open/misc/dirt/jungle/dark/arena,
@@ -22674,14 +22851,6 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/centcom/central_command_areas/admin)
-"iyZ" = (
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/carpet/red,
-/area/centcom/central_command_areas/adminroom)
 "iAf" = (
 /obj/structure/fence{
 	dir = 4
@@ -22689,10 +22858,6 @@
 /obj/structure/sign/warning/secure_area,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/admin)
-"iBY" = (
-/obj/machinery/seed_extractor,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "iCr" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 4
@@ -22723,6 +22888,11 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/admin)
+"iId" = (
+/obj/machinery/hydroponics/soil,
+/obj/effect/landmark/start/thanos_portal,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "iIV" = (
 /obj/structure/chair/sofa/right,
 /obj/machinery/light/directional/east{
@@ -22756,10 +22926,6 @@
 	},
 /turf/open/floor/sandy_dirt,
 /area/centcom/central_command_areas/adminroom)
-"iKx" = (
-/obj/structure/flora/tree/jungle/small/style_5,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "iKz" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 4
@@ -22775,9 +22941,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/admin)
-"iNk" = (
-/turf/open/floor/wood,
-/area/centcom/thanos_farm)
 "iOc" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 5
@@ -22914,10 +23077,6 @@
 	},
 /turf/open/floor/iron/white/herringbone,
 /area/centcom/central_command_areas/kitchen)
-"jfB" = (
-/obj/machinery/telecomms/relay/preset/auto,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "jhk" = (
 /obj/structure/marker_beacon/teal,
 /turf/open/misc/asteroid,
@@ -22971,37 +23130,20 @@
 	},
 /turf/open/floor/iron/dark/herringbone,
 /area/centcom/central_command_areas/admin)
-"jsn" = (
-/obj/structure/closet/crate/wooden/storage_barrel,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
-"jsq" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = -32;
-	layer = 2.8
-	},
-/obj/structure/closet/crate/bin,
-/obj/item/paper/crumpled{
-	desc = "Some sort of notification of contract completion.";
-	default_raw_text = "TO THE ACCOUNT OF 'WOLF': You are billed the sum of 10,000 MK$ for the services of Johnson and Co in installing an office in Central Command. Itemised tally: Design: MK$ 1000, Installation: MK$ 2000, Getting Past Security: MK$ 7000. Sincerely, Addust Johnson - Johnson and Co Architecture";
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/obj/item/paper/crumpled{
-	default_raw_text = "TO THE ACCOUNT OF CENTRAL COMMAND: A bill of MK$ 1000 is expected to be paid to the account of JOHNSON AND CO ARCHITECTURE LTD for the re-plating of one office door.";
-	pixel_x = -5;
-	pixel_y = 0
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "jsr" = (
 /obj/structure/flora/bush/lavendergrass/style_2,
 /obj/structure/flora/bush/flowers_yw/style_3,
 /turf/open/misc/grass,
 /area/centcom)
+"jth" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/carpet/green,
+/area/centcom/central_command_areas/adminroom)
 "jui" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/west,
 /obj/effect/turf_decal/weather/dirt{
@@ -23067,6 +23209,28 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/centcom/central_command_areas/admin)
+"jAA" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = -32;
+	layer = 2.8
+	},
+/obj/structure/closet/crate/bin,
+/obj/item/paper/crumpled{
+	desc = "Some sort of notification of contract completion.";
+	default_raw_text = "TO THE ACCOUNT OF 'WOLF': You are billed the sum of 10,000 MK$ for the services of Johnson and Co in installing an office in Central Command. Itemised tally: Design: MK$ 1000, Installation: MK$ 2000, Getting Past Security: MK$ 7000. Sincerely, Addust Johnson - Johnson and Co Architecture";
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/paper/crumpled{
+	default_raw_text = "TO THE ACCOUNT OF CENTRAL COMMAND: A bill of MK$ 1000 is expected to be paid to the account of JOHNSON AND CO ARCHITECTURE LTD for the re-plating of one office door.";
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "jCt" = (
 /obj/effect/rune/apocalypse,
 /obj/structure/chair/comfy/black{
@@ -23084,6 +23248,11 @@
 	dir = 9
 	},
 /turf/open/floor/iron/dark,
+/area/centcom/central_command_areas/admin)
+"jDd" = (
+/obj/structure/table/reinforced,
+/obj/item/aicard,
+/turf/open/floor/iron,
 /area/centcom/central_command_areas/admin)
 "jDG" = (
 /obj/structure/sign/poster/official/moth_meth,
@@ -23118,6 +23287,13 @@
 /obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
+"jFG" = (
+/obj/machinery/vending/coffee{
+	dir = 4
+	},
+/obj/machinery/light/directional/north,
+/turf/open/floor/mineral/titanium/tiled/white,
+/area/centcom/central_command_areas/adminroom)
 "jFK" = (
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/siding/wideplating_new/dark{
@@ -23295,6 +23471,33 @@
 /obj/item/fishing_rod,
 /turf/open/misc/dirt/jungle/dark/arena,
 /area/centcom/central_command_areas/admin)
+"kch" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = 32
+	},
+/obj/machinery/light/small/directional/east,
+/obj/item/ammo_casing/caseless/rocket/heap,
+/obj/structure/closet/cabinet,
+/obj/item/ammo_casing/caseless/rocket,
+/obj/item/ammo_casing/caseless/rocket,
+/obj/item/gun/ballistic/rocketlauncher/nobackblast{
+	pin = /obj/item/firing_pin
+	},
+/obj/item/ammo_casing/caseless/rocket,
+/obj/item/ammo_casing/caseless/rocket,
+/obj/item/ammo_casing/caseless/rocket/heap,
+/obj/item/ammo_casing/caseless/rocket/weak,
+/obj/item/ammo_casing/caseless/rocket/weak,
+/obj/item/clothing/under/rank/centcom/official,
+/obj/item/clothing/glasses/sunglasses,
+/obj/item/radio/headset/headset_cent/alt,
+/obj/item/clothing/shoes/jackboots,
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "kcm" = (
 /obj/effect/turf_decal/tile/dark/opposingcorners,
 /obj/structure/railing/wood{
@@ -23460,9 +23663,12 @@
 /turf/open/floor/iron/dark/small,
 /area/centcom/central_command_areas/admin)
 "kBZ" = (
-/obj/structure/flora/bush/fullgrass,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
+/obj/effect/spawner/random/entertainment/arcade{
+	dir = 8
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "kCo" = (
 /obj/effect/turf_decal/trimline/red/real_red/filled/line{
 	dir = 1
@@ -23563,6 +23769,13 @@
 /obj/machinery/light/directional/north,
 /turf/open/water/arena,
 /area/centcom/central_command_areas/admin)
+"kSK" = (
+/obj/structure/mineral_door/wood{
+	name = "TheProfit's Shithole";
+	desc = "This thing stinks."
+	},
+/turf/open/floor/plating/rust,
+/area/centcom/central_command_areas/adminroom)
 "kSU" = (
 /obj/structure/mineral_door/wood{
 	color = "543e27";
@@ -23616,6 +23829,14 @@
 	},
 /turf/open/misc/dirt/station,
 /area/centcom/central_command_areas/admin)
+"kZz" = (
+/obj/structure/closet/cabinet,
+/obj/item/clothing/suit/jacket/tailcoat/centcom,
+/obj/item/clothing/head/hats/centcom_cap,
+/obj/machinery/light/directional/north,
+/obj/item/flashlight,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "kZM" = (
 /obj/structure/flora/bush/sparsegrass/style_2,
 /obj/effect/turf_decal/sand/plating,
@@ -23641,6 +23862,13 @@
 	},
 /turf/open/floor/iron/dark/small,
 /area/centcom/central_command_areas/prison)
+"ldv" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/adminroom)
 "ldR" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /mob/living/basic/cow,
@@ -23735,27 +23963,22 @@
 /obj/effect/turf_decal/tile/dark_purple/fourcorners,
 /turf/open/floor/iron/textured,
 /area/centcom/central_command_areas/admin)
-"lsS" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = 32
-	},
-/obj/structure/table/wood,
-/obj/item/flashlight/lamp/green{
-	pixel_x = -2;
-	pixel_y = 12
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "lwC" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
 	dir = 1
 	},
 /turf/open/floor/iron/smooth_large,
 /area/cruiser_dock)
+"lxm" = (
+/obj/structure/ai_core/deactivated{
+	name = "MATRIARCH"
+	},
+/turf/open/floor/circuit/green/anim,
+/area/centcom/central_command_areas/admin)
+"lyy" = (
+/obj/machinery/vending/hydronutrients,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "lAc" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -23765,35 +23988,6 @@
 "lBd" = (
 /turf/open/floor/iron/smooth_corner,
 /area/cruiser_dock)
-"lCs" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-6";
-	pixel_y = 32;
-	layer = 2.8;
-	pixel_x = -32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = -32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = 32;
-	layer = 2.8
-	},
-/obj/machinery/computer/security/wooden_tv{
-	name = "old television";
-	desc = "An old television jury-rigged into Nanotrasen's security network. The dial seems to be set to 'STATION 13'."
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "lCG" = (
 /obj/effect/turf_decal/siding/white,
 /obj/effect/turf_decal/siding/white{
@@ -23812,6 +24006,10 @@
 	},
 /turf/open/water/arena,
 /area/centcom/central_command_areas/admin)
+"lDD" = (
+/obj/structure/flora/tree/jungle/small/style_6,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "lEm" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -23887,10 +24085,6 @@
 	},
 /turf/open/floor/iron/smooth_large,
 /area/cruiser_dock)
-"lNT" = (
-/obj/structure/flora/tree/jungle/small/style_2,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "lQf" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 1
@@ -23908,16 +24102,6 @@
 	},
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/admin)
-"lSt" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = 32;
-	layer = 2.8
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "lSF" = (
 /turf/closed/indestructible/riveted,
 /area/centcom)
@@ -23966,13 +24150,6 @@
 	},
 /turf/open/misc/sandy_dirt,
 /area/centcom/central_command_areas/admin)
-"mdf" = (
-/mob/living/basic/pet/cat/cak{
-	name = "Truffle";
-	desc = "She is a cat made out of cake. How the hell did this thing end up alive, much less here?!"
-	},
-/turf/open/floor/glass/reinforced/plasma,
-/area/centcom/central_command_areas/adminroom)
 "mdv" = (
 /obj/machinery/door/poddoor/shutters/indestructible/preopen{
 	dir = 8;
@@ -24023,28 +24200,6 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/centcom/central_command_areas/admin)
-"miZ" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-6";
-	pixel_y = 32;
-	layer = 2.8;
-	pixel_x = -32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = 32;
-	layer = 2.8
-	},
-/obj/structure/table/wood,
-/obj/machinery/fax/messageadmins{
-	fax_name = "Wolf's Office"
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "mjS" = (
 /obj/machinery/duct,
 /turf/open/floor/circuit/red/off,
@@ -24061,20 +24216,12 @@
 /obj/structure/flora/rock/pile/jungle/large/style_random,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/evacuation)
-"mpQ" = (
-/obj/machinery/door/airlock/vault{
-	name = "Wolf's Office"
-	},
-/obj/effect/mapping_helpers/airlock/access/any/admin/captain,
-/obj/machinery/door/poddoor/shutters/indestructible/preopen{
-	id = "donutstealthisid";
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/wood/end{
-	dir = 1
-	},
-/turf/open/floor/carpet/green,
-/area/centcom/central_command_areas/adminroom)
+"mnW" = (
+/obj/machinery/light/directional/east,
+/obj/structure/bed/double,
+/obj/item/bedsheet/hos/double,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "mrt" = (
 /obj/structure/railing/wooden_fence,
 /obj/effect/turf_decal/siding/wood{
@@ -24086,6 +24233,10 @@
 	},
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/adminroom)
+"mrZ" = (
+/obj/structure/flora/tree/jungle/small/style_5,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "msE" = (
 /obj/effect/spawner/random/trash/bacteria,
 /obj/effect/spawner/random/trash/garbage,
@@ -24117,10 +24268,6 @@
 /obj/structure/fake_stairs/wood/directional/north,
 /turf/open/misc/sandy_dirt,
 /area/centcom/central_command_areas/adminroom)
-"mBH" = (
-/obj/effect/landmark/start/thanos,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "mCs" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 1
@@ -24261,10 +24408,32 @@
 	},
 /turf/open/floor/plastic,
 /area/centcom/central_command_areas/admin)
-"mTs" = (
-/obj/effect/landmark/start/thanos_portal,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
+"mTh" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = -32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-5";
+	pixel_y = -32;
+	layer = 2.8;
+	pixel_x = -32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = -32;
+	layer = 2.8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "mUj" = (
 /obj/structure/flora/bush/stalky,
 /turf/open/floor/sandy_dirt,
@@ -24298,6 +24467,13 @@
 	},
 /turf/open/misc/sandy_dirt,
 /area/centcom/central_command_areas/admin)
+"nbv" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 4
+	},
+/turf/open/floor/carpet/green,
+/area/centcom/central_command_areas/adminroom)
 "ncQ" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner,
 /turf/open/floor/iron/smooth,
@@ -24348,6 +24524,10 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
+"njr" = (
+/obj/structure/flora/bush/fullgrass,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "nnN" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/flowers_pp,
@@ -24373,9 +24553,6 @@
 	pixel_y = 8
 	},
 /turf/open/floor/carpet/red,
-/area/centcom/central_command_areas/adminroom)
-"nsq" = (
-/turf/open/floor/wood,
 /area/centcom/central_command_areas/adminroom)
 "nsW" = (
 /obj/effect/decal/cleanable/blood/splatter,
@@ -24557,6 +24734,10 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
+"nQT" = (
+/obj/item/kirbyplants/organic/plant23,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "nSa" = (
 /obj/machinery/light/small/red/dim/directional/south,
 /turf/open/floor/sandy_dirt,
@@ -24667,6 +24848,18 @@
 /obj/structure/sign/poster/abductor/ayy_recruitment/directional/north,
 /turf/open/floor/iron/dark/herringbone,
 /area/centcom/central_command_areas/evacuation)
+"odD" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/pen/fourcolor{
+	pixel_x = -4;
+	pixel_y = 9
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "ofy" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 4
@@ -24885,6 +25078,12 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"oMX" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 10
+	},
+/turf/open/floor/carpet/green,
+/area/centcom/central_command_areas/adminroom)
 "oNH" = (
 /obj/machinery/light/neon_lining{
 	dir = 1;
@@ -24902,6 +25101,10 @@
 	dir = 1
 	},
 /area/centcom/central_command_areas/evacuation)
+"oOd" = (
+/obj/machinery/hydroponics/soil,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "oPp" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 9
@@ -24945,6 +25148,14 @@
 	id = "donutstealthisid1"
 	},
 /turf/open/floor/wood/large,
+/area/centcom/central_command_areas/adminroom)
+"oYA" = (
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/adminroom)
 "oYE" = (
 /obj/effect/turf_decal/tile/hot_pink/full,
@@ -25039,21 +25250,6 @@
 /obj/item/toy/plush/admin/veth,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/admin)
-"pnC" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = 32;
-	layer = 2.8
-	},
-/obj/structure/table/wood,
-/obj/item/flashlight/lamp/green{
-	pixel_x = -2;
-	pixel_y = 12
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "pnO" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
@@ -25093,6 +25289,10 @@
 /obj/structure/mop_bucket,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
+"ptv" = (
+/obj/machinery/seed_extractor,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "ptP" = (
 /obj/machinery/computer/communications/syndicate{
 	dir = 8
@@ -25132,25 +25332,6 @@
 /obj/item/storage/box/tiziran_meats,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
-"pyo" = (
-/obj/effect/turf_decal/siding/wood,
-/turf/open/floor/carpet/green,
-/area/centcom/central_command_areas/adminroom)
-"pzA" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = 32;
-	layer = 2.8
-	},
-/obj/machinery/button/door/directional/north{
-	name = "Emergency Assistants Fuck Off Button";
-	id = "donutstealthisid";
-	req_access = "cent_captain"
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "pCB" = (
 /obj/structure/table/wood,
 /obj/item/trash/tray,
@@ -25357,12 +25538,6 @@
 "pWj" = (
 /turf/open/floor/carpet/orange,
 /area/centcom/central_command_areas/admin)
-"pWL" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/carpet/green,
-/area/centcom/central_command_areas/adminroom)
 "pXo" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /turf/open/floor/grass,
@@ -25457,11 +25632,6 @@
 /obj/structure/meateor_fluff/eyeball,
 /turf/open/floor/material/meat,
 /area/centcom/central_command_areas/admin)
-"qid" = (
-/obj/structure/table/wood,
-/obj/item/storage/box/beakers,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "qig" = (
 /obj/structure/chair/comfy{
 	dir = 8
@@ -25497,12 +25667,6 @@
 	dir = 1
 	},
 /area/centcom/central_command_areas/evacuation)
-"qnZ" = (
-/turf/open/water/jungle,
-/area/centcom/thanos_farm)
-"qoj" = (
-/turf/closed/wall/mineral/wood,
-/area/centcom/thanos_farm)
 "qoQ" = (
 /obj/structure/flora/bush/flowers_pp,
 /obj/structure/railing/wood,
@@ -25529,6 +25693,11 @@
 /obj/machinery/photobooth/security,
 /turf/open/floor/iron/dark/small,
 /area/centcom/central_command_areas/prison)
+"qtV" = (
+/obj/structure/table/wood/fancy,
+/obj/machinery/coffeemaker,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "quF" = (
 /turf/open/floor/iron/dark/herringbone,
 /area/centcom/central_command_areas/admin)
@@ -25585,6 +25754,34 @@
 	},
 /turf/open/floor/glass/plasma,
 /area/centcom/central_command_areas/adminroom)
+"qzu" = (
+/obj/machinery/door/airlock/vault{
+	name = "Wolf's Office"
+	},
+/obj/effect/mapping_helpers/airlock/access/any/admin/captain,
+/obj/machinery/door/poddoor/shutters/indestructible/preopen{
+	id = "donutstealthisid";
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/end{
+	dir = 1
+	},
+/turf/open/floor/carpet/green,
+/area/centcom/central_command_areas/adminroom)
+"qAI" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = -32;
+	layer = 2.8
+	},
+/obj/machinery/bomb_actualizer{
+	desc = "An advanced machine capable of releasing the normally bluespace-inhibited destructive potential of a bomb assembly... or so the sticker says. You can see burn marks and ash around its exhaust ports."
+	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "qBw" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
@@ -25635,6 +25832,11 @@
 /obj/structure/chair/sofa/corp/right,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/hall)
+"qHH" = (
+/obj/structure/table/wood/fancy,
+/obj/item/pai_card,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "qHJ" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/turf_decal/weather/dirt{
@@ -25780,6 +25982,10 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/plastic,
 /area/centcom/central_command_areas/admin)
+"qYu" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "qYP" = (
 /obj/structure/railing/wooden_fencing{
 	pixel_y = 16
@@ -25798,8 +26004,8 @@
 /obj/machinery/chem_master,
 /turf/open/floor/iron/dark/textured,
 /area/centcom/central_command_areas/medical)
-"rcp" = (
-/obj/structure/flora/tree/jungle/small,
+"rcI" = (
+/obj/structure/flora/tree/jungle/small/style_2,
 /turf/open/floor/grass,
 /area/centcom/thanos_farm)
 "rcY" = (
@@ -25841,23 +26047,6 @@
 	paint_color = "#5f6361"
 	},
 /area/centcom/central_command_areas/admin)
-"rkG" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = 32
-	},
-/obj/machinery/light/small/directional/east,
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
-	},
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 1
-	},
-/turf/open/floor/carpet/green,
-/area/centcom/central_command_areas/adminroom)
 "rlq" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/misc/dirt/jungle/dark/arena,
@@ -25894,6 +26083,15 @@
 	},
 /obj/machinery/light/street_lamp,
 /turf/open/floor/grass,
+/area/centcom/central_command_areas/admin)
+"rnH" = (
+/obj/machinery/button/door/directional/north{
+	name = "Emergency Assistants Fuck Off Button";
+	id = "donutstealthisid";
+	req_access = "cent_captain"
+	},
+/obj/machinery/computer/communications,
+/turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/admin)
 "rpd" = (
 /obj/structure/table/reinforced/plasmarglass,
@@ -25954,10 +26152,6 @@
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/admin)
-"ryg" = (
-/obj/structure/reagent_dispensers/watertank/high,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "rAI" = (
 /obj/machinery/button/door/directional/north{
 	name = "talking time button";
@@ -26068,6 +26262,12 @@
 "rLY" = (
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
+"rMl" = (
+/obj/structure/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/centcom/thanos_farm)
 "rNh" = (
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/floor/grass,
@@ -26097,12 +26297,6 @@
 /obj/effect/mapping_helpers/airlock/access/any/admin/captain,
 /turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/adminroom)
-"rRh" = (
-/obj/structure/railing/wood{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/centcom/thanos_farm)
 "rRY" = (
 /obj/item/clothing/head/soft/fishing_hat,
 /obj/structure/table/wood,
@@ -26174,18 +26368,6 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/reinforced,
 /area/centcom/central_command_areas/admin)
-"rXK" = (
-/obj/structure/table/wood,
-/obj/item/paper_bin{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/pen/fourcolor{
-	pixel_x = -4;
-	pixel_y = 9
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "rXO" = (
 /turf/open/floor/iron/smooth_large,
 /area/cruiser_dock)
@@ -26195,6 +26377,35 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/centcom/central_command_areas/admin)
+"rYm" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-6";
+	pixel_y = 32;
+	layer = 2.8;
+	pixel_x = -32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = -32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = 32;
+	layer = 2.8
+	},
+/obj/machinery/computer/security/wooden_tv{
+	name = "old television";
+	desc = "An old television jury-rigged into Nanotrasen's security network. The dial seems to be set to 'STATION 13'."
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "rYI" = (
 /obj/machinery/button/door/directional/north{
 	name = "talking time button";
@@ -26216,10 +26427,6 @@
 /obj/effect/mapping_helpers/airlock/access/any/admin/captain,
 /turf/open/floor/iron/dark/small,
 /area/centcom/central_command_areas/prison)
-"sag" = (
-/obj/machinery/vending/hydroseeds,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "saC" = (
 /obj/effect/turf_decal/plaque{
 	icon_state = "L1"
@@ -26249,10 +26456,6 @@
 /obj/item/storage/toolbox/syndicate,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
-"sef" = (
-/obj/structure/table/wood,
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "ser" = (
 /obj/structure/chair/comfy/black{
 	dir = 1
@@ -26286,6 +26489,12 @@
 /obj/effect/turf_decal/tile/hot_pink/diagonal_edge,
 /turf/open/floor/iron/white/diagonal,
 /area/centcom/central_command_areas/kitchen)
+"siw" = (
+/obj/structure/sign/paint{
+	name = "RIP Karissa Sep '99 - Apr '16"
+	},
+/turf/open/floor/sandy_dirt,
+/area/centcom/central_command_areas/admin)
 "siB" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1;
@@ -26317,7 +26526,8 @@
 /obj/structure/billboard/space_cola,
 /turf/open/floor/iron/dark/textured_corner,
 /area/centcom/central_command_areas/evacuation)
-"snE" = (
+"smE" = (
+/obj/structure/flora/tree/jungle/style_6,
 /turf/open/floor/grass,
 /area/centcom/thanos_farm)
 "ssC" = (
@@ -26333,6 +26543,10 @@
 "suo" = (
 /turf/closed/indestructible/riveted,
 /area/centcom/central_command_areas/supplypod/supplypod_temp_holding)
+"svL" = (
+/obj/effect/landmark/start/thanos,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "sxc" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
@@ -26340,11 +26554,20 @@
 /obj/item/flashlight/flare/candle/infinite,
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
-"sxm" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 10
+"sxY" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = 32;
+	layer = 2.8
 	},
-/turf/open/floor/carpet/green,
+/obj/machinery/button/door/directional/north{
+	name = "Emergency Assistants Fuck Off Button";
+	id = "donutstealthisid";
+	req_access = "cent_captain"
+	},
+/turf/open/floor/wood,
 /area/centcom/central_command_areas/adminroom)
 "syU" = (
 /obj/effect/turf_decal/sand/plating,
@@ -26364,12 +26587,22 @@
 "sAG" = (
 /turf/open/floor/iron/smooth_edge,
 /area/cruiser_dock)
+"sBf" = (
+/obj/structure/table/wood,
+/obj/item/melee/roastingstick,
+/obj/item/melee/roastingstick,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "sCN" = (
 /obj/effect/spawner/random/vending/colavend,
 /obj/effect/turf_decal/bot_white,
 /obj/structure/sign/poster/contraband/free_drone/directional/north,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
+"sDg" = (
+/obj/structure/decorative/shelf/alcohol,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "sEm" = (
 /obj/structure/railing/wooden_fencing{
 	pixel_y = 16
@@ -26469,6 +26702,10 @@
 /obj/structure/shipping_container/vitezstvi,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
+"sSe" = (
+/obj/structure/bonfire/prelit,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "sSL" = (
 /obj/structure/barricade/wooden/crude,
 /obj/effect/spawner/random/trash/cigbutt,
@@ -26525,9 +26762,17 @@
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/centcom/central_command_areas/retirement_yard)
-"tcJ" = (
-/turf/open/floor/iron/dark,
-/area/cruiser_dock)
+"tdQ" = (
+/obj/structure/table/wood/fancy,
+/obj/item/storage/box/coffeepack,
+/obj/item/reagent_containers/cup/coffeepot/bluespace{
+	pixel_y = 9;
+	pixel_x = 5
+	},
+/obj/item/reagent_containers/cup/glass/mug/nanotrasen,
+/obj/machinery/light/directional/west,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "tez" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Raziel's Theatre"
@@ -26544,6 +26789,25 @@
 	},
 /obj/item/kirbyplants/organic/plant22,
 /turf/open/floor/wood/parquet,
+/area/centcom/central_command_areas/admin)
+"tiz" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = 32
+	},
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green{
+	pixel_x = -2;
+	pixel_y = 12
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
+"tlO" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron,
 /area/centcom/central_command_areas/admin)
 "tlQ" = (
 /obj/structure/flora/bush/fullgrass/style_random,
@@ -26696,6 +26960,10 @@
 /obj/item/healthanalyzer/advanced,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/medical)
+"tyd" = (
+/obj/structure/flora/tree/jungle/small,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "tyg" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -26709,12 +26977,6 @@
 /obj/structure/closet/crate/coffin/meatcoffin,
 /turf/open/floor/lowered/iron/pool/cobble/side,
 /area/centcom/central_command_areas/adminroom)
-"tyC" = (
-/obj/structure/railing/wood{
-	dir = 4
-	},
-/turf/open/floor/wood,
-/area/centcom/thanos_farm)
 "tyZ" = (
 /obj/machinery/light/cold/directional/east,
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
@@ -26744,6 +27006,10 @@
 /obj/structure/flora/bush/fullgrass/style_random,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/evacuation)
+"tAE" = (
+/obj/structure/flora/tree/jungle,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "tBz" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Vault G-07"
@@ -26755,6 +27021,10 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
+/area/centcom/central_command_areas/admin)
+"tBN" = (
+/obj/structure/chair/comfy/black,
+/turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/admin)
 "tCt" = (
 /obj/machinery/light/neon_lining{
@@ -26913,6 +27183,10 @@
 /obj/structure/flora/bush/sparsegrass/style_2,
 /turf/open/misc/grass,
 /area/centcom)
+"tYn" = (
+/obj/effect/turf_decal/siding/wood,
+/turf/open/floor/carpet/green,
+/area/centcom/central_command_areas/adminroom)
 "tYo" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/food/cake/bscc,
@@ -26938,20 +27212,9 @@
 	},
 /turf/open/floor/engine,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
-"uab" = (
-/obj/structure/flora/tree/jungle/style_6,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "udR" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/parquet,
-/area/centcom/central_command_areas/admin)
-"ued" = (
-/obj/structure/mineral_door/wood{
-	color = "543e27";
-	name = "empty office"
-	},
-/turf/open/floor/sandy_dirt,
 /area/centcom/central_command_areas/admin)
 "uei" = (
 /obj/effect/turf_decal/stripes/box,
@@ -26979,6 +27242,14 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/plastic,
 /area/centcom/central_command_areas/admin)
+"uli" = (
+/obj/item/language_manual{
+	language = /datum/language/machine;
+	name = "Silicon Speak for Dummies"
+	},
+/obj/structure/table/wood/fancy,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "ulw" = (
 /obj/structure/flora/bush/sparsegrass,
 /turf/open/floor/sandy_dirt,
@@ -26998,32 +27269,6 @@
 	},
 /turf/closed/indestructible/wood,
 /area/centcom/central_command_areas/admin)
-"uoO" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = -32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-5";
-	pixel_y = -32;
-	layer = 2.8;
-	pixel_x = -32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = -32;
-	layer = 2.8
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "upN" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -27047,32 +27292,6 @@
 	},
 /turf/open/misc/asteroid,
 /area/cruiser_dock)
-"uue" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = -32;
-	layer = 2.8
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-5";
-	pixel_y = -32;
-	layer = 2.8;
-	pixel_x = -32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = -32
-	},
-/obj/machinery/photocopier/gratis,
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "uuh" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -27125,33 +27344,6 @@
 	},
 /turf/open/floor/iron/textured,
 /area/centcom/central_command_areas/admin)
-"uCp" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = 32
-	},
-/obj/machinery/light/small/directional/east,
-/obj/item/ammo_casing/caseless/rocket/heap,
-/obj/structure/closet/cabinet,
-/obj/item/ammo_casing/caseless/rocket,
-/obj/item/ammo_casing/caseless/rocket,
-/obj/item/gun/ballistic/rocketlauncher/nobackblast{
-	pin = /obj/item/firing_pin
-	},
-/obj/item/ammo_casing/caseless/rocket,
-/obj/item/ammo_casing/caseless/rocket,
-/obj/item/ammo_casing/caseless/rocket/heap,
-/obj/item/ammo_casing/caseless/rocket/weak,
-/obj/item/ammo_casing/caseless/rocket/weak,
-/obj/item/clothing/under/rank/centcom/official,
-/obj/item/clothing/glasses/sunglasses,
-/obj/item/radio/headset/headset_cent/alt,
-/obj/item/clothing/shoes/jackboots,
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "uCA" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -27316,6 +27508,15 @@
 /obj/structure/stone_tile/slab/burnt,
 /turf/open/floor/lowered/iron/pool/cobble,
 /area/centcom/central_command_areas/adminroom)
+"uUV" = (
+/obj/machinery/vending/coffee{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium,
+/area/centcom/syndicate_mothership/control)
 "uVO" = (
 /obj/structure/chair/office/tactical{
 	dir = 8
@@ -27329,6 +27530,10 @@
 /obj/machinery/door/poddoor/shutters/indestructible/preopen,
 /turf/closed/indestructible/fakeglass,
 /area/centcom/central_command_areas/adminroom)
+"uWz" = (
+/obj/machinery/vending/hydroseeds,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "uXS" = (
 /obj/structure/fans/tiny/forcefield{
 	color = "#276c87"
@@ -27416,13 +27621,6 @@
 /obj/effect/mapping_helpers/airlock/access/any/admin/captain,
 /turf/open/floor/iron/white/textured,
 /area/centcom/central_command_areas/admin)
-"vgl" = (
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
-"vgu" = (
-/obj/structure/flora/bush/fullgrass/style_3,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "vgV" = (
 /obj/structure/closet/syndicate{
 	desc = "It's a personal storage unit for operative gear."
@@ -27511,34 +27709,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/evacuation)
-"vsq" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = 32;
-	layer = 2.8
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-10";
-	pixel_y = 32;
-	layer = 2.8;
-	pixel_x = 32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = 32
-	},
-/obj/structure/bed/double,
-/obj/item/bedsheet/centcom/double,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
 "vsR" = (
 /obj/structure/sign{
 	name = "wall";
@@ -27588,6 +27758,12 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/admin/captain,
 /turf/open/floor/iron/white/textured,
+/area/centcom/central_command_areas/admin)
+"vvF" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/admin)
 "vxh" = (
 /turf/closed/indestructible/riveted,
@@ -27646,6 +27822,12 @@
 /obj/structure/fence,
 /turf/open/misc/sandy_dirt,
 /area/centcom/central_command_areas/admin)
+"vEX" = (
+/obj/effect/spawner/random/entertainment/arcade{
+	dir = 8
+	},
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "vFm" = (
 /turf/open/floor/mineral/titanium/purple,
 /area/centcom/central_command_areas/adminroom)
@@ -27687,6 +27869,10 @@
 	},
 /turf/open/floor/circuit/red/off,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"vJt" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "vJI" = (
 /obj/machinery/porta_turret/syndicate/assaultops/internal{
 	system_id = "goldeneyebase"
@@ -27810,6 +27996,9 @@
 	},
 /turf/open/water/arena,
 /area/centcom/central_command_areas/admin)
+"vXj" = (
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "vXv" = (
 /obj/structure/organ_creator,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
@@ -27817,6 +28006,11 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/centcom/central_command_areas/medical)
+"vXP" = (
+/obj/item/radio/headset/headset_cent,
+/obj/structure/table/reinforced,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "vYm" = (
 /obj/machinery/door/airlock/centcom{
 	dir = 4;
@@ -27837,6 +28031,11 @@
 /obj/machinery/light/small/built/directional/west,
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
+"vZl" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/beakers,
+/turf/open/floor/carpet/black,
+/area/centcom/thanos_farm)
 "vZN" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 4
@@ -28036,29 +28235,6 @@
 	},
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/admin)
-"wrH" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 4;
-	pixel_y = -5
-	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
-	},
-/obj/structure/railing/wooden_fencing{
-	pixel_y = 16
-	},
-/obj/structure/railing/wooden_fencing{
-	pixel_y = 16
-	},
-/turf/open/floor/sandy_dirt,
-/area/centcom/central_command_areas/admin)
-"wrV" = (
-/obj/structure/table/wood,
-/obj/machinery/reagentgrinder{
-	pixel_y = 10
-	},
-/turf/open/floor/carpet/black,
-/area/centcom/thanos_farm)
 "wso" = (
 /obj/effect/turf_decal/weather,
 /turf/open/floor/sandy_dirt,
@@ -28084,6 +28260,9 @@
 /obj/structure/flora/bush/pale/style_3,
 /turf/open/misc/dirt/station,
 /area/centcom/central_command_areas/admin)
+"wwC" = (
+/turf/open/floor/wood,
+/area/centcom/thanos_farm)
 "wwG" = (
 /obj/structure/bed/maint,
 /obj/item/toy/plush/spider{
@@ -28259,63 +28438,21 @@
 	dir = 8
 	},
 /area/cruiser_dock)
+"wSs" = (
+/obj/structure/flora/bush/fullgrass/style_2,
+/turf/open/floor/grass,
+/area/centcom/thanos_farm)
 "wTG" = (
 /obj/effect/spawner/random/trash/bacteria,
 /obj/effect/spawner/random/trash/garbage,
 /turf/open/floor/iron/vaporwave,
 /area/centcom/central_command_areas/adminroom)
-"wTX" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-12";
-	pixel_y = -32;
-	layer = 2.8
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = 32
-	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-9";
-	pixel_y = -32;
-	layer = 2.8;
-	pixel_x = 32
-	},
-/mob/living/basic/bee{
-	faction = list("hostile","hive","neutral");
-	name = "The Poobee";
-	desc = "Somehow, you feel this bee is the only thing keeping the world intertwined."
-	},
-/obj/structure/bed/dogbed{
-	name = "The Poobee's bed";
-	desc = "I'm just saying, it looks a little bit oversized for what lives in it."
-	},
-/turf/open/floor/wood,
-/area/centcom/central_command_areas/adminroom)
-"wTZ" = (
-/obj/machinery/vending/coffee,
-/obj/effect/turf_decal/bot_white,
-/turf/open/floor/iron/dark/textured_large,
-/area/cruiser_dock)
 "wVL" = (
 /obj/structure/fans/tiny/forcefield{
 	color = "#276c87"
 	},
 /turf/closed/indestructible/grille,
 /area/centcom/central_command_areas/prison)
-"wVP" = (
-/obj/structure/mineral_door/wood{
-	name = "TheProfit's Shithole";
-	desc = "This thing stinks."
-	},
-/turf/open/floor/plating/rust,
-/area/centcom/central_command_areas/adminroom)
 "wXc" = (
 /obj/machinery/computer/accounting{
 	dir = 4
@@ -28329,6 +28466,13 @@
 	},
 /turf/open/floor/plastic,
 /area/centcom/central_command_areas/admin)
+"wXD" = (
+/obj/structure/table/reinforced,
+/obj/machinery/fax{
+	name = "Beverly's Fax Machine"
+	},
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "wXS" = (
 /turf/open/floor/glass/reinforced,
 /area/centcom/central_command_areas/admin)
@@ -28341,8 +28485,8 @@
 	},
 /turf/open/misc/grass,
 /area/centcom/central_command_areas/kitchen)
-"xaw" = (
-/obj/machinery/computer/camera_advanced,
+"wZG" = (
+/obj/structure/closet/crate/wooden/storage_barrel,
 /turf/open/floor/carpet/black,
 /area/centcom/thanos_farm)
 "xbs" = (
@@ -28377,13 +28521,13 @@
 	dir = 4
 	},
 /area/centcom/central_command_areas/prison)
-"xdF" = (
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/turf_decal/siding/wood/corner{
+"xcR" = (
+/obj/machinery/door/airlock/vault{
 	dir = 4
 	},
-/turf/open/floor/carpet/green,
-/area/centcom/central_command_areas/adminroom)
+/obj/effect/mapping_helpers/airlock/access/any/admin/general,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "xdU" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/flowers_pp/style_random,
@@ -28400,10 +28544,6 @@
 /obj/effect/turf_decal/trimline/red/real_red/filled/line,
 /turf/open/floor/iron/dark/textured,
 /area/centcom/central_command_areas/admin)
-"xeZ" = (
-/obj/structure/flora/tree/jungle/style_3,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "xfe" = (
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/adminroom)
@@ -28414,30 +28554,18 @@
 	},
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/admin)
-"xhi" = (
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-3";
-	desc = "Effectively impervious to conventional methods of destruction.";
-	pixel_x = 32
+"xgN" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin{
+	pixel_y = 5
 	},
-/obj/structure/sign{
-	name = "wall";
-	icon = 'icons/turf/walls/wood_wall.dmi';
-	icon_state = "wood_wall-6";
-	pixel_y = 32;
-	layer = 2.8;
-	pixel_x = 32
+/obj/item/pen{
+	pixel_y = 8
 	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
-	},
-/turf/open/floor/carpet/green,
-/area/centcom/central_command_areas/adminroom)
+/obj/item/stamp/centcom,
+/obj/item/stamp/denied,
+/turf/open/floor/carpet/red,
+/area/centcom/central_command_areas/admin)
 "xih" = (
 /obj/structure/railing/wood{
 	dir = 1
@@ -28482,6 +28610,16 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"xkv" = (
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
+"xkY" = (
+/obj/machinery/door/airlock/vault{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/access/any/admin/general,
+/turf/open/floor/iron,
+/area/centcom/central_command_areas/admin)
 "xno" = (
 /obj/structure/window/reinforced/tinted/frosted,
 /turf/open/floor/iron/dark/small,
@@ -28542,6 +28680,9 @@
 	dir = 4
 	},
 /area/centcom/central_command_areas/evacuation)
+"xwu" = (
+/turf/closed/mineral/ash_rock,
+/area/centcom/thanos_farm)
 "xwy" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/plastic,
@@ -28611,15 +28752,21 @@
 /obj/structure/flora/bush/large/style_3,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/retirement_yard)
-"xFh" = (
-/obj/structure/flora/tree/jungle,
-/turf/open/floor/grass,
-/area/centcom/thanos_farm)
 "xGe" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/decal/cleanable/piss_stain,
 /turf/open/misc/sandy_dirt,
 /area/centcom/central_command_areas/admin)
+"xHG" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-12";
+	pixel_y = -32;
+	layer = 2.8
+	},
+/turf/open/floor/wood,
+/area/centcom/central_command_areas/adminroom)
 "xJC" = (
 /obj/structure/closet/cardboard,
 /mob/living/basic/bot/medbot/nukie/assop{
@@ -28633,6 +28780,12 @@
 	},
 /obj/machinery/grill,
 /turf/open/misc/sandy_dirt,
+/area/centcom/central_command_areas/adminroom)
+"xKs" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/carpet/green,
 /area/centcom/central_command_areas/adminroom)
 "xMe" = (
 /obj/machinery/light/neon_lining{
@@ -28688,6 +28841,9 @@
 	},
 /turf/open/floor/plastic,
 /area/centcom/central_command_areas/admin)
+"xRv" = (
+/turf/open/water/jungle,
+/area/centcom/thanos_farm)
 "xSw" = (
 /obj/machinery/door/poddoor/shutters/indestructible,
 /turf/open/floor/plating,
@@ -28739,6 +28895,33 @@
 /obj/item/stamp/granted,
 /turf/open/floor/iron/dark/small,
 /area/centcom/central_command_areas/admin)
+"xUb" = (
+/turf/closed/wall/mineral/wood,
+/area/centcom/thanos_farm)
+"xUt" = (
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-3";
+	desc = "Effectively impervious to conventional methods of destruction.";
+	pixel_x = 32
+	},
+/obj/structure/sign{
+	name = "wall";
+	icon = 'icons/turf/walls/wood_wall.dmi';
+	icon_state = "wood_wall-6";
+	pixel_y = 32;
+	layer = 2.8;
+	pixel_x = 32
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/turf/open/floor/carpet/green,
+/area/centcom/central_command_areas/adminroom)
 "xVl" = (
 /obj/effect/turf_decal/siding/purple{
 	dir = 10
@@ -28748,6 +28931,10 @@
 	},
 /turf/open/floor/glass/plasma,
 /area/centcom/central_command_areas/kitchen)
+"xVD" = (
+/obj/item/toy/plush/pooba_bee_plush,
+/turf/open/floor/plating,
+/area/centcom/central_command_areas/admin)
 "xWM" = (
 /obj/structure/closet/crate/cardboard/mothic,
 /obj/item/storage/box/mothic_rations,
@@ -35163,42 +35350,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ask
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
 ayD
 ayD
 ayD
@@ -35420,42 +35607,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -35677,42 +35864,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -35934,42 +36121,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -36191,42 +36378,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -36448,42 +36635,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -36705,42 +36892,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -36962,42 +37149,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -37219,42 +37406,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -37476,42 +37663,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -37733,42 +37920,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -37990,42 +38177,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -38247,42 +38434,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -38504,42 +38691,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -38761,42 +38948,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -39018,42 +39205,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -39275,42 +39462,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -39532,42 +39719,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -39789,42 +39976,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -40046,42 +40233,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -40303,42 +40490,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -40560,42 +40747,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -40817,42 +41004,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -41074,42 +41261,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -41331,42 +41518,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -41588,42 +41775,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -41845,42 +42032,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -42102,42 +42289,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -42359,42 +42546,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -42616,42 +42803,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -42691,7 +42878,7 @@ acz
 acz
 anK
 arS
-apc
+uUV
 anK
 anK
 anK
@@ -42873,42 +43060,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -43130,42 +43317,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -43387,42 +43574,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -43644,42 +43831,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -43901,42 +44088,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -44158,42 +44345,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -44415,42 +44602,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -44672,42 +44859,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -44929,42 +45116,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -45186,42 +45373,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -45443,42 +45630,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -45700,42 +45887,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -45957,42 +46144,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -46214,42 +46401,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -46471,42 +46658,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -46728,42 +46915,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -46985,42 +47172,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -47242,6 +47429,41 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
@@ -47264,41 +47486,6 @@ axE
 axE
 axE
 axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 afx
 afx
 axE
@@ -47331,61 +47518,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
 aaa
 aaa
 aaa
@@ -47499,6 +47686,41 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
@@ -47521,41 +47743,6 @@ axE
 axE
 axE
 axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 afx
 afx
 axE
@@ -47588,61 +47775,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-bSk
-bSk
-snE
-snE
-snE
-snE
-snE
-snE
-vgu
-snE
-snE
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+oOd
+oOd
+caX
+caX
+caX
+caX
+caX
+caX
+cfk
+caX
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -47756,6 +47943,41 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
@@ -47778,41 +48000,6 @@ axE
 axE
 axE
 axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 afx
 afx
 axE
@@ -47845,61 +48032,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-snE
-snE
-snE
-xeZ
-snE
-iKx
-snE
-snE
-xFh
-kBZ
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xwu
+oOd
+caX
+caX
+caX
+bIV
+caX
+mrZ
+caX
+caX
+tAE
+njr
+hZQ
 aaa
 aaa
 aaa
@@ -48013,6 +48200,41 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
@@ -48035,41 +48257,6 @@ axE
 axE
 axE
 axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 afx
 afx
 axE
@@ -48102,61 +48289,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-dQH
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-snE
-snE
-snE
-snE
-snE
-kBZ
-snE
-snE
-cun
-snE
-dsc
+hZQ
+oOd
+iId
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+caX
+caX
+caX
+caX
+caX
+njr
+caX
+caX
+wSs
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -48270,6 +48457,41 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
@@ -48292,41 +48514,6 @@ axE
 axE
 axE
 axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 afx
 afx
 axE
@@ -48359,61 +48546,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-dQH
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-snE
-snE
-uab
-snE
-lNT
-snE
-snE
-rcp
-snE
-vgu
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+iId
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+caX
+caX
+smE
+caX
+rcI
+caX
+caX
+tyd
+caX
+cfk
+hZQ
 aaa
 aaa
 aaa
@@ -48527,6 +48714,41 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
@@ -48549,41 +48771,6 @@ axE
 axE
 axE
 axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 afx
 afx
 axE
@@ -48616,61 +48803,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-kBZ
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+njr
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -48784,42 +48971,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -48873,61 +49060,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-qoj
-qoj
-qoj
-qoj
-qoj
-qoj
-snE
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+xUb
+xUb
+xUb
+xUb
+xUb
+xUb
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -49041,6 +49228,41 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
@@ -49063,41 +49285,6 @@ axE
 axE
 axE
 axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 afx
 axE
 axE
@@ -49130,61 +49317,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-dQH
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-sag
-vgl
-qid
-sef
-wrV
-qoj
-snE
-vgu
-dsc
+hZQ
+oOd
+oOd
+oOd
+iId
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+uWz
+gXX
+vZl
+dUD
+dto
+xUb
+caX
+cfk
+hZQ
 aaa
 aaa
 aaa
@@ -49298,6 +49485,41 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
@@ -49320,41 +49542,6 @@ axE
 axE
 axE
 axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 afx
 axE
 axE
@@ -49387,61 +49574,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-ezQ
-vgl
-vgl
-mBH
-cdj
-qoj
-snE
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+lyy
+gXX
+gXX
+svL
+bby
+xUb
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -49555,42 +49742,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -49644,61 +49831,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-iBY
-vgl
-vgl
-vgl
-sef
-qoj
-snE
-dus
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+ptv
+gXX
+gXX
+gXX
+dUD
+xUb
+caX
+lDD
+hZQ
 aaa
 aaa
 aaa
@@ -49812,42 +49999,42 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
-axE
 axE
 axE
 axE
@@ -49901,61 +50088,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-jsn
-mBH
-vgl
-vgl
-cSS
-qoj
-snE
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+wZG
+svL
+gXX
+gXX
+sBf
+xUb
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -50069,63 +50256,63 @@ aaa
 aaa
 aaa
 aaa
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-ayD
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 ayD
 axE
 axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
 afx
 afx
 afx
@@ -50158,61 +50345,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-snE
-snE
-snE
-snE
-mTs
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-rRh
-rRh
-rRh
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-rRh
-rRh
-rRh
-rRh
-snE
-snE
-snE
-snE
-snE
-snE
-hrm
-qoj
-eNb
-vgl
-vgl
-vgl
-sef
-qoj
-vgu
-snE
-dsc
+hZQ
+caX
+caX
+caX
+caX
+bCi
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+hen
+hen
+hen
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+hen
+hen
+hen
+hen
+caX
+caX
+caX
+caX
+caX
+caX
+sSe
+xUb
+dTA
+gXX
+gXX
+gXX
+dUD
+xUb
+cfk
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -50361,26 +50548,26 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 ayD
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
 axE
 axE
 afx
@@ -50415,61 +50602,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-mTs
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-iNk
-iNk
-iNk
-iNk
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-iNk
-iNk
-iNk
-iNk
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-vgl
-vgl
-vgl
-mBH
-sef
-qoj
-snE
-cun
-dsc
+hZQ
+bCi
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+wwC
+wwC
+wwC
+wwC
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+wwC
+wwC
+wwC
+wwC
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+gXX
+gXX
+gXX
+svL
+dUD
+xUb
+caX
+wSs
+hZQ
 aaa
 aaa
 aaa
@@ -50618,26 +50805,26 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 ayD
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
+axE
 axE
 axE
 afx
@@ -50672,61 +50859,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-tyC
-tyC
-tyC
-tyC
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-tyC
-tyC
-tyC
-tyC
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-snE
-hrm
-qoj
-vgl
-vgl
-vgl
-vgl
-sef
-qoj
-snE
-snE
-dsc
+hZQ
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+rMl
+rMl
+rMl
+rMl
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+rMl
+rMl
+rMl
+rMl
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+caX
+sSe
+xUb
+gXX
+gXX
+gXX
+gXX
+dUD
+xUb
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -50875,25 +51062,25 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
 ayD
 axE
 axE
@@ -50929,61 +51116,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-vgl
-mBH
-vgl
-vgl
-sef
-qoj
-fdS
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+gXX
+svL
+gXX
+gXX
+dUD
+xUb
+dow
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -51186,61 +51373,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-jfB
-vgl
-vgl
-vgl
-sef
-qoj
-snE
-vgu
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+bdi
+gXX
+gXX
+gXX
+dUD
+xUb
+caX
+cfk
+hZQ
 aaa
 aaa
 aaa
@@ -51443,61 +51630,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-dQH
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-xaw
-vgl
-vgl
-mBH
-sef
-qoj
-cun
-snE
-dsc
+hZQ
+oOd
+oOd
+iId
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+ckk
+gXX
+gXX
+svL
+dUD
+xUb
+wSs
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -51700,61 +51887,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-ryg
-vgl
-sef
-sef
-sef
-qoj
-snE
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xwu
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+vJt
+gXX
+dUD
+dUD
+dUD
+xUb
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -51957,61 +52144,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-qoj
-qoj
-qoj
-qoj
-qoj
-qoj
-qoj
-vgu
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+xUb
+xUb
+xUb
+xUb
+xUb
+xUb
+xUb
+cfk
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -52214,61 +52401,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-dQH
-bSk
-bSk
-bSk
-bSk
-dQH
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-snE
-snE
-snE
-snE
-snE
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-snE
-snE
-snE
-snE
-snE
-cun
-snE
-snE
-snE
-dsc
+hZQ
+oOd
+iId
+oOd
+oOd
+oOd
+oOd
+iId
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xwu
+caX
+caX
+caX
+caX
+caX
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+caX
+caX
+caX
+caX
+caX
+wSs
+caX
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -52471,61 +52658,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-snE
-snE
-snE
-rcp
-vgu
-snE
-snE
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-snE
-snE
-snE
-snE
-cLR
-snE
-snE
-snE
-cun
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+caX
+caX
+caX
+tyd
+cfk
+caX
+caX
+xwu
+xRv
+xRv
+xRv
+xRv
+xRv
+xRv
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+caX
+caX
+caX
+caX
+gpL
+caX
+caX
+caX
+wSs
+hZQ
 aaa
 aaa
 aaa
@@ -52728,61 +52915,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-snE
-ebu
-snE
-vgu
-cun
-snE
-kBZ
-cun
-snE
-vgu
-snE
-snE
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-snE
-snE
-snE
-snE
-vgu
-snE
-snE
-hFh
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+caX
+xwu
+caX
+cfk
+wSs
+caX
+njr
+wSs
+caX
+cfk
+caX
+caX
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+caX
+caX
+caX
+caX
+cfk
+caX
+caX
+eUr
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -52985,61 +53172,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-qnZ
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-snE
-snE
-cun
-uab
-vgu
-kBZ
-snE
-vgu
-snE
-hFh
-cun
-snE
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-snE
-snE
-lNT
-vgu
-snE
-snE
-snE
-snE
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xRv
+xRv
+xRv
+xRv
+xRv
+xwu
+caX
+caX
+wSs
+smE
+cfk
+njr
+caX
+cfk
+caX
+eUr
+wSs
+caX
+xwu
+xRv
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+caX
+caX
+rcI
+cfk
+caX
+caX
+caX
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -53242,61 +53429,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-ebu
-qnZ
-qnZ
-qnZ
-qnZ
-ebu
-ebu
-snE
-vgu
-snE
-kBZ
-snE
-cun
-snE
-snE
-kBZ
-cun
-vgu
-snE
-snE
-ebu
-qnZ
-qnZ
-qnZ
-ebu
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-bSk
-snE
-snE
-snE
-snE
-cun
-snE
-vgu
-snE
-snE
-snE
-dsc
+hZQ
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+xwu
+xRv
+xRv
+xRv
+xRv
+xwu
+xwu
+caX
+cfk
+caX
+njr
+caX
+wSs
+caX
+caX
+njr
+wSs
+cfk
+caX
+caX
+xwu
+xRv
+xRv
+xRv
+xwu
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+oOd
+caX
+caX
+caX
+caX
+wSs
+caX
+cfk
+caX
+caX
+caX
+hZQ
 aaa
 aaa
 aaa
@@ -53499,61 +53686,61 @@ aaa
 aaa
 aaa
 aaa
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
-dsc
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
+hZQ
 aaa
 aaa
 aaa
@@ -54651,7 +54838,7 @@ yhF
 mUv
 yhF
 gWc
-wVP
+kSK
 nGN
 uRb
 sRa
@@ -55680,10 +55867,10 @@ mUv
 yhF
 hpU
 kpH
-miZ
-glx
-nsq
-uue
+cQL
+aaW
+xkv
+cSL
 kpH
 aaa
 aiF
@@ -55937,10 +56124,10 @@ mUv
 yhF
 aDM
 kpH
-pnC
-rXK
-nsq
-jsq
+dQc
+odD
+xkv
+jAA
 kpH
 aaa
 aiF
@@ -56194,10 +56381,10 @@ mUv
 yhF
 iOc
 kpH
-lSt
-ccR
-sxm
-cJk
+aKc
+jth
+oMX
+qAI
 kpH
 aaa
 aiF
@@ -56451,10 +56638,10 @@ mUv
 yhF
 yhF
 kpH
-pzA
-pWL
-pyo
-dgA
+sxY
+xKs
+tYn
+xHG
 kpH
 aaa
 aiF
@@ -56696,7 +56883,7 @@ aaa
 aaa
 aaa
 kpH
-elw
+jFG
 aAl
 aAl
 aAl
@@ -56707,11 +56894,11 @@ yhF
 mUv
 yhF
 yhF
-mpQ
-xhi
-rkG
-xdF
-dTl
+qzu
+xUt
+eNq
+nbv
+fan
 kpH
 aaa
 aiF
@@ -56967,7 +57154,7 @@ yhF
 kpH
 kpH
 kpH
-dyb
+gwm
 kpH
 kpH
 aaa
@@ -57222,10 +57409,10 @@ mUv
 yhF
 egP
 kpH
-lCs
-inB
-iyZ
-uoO
+rYm
+hAP
+oYA
+mTh
 kpH
 aaa
 aiF
@@ -57479,10 +57666,10 @@ mUv
 yhF
 dtE
 kpH
-hfo
-bbh
-cZL
-dgA
+hlg
+cIl
+ldv
+xHG
 kpH
 aaa
 aiF
@@ -57736,10 +57923,10 @@ mUv
 yhF
 dtE
 kpH
-vsq
-lsS
-uCp
-wTX
+iew
+tiz
+kch
+hol
 kpH
 aaa
 aiF
@@ -59323,7 +59510,7 @@ aMc
 aMc
 lSF
 fAH
-eSM
+gvr
 eBX
 lSF
 jsr
@@ -59339,7 +59526,7 @@ wpP
 nnN
 dii
 vkm
-mdf
+aNa
 iLo
 jvQ
 vxh
@@ -65926,11 +66113,11 @@ aaa
 aaa
 aaa
 aaa
-aOn
-lgW
-lgW
-lgW
-lgW
+blK
+hDu
+xVD
+qGw
+blK
 lgW
 lgW
 lgW
@@ -66186,7 +66373,7 @@ aaa
 blK
 blK
 blK
-blK
+boG
 blK
 blK
 blK
@@ -66441,16 +66628,16 @@ aaa
 aaa
 aaa
 blK
-kFQ
-tVr
-nPn
-kdH
-gXp
-bHb
+wXD
+xgN
+vXj
+vXj
+qtV
+tdQ
 blK
 aMc
 jRn
-wrH
+fmn
 exa
 pkc
 qZk
@@ -66698,17 +66885,17 @@ aaa
 aaa
 aaa
 blK
-cnR
-vPE
-cmN
-ijQ
-cKq
-jJO
+coJ
+vXj
+vXj
+vXj
+vXj
+qHH
 blK
 cdN
 aMc
 kPZ
-eTJ
+exa
 exa
 exa
 exa
@@ -66955,17 +67142,17 @@ aaa
 aaa
 aaa
 blK
-qKa
-lpd
-flv
-ijQ
-cKq
-jJO
-ued
+cwv
+tBN
+bed
+vXj
+vXj
+vXj
+fgm
 aMc
 aMc
 kPZ
-eTJ
+exa
 exa
 exa
 mIn
@@ -67212,17 +67399,17 @@ aaa
 aaa
 aaa
 blK
-fex
-vPE
-cmN
-ijQ
-cKq
-jJO
+rnH
+vXj
+vXP
+vXj
+vXj
+vXj
 blK
 cdN
 aMc
 kPZ
-eTJ
+exa
 jbR
 exa
 rRY
@@ -67469,16 +67656,16 @@ aaa
 aaa
 aaa
 blK
-wJw
-vBV
-jwN
-iwc
-dIy
-cMo
+hNV
+vXj
+vXj
+vXj
+vEX
+kBZ
 blK
 aMc
 jRn
-ioX
+duN
 exa
 exa
 exa
@@ -67727,7 +67914,7 @@ aaa
 aaa
 blK
 blK
-blK
+xcR
 vyT
 blK
 blK
@@ -67982,14 +68169,14 @@ aaa
 aaa
 aaa
 aaa
-aOn
-exa
-exa
-exa
-exa
-exa
-exa
-exa
+blK
+kZz
+vXj
+vXj
+vXj
+qYu
+nQT
+blK
 exa
 exa
 exa
@@ -68239,14 +68426,14 @@ aaa
 aaa
 aaa
 aaa
-aOn
-exa
-exa
-exa
-exa
-exa
-exa
-exa
+blK
+blK
+xkY
+blK
+vXj
+vXj
+ima
+blK
 exa
 exa
 exa
@@ -68496,14 +68683,14 @@ aaa
 aaa
 aaa
 aaa
-aOn
-exa
-exa
-exa
-exa
-exa
-exa
-exa
+blK
+gHt
+kWs
+blK
+hqg
+vXj
+vvF
+blK
 exa
 exa
 exa
@@ -68753,14 +68940,14 @@ aaa
 aaa
 aaa
 aaa
-aOn
-exa
-exa
-exa
-exa
-exa
-exa
-exa
+blK
+ivi
+tlO
+blK
+vXj
+vXj
+sDg
+blK
 exa
 aeB
 aeB
@@ -69010,14 +69197,14 @@ aaa
 aaa
 aaa
 aaa
-aOn
-exa
-exa
-exa
-exa
-exa
-exa
-exa
+blK
+lxm
+jDd
+blK
+gPj
+mnW
+uli
+blK
 aeB
 aeB
 exa
@@ -69267,14 +69454,14 @@ aaa
 aaa
 aaa
 aaa
-aOn
-exa
-exa
-exa
-exa
-exa
-aeB
-exa
+blK
+blK
+blK
+blK
+blK
+blK
+blK
+blK
 exa
 aeB
 aeB
@@ -69526,7 +69713,7 @@ aaa
 aaa
 aOn
 aeB
-exa
+siw
 exa
 exa
 exa
@@ -75199,7 +75386,7 @@ anV
 anV
 anV
 anV
-tcJ
+anV
 anV
 anV
 anV
@@ -81844,7 +82031,7 @@ dUR
 dUR
 dUR
 tWT
-wTZ
+bfU
 axV
 axV
 nvZ
