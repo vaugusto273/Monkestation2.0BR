@@ -96,12 +96,12 @@
 	background_icon_state = "syndie"
 	sound = 'sound/magic/repulse.ogg'
 	cooldown_time = 20 SECONDS
-	var/mario_star = FALSE
-	var/super_mario_star = FALSE
+	var/static/charge_strong = TRUE
+	var/charging = FALSE
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge/Grant(mob/grant_to)
 	. = ..()
-	RegisterSignal(grant_to, COMSIG_MOVABLE_BUMP, PROC_REF(mario_star))
+	RegisterSignal(grant_to, COMSIG_MOVABLE_BUMP, PROC_REF(charge))
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge/Remove(mob/living/remove_from)
 	. = ..()
@@ -111,38 +111,39 @@
 	. = ..()
 	if(iscarbon(cast_on))
 		var/mob/living/carbon/carbon_caster = cast_on
-		ADD_TRAIT(carbon_caster, TRAIT_STUNIMMUNE, YEET_TRAIT)
 		ADD_TRAIT(carbon_caster, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
-		mario_star = TRUE
-		super_mario_star = TRUE
+		if(charge_strong)
+			ADD_TRAIT(carbon_caster, TRAIT_STUNIMMUNE, YEET_TRAIT)
+		charging = TRUE
 		carbon_caster.move_force = INFINITY
 		carbon_caster.visible_message(span_danger("[carbon_caster] charges!"))
 		addtimer(CALLBACK(src, PROC_REF(done), carbon_caster), 50)
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge/proc/done(mob/living/carbon/user)
-	mario_star = FALSE
-	super_mario_star = FALSE
 	user.move_force = initial(user.move_force)
-	REMOVE_TRAIT(user, TRAIT_STUNIMMUNE, YEET_TRAIT)
 	REMOVE_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
+	if(charge_strong)
+		REMOVE_TRAIT(user, TRAIT_STUNIMMUNE, YEET_TRAIT)
 	user.visible_message(span_danger("[user] relaxes..."))
 
-/datum/action/cooldown/spell/infinity/syndie_bullcharge/proc/mario_star(atom/hit_object)
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/proc/charge(atom/movable/source, atom/target)
 	SIGNAL_HANDLER
-	if(isliving(owner))
+	if(charging)
+		if(!iscarbon(owner))
+			return
 		var/mob/living/carbon/carbon_owner = owner
-		if(mario_star || super_mario_star)
-			if(isliving(hit_object))
-				var/mob/living/living_hit_object = hit_object
-				carbon_owner.visible_message(span_danger("[carbon_owner] rams into [living_hit_object]!"))
-				if(super_mario_star)
-					living_hit_object.Paralyze(7.5 SECONDS)
-					living_hit_object.adjustBruteLoss(20)
-					carbon_owner.heal_overall_damage(12.5, 12.5, 12.5)
-				else
-					living_hit_object.Paralyze(5 SECONDS)
-					living_hit_object.adjustBruteLoss(12)
-					carbon_owner.heal_overall_damage(7.5, 7.5, 7.5)
+		if(!isliving(hit_object))
+			return
+		var/mob/living/living_target = target
+		carbon_owner.visible_message(span_danger("[carbon_owner] rams into [living_target]!"))
+		if(charge_strong)
+			living_target.Paralyze(7.5 SECONDS)
+			living_target.adjustBruteLoss(20)
+			carbon_owner.heal_overall_damage(12.5, 12.5, 12.5)
+		else
+			living_target.Paralyze(5 SECONDS)
+			living_target.adjustBruteLoss(12)
+			carbon_owner.heal_overall_damage(7.5, 7.5, 7.5)
 
 /datum/action/cooldown/spell/infinity/syndie_jump
 	name = "Syndie Stone: Super Jump"

@@ -690,55 +690,13 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 				to_chat(cast_on, span_notice("You are fully healed."))
 				return
 
-/datum/action/cooldown/spell/infinity/gauntlet_bullcharge
+/datum/action/cooldown/spell/infinity/syndie_bullcharge/gauntlet
 	name = "Badmin Gauntlet: Bull Charge"
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone in your way!"
 	background_icon_state = "bg_default"
 	sound = 'sound/magic/repulse.ogg'
 	cooldown_time = 25 SECONDS
-	var/mario_star = FALSE
-	var/super_mario_star = FALSE
-
-/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/Grant(mob/grant_to)
-	. = ..()
-	RegisterSignal(grant_to, COMSIG_MOVABLE_BUMP, PROC_REF(mario_star))
-
-/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/Remove(mob/living/remove_from)
-	. = ..()
-	UnregisterSignal(remove_from, COMSIG_MOVABLE_BUMP)
-
-/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/cast(atom/cast_on)
-	. = ..()
-	if(iscarbon(cast_on))
-		var/mob/living/carbon/carbon_caster = cast_on
-		ADD_TRAIT(carbon_caster, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
-		mario_star = TRUE
-		super_mario_star = FALSE
-		carbon_caster.visible_message(span_danger("[carbon_caster] charges!"))
-		addtimer(CALLBACK(src, PROC_REF(done), carbon_caster), 50)
-
-/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/proc/done(mob/living/carbon/user)
-	mario_star = FALSE
-	super_mario_star = FALSE
-	REMOVE_TRAIT(user, TRAIT_IGNORESLOWDOWN, YEET_TRAIT)
-	user.visible_message(span_danger("[user] relaxes..."))
-
-/datum/action/cooldown/spell/infinity/gauntlet_bullcharge/proc/mario_star(atom/movable/bumped)
-	SIGNAL_HANDLER
-	if(iscarbon(owner))
-		var/mob/living/carbon/carbon_owner = owner
-		if(mario_star || super_mario_star)
-			if(isliving(bumped))
-				var/mob/living/living_bumped = bumped
-				carbon_owner.visible_message(span_danger("[carbon_owner] rams into [living_bumped]!"))
-				if(super_mario_star)
-					living_bumped.Paralyze(7.5 SECONDS)
-					living_bumped.adjustBruteLoss(20)
-					carbon_owner.heal_overall_damage(12.5, 12.5, 12.5)
-				else
-					living_bumped.Paralyze(5 SECONDS)
-					living_bumped.adjustBruteLoss(12)
-					carbon_owner.heal_overall_damage(7.5, 7.5, 7.5)
+	charge_strong = FALSE
 
 /datum/action/cooldown/spell/infinity/gauntlet_jump
 	name = "Badmin Gauntlet: Super Jump"
