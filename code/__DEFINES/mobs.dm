@@ -732,6 +732,12 @@ GLOBAL_LIST_INIT(human_heights_to_offsets, list(
 #define FACEMASK_LAYER 11
 /// Head layer (hats, helmets, etc.)
 #define HEAD_LAYER 10
+// NOVA EDIT ADDITION START
+/// This layer is used for things that shouldn't be over clothes, but should be over mutations
+#define BODY_FRONT_UNDER_CLOTHES 33
+/// Combination flag to only heal the main damage types.
+// #define HEAL_DAMAGE (HEAL_BRUTE|HEAL_BURN|HEAL_TOX|HEAL_OXY|HEAL_STAM) // duplicated on monkey
+// NOVA EDIT ADDITION END
 /// Handcuff layer (when your hands are cuffed)
 #define HANDCUFF_LAYER 9
 /// Legcuff layer (when your feet are cuffed)

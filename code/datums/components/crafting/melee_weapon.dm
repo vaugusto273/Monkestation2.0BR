@@ -151,3 +151,40 @@
 				/obj/item/shard = 1)
 	category = CAT_WEAPON_MELEE
 	tool_behaviors = list(TOOL_WIRECUTTER)
+
+
+// addition NovaSector begins
+
+/datum/crafting_recipe/sm_sword
+	name = "Supermatter Sword"
+	result = /obj/item/melee/supermatter_sword
+	reqs = list(
+		/obj/item/assembly/signaler/anomaly/vortex = (MAX_CORES_VORTEX - 1),
+	)
+	machinery = list(
+		/obj/machinery/power/supermatter_crystal/small = CRAFTING_MACHINERY_CONSUME,
+	)
+	time = 120 SECONDS
+	category = CAT_WEAPON_MELEE
+
+/datum/crafting_recipe/singulo_hammer
+	name = "Singularity Hammer"
+	result = /obj/item/singularityhammer
+	reqs = list(
+		/obj/item/assembly/signaler/anomaly/pyro = 1,
+		/obj/item/assembly/signaler/anomaly/grav = 1,
+		/obj/item/assembly/signaler/anomaly/flux = 1,
+		/obj/item/assembly/signaler/anomaly/bluespace = 1,
+		/obj/item/assembly/signaler/anomaly/vortex = 1,
+		/obj/item/assembly/signaler/anomaly/bioscrambler = 1,
+		/obj/item/assembly/signaler/anomaly/hallucination = 1,
+		/obj/item/assembly/signaler/anomaly/dimensional = 1,
+		/obj/item/assembly/signaler/anomaly/ectoplasm = 1,
+	)
+	machinery = list(
+		/obj/machinery/power/supermatter_crystal = CRAFTING_MACHINERY_CONSUME,
+	)
+	time = 10 SECONDS
+	category = CAT_WEAPON_MELEE
+
+// NovaSector ends

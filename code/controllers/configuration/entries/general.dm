@@ -698,7 +698,7 @@
 	default = FALSE
 
 /datum/config_entry/number/minimum_age
-	default = 7
+	default = -1 // disable interviews?
 
 /datum/config_entry/flag/vpn_kick
 	default = FALSE

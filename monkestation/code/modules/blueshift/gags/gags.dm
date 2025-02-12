@@ -1256,7 +1256,7 @@ TREK
 
 // SNEAKERS
 
-/datum/greyscale_config/sneakers/worn/digi
+/datum/greyscale_config/sneakers/worn/digitigrade
 	name = "Sneakers (Worn, Digi)"
 	icon_file = 'monkestation/code/modules/blueshift/gags/icons/sneakers_digi.dmi'
 

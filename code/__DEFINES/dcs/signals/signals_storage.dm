@@ -7,3 +7,11 @@
 
 /// Sent to the STORAGE when an ITEM is STORED INSIDE.
 #define COMSIG_STORAGE_STORED_ITEM "storage_storing_item"
+
+
+// NOVA ADDITION START
+
+/// Sent to the STORAGE when an ITEM is REMOVED. (obj/item, atom, silent)
+#define COMSIG_STORAGE_REMOVED_ITEM "storage_removing_item"
+
+// NOVA ADDITION END

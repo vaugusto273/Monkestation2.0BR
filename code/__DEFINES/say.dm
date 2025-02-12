@@ -107,3 +107,13 @@
 //Used in visible_message_flags, audible_message_flags and runechat_flags
 #define EMOTE_MESSAGE (1<<0)
 #define LOOC_MESSAGE (1<<1) //monke: looc
+
+
+// NOVA ADDITION START
+
+/// By default, self_message will respect the visual / audible component of the message.
+/// Meaning that if the message is visual, and sourced from a blind mob, they will not see it.
+/// This flag skips that behavior, and will always show the self message to the mob.
+#define ALWAYS_SHOW_SELF_MESSAGE (1<<1)
+
+// NOVA ADDITION END
