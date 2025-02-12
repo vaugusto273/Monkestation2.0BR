@@ -8678,3 +8678,4 @@
 #include "modular_nova\modules\cellguns\code\cellgun_cells.dm"
 #include "modular_nova\master_files\code\modules\projectiles\ammunition\energy\_energy.dm"
 
+#include "modular_nova\modules\customization\game\objects\items\conversion_kits.dm"

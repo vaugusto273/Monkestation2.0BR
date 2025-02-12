@@ -84,6 +84,12 @@
 	var/power_environ = TRUE
 
 	var/has_gravity = FALSE
+	// NOVA ADDITION START // possibly redundant because of var/has_gravity
+
+	/// The default gravity for the area
+	var/default_gravity = ZERO_GRAVITY
+
+	// NOVA ADDITION END
 
 	var/parallax_movedir = 0
 

@@ -236,14 +236,14 @@
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION
 	flags_cover = parent_type::flags_cover | PEPPERPROOF
 	dog_fashion = null
-
+/* monke already has this, need to check what flipped_visor is on monkey maybe
 /obj/item/clothing/head/helmet/sec/click_alt(mob/user)
 	. = ..()
 	if (flipped_visor)
 		flags_cover &= ~PEPPERPROOF
 	else
 		flags_cover |= PEPPERPROOF
-
+*/
 
 //Beret replacement
 /obj/item/clothing/head/security_garrison
@@ -567,7 +567,7 @@
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/security.dmi'
 	icon_state = "jumpskirt_blue"
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
-	gets_cropped_on_taurs = FALSE
+	//gets_cropped_on_taurs = FALSE // ALL MY HOMIES HATE CUSTOM SPECIES
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Blue Variant" = list(
