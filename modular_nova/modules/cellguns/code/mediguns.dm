@@ -68,16 +68,16 @@
 	name = "VeyMedical CWM-479 upgrade kit"
 	desc = "Upgrades the internal battery inside of the medigun, allowing for faster charging and a higher cell capacity. Requires the medigun's cells to be removed first!"
 	// don't tinker with a loaded (medi)gun. fool
-	from_obj = /obj/item/gun/energy/cell_loaded/medigun/standard
-	to_obj = /obj/item/gun/energy/cell_loaded/medigun/upgraded
-
+	//from_obj = /obj/item/gun/energy/cell_loaded/medigun/standard
+	//to_obj = /obj/item/gun/energy/cell_loaded/medigun/upgraded
+/*
 /obj/item/device/custom_kit/medigun_fastcharge/pre_convert_check(obj/target_obj, mob/user)
 	var/obj/item/gun/energy/cell_loaded/medigun/standard/our_medigun = target_obj
 	if(length(our_medigun.installedcells))
 		balloon_alert(user, "unload it first!")
 		return FALSE
 	return TRUE
-
+*/
 // Medigun wiki book
 /obj/item/book/manual/wiki/mediguns
 	name = "medigun operating manual"
@@ -300,8 +300,8 @@
 	icon = 'modular_nova/modules/cellguns/icons/obj/guns/mediguns/medicells.dmi'
 	icon_state = "empty"
 	desc = "An inactive salve medicell, use this on an aloe leaf to make this into a usable cell."
-	from_obj = /obj/item/food/grown/aloe
-	to_obj = /obj/item/weaponcell/medical/utility/salve
+	//from_obj = /obj/item/food/grown/aloe
+	//to_obj = /obj/item/weaponcell/medical/utility/salve
 
 /obj/item/device/custom_kit/empty_cell/Initialize(mapload)
 	. = ..()
@@ -310,11 +310,11 @@
 /obj/item/device/custom_kit/empty_cell/body_teleporter
 	name = "empty body teleporter medicell"
 	desc = "An inactive body teleporter medicell, use this on a bluespace slime extract to make this into a usable cell."
-	from_obj = /obj/item/slime_extract/bluespace
-	to_obj = /obj/item/weaponcell/medical/utility/body_teleporter
+	//from_obj = /obj/item/slime_extract/bluespace
+	//to_obj = /obj/item/weaponcell/medical/utility/body_teleporter
 
 /obj/item/device/custom_kit/empty_cell/relocator
 	name = "empty oppressive force relocator medicell"
 	desc = "An inactive oppressive force relocator medicell, use this on a bluespace slime extract to make this into a usable cell."
-	from_obj = /obj/item/slime_extract/bluespace
-	to_obj = /obj/item/weaponcell/medical/utility/relocation
+	//from_obj = /obj/item/slime_extract/bluespace
+	//to_obj = /obj/item/weaponcell/medical/utility/relocation

@@ -212,7 +212,6 @@ GLOBAL_LIST_INIT(detective_vest_allowed, list(
 	/obj/item/storage/belt/holster/detective,
 	/obj/item/storage/belt/holster/nukie,
 	/obj/item/storage/belt/holster/energy,
-	/obj/item/storage/belt/machete, // NOVA EDIT ADDITION
 ))
 
 GLOBAL_LIST_INIT(security_vest_allowed, list(
@@ -246,7 +245,6 @@ GLOBAL_LIST_INIT(security_wintercoat_allowed, list(
 	/obj/item/storage/belt/holster/detective,
 	/obj/item/storage/belt/holster/nukie,
 	/obj/item/storage/belt/holster/energy,
-	/obj/item/storage/belt/machete, // NOVA EDIT ADDITION
 ))
 
 /// String for items placed into the left pocket.

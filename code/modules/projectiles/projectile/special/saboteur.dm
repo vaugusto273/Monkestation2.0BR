@@ -19,9 +19,9 @@
 /obj/projectile/energy/fisher/on_hit(atom/target, blocked, pierce_hit)
 	. = ..()
 	var/list/things_to_disrupt = list(target)
-	if(isliving(target))
-		var/mob/living/live_target = target
-		things_to_disrupt += live_target.get_all_gear()
+	//if(isliving(target))
+		//var/mob/living/live_target = target
+		//things_to_disrupt += live_target.get_all_gear()
 
 	var/success = FALSE
 	for(var/atom/disrupted as anything in things_to_disrupt)

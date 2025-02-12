@@ -20,7 +20,7 @@
 	rack_sound = 'sound/weapons/gun/pistol/rack_small.ogg'
 	lock_back_sound = 'sound/weapons/gun/pistol/lock_small.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/pistol/drop_small.ogg'
-		fire_sound_volume = 90
+	fire_sound_volume = 90
 	bolt_wording = "slide"
 	suppressor_x_offset = 10
 	suppressor_y_offset = -1
@@ -88,16 +88,16 @@
 	QDEL_NULL(underbarrel)
 	return ..()
 
-/obj/item/gun/ballistic/automatic/pistol/clandestine/fisher/try_fire_gun(atom/target, mob/living/user, params)
+/obj/item/gun/ballistic/automatic/pistol/clandestine/fisher/afterattack(atom/target, mob/living/user, params)
 	if(LAZYACCESS(params2list(params), RIGHT_CLICK))
-		return underbarrel.try_fire_gun(target, user, params)
+		return underbarrel.afterattack(target, user, params) // try_fire_gun edit into afterattack
 	return ..()
 
 /obj/item/gun/ballistic/automatic/pistol/clandestine/fisher/afterattack(atom/target, mob/user, click_parameters)
 	var/obj/projectile/energy/fisher/melee/simulated_hit = new
 	simulated_hit.firer = user
 	simulated_hit.on_hit(target)
-
+/*
 /obj/item/gun/ballistic/automatic/pistol/clandestine/fisher/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
 	if(.)
@@ -105,6 +105,7 @@
 	var/obj/projectile/energy/fisher/melee/simulated_hit = new
 	simulated_hit.firer = throwingdatum.get_thrower()
 	simulated_hit.on_hit(hit_atom)
+*/
 // end of nova edit
 /obj/item/gun/ballistic/automatic/pistol/m1911
 	name = "\improper M1911"

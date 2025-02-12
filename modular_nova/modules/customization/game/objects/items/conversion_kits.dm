@@ -1,3 +1,4 @@
+/*
 /obj/item/device/custom_kit
 	name = "modification kit"
 	desc = "A box of parts for modifying a certain object."
@@ -26,3 +27,4 @@
 /// Override this if you have some condition you want fulfilled before allowing the conversion. Return TRUE to allow it to convert, return FALSE to prevent it.
 /obj/item/device/custom_kit/proc/pre_convert_check(obj/target_obj, mob/user)
 	return TRUE
+*/

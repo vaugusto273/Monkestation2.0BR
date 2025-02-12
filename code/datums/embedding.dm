@@ -62,7 +62,7 @@
 /datum/embedding/Destroy(force)
 	if (!parent)
 		return ..()
-	parent.set_embed(null)
+	//parent.set_embed(null)
 	UnregisterSignal(parent, list(COMSIG_QDELETING, COMSIG_MOVABLE_IMPACT_ZONE, COMSIG_ATOM_EXAMINE))
 	owner = null
 	owner_limb = null
@@ -157,10 +157,10 @@
 /// Used for custom logic while setting up shrapnel payload
 /datum/embedding/proc/setup_shrapnel(obj/item/payload, obj/projectile/source, mob/living/carbon/victim)
 	// Detach from parent, we don't want em to delete us
-	source.set_embed(null, dont_delete = TRUE)
+	//source.set_embed(null, dont_delete = TRUE)
 	// Hook signals up first, as payload sends a comsig upon embed update
 	register_on(payload)
-	payload.set_embed(src)
+	//payload.set_embed(src)
 	if(istype(payload, /obj/item/shrapnel/bullet))
 		payload.name = source.name
 	SEND_SIGNAL(source, COMSIG_PROJECTILE_ON_SPAWN_EMBEDDED, payload, victim)
@@ -375,8 +375,8 @@
 	SIGNAL_HANDLER
 
 	var/chance = jostle_chance
-	if(!forced && (owner.move_intent == MOVE_INTENT_WALK || owner.body_position == LYING_DOWN) && !CHECK_MOVE_LOOP_FLAGS(source, MOVEMENT_LOOP_OUTSIDE_CONTROL))
-		chance *= 0.5
+	//if(!forced && (owner.move_intent == MOVE_INTENT_WALK || owner.body_position == LYING_DOWN) && !CHECK_MOVE_LOOP_FLAGS(source, MOVEMENT_LOOP_OUTSIDE_CONTROL))
+	//	chance *= 0.5
 
 	if(is_harmless() || !prob(chance))
 		return

@@ -171,8 +171,8 @@
 		resolve_parent.balloon_alert(user, "can't reach!")
 		return FALSE
 
-	if(!isliving(user) || user.incapacitated)
-		return FALSE
+	//if(!isliving(user) || user.incapacitated)
+	//	return FALSE
 
 	var/obj/item/gun/gun_to_draw = locate() in real_location
 	if(!gun_to_draw)
@@ -237,7 +237,7 @@
 	flags_cover = parent_type::flags_cover | PEPPERPROOF
 	dog_fashion = null
 /* monke already has this, need to check what flipped_visor is on monkey maybe
-/obj/item/clothing/head/helmet/sec/click_alt(mob/user)
+/obj/item/clothing/head/helmet/sec/AltClick(mob/user)
 	. = ..()
 	if (flipped_visor)
 		flags_cover &= ~PEPPERPROOF
@@ -378,7 +378,7 @@
 		),
 	)
 
-/obj/item/clothing/neck/security_cape/click_alt(mob/user)
+/obj/item/clothing/neck/security_cape/AltClick(mob/user)
 	swapped = !swapped
 	to_chat(user, span_notice("You swap which arm [src] will lay over."))
 	update_appearance()

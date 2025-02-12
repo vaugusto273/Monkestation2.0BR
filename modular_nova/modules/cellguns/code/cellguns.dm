@@ -71,7 +71,7 @@
 		charge_overlay.pixel_y = ammo_y_offset * (i - 1)
 		. += new /mutable_appearance(charge_overlay)
 
-/obj/item/gun/energy/cell_loaded/click_alt(mob/user, modifiers)
+/obj/item/gun/energy/cell_loaded/AltClick(mob/user, modifiers)
 	if(!installedcells.len) //Checks to see if there is a cell inside of the gun, before removal.
 		to_chat(user, span_notice("The [src] has no cells inside"))
 		return CLICK_ACTION_BLOCKING

@@ -1,3 +1,4 @@
+/*
 /obj/item/machete
 	name = "surplus machete"
 	icon = 'modular_nova/modules/mauling_melees/icons/objects.dmi'
@@ -85,7 +86,7 @@
 	if(length(contents))
 		. += span_notice("Alt-click it to quickly draw the blade.")
 
-/obj/item/storage/belt/machete/click_alt(mob/user)
+/obj/item/storage/belt/machete/AltClick(mob/user)
 	for(var/obj/item/machete/machete in contents)
 		user.visible_message(span_notice("[user] takes [machete] out of [src]."), span_notice("You take [machete] out of [src]."))
 		machete.remove_item_from_storage(user)
@@ -116,7 +117,7 @@
 	playsound(src, atom_storage.rustle_sound, 50, TRUE, -5)
 
 /// alt rmb to change wear style
-/obj/item/storage/belt/machete/click_alt_secondary(mob/user)
+/obj/item/storage/belt/machete/alt_click_secondary(mob/user)
 	switch(worn_variant)
 		if (MACHETE_BACK)
 			worn_variant = MACHETE_WAIST
@@ -136,3 +137,4 @@
 /obj/item/trench_tool/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/mauling)
+*/

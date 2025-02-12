@@ -18,16 +18,16 @@
 	flags_cover = MASKCOVERSMOUTH
 	visor_flags_cover = MASKCOVERSMOUTH
 	flags_1 = IS_PLAYER_COLORABLE_1
-	interaction_flags_click = NEED_DEXTERITY|ALLOW_RESTING
+	interaction_flags_atom = NEED_DEXTERITY|ALLOW_RESTING
 
 /obj/item/clothing/mask/neck_gaiter/attack_self(mob/user)
 	visor_toggling(user)
 
-/obj/item/clothing/mask/neck_gaiter/click_alt(mob/user)
+/obj/item/clothing/mask/neck_gaiter/AltClick(mob/user)
 	visor_toggling(user)
 	return CLICK_ACTION_SUCCESS
 
-/obj/item/clothing/mask/neck_gaiter/click_alt_secondary(mob/user)
+/obj/item/clothing/mask/neck_gaiter/alt_click_secondary(mob/user)
 	alternate_worn_layer = (alternate_worn_layer == initial(alternate_worn_layer) ? NONE : initial(alternate_worn_layer))
 	user.update_clothing(ITEM_SLOT_MASK)
 	balloon_alert(user, "wearing [alternate_worn_layer == initial(alternate_worn_layer) ? "below" : "above"] suits")

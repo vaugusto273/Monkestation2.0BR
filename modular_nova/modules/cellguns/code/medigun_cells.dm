@@ -382,14 +382,14 @@
 	if(!IsLivingHuman(target))
 		return FALSE
 
-	var/ideal_temp = target.get_body_temp_normal(apply_change=FALSE) //Gets the temperature we should be aiming for.
-	var/current_temp = target.bodytemperature //Retrieves the targets body temperature
-	var/difference = ideal_temp - current_temp
+	//var/ideal_temp = target.get_body_temp_normal(apply_change=FALSE) //Gets the temperature we should be aiming for.
+	//var/current_temp = target.bodytemperature //Retrieves the targets body temperature
+	//var/difference = ideal_temp - current_temp
 
-	if(abs(difference) <= MINIMUM_TEMP_DIFFERENCE) //It won't adjust temperature if the difference is too low
-		return FALSE
+	//if(abs(difference) <= MINIMUM_TEMP_DIFFERENCE) //It won't adjust temperature if the difference is too low
+	//	return FALSE
 
-	target.adjust_bodytemperature(difference < 0 ? -TEMP_PER_SHOT : TEMP_PER_SHOT)
+	//target.adjust_bodytemperature(difference < 0 ? -TEMP_PER_SHOT : TEMP_PER_SHOT)
 
 //Surgical Gown Medicell.
 /obj/item/ammo_casing/energy/medical/utility/gown
@@ -424,8 +424,8 @@
 /obj/projectile/energy/medical/utility/salve
 	name = "salve globule"
 	icon_state = "glob_projectile"
-	shrapnel_type = /obj/item/mending_globule/hardlight
-	embed_type = /datum/component/embedded/salve_globule
+	shrapnel_type = /obj/item/mending_globule/hardlight // emed_type -> shrapnel_type
+	shrapnel_type = /datum/component/embedded/salve_globule // emed_type -> shrapnel_type
 	damage = 0
 
 /datum/component/embedded/salve_globule
@@ -514,7 +514,7 @@
 /obj/item/mending_globule/hardlight
 	name = "salve globule"
 	desc = "A ball of regenerative synthetic plant matter, contained within a soft hardlight field."
-	embed_type = /datum/component/embedded/salve_globule/hardlight
+	//embed_type = /datum/component/embedded/salve_globule/hardlight // emed_type -> shrapnel_type
 	icon = 'modular_nova/modules/cellguns/icons/obj/guns/mediguns/misc.dmi'
 	icon_state = "globule"
 	heals_left = 40 //This means it'll be heaing 15 damage per type max.
@@ -560,7 +560,7 @@
 /obj/structure/bed/medical/medigun/post_unbuckle_mob(mob/living/M)
 	. = ..()
 	qdel(src)
-
+/*
 /obj/structure/bed/medical/medigun/mouse_drop_dragged(atom/over, mob/user, src_location, over_location, params)
 	if(over == user && Adjacent(user))
 		if(!ishuman(user) || !user.can_perform_action(src))
@@ -571,7 +571,7 @@
 
 		user.visible_message(span_notice("[user] deactivates \the [src]."), span_notice("You deactivate \the [src]."))
 		qdel(src)
-
+*/
 //Oppressive Force Relocation
 /obj/item/ammo_casing/energy/medical/utility/relocation
 	projectile_type = /obj/projectile/energy/medical/utility/relocation
