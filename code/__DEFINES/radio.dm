@@ -139,3 +139,10 @@
 #define RADIO_FREQENCY_LOCKED 1
 /// Radio frequency is locked and unchangeable, but can be unlocked by an emag
 #define RADIO_FREQENCY_EMAGGABLE_LOCK 2
+
+// nova addition start
+
+///Bitflag for if a headset can use the centcom radio channel
+#define RADIO_SPECIAL_CENTCOM (1<<1)
+
+// nova addition end

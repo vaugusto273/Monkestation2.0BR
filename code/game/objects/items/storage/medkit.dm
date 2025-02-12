@@ -510,6 +510,16 @@
 /obj/item/storage/pill_bottle/stimulant/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/stimulant(src)
+// NOVA SECTOR ADDITION
+
+/obj/item/storage/pill_bottle/sansufentanyl
+	name = "bottle of experimental medication"
+	desc = "A bottle of pills developed by Interdyne Pharmaceuticals. They're used to treat Hereditary Manifold Sickness."
+
+/obj/item/storage/pill_bottle/sansufentanyl/PopulateContents()
+	for(var/i in 1 to 6)
+		new /obj/item/reagent_containers/pill/sansufentanyl(src)
+// NOVA SECTOR END
 
 /obj/item/storage/pill_bottle/mining
 	name = "bottle of patches"

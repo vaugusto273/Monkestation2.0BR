@@ -152,6 +152,16 @@
 	desc = "Used to treat symptoms for brain tumors."
 	list_reagents = list(/datum/reagent/medicine/mannitol = 5)
 
+// NOVA ADDITION START
+
+/obj/item/reagent_containers/pill/sansufentanyl
+	name = "sansufentanyl pill"
+	desc = "Used to treat Hereditary Manifold Sickness. Temporary side effects include - nausea, dizziness, impaired motor coordination."
+	icon_state = "pill19"
+	list_reagents = list(/datum/reagent/medicine/sansufentanyl = 10) // NOVA EDIT CHANGE - ORIGINAL: list_reagents = list(/datum/reagent/medicine/sansufentanyl = 5)
+
+// NOVA ADDITION END
+
 /obj/item/reagent_containers/pill/mutadone
 	name = "mutadone pill"
 	desc = "Used to treat genetic damage."

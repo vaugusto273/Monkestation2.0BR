@@ -53,3 +53,10 @@
 	// We have the same returns here as COMSIG_ATOM_TOOL_ACT
 	// #define COMPONENT_BLOCK_TOOL_ATTACK (1<<0)
 #define COMSIG_ATOM_DOOR_OPEN "atom_door_open"
+
+// NOVA ADDITION START
+/// from /obj/projectile/energy/fisher/on_hit() or /obj/item/gun/energy/recharge/fisher when striking a target
+#define COMSIG_ATOM_SABOTEUR_ACT "hit_by_saboteur"
+	#define COMSIG_SABOTEUR_SUCCESS 1
+
+// NOVA ADDITION END

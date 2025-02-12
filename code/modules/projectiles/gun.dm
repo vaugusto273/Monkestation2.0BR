@@ -47,6 +47,12 @@
 	///Can we hold up our target with this? Default to yes
 	var/can_hold_up = TRUE
 
+// NOVA ADDITION START
+
+	var/dry_fire_sound_volume = 30
+
+// NOVA ADDITION END
+
 	/// Just 'slightly' snowflakey way to modify projectile damage for projectiles fired from this gun.
 	var/projectile_damage_multiplier = 1
 
@@ -83,6 +89,9 @@
 
 	if(has_manufacturer)
 		give_manufacturer_examine()
+	// NOVA ADDITION START
+	add_bayonet_point()
+	// NOVA ADDITION END
 
 /obj/item/gun/Destroy()
 	if(isobj(pin)) //Can still be the initial path, then we skip
@@ -110,6 +119,14 @@
 /// Or, if a child of a gun with a seclite mount has slightly different behavior or icons, extend this.
 /obj/item/gun/proc/add_seclight_point()
 	return
+
+// NOVA ADDITION START
+
+/// Similarly to add_seclight_point(), handles [the bayonet attachment component][/datum/component/bayonet_attachable]
+/obj/item/gun/proc/add_bayonet_point()
+	return
+
+// NOVA ADDITION END // monke has bayonet already.... maybe we need to change something?
 
 /obj/item/gun/handle_atom_del(atom/A)
 	if(A == pin)

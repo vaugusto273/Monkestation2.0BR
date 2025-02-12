@@ -373,7 +373,23 @@
 	suit_requirement = /obj/item/clothing/suit/bluetag
 	tagcolor = "blue"
 
+// NOVA ADDITION START
+
+/obj/item/firing_pin/monkey
+	name = "monkeylock firing pin"
+	desc = "This firing pin prevents non-monkeys from firing a gun."
+	fail_message = "not a monkey!"
+
+/obj/item/firing_pin/monkey/pin_auth(mob/living/user)
+	if(!is_simian(user))
+		playsound(src, SFX_SCREECH, 75, TRUE)
+		return FALSE
+	return TRUE
+
+// NOVA ADDITION END
+
 /obj/item/firing_pin/Destroy()
 	if(gun)
 		gun.pin = null
 	return ..()
+

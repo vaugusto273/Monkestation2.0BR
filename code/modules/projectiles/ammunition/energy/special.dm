@@ -75,3 +75,14 @@
 	select_name = "marksman nanoshot"
 	e_cost = 0
 	fire_sound = 'sound/weapons/gun/revolver/shot_alt.ogg'
+
+// NOVA ADDITION START
+
+/obj/item/ammo_casing/energy/fisher
+	projectile_type = /obj/projectile/energy/fisher
+	select_name = "light disruptor"
+	harmful = FALSE
+	e_cost = LASER_SHOTS(2, 100 * 0.5)
+	fire_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg' // fwip fwip fwip fwip
+
+// NOVA ADDITION END

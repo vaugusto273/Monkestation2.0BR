@@ -52,6 +52,13 @@
 #define CONDIMASTER_STYLE_AUTO "auto"
 #define CONDIMASTER_STYLE_FALLBACK "_"
 
+// NOVA ADDITION START
+
+/// When returned by on_mob_life(), on_mob_dead(), overdose_start() or overdose_processed(), will cause the mob to updatehealth() afterwards
+#define UPDATE_MOB_HEALTH 1
+
+// NOVA ADDITION END
+
 #define ALLERGIC_REMOVAL_SKIP "Allergy"
 
 //Used in holder.dm/equlibrium.dm to set values and volume limits

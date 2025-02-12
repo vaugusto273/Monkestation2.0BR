@@ -39,6 +39,12 @@
 	///The config type to use for greyscaled belt overlays. Both this and greyscale_colors must be assigned to work.
 	var/greyscale_config_belt
 
+	// nova sector addition
+	/// The config type to use for greyscaled worn sprites for characters with a muzzle sprite accessory. Both this and greyscale_colors must be assigned to work.
+	var/greyscale_config_worn_muzzled
+
+	// end of nova sector
+
 	//Overrides for digitigrade and snouted clothing handling
 	//Icon file for mob worn overlays, if the user is digitigrade.
 	var/icon/worn_icon_digitigrade

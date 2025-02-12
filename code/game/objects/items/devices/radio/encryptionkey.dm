@@ -15,6 +15,9 @@
 	var/datum/language/translated_language
 	greyscale_config = /datum/greyscale_config/encryptionkey_basic
 	greyscale_colors = "#820a16#3758c4"
+// NOVA ADDITION START
+	var/special_channels = NONE
+// NOVA ADDITION END	
 
 /obj/item/encryptionkey/examine(mob/user)
 	. = ..()
