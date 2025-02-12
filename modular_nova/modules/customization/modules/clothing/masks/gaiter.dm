@@ -21,10 +21,10 @@
 	interaction_flags_click = NEED_DEXTERITY|ALLOW_RESTING
 
 /obj/item/clothing/mask/neck_gaiter/attack_self(mob/user)
-	adjust_visor(user)
+	visor_toggling(user)
 
 /obj/item/clothing/mask/neck_gaiter/click_alt(mob/user)
-	adjust_visor(user)
+	visor_toggling(user)
 	return CLICK_ACTION_SUCCESS
 
 /obj/item/clothing/mask/neck_gaiter/click_alt_secondary(mob/user)

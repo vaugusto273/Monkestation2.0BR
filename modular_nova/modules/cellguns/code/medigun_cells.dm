@@ -520,12 +520,12 @@
 	heals_left = 40 //This means it'll be heaing 15 damage per type max.
 
 /datum/component/embedded/salve_globule/hardlight/process(seconds_per_tick)
-	if(!owner_limb.get_damage()) //Makes it poof as soon as the body part is fully healed, no keeping this on forever.
+	if(!limb.get_damage()) //Makes it poof as soon as the body part is fully healed, no keeping this on forever.
 		qdel(src)
 		return FALSE
 
 	var/obj/item/mending_globule/globule = parent
-	owner_limb.heal_damage(0.125 * seconds_per_tick, 0.125 * seconds_per_tick) //Reduced healing rate over original
+	limb.heal_damage(0.125 * seconds_per_tick, 0.125 * seconds_per_tick) //Reduced healing rate over original
 	globule.heals_left--
 
 	if(globule.heals_left <= 0)
