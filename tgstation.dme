@@ -8632,6 +8632,7 @@
 #include "code\__DEFINES\~nova_defines\mapping.dm"
 #include "code\__DEFINES\~nova_defines\language.dm"
 #include "code\__DEFINES\~nova_defines\access.dm"
+#include "code\__DEFINES\click.dm"
 #include "code\datums\embedding.dm"
 #include "modular_nova\modules\primitive_catgirls\code\language.dm"
 #include "modular_nova\modules\mapping\code\icemoon.dm"
@@ -8679,3 +8680,4 @@
 #include "modular_nova\master_files\code\modules\projectiles\ammunition\energy\_energy.dm"
 
 #include "modular_nova\modules\customization\game\objects\items\conversion_kits.dm"
+

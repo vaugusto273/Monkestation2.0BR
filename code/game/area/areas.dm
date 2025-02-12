@@ -87,7 +87,7 @@
 	// NOVA ADDITION START // possibly redundant because of var/has_gravity
 
 	/// The default gravity for the area
-	var/default_gravity = ZERO_GRAVITY
+	var/default_gravity = FALSE //ZERO_GRAVITY <- original from NOVA
 
 	// NOVA ADDITION END
 

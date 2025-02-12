@@ -43,10 +43,10 @@
 	clothing_traits = traits
 
 /obj/item/clothing/glasses/hud/ar/proc/toggle_mode(mob/user, voluntary)
-
+/* whatever let them use their hud while incapacitated
 	if(!istype(user) || user.incapacitated)
 		return
-
+*/
 	if(mode == modes[mode])
 		return // If there is only really one mode to cycle through, early return
 
