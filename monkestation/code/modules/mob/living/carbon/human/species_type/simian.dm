@@ -9,11 +9,12 @@
 		//Simian unique traits
 		TRAIT_VAULTING,
 		TRAIT_MONKEYFRIEND,
+		TRAIT_VENTCRAWLER_NUDE, //We don't want a roundstart species that can ventcrawl. // EDIT yes i do :) its a monkey, it can do monkey things
 		/*Monkey traits that Simians don't have, and why.
 		TRAIT_NO_BLOOD_OVERLAY, //let's them have a blood overlay, why not?
 		TRAIT_NO_TRANSFORMATION_STING, //Simians are a roundstart species and can equip all, unlike monkeys.
 		TRAIT_GUN_NATURAL, //Simians are Advanced tool users, this lets monkeys use guns without being smart.
-		TRAIT_VENTCRAWLER_NUDE, //We don't want a roundstart species that can ventcrawl.
+
 		TRAIT_WEAK_SOUL, //Crew innately giving less to Revenants for no real reason sucks for the rev.
 		*/
 	)
