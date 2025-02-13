@@ -321,7 +321,7 @@
 	. = ..()
 	if(!.)
 		return
-	hud.mymob.client << link("https://discord.gg/monkestation")
+	hud.mymob.client << link("https://discord.gg/Vj9pPHvJS8")
 
 /atom/movable/screen/lobby/button/twitch
 	icon = 'icons/hud/lobby/bottom_buttons.dmi'
@@ -456,7 +456,7 @@
 		return
 	var/mob/dead/new_player/new_player = hud.mymob
 	new_player.handle_player_polling()
-
+/* No sister servers
 //This is the changing You are here Button
 /atom/movable/screen/lobby/youarehere
 	var/vanderlin = 0
@@ -566,7 +566,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby/button/server)
 			return TRUE
 	return FALSE
 */
-
+*/
 //Monke button
 /atom/movable/screen/lobby/button/ook
 	screen_loc = "TOP:-126,CENTER:110"
