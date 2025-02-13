@@ -681,39 +681,39 @@ GLOBAL_LIST_INIT(human_heights_to_offsets, list(
 /// Total number of layers for mob overlays
 /// KEEP THIS UP-TO-DATE OR SHIT WILL BREAK
 /// Also consider updating layers_to_offset
-#define TOTAL_LAYERS 34
+#define TOTAL_LAYERS 41 // NOVA EDIT original 34
 /// Mutant race multiparts - Lbelly
-#define ACCESSORIES_LAYER 34
+#define ACCESSORIES_LAYER 41 // NOVA EDIT original 34
 /// Mutations layer - Tk headglows, cold resistance glow, etc
-#define MUTATIONS_LAYER 33
+#define MUTATIONS_LAYER 41 // NOVA EDIT original 33
 /// Mutantrace features (tail when looking south) that must appear behind the body parts
-#define BODY_BEHIND_LAYER 32
+#define BODY_BEHIND_LAYER 40 // NOVA EDIT original 32
 /// Layer for bodyparts that should appear behind every other bodypart - Mostly, legs when facing WEST or EAST
-#define BODYPARTS_LOW_LAYER 31
+#define BODYPARTS_LOW_LAYER 39 // NOVA EDIT original 31
 /// Layer for most bodyparts, appears above BODYPARTS_LOW_LAYER and below BODYPARTS_HIGH_LAYER
-#define BODYPARTS_LAYER 30
+#define BODYPARTS_LAYER 38 // NOVA EDIT original 30
 /// Mutantrace features (snout, body markings) that must appear above the body parts
-#define BODY_ADJ_LAYER 29
+#define BODY_ADJ_LAYER 37 // NOVA EDIT original 29
 /// Underwear, undershirts, socks
-#define BODY_LAYER 28
+#define BODY_LAYER 36 // NOVA EDIT original 28
 /// Mutations that should appear above body, body_adj and bodyparts layer (e.g. laser eyes)
-#define FRONT_MUTATIONS_LAYER 27
+#define FRONT_MUTATIONS_LAYER 35 // NOVA EDIT original 27
 /// Damage indicators (cuts and burns)
-#define DAMAGE_LAYER 26
+#define DAMAGE_LAYER 34 // NOVA EDIT original 26
 /// Jumpsuit clothing layer
-#define UNIFORM_LAYER 25
+#define UNIFORM_LAYER 32 // NOVA EDIT original 25
 /// ID card layer
-#define ID_LAYER 24
+#define ID_LAYER 26 // NOVA EDIT original 24
 /// ID card layer (might be deprecated)
-#define ID_CARD_LAYER 23
+#define ID_CARD_LAYER 25 // NOVA EDIT original 23
 /// Layer for bodyparts that should appear above every other bodypart - Currently only used for hands
-#define BODYPARTS_HIGH_LAYER 22
+#define BODYPARTS_HIGH_LAYER 24 // NOVA EDIT original 22
 /// Gloves layer
-#define GLOVES_LAYER 21
+#define GLOVES_LAYER 23 // NOVA EDIT original 21
 /// Shoes layer
-#define SHOES_LAYER 20
+#define SHOES_LAYER 22 // NOVA EDIT original 20
 /// Ears layer (Spessmen have ears? Wow)
-#define EARS_LAYER 19
+#define EARS_LAYER 20 // NOVA EDIT original 19
 /// Suit layer (armor, coats, etc.)
 #define SUIT_LAYER 18
 /// Glasses layer
