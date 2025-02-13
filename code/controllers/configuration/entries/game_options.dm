@@ -157,38 +157,39 @@
 /datum/config_entry/flag/arrivals_shuttle_require_safe_latejoin //Require the arrivals shuttle to be operational in order for latejoiners to join
 
 /datum/config_entry/string/alert_green
-	default = "All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced."
+    default = "Todas as ameaças à estação passaram. A segurança não pode ter armas à mostra, e as leis de privacidade estão novamente plenamente em vigor."
 
 /datum/config_entry/string/alert_blue_upto
-	default = "The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted."
+    default = "A estação recebeu informações confiáveis sobre possível atividade hostil na estação. A equipe de segurança pode ter armas visíveis, e buscas aleatórias são permitidas."
 
 /datum/config_entry/string/alert_blue_downto
-	default = "The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed."
+    default = "A ameaça imediata passou. A segurança não precisa mais manter as armas desembainhadas o tempo todo, mas pode continuar a tê-las à mostra. Buscas aleatórias ainda são permitidas."
 
 /datum/config_entry/string/alert_red_upto
-	default = "There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised."
+    default = "Há uma ameaça imediata e séria à estação. A segurança pode ter as armas desembainhadas o tempo todo. Buscas aleatórias são permitidas e recomendadas."
 
 /datum/config_entry/string/alert_red_downto
-	default = "The station's destruction has been averted. There is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised."
+    default = "A destruição da estação foi evitada. No entanto, ainda há uma ameaça imediata e séria à estação. A segurança pode ter as armas desembainhadas o tempo todo; buscas aleatórias são permitidas e recomendadas."
 
 /datum/config_entry/string/alert_delta
-	default = "Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill."
+    default = "A destruição da estação é iminente. Toda a tripulação está instruída a obedecer a todas as ordens dos chefes de equipe. Qualquer violação dessas ordens poderá ser punida com a morte. Isto não é um exercício."
 
 // monkestation start: additional alert levels
 /datum/config_entry/string/alert_epsilon
-	default = "Central Command has ordered the Epsilon security level on the station. Consider all contracts terminated."
+    default = "O Comando Central determinou o nível de segurança Épsilon na estação. Considere todos os contratos rescindidos."
 
 /datum/config_entry/string/alert_yellow
-	default = "The security alert level has been changed to yellow. There is currently a critical engineering issue on board %STATION_NAME%. Crewmembers are advised to avoid damaged areas, and report them as needed."
+    default = "O nível de alerta de segurança foi alterado para amarelo. Atualmente, há um problema crítico de engenharia a bordo de %STATION_NAME%. Os tripulantes são aconselhados a evitar áreas danificadas e reportá-las conforme necessário."
 
 /datum/config_entry/string/alert_amber
-	default = "The security alert level has been changed to amber. There is an ongoing C-B-R-N threat to the station. Crewmembers are advised to don protective gear, and personal oxygen systems until the alert is lifted. Report any symptoms to medical personnel immediately."
+    default = "O nível de alerta de segurança foi alterado para âmbar. Há uma ameaça C-B-R-N em curso na estação. Os tripulantes são aconselhados a usar equipamentos de proteção e sistemas pessoais de oxigênio até que o alerta seja suspenso. Relate quaisquer sintomas imediatamente ao pessoal médico."
 
 /datum/config_entry/string/alert_gamma
-	default = "Central Command has issued an elevated security alert. There is an elevated threat designated by Central Command on board the station. All security forces are to stay armed and on high alert, remaining staff are advised to seek shelter in their departments."
+    default = "O Comando Central emitiu um alerta de segurança elevado. Há uma ameaça elevada designada pelo Comando Central a bordo da estação. Todas as forças de segurança devem permanecer armadas e em alerta máximo; os demais funcionários são aconselhados a buscar abrigo em seus departamentos."
 
 /datum/config_entry/string/alert_lambda
-	default = "Central Command has detected a large spike of dimensional energy, consistent with the summoning of \[REDACTED\] entities. You are advised to make what little time you have left worthwhile; as no additional assets will be dispatched to %STATION_NAME% at this time."
+    default = "O Comando Central detectou um grande pico de energia dimensional, consistente com a convocação da entidade \[REDACTED\]. Você é aconselhado a fazer valer o pouco tempo que lhe resta; pois nenhum recurso adicional será despachado para %STATION_NAME% neste momento."
+
 // monkestation end
 
 /datum/config_entry/flag/revival_pod_plants

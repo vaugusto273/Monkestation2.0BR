@@ -27,7 +27,7 @@
 
 /datum/shuttle_loan_situation/antidote
 	sender = "CentCom Research Initiatives"
-	announcement_text = "Your station has been chosen for an epidemiological research project. Send us your cargo shuttle to receive your research samples."
+	announcement_text = "Sua estação foi escolhida para um projeto de pesquisa epidemiológica. Envie-nos sua nave de carga para receber suas amostras de pesquisa."
 	shuttle_transit_text = "Virus samples incoming."
 	logging_desc = "Virus shuttle"
 
@@ -50,7 +50,7 @@
 
 /datum/shuttle_loan_situation/department_resupply
 	sender = "CentCom Supply Department"
-	announcement_text = "Seems we've ordered doubles of our department resupply packages this month. Can we send them to you?"
+	announcement_text = "Parece que encomendamos pacotes de reabastecimento em dobro para nosso departamento este mês. Podemos enviá-los para você?"
 	shuttle_transit_text = "Department resupply incoming."
 	thanks_msg = "The cargo shuttle should return in five minutes."
 	bonus_points = 0
@@ -78,7 +78,7 @@
 
 /datum/shuttle_loan_situation/department_resupply
 	sender = "CentCom Counterintelligence"
-	announcement_text = "The syndicate are trying to infiltrate your station. If you let them hijack your cargo shuttle, you'll save us a headache."
+	announcement_text = "O Sindicato está tentando se infiltrar em sua estação. Se você permitir que eles sequestram sua nave de carga, nos poupará uma grande dor de cabeça."
 	shuttle_transit_text = "Syndicate hijack team incoming."
 	logging_desc = "Syndicate boarding party"
 
@@ -95,7 +95,7 @@
 
 /datum/shuttle_loan_situation/lots_of_bees
 	sender = "CentCom Janitorial Division"
-	announcement_text = "One of our freighters carrying a bee shipment has been attacked by eco-terrorists. Can you clean up the mess for us?"
+	announcement_text = "Um de nossos cargueiros transportando um carregamento de abelhas foi atacado por eco-terroristas. Você pode limpar essa bagunça para nós?"
 	shuttle_transit_text = "Biohazard cleanup incoming."
 	bonus_points = 20000 //Toxin bees can be unbeelievably lethal
 	logging_desc = "Shuttle full of bees"
@@ -130,7 +130,7 @@
 
 /datum/shuttle_loan_situation/jc_a_bomb
 	sender = "CentCom Security Division"
-	announcement_text = "We have discovered an active Syndicate bomb near our VIP shuttle's fuel lines. If you feel up to the task, we will pay you for defusing it."
+	announcement_text = "Descobrimos uma bomba do Sindicato ativa perto das linhas de combustível da nossa nave VIP. Se você estiver disposto a desarmá-la, pagaremos pelo serviço."
 	shuttle_transit_text = "Live explosive ordnance incoming. Exercise extreme caution."
 	thanks_msg = "Live explosive ordnance incoming via supply shuttle. Evacuating cargo bay is recommended."
 	bonus_points = 45000 //If you mess up, people die and the shuttle gets turned into swiss cheese
@@ -145,7 +145,7 @@
 
 /datum/shuttle_loan_situation/papers_please
 	sender = "CentCom Paperwork Division"
-	announcement_text = "A neighboring station needs some help handling some paperwork. Could you help process it for us?"
+	announcement_text = "Uma estação vizinha precisa de ajuda para lidar com alguns documentos. Você pode nos ajudar a processá-los?"
 	shuttle_transit_text = "Paperwork incoming."
 	thanks_msg = "The cargo shuttle should return in five minutes. Payment will be rendered when the paperwork is processed and returned."
 	bonus_points = 0 //Payout is made when the stamped papers are returned
@@ -156,7 +156,7 @@
 
 /datum/shuttle_loan_situation/pizza_delivery
 	sender = "CentCom Spacepizza Division"
-	announcement_text = "It looks like a neighbouring station accidentally delivered their pizza to you instead."
+	announcement_text = "Parece que uma estação vizinha acidentalmente entregou a pizza deles para você."
 	shuttle_transit_text = "Pizza delivery!"
 	thanks_msg = "The cargo shuttle should return in five minutes."
 	bonus_points = 0
@@ -170,7 +170,7 @@
 
 /datum/shuttle_loan_situation/russian_party
 	sender = "CentCom Russian Outreach Program"
-	announcement_text = "A group of angry Russians want to have a party. Can you send them your cargo shuttle then make them disappear?"
+	announcement_text = "Um grupo de russos irritados quer dar uma festa. Você pode enviar sua nave de carga para eles e fazê-los desaparecer?"
 	shuttle_transit_text = "Partying Russians incoming."
 	logging_desc = "Russian party squad"
 
@@ -188,7 +188,7 @@
 
 /datum/shuttle_loan_situation/spider_gift
 	sender = "CentCom Diplomatic Corps"
-	announcement_text = "The Spider Clan has sent us a mysterious gift. Can we ship it to you to see what's inside?"
+	announcement_text = "O Clã da Aranha nos enviou um presente misterioso. Podemos enviá-lo para você descobrir o que tem dentro?"
 	shuttle_transit_text = "Spider Clan gift incoming."
 	logging_desc = "Shuttle full of spiders"
 
