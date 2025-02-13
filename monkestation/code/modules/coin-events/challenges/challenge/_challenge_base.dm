@@ -30,14 +30,22 @@
 
 ///we just use the client to try and apply this as its easier to track mobs
 /datum/challenge/proc/on_apply()
-	SHOULD_CALL_PARENT(TRUE)
-	LAZYADD(host.applied_challenges, src)
-	if(!applied_trait)
-		return
-	var/mob/current_mob = host.find_current_mob()
-	if(!current_mob)
-		CRASH("Couldn't find mob for [host]")
-	ADD_TRAIT(current_mob, applied_trait, CHALLENGE_TRAIT)
+    SHOULD_CALL_PARENT(TRUE)
+    LAZYADD(host.applied_challenges, src)
+    if(!applied_trait)
+        return
+    var/mob/current_mob = host.find_current_mob()
+    if(!current_mob)
+        CRASH("Couldn't find mob for [host]")
+
+    // Check if applied_trait is a list (multiple traits)
+    if(islist(applied_trait))
+        // Iterate over each trait in the list and apply it
+        for(var/trait in applied_trait)
+            ADD_TRAIT(current_mob, trait, CHALLENGE_TRAIT)
+    else
+        // If it's a single trait, apply it directly
+        ADD_TRAIT(current_mob, applied_trait, CHALLENGE_TRAIT)
 
 ///this fires every 10 seconds
 /datum/challenge/proc/on_process()

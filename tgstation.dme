@@ -7226,6 +7226,7 @@
 #include "monkestation\code\modules\coin-events\challenges\challenge_controller.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge_selector.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\_challenge_base.dm"
+#include "monkestation\code\modules\coin-events\challenges\challenge\fucked_person.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\heavy_bleeder.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\no_healing.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\no_sprint.dm"
@@ -8673,5 +8674,5 @@
 #include "modular_nova\modules\cellguns\code\cellgun_cells.dm"
 #include "modular_nova\master_files\code\modules\projectiles\ammunition\energy\_energy.dm"
 #include "modular_nova\modules\customization\game\objects\items\conversion_kits.dm"
-
+#include "monkestation\code\modules\coin-events\challenges\challenge\fucked_person.dm"
 // END_INCLUDE
