@@ -20,7 +20,7 @@
 		credit_order_for_this_round += SScredits.producers_string
 		credit_order_for_this_round += SScredits.disclaimers_string
 		credit_order_for_this_round += SScredits.cast_string
-		credit_order_for_this_round += "<center>The Admin Bus</center>"
+		credit_order_for_this_round += "<center>Admin Bus</center>"
 		var/list/admins = shuffle(SScredits.admin_pref_images)
 
 		var/y_offset = 0
@@ -36,7 +36,7 @@
 				x_offset += 70
 				credit_order_for_this_round += picked
 
-		credit_order_for_this_round += "<center>Our Lovely Contributors</center>"
+		credit_order_for_this_round += "<center>Os nossos queridos Contribuidores</center>"
 		var/list/contributors = shuffle(SScredits.contributer_pref_images)
 
 		var/contributors_length = length(contributors)

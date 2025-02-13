@@ -3,7 +3,7 @@ SUBSYSTEM_DEF(credits)
 	flags = SS_NO_FIRE
 	init_order = INIT_ORDER_CREDITS
 
-	var/director = "Some monkey we found on the street"
+	var/director = "Um macaco que achamos na rua"
 	var/star = ""
 	var/ss = ""
 	var/list/disclaimers = list()
@@ -116,7 +116,7 @@ SUBSYSTEM_DEF(credits)
 /datum/controller/subsystem/credits/proc/finalize_episodestring()
 	var/season = time2text(world.timeofday,"YY")
 	var/episodenum = GLOB.round_id || 1
-	episode_string = list("<center>SEASON [season] EPISODE [episodenum]</center>")
+	episode_string = list("<center>TEMPORADA [season] EPISODIO [episodenum]</center>")
 	episode_string += "<center>[episode_name]</center>"
 
 /datum/controller/subsystem/credits/proc/finalize_disclaimerstring()
@@ -124,19 +124,19 @@ SUBSYSTEM_DEF(credits)
 	for(var/disclaimer in disclaimers)
 		disclaimers_string += "<center>[disclaimer]</center>"
 /datum/controller/subsystem/credits/proc/draft_disclaimers()
-	disclaimers += "Filmed on Location at [station_name()].<br>"
-	disclaimers += "Filmed with BYOND&#169; cameras and lenses. Outer space footage provided by NASA.<br>"
-	disclaimers += "Additional special visual effects by LUMMOX&#174; JR. Motion Picture Productions.<br>"
-	disclaimers += "Unofficially Sponsored by The United States Navy.<br>"
-	disclaimers += "All rights reserved.<br>"
+	disclaimers += "Filmado em [station_name()].<br>"
+	disclaimers += "Filmado com BYOND&#169; cameras e lentes. Imagens do espaço sideral fornecidas por NASA.<br>"
+	disclaimers += "Efeitos visuais especiais adicionais por LUMMOX&#174; JR. Motion Picture Productions.<br>"
+	disclaimers += "Patrocinado não oficialmente por The United States Navy.<br>"
+	disclaimers += "Todos os direitos reservados.<br>"
 	disclaimers += "<br>"
-	disclaimers += pick("All stunts were performed by underpaid and expendable interns. Do NOT try at home.<br>", "[director] does not endorse behaviour depicted. Attempt at your own risk.<br>")
-	disclaimers += "This motion picture is (not) protected under the copyright laws of the United States and all countries throughout the universe"
-	disclaimers += "Country of first publication: United States of America."
-	disclaimers += "Any unauthorized exhibition, distribution, or copying of this picture or any part thereof (including soundtrack)"
-	disclaimers += "is an infringement of the relevant copyright and will subject the infringer to civil liability and criminal prosecution."
-	disclaimers += "The story, all names, characters, and incidents portrayed in this production are fictitious."
-	disclaimers += "No identification with actual persons (living or deceased), places, buildings, and products is intended or should be inferred."
+	disclaimers += pick("Todas as acrobacias foram realizadas por estagiários mal pagos e dispensáveis. NÃO tente em casa.<br>", "[director] não endossa o comportamento retratado. Tente por sua própria conta e risco.<br>")
+	disclaimers += "Este filme (não) está protegido pelas leis de direitos autorais de the United States e todos os países do universo"
+	disclaimers += "País da primeira publicação: United States of America."
+	disclaimers += "Qualquer exibição, distribuição ou cópia não autorizada desta imagem ou de qualquer parte dela (incluindo trilha sonora)"
+	disclaimers += "é uma violação dos direitos autorais relevantes e sujeitará o infrator a responsabilidade civil e processo criminal."
+	disclaimers += "A história, todos os nomes, personagens e incidentes retratados nesta produção são fictícios."
+	disclaimers += "Nenhuma identificação com pessoas reais (vivas ou falecidas), lugares, edifícios e produtos é intencional ou deve ser inferida."
 
 /datum/controller/subsystem/credits/proc/draft_caststring()
 	cast_string = list("<center>CAST:</center>")
@@ -164,8 +164,8 @@ SUBSYSTEM_DEF(credits)
 		if(H.real_name)
 			corpses += H.real_name
 	if(corpses.len)
-		var/true_story_bro = "<center><br>[pick("BASED ON","INSPIRED BY","A RE-ENACTMENT OF")] [pick("A TRUE STORY","REAL EVENTS","THE EVENTS ABOARD [uppertext(station_name())]")]</center>"
-		cast_string += "<center><h3>[true_story_bro]</h3><br>In memory of those that did not make it.<br>[english_list(corpses)].<br></center>"
+		var/true_story_bro = "<center><br>[pick("BASEADO EM","INSPIRADO POR","UMA REENACTAÇÃO DE")] [pick("UMA HISTÓRIA VERDADEIRA","EVENTOS REAIS","OS EVENTOS A BORDO [uppertext(station_name())]")]</center>"
+		cast_string += "<center><h3>[true_story_bro]</h3><br>Em memória daqueles que não sobreviveram.<br>[english_list(corpses)].<br></center>"
 	cast_string += "</div><br>"
 
 
