@@ -10,10 +10,10 @@
 | Website                 | Link                                           |
 |-------------------------|------------------------------------------------|
 | Website                 | [https://monkestation.com/](https://monkestation.com/) |
-| Code                    | [https://github.com/Monkestation/Monkestation2.0](https://github.com/Monkestation/Monkestation2.0) |
+| Code                    | [https://github.com/vaugusto273/Monkestation2.0BR](https://github.com/vaugusto273/Monkestation2.0BR) |
 | Wiki                    | [https://wiki.monkestation.com/](https://wiki.monkestation.com/) |
 | Codedocs                | [https://codedocs.tgstation13.org/](https://codedocs.tgstation13.org/) |
-| monkestation Discord    | [https://discord.com/invite/monkestation](https://discord.com/invite/monkestation) |
+| monkestation Discord    | [https://discord.gg/Vj9pPHvJS8](https://discord.gg/Vj9pPHvJS8) |
 
 This is the codebase for the monkestation-flavored fork of Space Station 13.
 

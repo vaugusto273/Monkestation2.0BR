@@ -185,7 +185,7 @@
 		return
 	var/datum/discord_embed/embed = new()
 	embed.title = "Mentor Reply"
-	embed.description = @"[Join Server!](http://play.monkestation.com:7420)"
+	embed.description = @"[Join Server!](http://104.234.224.141:1337)"
 	embed.fields = list(
 		"MENTOR ID" = id,
 		"From:" = ckey,

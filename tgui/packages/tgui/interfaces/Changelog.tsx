@@ -99,7 +99,7 @@ const Header = (props: { dropdown: any }, _context) => {
       </p>
       <p>
         {'You can also join our discord '}
-        <a href="https://discord.gg/monkestation">here</a>.
+        <a href="https://discord.gg/Vj9pPHvJS8">here</a>.
       </p>
       {props.dropdown}
     </Section>
