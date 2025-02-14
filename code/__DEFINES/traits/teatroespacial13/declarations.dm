@@ -1,0 +1,3 @@
+/* ATIVE ISTO SOMENTE EM CASO DE FAZER FUNNY FUNNY no_airlocks
+#define STATION_TRAIT_NO_AIRLOCKS "no_airlocks"
+*/
