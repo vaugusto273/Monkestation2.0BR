@@ -8691,4 +8691,5 @@
 #include "modular_nova\modules\mapping\code\areas\ruins.dm"
 #include "code\datums\elements\watery_tile.dm"
 #include "teatroespacial13\modules\jump\code\jump.dm"
+#include "teatroespacial13/modules/kitchen-plus/code/kitchenplus_qol.dm"
 // END_INCLUDE
