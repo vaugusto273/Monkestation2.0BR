@@ -8688,3 +8688,5 @@
 #include "monkestation\code\modules\coin-events\challenges\challenge\fucked_person.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\blood_deficiency.dm"
 // END_INCLUDE
+#include "modular_nova\modules\mapping\code\areas\ruins.dm"
+#include "code\datums\elements\watery_tile.dm"
