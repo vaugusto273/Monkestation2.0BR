@@ -164,11 +164,6 @@
 /obj/machinery/biogenerator,
 /turf/open/floor/iron/colony,
 /area/ruin/turretbunker)
-"mI" = (
-/obj/structure/table/reinforced,
-/obj/item/xenoarch/hammer/cm1,
-/turf/open/floor/iron/colony,
-/area/ruin/turretbunker)
 "mT" = (
 /obj/structure/table/reinforced,
 /obj/machinery/biogenerator/foodricator,
@@ -208,16 +203,10 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/mob_spawn/corpse/human/minesite,
-/turf/open/floor/iron/colony/white,
 /area/ruin/turretbunker)
 "sa" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/colony/texture,
-/area/ruin/turretbunker)
-"sn" = (
-/obj/effect/spawner/random/throwturret,
-/turf/open/floor/iron/colony/bolts,
 /area/ruin/turretbunker)
 "sX" = (
 /obj/structure/fence/corner{
@@ -250,18 +239,9 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/colony,
 /area/ruin/turretbunker)
-"xp" = (
-/obj/item/stack/cable_coil/thirty,
-/turf/open/floor/iron/colony,
-/area/ruin/turretbunker)
 "yf" = (
 /obj/machinery/oven/range_frontier,
 /turf/open/floor/iron/colony,
-/area/ruin/turretbunker)
-"yE" = (
-/obj/structure/table/reinforced,
-/obj/item/construction/plumbing/mining,
-/turf/open/floor/iron/colony/bolts,
 /area/ruin/turretbunker)
 "zb" = (
 /obj/structure/table/reinforced,
@@ -274,12 +254,6 @@
 	id = "turretbunk1"
 	},
 /turf/open/floor/iron/colony,
-/area/ruin/turretbunker)
-"AJ" = (
-/obj/structure/table/reinforced,
-/obj/item/xenoarch/hammer/cm10,
-/obj/item/storage/bag/xenoarch,
-/turf/open/floor/iron/colony/bolts,
 /area/ruin/turretbunker)
 "AP" = (
 /obj/machinery/light_switch/directional/north,
@@ -304,8 +278,6 @@
 /turf/open/floor/iron/colony,
 /area/ruin/turretbunker)
 "Cz" = (
-/obj/effect/spawner/random/magturret,
-/turf/open/floor/iron/colony,
 /area/ruin/turretbunker)
 "CG" = (
 /obj/machinery/space_heater/wall_mounted/directional/west,
@@ -327,8 +299,6 @@
 /area/ruin/turretbunker)
 "Di" = (
 /obj/structure/table/reinforced,
-/obj/item/xenoarch/tape_measure,
-/obj/machinery/light/directional/east,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/colony,
 /area/ruin/turretbunker)
@@ -342,21 +312,12 @@
 /obj/machinery/recharge_station,
 /turf/open/floor/iron/colony,
 /area/ruin/turretbunker)
-"Ey" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/porta_turret/syndicate/toolbox/mag_fed/colonist/malf,
-/turf/open/floor/iron/colony/white,
-/area/ruin/turretbunker)
 "Gn" = (
 /obj/structure/cable,
 /turf/open/floor/iron/colony/texture,
 /area/ruin/turretbunker)
 "Go" = (
 /obj/structure/table/reinforced,
-/obj/item/target_designator/sniper,
-/turf/open/floor/iron/colony/bolts,
 /area/ruin/turretbunker)
 "GX" = (
 /turf/open/floor/iron/colony/white,
@@ -437,20 +398,10 @@
 "TK" = (
 /turf/closed/wall/prefab_plastic,
 /area/ruin/turretbunker)
-"UV" = (
-/obj/structure/table/reinforced,
-/obj/item/xenoarch/brush,
-/turf/open/floor/iron/colony/bolts,
-/area/ruin/turretbunker)
 "VR" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
-"Wx" = (
-/obj/effect/mob_spawn/corpse/human/minesite,
-/obj/effect/decal/cleanable/blood/gibs/old,
-/turf/open/floor/iron/colony/texture,
-/area/ruin/turretbunker)
 "Yn" = (
 /obj/machinery/door/airlock/colony_prefab,
 /obj/structure/cable,
@@ -514,11 +465,11 @@ pj
 TK
 Bk
 MH
-yE
+Go
 TK
 Bt
 aO
-xp
+Cz
 ku
 yf
 cw
@@ -536,7 +487,7 @@ CZ
 TK
 RW
 NQ
-Wx
+Oj
 Oj
 Oj
 DH
@@ -556,7 +507,7 @@ tn
 tn
 tn
 tn
-Ey
+rC
 tn
 iW
 BQ
@@ -642,7 +593,7 @@ iF
 tn
 mu
 TK
-sn
+Cz
 NP
 CG
 DK
@@ -692,7 +643,7 @@ pj
 (13,1,1) = {"
 pj
 TK
-mI
+Go
 NP
 lN
 TK
@@ -710,9 +661,9 @@ pj
 (14,1,1) = {"
 pj
 TK
-AJ
+Go
 Di
-UV
+Go
 TK
 YB
 fj

@@ -22,10 +22,6 @@
 /obj/machinery/power/solar_control,
 /turf/open/floor/iron/colony/bolts,
 /area/ruin/colonist_homestead)
-"j" = (
-/obj/machinery/biogenerator/food_replicator,
-/turf/open/floor/iron/colony/bolts,
-/area/ruin/colonist_homestead)
 "k" = (
 /obj/structure/cable,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
@@ -138,7 +134,6 @@
 "G" = (
 /obj/item/screwdriver/omni_drill,
 /obj/item/storage/belt/utility/frontier_colonist,
-/obj/item/crowbar/hammer,
 /obj/item/circuitboard/machine/cell_charger,
 /turf/open/floor/iron/colony/bolts,
 /area/ruin/colonist_homestead)
@@ -208,7 +203,6 @@
 /obj/item/stock_parts/matter_bin/adv,
 /obj/item/stock_parts/matter_bin/adv,
 /obj/item/stock_parts/matter_bin/adv,
-/obj/item/stock_parts/servo/nano,
 /turf/open/floor/iron/colony/bolts,
 /area/ruin/colonist_homestead)
 "V" = (
@@ -276,7 +270,7 @@ u
 W
 l
 s
-j
+c
 W
 x
 x

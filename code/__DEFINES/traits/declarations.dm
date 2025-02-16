@@ -997,6 +997,13 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 ///Fish will also occasionally fire weak tesla zaps
 /* #define TRAIT_FISH_ELECTROGENESIS "fish_electrogenesis" */
 
+// NOVA ADDITION START
+
+/// Atoms with this trait can be right-clicked with a fish to release them, presumably back in the fishing spot they were caught from.
+#define TRAIT_CATCH_AND_RELEASE "catch_and_release"
+
+// end of nova addition
+
 /// Trait given to angelic constructs to let them purge cult runes
 #define TRAIT_ANGELIC "angelic"
 
@@ -1020,7 +1027,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// If the movable shouldn't be reflected by mirrors.
 #define TRAIT_NO_MIRROR_REFLECTION "no_mirror_reflection"
 /// If this movable is currently treading in a turf with the immerse element.
-/* #define TRAIT_IMMERSED "immersed" */
+#define TRAIT_IMMERSED "immersed" // NOVA EDIT uncomment this trait
 /// From [/datum/element/elevation_core] for purpose of checking if the turf has the trait from an instance of the element
 #define TRAIT_ELEVATED_TURF "elevated_turf"
 /**

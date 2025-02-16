@@ -163,10 +163,10 @@
 	var/message
 
 	if(current_level_number > previous_level_number)
-		title = "Attention! Security level elevated to [current_level_name]:"
+		title = "Atenção! Nível de segurança elevado para [current_level_name]:"
 		message = replacetext_char(selected_level.elevating_to_announcement, "%STATION_NAME%", station_name()) // monkestation edit: add %STATION_NAME% replacement
 	else
-		title = "Attention! Security level lowered to [current_level_name]:"
+		title = "Atenção! Nível de segurança reduzido para [current_level_name]:"
 		message = replacetext_char(selected_level.lowering_to_announcement, "%STATION_NAME%", station_name()) // monkestation edit: add %STATION_NAME% replacement
 
 	var/list/level_announcement_strings = list()

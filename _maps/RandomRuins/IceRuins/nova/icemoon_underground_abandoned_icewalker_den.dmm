@@ -5,8 +5,6 @@
 /turf/open/floor/wood/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "aQ" = (
-/obj/structure/bonfire/grill_pre_attached,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/stone/icemoon,
@@ -26,14 +24,10 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
+/obj/effect/decal/cleanable/dirt)
 "bp" = (
 /obj/item/stack/sheet/mineral/stone,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/structure/wall_torch/mount_only/directional/north,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "bw" = (
@@ -46,9 +40,7 @@
 /area/ruin/unpowered/abandoned_hearth)
 "bS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/mineral/wood,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
+/obj/item/stack/sheet/mineral/wood)
 "ci" = (
 /obj/structure/closet/crate/wooden,
 /turf/open/misc/asteroid/snow/icemoon,
@@ -95,33 +87,20 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
+/obj/effect/decal/cleanable/dirt/dust)
 "dq" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"dw" = (
-/obj/effect/decal/cleanable/blood/trails{
-	dir = 4
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
+/obj/effect/decal/cleanable/dirt/dust)
 "dy" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/effect/decal/cleanable/blood/gibs,
-/obj/effect/decal/cleanable/blood,
-/obj/item/ammo_casing/arrow/bone,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
+/obj/effect/decal/cleanable/blood)
 "dE" = (
 /obj/structure/closet/crate/wooden/storage_barrel,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -144,39 +123,18 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
+/obj/effect/decal/cleanable/dirt/dust)
 "dR" = (
-/obj/structure/reagent_crafting_bench,
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "ed" = (
 /obj/effect/turf_decal/siding/wood/corner,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"ew" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 4;
-	pixel_y = 6
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"eG" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 4;
-	pixel_y = 12
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
+/obj/effect/decal/cleanable/dirt/dust)
 "ft" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "fL" = (
 /obj/effect/turf_decal/siding/wood{
@@ -184,7 +142,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/tracks,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "fN" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -216,22 +173,8 @@
 	},
 /turf/open/misc/asteroid/snow/ice/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
-"gV" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 8
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
 "hJ" = (
 /turf/open/floor/stone/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"hY" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 8;
-	pixel_y = 12
-	},
-/obj/structure/deployable_barricade/wooden,
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "iJ" = (
 /obj/structure/closet/crate/wooden,
@@ -245,7 +188,6 @@
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "jh" = (
 /obj/item/reagent_containers/cup/glass/bottle/lizardwine{
@@ -255,11 +197,6 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"jP" = (
-/obj/item/ammo_casing/arrow/bronze,
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "jS" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -286,7 +223,6 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "lu" = (
 /obj/item/stack/sheet/mineral/stone,
@@ -313,12 +249,10 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "lH" = (
 /obj/structure/bed/dogbed,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "lP" = (
 /obj/effect/turf_decal/weather/dirt,
@@ -342,13 +276,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/stone/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
-"ng" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 8;
-	pixel_y = 6
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
 "nh" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 1
@@ -363,12 +290,9 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "nA" = (
-/obj/machinery/vending/primitive_catgirl_clothing_vendor,
 /obj/effect/decal/cleanable/cobweb,
-/obj/structure/wall_torch/mount_only/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "nE" = (
 /obj/effect/turf_decal/siding/wood/corner,
@@ -399,7 +323,6 @@
 	pixel_x = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "or" = (
 /obj/structure/water_source/puddle,
@@ -422,7 +345,6 @@
 	pixel_y = 13
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "pd" = (
 /obj/structure/closet/crate/wooden/storage_barrel,
@@ -437,7 +359,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "pV" = (
 /obj/effect/turf_decal/siding/wood,
@@ -449,12 +370,6 @@
 /turf/open/misc/asteroid/basalt{
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},
-/area/ruin/unpowered/abandoned_hearth)
-"qx" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 4
-	},
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "qF" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -479,37 +394,23 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "qU" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"rf" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 1;
-	pixel_y = 23
-	},
-/obj/structure/deployable_barricade/wooden{
-	dir = 4
-	},
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "rl" = (
 /obj/structure/chair/wood{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "rz" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/structure/wall_torch/spawns_lit/directional/north,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "rB" = (
 /obj/item/pickaxe/mini,
@@ -568,14 +469,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"tf" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 1;
-	pixel_y = 23
-	},
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "th" = (
 /obj/effect/turf_decal/siding/wood{
@@ -587,28 +480,14 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/corpse/human/miner/mod,
-/obj/item/forging/reagent_weapon/spear,
-/turf/open/misc/dirt/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"tw" = (
-/obj/item/forging/reagent_weapon/axe/fake_copper{
-	pixel_x = 4;
-	pixel_y = -4
-	},
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "ty" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "tB" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"tT" = (
-/obj/effect/decal/cleanable/blood/trails,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "tU" = (
@@ -635,7 +514,6 @@
 	},
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "vW" = (
 /obj/structure/bed/dogbed,
@@ -644,7 +522,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "wd" = (
 /obj/effect/turf_decal/siding/wood,
@@ -680,17 +557,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/stone/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
-"wZ" = (
-/obj/structure/wall_torch/mount_only/directional/south,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"xg" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 10
-	},
-/obj/structure/wall_torch/mount_only/directional/north,
-/turf/open/misc/asteroid/snow/ice/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
 "xj" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/turf_decal/siding/wood{
@@ -702,13 +568,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/punji_sticks/spikes,
 /turf/open/floor/stone/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"xk" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 8;
-	pixel_y = 12
-	},
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "xs" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -738,7 +597,6 @@
 	pixel_x = -7
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "yw" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -752,7 +610,6 @@
 	pixel_x = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "zz" = (
 /obj/effect/turf_decal/siding/wood,
@@ -770,7 +627,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Bm" = (
 /obj/item/reagent_containers/cup/mortar{
@@ -794,14 +650,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Cc" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Cl" = (
 /obj/effect/turf_decal/siding/wood{
@@ -823,7 +677,6 @@
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Cs" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -844,7 +697,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "CL" = (
 /obj/effect/turf_decal/siding/wood{
@@ -854,10 +706,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/trails{
-	dir = 4
-	},
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "CX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -938,7 +786,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Eq" = (
 /obj/item/stack/sheet/mineral/stone,
@@ -963,7 +810,6 @@
 /area/ruin/unpowered/abandoned_hearth)
 "EC" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "ED" = (
 /obj/item/shovel,
@@ -998,12 +844,10 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Fu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Fv" = (
 /obj/effect/turf_decal/siding/wood{
@@ -1011,7 +855,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "FS" = (
 /obj/structure/table/wood,
@@ -1025,7 +868,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Gy" = (
 /turf/closed/indestructible/stone,
@@ -1060,7 +902,6 @@
 /area/ruin/unpowered/abandoned_hearth)
 "HK" = (
 /obj/structure/barricade/wooden,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Ib" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1089,12 +930,10 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Kw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "KG" = (
 /obj/item/storage/box/matches{
@@ -1103,7 +942,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "KH" = (
 /obj/effect/turf_decal/siding/wood{
@@ -1124,7 +962,6 @@
 /obj/structure/chair/sofa/bamboo/right,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Lv" = (
 /obj/effect/mob_spawn/corpse/human/doctor,
@@ -1141,7 +978,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Nc" = (
 /obj/structure/bed/maint{
@@ -1152,7 +988,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Nj" = (
 /obj/structure/punji_sticks/spikes,
@@ -1163,7 +998,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "NG" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -1214,19 +1048,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/stone/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
-"Pb" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6
-	},
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 1
-	},
-/obj/structure/wall_torch/mount_only/directional/north,
-/turf/open/misc/asteroid/snow/ice/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"Pg" = (
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
 "Pi" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 1
@@ -1235,12 +1056,6 @@
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},
 /area/ruin/unpowered/abandoned_hearth)
-"Pl" = (
-/obj/item/shield/goliath{
-	pixel_x = -6
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
 "PC" = (
 /obj/structure/bed/maint{
 	pixel_y = 13
@@ -1248,7 +1063,6 @@
 /obj/structure/bed/maint,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "PL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1288,16 +1102,13 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "QY" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/basic/mining/wolf,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Si" = (
-/obj/structure/reagent_water_basin,
 /obj/effect/decal/cleanable/cobweb{
 	dir = 1
 	},
@@ -1310,7 +1121,6 @@
 /obj/structure/closet/crate/wooden/storage_barrel,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "SZ" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -1337,23 +1147,15 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Tw" = (
 /obj/structure/table/wood,
 /obj/item/plate/oven_tray,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Us" = (
 /obj/item/stack/sheet/mineral/stone,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"Uw" = (
-/obj/structure/deployable_barricade/wooden{
-	broken = 1
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Uz" = (
@@ -1362,7 +1164,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "UM" = (
 /obj/effect/turf_decal/siding/wood{
@@ -1376,11 +1177,6 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Vz" = (
-/obj/structure/deployable_barricade/wooden,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"VP" = (
-/obj/structure/wall_torch/mount_only/directional/north,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Wa" = (
@@ -1396,15 +1192,10 @@
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},
 /area/ruin/unpowered/abandoned_hearth)
-"WR" = (
-/obj/structure/reagent_anvil,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
 "Xh" = (
 /obj/structure/closet/crate/wooden/storage_barrel,
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Xt" = (
 /obj/effect/decal/cleanable/blood,
@@ -1467,7 +1258,6 @@
 "Ym" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "YH" = (
 /obj/machinery/oven/stone,
@@ -1519,10 +1309,10 @@ Yf
 Yf
 Yf
 Yf
-gV
-Pg
-Pg
-xk
+Vz
+Vz
+Vz
+Vz
 Yf
 Yf
 Yf
@@ -1541,10 +1331,10 @@ Yf
 (3,1,1) = {"
 Yf
 Yf
-gV
-Pg
+Vz
+Vz
 oa
-Pg
+Vz
 Vz
 lz
 Ib
@@ -1554,8 +1344,8 @@ Gy
 Yf
 Yf
 Yf
-ng
-xk
+Vz
+Vz
 Yf
 Yf
 Yf
@@ -1565,8 +1355,8 @@ Yf
 Yf
 Yf
 xG
-Pg
-wZ
+Vz
+Vz
 Gy
 Gy
 lz
@@ -1576,10 +1366,10 @@ Oo
 lz
 Eq
 Gy
-ng
-Pg
+Vz
+Vz
 mr
-xk
+Vz
 Yf
 Yf
 Yf
@@ -1589,8 +1379,8 @@ Yf
 xG
 KZ
 Xt
-Pg
-Pg
+Vz
+Vz
 Jn
 uS
 DQ
@@ -1598,10 +1388,10 @@ dq
 Ey
 HI
 xG
-Pg
-Pg
+Vz
+Vz
 DV
-Pg
+Vz
 Vz
 Yf
 Yf
@@ -1611,8 +1401,8 @@ Yf
 Gy
 Gy
 Si
-jP
-Pg
+Vz
+Vz
 dR
 xj
 cE
@@ -1620,22 +1410,22 @@ ap
 vN
 PL
 Oo
-Pg
-Pg
-Pg
+Vz
+Vz
+Vz
 GW
 xG
-Pg
-hY
+Vz
+Vz
 Yf
 Yf
 "}
 (7,1,1) = {"
 PT
 iJ
-Pg
+Vz
 mr
-Pg
+Vz
 ci
 cq
 Oi
@@ -1645,10 +1435,10 @@ oi
 ba
 KZ
 mr
-Pg
-Pg
-Pg
-Pg
+Vz
+Vz
+Vz
+Vz
 tU
 Yf
 Yf
@@ -1656,9 +1446,9 @@ Yf
 (8,1,1) = {"
 lx
 kf
-Pg
-Pg
-Pg
+Vz
+Vz
+Vz
 Gy
 lu
 lz
@@ -1667,11 +1457,11 @@ CL
 yw
 lz
 Eq
-Pg
-Pg
+Vz
+Vz
 kh
-Pg
-Pg
+Vz
+Vz
 Vz
 Yf
 Yf
@@ -1679,10 +1469,10 @@ Yf
 (9,1,1) = {"
 Gy
 hJ
-Pg
-WR
-Pg
-Pl
+Vz
+Vz
+Vz
+Vz
 rC
 pf
 ty
@@ -1690,22 +1480,22 @@ CX
 qU
 Nc
 xG
-Pg
+Vz
 EX
 gD
 UO
 rB
-eG
+Vz
 Yf
 Yf
 "}
 (10,1,1) = {"
 Gy
 Gy
-VP
-Pg
+Vz
+Vz
 oa
-jP
+Vz
 xj
 EC
 QY
@@ -1713,11 +1503,11 @@ PL
 fL
 lH
 tB
-tT
+Vz
 Eu
 nP
 xG
-Pg
+Vz
 Yf
 Yf
 Yf
@@ -1726,9 +1516,9 @@ Yf
 Yf
 xG
 NX
-Pg
-Pg
-tw
+Vz
+Vz
+Vz
 Xx
 PC
 dy
@@ -1736,9 +1526,9 @@ CX
 qU
 oR
 xG
-Pg
+Vz
 Dc
-Pg
+Vz
 QO
 Vz
 Yf
@@ -1750,7 +1540,7 @@ Yf
 HK
 HK
 Us
-Pg
+Vz
 Gy
 Gy
 Gy
@@ -1760,21 +1550,21 @@ ft
 Wa
 Gy
 Gy
-xg
-Pg
+rP
+Vz
 tU
-Pg
-hY
+Vz
+Vz
 Yf
 Yf
 "}
 (13,1,1) = {"
 Yf
 Yf
-tf
-Pg
-Pg
-Pg
+Vz
+Vz
+Vz
+Vz
 xG
 nA
 Lf
@@ -1785,8 +1575,8 @@ xG
 jS
 gM
 mr
-Pg
-dw
+Vz
+Vz
 Vz
 Yf
 Yf
@@ -1795,9 +1585,9 @@ Yf
 Yf
 Yf
 nq
-Pg
+Vz
 Xt
-Pg
+Vz
 Uz
 Ym
 Fu
@@ -1806,9 +1596,9 @@ rl
 Kw
 EC
 Nj
-Pg
+Vz
 kh
-Pg
+Vz
 CA
 Lv
 Yf
@@ -1817,9 +1607,9 @@ Yf
 (15,1,1) = {"
 Yf
 Yf
-rf
+Vz
 rB
-Pg
+Vz
 mr
 xG
 rz
@@ -1829,20 +1619,20 @@ qO
 xS
 xG
 sH
-Pg
-jP
+Vz
+Vz
 Xt
 xG
-Pg
-hY
+Vz
+Vz
 Yf
 "}
 (16,1,1) = {"
 Yf
 Yf
 Yf
-Pg
-Pg
+Vz
+Vz
 Gy
 Gy
 Gy
@@ -1853,8 +1643,8 @@ Gy
 Gy
 Gy
 fN
-Pg
-Pg
+Vz
+Vz
 XW
 xG
 Vz
@@ -1864,9 +1654,9 @@ Yf
 Yf
 Yf
 Yf
-qx
-Pg
-jP
+Vz
+Vz
+Vz
 xG
 KG
 ed
@@ -1877,19 +1667,19 @@ xG
 pd
 UM
 Di
-Pg
+Vz
 ED
 zz
-Pg
-hY
+Vz
+Vz
 "}
 (18,1,1) = {"
 Yf
 Yf
 Yf
 Yf
-qx
-qx
+Vz
+Vz
 KZ
 dJ
 Cc
@@ -1901,7 +1691,7 @@ Yj
 qF
 Do
 ZO
-Pg
+Vz
 NG
 rJ
 Vz
@@ -1925,9 +1715,9 @@ bw
 we
 or
 rP
-Pg
+Vz
 pV
-Pg
+Vz
 "}
 (20,1,1) = {"
 Yf
@@ -1967,12 +1757,12 @@ lG
 Xh
 lE
 oG
-Pg
+Vz
 co
 qJ
 SZ
 Ec
-Pg
+Vz
 Vz
 "}
 (22,1,1) = {"
@@ -2014,9 +1804,9 @@ Bm
 xG
 GC
 nh
-Pg
+Vz
 Qo
-Pg
+Vz
 xG
 Yf
 Yf
@@ -2036,10 +1826,10 @@ EZ
 Gy
 Us
 Gy
-Pb
+co
 Eu
-Pg
-Pg
+Vz
+Vz
 Yf
 Yf
 Yf
@@ -2058,11 +1848,11 @@ lE
 xG
 Gy
 Yf
-tf
+Vz
 fQ
-Pg
-Pg
-Pg
+Vz
+Vz
+Vz
 Yf
 Yf
 Yf
@@ -2082,9 +1872,9 @@ Yf
 Yf
 Yf
 Yf
-qx
-ew
-Uw
+Vz
+Vz
+Vz
 Yf
 Yf
 Yf
