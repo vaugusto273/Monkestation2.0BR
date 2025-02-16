@@ -2669,12 +2669,6 @@
 	},
 /area/ruin/interdyne_planetary_base/main)
 "hs" = (
-/obj/machinery/vending/drugs{
-	name = "\improper SyndiDrug Plus";
-	onstation = 0;
-	extended_inventory = 1;
-	all_products_free = 1
-	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "ht" = (
