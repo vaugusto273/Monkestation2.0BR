@@ -158,10 +158,6 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "eG" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 4;
-	pixel_y = 12
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "ft" = (
@@ -210,20 +206,12 @@
 /turf/open/misc/asteroid/snow/ice/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "gV" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 8
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "hJ" = (
 /turf/open/floor/stone/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "hY" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 8;
-	pixel_y = 12
-	},
-/obj/structure/deployable_barricade/wooden,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "iJ" = (
@@ -336,10 +324,6 @@
 /turf/open/floor/stone/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "ng" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 8;
-	pixel_y = 6
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "nh" = (
@@ -444,9 +428,6 @@
 	},
 /area/ruin/unpowered/abandoned_hearth)
 "qx" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 4
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "qF" = (
@@ -482,13 +463,6 @@
 /turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "rf" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 1;
-	pixel_y = 23
-	},
-/obj/structure/deployable_barricade/wooden{
-	dir = 4
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "rl" = (
@@ -564,10 +538,6 @@
 /turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "tf" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 1;
-	pixel_y = 23
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "th" = (
@@ -696,10 +666,6 @@
 /turf/open/floor/stone/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "xk" = (
-/obj/structure/deployable_barricade/wooden{
-	dir = 8;
-	pixel_y = 12
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "xs" = (
@@ -1340,9 +1306,6 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Uw" = (
-/obj/structure/deployable_barricade/wooden{
-	broken = 1
-	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Uz" = (
@@ -1365,7 +1328,6 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Vz" = (
-/obj/structure/deployable_barricade/wooden,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "VP" = (
