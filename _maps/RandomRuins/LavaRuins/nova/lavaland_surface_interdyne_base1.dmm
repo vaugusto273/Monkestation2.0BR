@@ -724,11 +724,6 @@
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/main)
 "gY" = (
-/obj/machinery/vending/wardrobe/coroner_wardrobe{
-	all_products_free = 1;
-	extended_inventory = 1;
-	onstation = 0
-	},
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 8
 	},
@@ -1003,9 +998,6 @@
 /obj/machinery/camera/autoname/directional/west{
 	network = list("intd13")
 	},
-/obj/machinery/vending/imported/tiziran{
-	onstation = 0
-	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -1052,9 +1044,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "jl" = (
-/obj/machinery/computer/camera_advanced/xenobio{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan,
 /obj/effect/turf_decal/tile/dark_green/half,
 /turf/open/floor/iron/dark/smooth_large,
@@ -1147,7 +1136,6 @@
 "jM" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/siding/brown,
-/obj/machinery/computer/order_console/mining/interdyne,
 /turf/open/floor/iron/dark/diagonal,
 /area/ruin/interdyne_planetary_base/cargo)
 "jR" = (
@@ -1466,10 +1454,6 @@
 /obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
-"ml" = (
-/obj/structure/closet/secure_closet/interdynefob/deckofficer_locker,
-/turf/open/floor/wood,
-/area/ruin/interdyne_planetary_base/cargo/deck)
 "mm" = (
 /obj/effect/turf_decal/siding/thinplating/corner{
 	dir = 1
@@ -1578,13 +1562,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/interdyne_planetary_base/cargo/ware)
-"nv" = (
-/mob/living/basic/pet/chinchilla/white{
-	dir = 4;
-	name = "Gizmo"
-	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ruin/interdyne_planetary_base/cargo/deck)
 "nw" = (
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 8
@@ -2005,7 +1982,6 @@
 /area/ruin/interdyne_planetary_base/eng)
 "qw" = (
 /obj/structure/table/reinforced/rglass,
-/obj/effect/spawner/surgery_tray/full/morgue,
 /obj/machinery/camera/autoname/directional/east{
 	network = list("intd13")
 	},
@@ -2213,7 +2189,6 @@
 /turf/open/floor/circuit/telecomms,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "sJ" = (
-/obj/machinery/skill_station/plasmaglass,
 /obj/effect/turf_decal/siding/dark_green{
 	dir = 8
 	},
@@ -2273,10 +2248,6 @@
 /area/ruin/interdyne_planetary_base/med/morgue)
 "ta" = (
 /obj/structure/safe,
-/obj/item/storage/box/syndie_kit/chameleon/ghostcafe{
-	desc = "It's a box, for storing things.";
-	name = "chameleon kit"
-	},
 /obj/item/gun/energy/cell_loaded/medigun/standard,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/vault)
@@ -2324,11 +2295,6 @@
 	dir = 8
 	},
 /obj/machinery/light_switch/directional/west,
-/obj/machinery/vending/wardrobe/syndie_wardrobe/interdyne{
-	onstation = 0;
-	all_products_free = 1;
-	extended_inventory = 1
-	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -2576,7 +2542,6 @@
 	req_access = list("syndicate")
 	},
 /obj/effect/turf_decal/delivery/white,
-/obj/machinery/suit_storage_unit/interdyne/nerfed,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "vO" = (
@@ -2922,7 +2887,6 @@
 /obj/effect/turf_decal/tile/dark_green/anticorner{
 	dir = 8
 	},
-/obj/machinery/processor/slime/fullupgrade,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "ze" = (
@@ -3127,11 +3091,6 @@
 	},
 /area/ruin/interdyne_planetary_base/cargo)
 "AJ" = (
-/obj/machinery/vending/dorms{
-	onstation = 0;
-	all_products_free = 1;
-	extended_inventory = 1
-	},
 /turf/open/floor/wood/parquet,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "AK" = (
@@ -3806,7 +3765,6 @@
 /area/ruin/interdyne_planetary_base)
 "Fh" = (
 /obj/structure/cable,
-/obj/machinery/power/micro_reactor,
 /turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/eng)
 "Fj" = (
@@ -3825,12 +3783,10 @@
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "Fq" = (
-/obj/structure/closet/xenoarch,
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 1
 	},
 /obj/machinery/light_switch/directional/north,
-/obj/item/xenoarch/handheld_recoverer,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "Fv" = (
@@ -4293,7 +4249,6 @@
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 1
 	},
-/obj/machinery/monkey_recycler/fullupgrade,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "Jz" = (
@@ -4319,9 +4274,6 @@
 	},
 /obj/effect/turf_decal/tile/dark_green/full,
 /obj/machinery/door/firedoor,
-/obj/item/storage/box/syndie_kit/sansufentanyl{
-	pixel_x = -3
-	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med/pharm)
 "JU" = (
@@ -4700,9 +4652,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "No" = (
-/obj/machinery/computer/shuttle/interdyne_cargo{
-	dir = 8
-	},
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 4
 	},
@@ -4784,7 +4733,6 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east{
 	pixel_x = 4
 	},
-/obj/item/storage/backpack/duffelbag/synth_treatment_kit/trauma/advanced,
 /turf/open/floor/iron/dark/small,
 /area/ruin/interdyne_planetary_base/med)
 "NZ" = (
@@ -4963,7 +4911,6 @@
 /area/ruin/interdyne_planetary_base/med)
 "Po" = (
 /obj/effect/turf_decal/stripes/blue/full,
-/obj/machinery/cryo_cell,
 /turf/open/floor/iron/dark,
 /area/ruin/interdyne_planetary_base/med)
 "Pq" = (
@@ -5132,7 +5079,6 @@
 	dir = 1
 	},
 /obj/machinery/light_switch/directional/north,
-/obj/machinery/biogenerator/fullupgrade,
 /turf/open/floor/iron/dark/herringbone,
 /area/ruin/interdyne_planetary_base/serv/hydr)
 "Rk" = (
@@ -5233,11 +5179,6 @@
 "RX" = (
 /obj/effect/turf_decal/siding/dark_green{
 	dir = 1
-	},
-/obj/machinery/vending/boozeomat/syndicate{
-	onstation = 0;
-	all_products_free = 1;
-	extended_inventory = 1
 	},
 /turf/open/floor/wood/tile,
 /area/ruin/interdyne_planetary_base/serv/bar)
@@ -5519,14 +5460,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/interdyne_planetary_base/cargo/deck)
-"TH" = (
-/obj/machinery/vending/medical/syndicate{
-	onstation = 0;
-	all_products_free = 1;
-	extended_inventory = 1
-	},
-/turf/open/floor/iron/dark/small,
-/area/ruin/interdyne_planetary_base/med)
 "TI" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ruin/interdyne_planetary_base/cargo/obs)
@@ -5567,7 +5500,6 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/west,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /obj/machinery/door/firedoor,
-/obj/machinery/chem_master/fullupgrade,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med/pharm)
 "TV" = (
@@ -5690,7 +5622,6 @@
 /area/ruin/interdyne_planetary_base/med)
 "UE" = (
 /obj/structure/table/reinforced,
-/obj/item/folder/syndicate/red/secretformula,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/vault)
 "UN" = (
@@ -5736,10 +5667,6 @@
 	pixel_y = 2;
 	pixel_x = 4
 	},
-/obj/item/disk/design_disk/limbs/felinid{
-	pixel_y = 4;
-	pixel_x = 4
-	},
 /obj/item/disk/design_disk/limbs/lizard{
 	pixel_y = 6;
 	pixel_x = 4
@@ -5749,13 +5676,6 @@
 	pixel_x = 4
 	},
 /obj/structure/table,
-/obj/item/clothing/glasses/hud/health/prescription{
-	pixel_y = -4
-	},
-/obj/item/clothing/glasses/hud/health/prescription{
-	pixel_y = -6;
-	pixel_x = -2
-	},
 /obj/item/nif_repair_kit{
 	pixel_x = -4;
 	pixel_y = 5
@@ -6144,10 +6064,6 @@
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/interdyne_planetary_base/main)
 "XK" = (
-/obj/structure/closet/secure_closet/ds2atmos{
-	anchorable = 0;
-	anchored = 1
-	},
 /obj/item/wrench/bolter,
 /obj/item/grenade/chem_grenade/smart_metal_foam,
 /obj/item/grenade/chem_grenade/smart_metal_foam,
@@ -6262,9 +6178,6 @@
 /turf/open/floor/iron/dark/herringbone,
 /area/ruin/interdyne_planetary_base/serv/hydr)
 "Ze" = (
-/obj/item/towel,
-/obj/item/towel,
-/obj/item/towel,
 /obj/structure/table,
 /obj/item/soap/syndie,
 /obj/machinery/duct,
@@ -6624,7 +6537,7 @@ ja
 fm
 Qf
 By
-ml
+Wa
 Wa
 By
 uX
@@ -6749,7 +6662,7 @@ By
 HV
 Cq
 Qw
-nv
+By
 wr
 zW
 Dt
@@ -6831,7 +6744,7 @@ Pn
 NW
 jY
 Un
-TH
+NL
 Mv
 Ey
 uP

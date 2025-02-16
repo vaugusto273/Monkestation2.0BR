@@ -20,7 +20,6 @@
 	dir = 4
 	},
 /obj/structure/stone_tile/center,
-/mob/living/simple_animal/hostile/megafauna/gladiator,
 /turf/open/lava/smooth/lava_land_surface{
 	slowdown = 0
 	},
@@ -98,24 +97,6 @@
 	},
 /obj/structure/stone_tile{
 	dir = 8
-	},
-/turf/open/lava/smooth/lava_land_surface{
-	slowdown = 0
-	},
-/area/lavaland/surface/outdoors)
-"ey" = (
-/obj/structure/stone_tile/block{
-	dir = 4
-	},
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/mob/living/basic/mining/hivelord/no_wander{
-	color = "red";
-	name = "gate guardian"
 	},
 /turf/open/lava/smooth/lava_land_surface{
 	slowdown = 0
@@ -294,22 +275,6 @@
 	dir = 1
 	},
 /obj/structure/stone_tile,
-/turf/open/lava/smooth/lava_land_surface{
-	slowdown = 0
-	},
-/area/lavaland/surface/outdoors)
-"nA" = (
-/obj/structure/stone_tile/block{
-	dir = 8
-	},
-/obj/structure/stone_tile,
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/mob/living/basic/mining/hivelord/no_wander{
-	color = "red";
-	name = "gate guardian"
-	},
 /turf/open/lava/smooth/lava_land_surface{
 	slowdown = 0
 	},
@@ -559,19 +524,6 @@
 	slowdown = 0
 	},
 /area/lavaland/surface/outdoors)
-"CK" = (
-/obj/structure/stone_tile/block{
-	dir = 8
-	},
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/obj/structure/stone_tile,
-/obj/item/claymore/bone,
-/turf/open/lava/smooth/lava_land_surface{
-	slowdown = 0
-	},
-/area/lavaland/surface/outdoors)
 "CR" = (
 /obj/structure/stone_tile/block,
 /obj/structure/stone_tile{
@@ -609,20 +561,6 @@
 	desc = "They look like remains, whether ash walker or miner you cannot tell. They have a strange aura about them."
 	},
 /obj/item/clothing/under/costume/gladiator/ash_walker,
-/turf/open/indestructible/boss,
-/area/lavaland/surface/outdoors)
-"DE" = (
-/obj/structure/stone_tile/block{
-	dir = 8
-	},
-/obj/structure/stone_tile,
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/mob/living/basic/mining/hivelord/no_wander{
-	color = "red";
-	name = "gate guardian"
-	},
 /turf/open/indestructible/boss,
 /area/lavaland/surface/outdoors)
 "DM" = (
@@ -757,38 +695,6 @@
 "LS" = (
 /obj/structure/statue/bone/rib,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
-"MF" = (
-/obj/structure/stone_tile/block{
-	dir = 4
-	},
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/mob/living/basic/mining/hivelord/no_wander{
-	color = "red";
-	name = "gate guardian"
-	},
-/turf/open/indestructible/boss,
-/area/lavaland/surface/outdoors)
-"MP" = (
-/obj/structure/stone_tile,
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/obj/item/claymore/bone,
-/turf/open/lava/smooth/lava_land_surface{
-	slowdown = 0
-	},
 /area/lavaland/surface/outdoors)
 "Ng" = (
 /obj/structure/stone_tile/block{
@@ -1330,7 +1236,7 @@ XL
 pF
 lf
 lf
-MP
+pF
 kO
 Wr
 wQ
@@ -1509,8 +1415,8 @@ vF
 vF
 vF
 XY
-nA
-DE
+Qe
+ug
 XY
 Tf
 lJ
@@ -1641,8 +1547,8 @@ Pj
 Pj
 Pj
 XY
-ey
-MF
+lf
+Jk
 XY
 Tf
 LS
@@ -1671,7 +1577,7 @@ wQ
 Wr
 Wr
 mZ
-CK
+ne
 ne
 XY
 XY

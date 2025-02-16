@@ -106,13 +106,6 @@
 	},
 /turf/open/lava/smooth/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
-"hd" = (
-/obj/structure/stone_tile/surrounding_tile{
-	dir = 8
-	},
-/obj/structure/closet/xenoarch/ashwalker_version,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
 "hr" = (
 /obj/structure/closet/crate/wooden,
 /obj/item/screwdriver/ashwalker,
@@ -140,14 +133,6 @@
 /obj/item/reagent_containers/cup/bowl/mushroom_bowl{
 	pixel_y = 11;
 	pixel_x = 1
-	},
-/obj/item/smelling_salts{
-	pixel_y = -9;
-	pixel_x = -5
-	},
-/obj/item/smelling_salts{
-	pixel_y = -9;
-	pixel_x = 6
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
@@ -370,11 +355,6 @@
 	dir = 8
 	},
 /turf/open/lava/smooth/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
-"nY" = (
-/obj/structure/reagent_water_basin,
-/obj/structure/stone_tile/slab,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
 "oe" = (
 /obj/structure/bonfire/dense,
@@ -923,13 +903,6 @@
 /obj/structure/stone_tile/surrounding_tile,
 /turf/open/indestructible/boss,
 /area/ruin/unpowered/ash_walkers)
-"Je" = (
-/obj/structure/stone_tile/surrounding_tile{
-	dir = 8
-	},
-/mob/living/basic/chicken/gunther,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
 "Jh" = (
 /obj/structure/stone_tile/block{
 	dir = 8
@@ -1022,29 +995,12 @@
 /obj/structure/flora/ash/cap_shroom,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
-"Mv" = (
-/obj/structure/reagent_crafting_bench,
-/obj/item/forging/tongs/primitive,
-/obj/structure/stone_tile/slab,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
 "MD" = (
 /obj/structure/stone_tile/surrounding_tile/cracked,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
 "MF" = (
 /obj/item/shovel,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
-"MR" = (
-/obj/machinery/smartfridge/drying/rack,
-/obj/structure/stone_tile/slab,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
-"MS" = (
-/obj/structure/reagent_anvil,
-/obj/item/forging/hammer/primitive,
-/obj/structure/stone_tile/slab,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
 "Ne" = (
@@ -1063,10 +1019,6 @@
 /obj/structure/rack/shelf{
 	icon = 'modular_nova/modules/mapping/icons/unique/furniture.dmi';
 	icon_state = "empty_shelf_1"
-	},
-/obj/item/claymore/bone,
-/obj/item/claymore/bone{
-	pixel_y = 6
 	},
 /obj/structure/stone_tile/slab,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
@@ -1579,7 +1531,7 @@ NM
 Ly
 cm
 Ly
-MR
+dw
 FL
 FL
 Ly
@@ -1727,7 +1679,7 @@ WJ
 OJ
 cm
 qr
-Je
+zI
 OJ
 rP
 HF
@@ -1768,7 +1720,7 @@ mv
 mv
 mv
 NM
-hd
+zI
 Mq
 pE
 HF
@@ -2077,7 +2029,7 @@ Ol
 zI
 mZ
 mZ
-Mv
+dw
 pE
 HF
 wR
@@ -2102,7 +2054,7 @@ pE
 Lz
 zI
 Og
-MS
+dw
 cm
 eA
 mZ
@@ -2126,7 +2078,7 @@ OJ
 pE
 cm
 VX
-nY
+dw
 pE
 pE
 WK
