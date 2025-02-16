@@ -1109,7 +1109,6 @@
 /mob/living/basic/mining/wolf,
 /area/ruin/unpowered/abandoned_hearth)
 "Si" = (
-/obj/structure/reagent_water_basin,
 /obj/effect/decal/cleanable/cobweb{
 	dir = 1
 	},
@@ -1192,10 +1191,6 @@
 /turf/open/misc/asteroid/basalt{
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},
-/area/ruin/unpowered/abandoned_hearth)
-"WR" = (
-/obj/structure/reagent_anvil,
-/turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Xh" = (
 /obj/structure/closet/crate/wooden/storage_barrel,
@@ -1475,7 +1470,7 @@ Yf
 Gy
 hJ
 Vz
-WR
+Vz
 Vz
 Vz
 rC
