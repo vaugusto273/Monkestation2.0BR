@@ -639,7 +639,6 @@
 /turf/open/floor/stone/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "wZ" = (
-/obj/structure/wall_torch/mount_only/directional/south,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "xg" = (
