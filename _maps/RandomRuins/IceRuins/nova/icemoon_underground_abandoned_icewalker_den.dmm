@@ -158,10 +158,6 @@
 ///turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "ew" = (
-/////obj/structure/deployable_barricade/wooden{
-//	dir = 4;
-//	pixel_y = 6
-//	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "eG" = (
