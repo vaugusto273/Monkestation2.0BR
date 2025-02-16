@@ -308,6 +308,8 @@
 		/obj/machinery/plumbing/filter = 5,
 		/obj/machinery/plumbing/splitter = 5,
 		/obj/machinery/plumbing/output = 5,
+		/obj/machinery/plumbing/layer_manifold = 5,
+		/obj/machinery/plumbing/sender = 20,
 
 		//category 3 storage
 		/obj/machinery/plumbing/tank = 20,
