@@ -28,7 +28,6 @@
 /area/ruin/unpowered/ash_walkers)
 "bH" = (
 /obj/structure/stone_tile/slab,
-/obj/item/storage/bag/quiver,
 /obj/structure/rack/shelf,
 /obj/item/gun/ballistic/bow{
 	pixel_y = 0;

@@ -53,11 +53,6 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"G" = (
-/obj/structure/table/reinforced,
-/obj/item/flatpacked_machine/boulder_collector,
-/turf/open/floor/plating/lavaland_atmos,
-/area/lavaland/surface/outdoors)
 "H" = (
 /turf/template_noop,
 /area/template_noop)
@@ -87,10 +82,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
-"Y" = (
-/obj/structure/ore_vent/ghost_mining/lavaland,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 
@@ -145,7 +136,7 @@ a
 a
 C
 a
-Y
+a
 a
 O
 a
@@ -169,7 +160,7 @@ H
 a
 a
 a
-G
+z
 z
 F
 B
@@ -210,7 +201,7 @@ H
 a
 C
 a
-Y
+a
 a
 O
 a
