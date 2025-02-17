@@ -8,6 +8,8 @@
 /area/icemoon/surface/outdoors/nospawn)
 "i" = (
 /obj/structure/table/rolling,
+/obj/item/flatpacked_machine/boulder_collector,
+/turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
 "k" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -68,6 +70,8 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
 "S" = (
+/obj/structure/ore_vent/ghost_mining/snowland,
+/turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
 "Y" = (
 /obj/effect/turf_decal/stripes/white/line{
