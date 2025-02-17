@@ -8686,4 +8686,9 @@
 #include "modular_nova\modules\customization\game\objects\items\conversion_kits.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\fucked_person.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\blood_deficiency.dm"
+#include "modular_nova\modules\interdyne_pharma\mod.dm"
+#include "modular_nova\modules\mapping\code\shuttles.dm"
+#include "modular_nova\modules\mapping\code\areas\shuttles.dm"
+#include "modular_nova\modules\mapping\code\machinery.dm"
+#include "modular_nova\modules\mapping\code\interdyne_mining.dm"
 // END_INCLUDE
