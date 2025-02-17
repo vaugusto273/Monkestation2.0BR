@@ -29,9 +29,9 @@
 			if (L.body_part == CHEST)
 				continue
 			qdel(L)
-		// hair_style = "Bald"
-		// facial_hair_style = "Shaved"
-		// update_hair()
+		underwear = "Nude"
+		facial_hairstyle = "Shaved"
+		hairstyle = "Bald"
 		update_body()
 		set_stat(DEAD)
 		timeofdeath = world.time + 100000000000000000000
