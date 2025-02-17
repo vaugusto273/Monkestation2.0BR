@@ -8646,6 +8646,7 @@
 #include "code\__DEFINES\~nova_defines\language.dm"
 #include "code\__DEFINES\~nova_defines\access.dm"
 #include "code\__DEFINES\click.dm"
+#include "code\__DEFINES\~nova_defines\techweb_nodes.dm"
 #include "code\datums\embedding.dm"
 #include "modular_nova\modules\primitive_catgirls\code\language.dm"
 #include "modular_nova\modules\mapping\code\icemoon.dm"
@@ -8699,5 +8700,7 @@
 #include "modular_nova\modules\mapping\code\areas\shuttles.dm"
 #include "modular_nova\modules\mapping\code\machinery.dm"
 #include "modular_nova\modules\mapping\code\interdyne_mining.dm"
-// END_INCLUDE
 #include "modular_nova\modules\bluespace_miner\code\bluespace_miner.dm"
+#include "code\__DEFINES\traits\teatroespacial13\declarations.dm"
+// END_INCLUDE
+
