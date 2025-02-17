@@ -1,0 +1,5 @@
+author: "JohnnySilverhand123"
+delete-after: True
+changes:
+  - rscadd: "Added missing items on a ghost role"
+  - rscdel: "Removed missing items from a ghost role"
