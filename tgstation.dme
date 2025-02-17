@@ -8691,3 +8691,4 @@
 #include "code\datums\elements\watery_tile.dm"
 #include "teatroespacial13\modules\jump\code\jump.dm"
 // END_INCLUDE
+#include "modular_nova\modules\bluespace_miner\code\bluespace_miner.dm"
