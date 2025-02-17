@@ -216,6 +216,7 @@
 	prereq_ids = list("robotics")
 	design_ids = list(
 		"ipc_head",
+		"ipc_body",
 		"ipc_chest",
 		"ipc_arm_left",
 		"ipc_arm_right",
