@@ -8700,3 +8700,4 @@
 #include "modular_nova\modules\mapping\code\machinery.dm"
 #include "modular_nova\modules\mapping\code\interdyne_mining.dm"
 // END_INCLUDE
+#include "modular_nova\modules\bluespace_miner\code\bluespace_miner.dm"
