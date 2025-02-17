@@ -2,7 +2,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 
 /obj/item/mmi/posibrain
 	name = "positronic brain"
-	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves."
+	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves.<br>Can be transformed into an IPC brain with <b>Ctrl+Click</b>!"
 	icon = 'icons/obj/assemblies/assemblies.dmi'
 	icon_state = "posibrain"
 	base_icon_state = "posibrain"
@@ -85,6 +85,32 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	to_chat(user, span_notice("You set the personality seed to \"[input_seed]\"."))
 	ask_role = input_seed
 	update_appearance()
+
+/obj/item/mmi/posibrain/CtrlClick(mob/user)
+	if(!brainmob?.mind || !brainmob)
+		to_chat(user, span_notice("You press the button and release it, but nothing happens because the positronic brain is inactive."))
+		return
+	else if(brainmob.ckey == user.ckey)
+		to_chat(brainmob, span_notice("You cannot press your button itself, so nothing happens."))
+		return
+	to_ipc_posi(user)
+	to_chat(user, span_notice("You press the button to transform the positronic brain into an IPC brain."))
+
+/obj/item/mmi/posibrain/proc/to_ipc_posi(mob/user)
+	var/obj/item/organ/internal/brain/synth/brain = new /obj/item/organ/internal/brain/synth
+	brainmob.container = null //Reset brainmob mmi var.
+	brainmob.forceMove(brain) //Throw mob into brain.
+	brainmob.set_stat(DEAD)
+	brainmob.emp_damage = 0
+	brainmob.reset_perspective() //so the brainmob follows the brain organ instead of the mmi. And to update our vision
+	brain.brainmob = brainmob //Set the brain to use the brainmob
+	brainmob = null //Set mmi brainmob var to null
+	src.forceMove(drop_location())
+	if(Adjacent(user))
+		user.put_in_hands(brain)
+	brain.organ_flags &= ~ORGAN_FROZEN
+	brain = null //No more brain in here
+	qdel(src)
 
 /obj/item/mmi/posibrain/proc/check_success()
 	searching = FALSE
