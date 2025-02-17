@@ -1136,6 +1136,7 @@
 "jM" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/siding/brown,
+/obj/machinery/computer/order_console/mining/interdyne,
 /turf/open/floor/iron/dark/diagonal,
 /area/ruin/interdyne_planetary_base/cargo)
 "jR" = (
@@ -2542,6 +2543,7 @@
 	req_access = list("syndicate")
 	},
 /obj/effect/turf_decal/delivery/white,
+/obj/machinery/suit_storage_unit/interdyne/nerfed,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "vO" = (
@@ -3765,6 +3767,7 @@
 /area/ruin/interdyne_planetary_base)
 "Fh" = (
 /obj/structure/cable,
+/obj/machinery/power/micro_reactor,
 /turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/eng)
 "Fj" = (
@@ -4652,6 +4655,9 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "No" = (
+/obj/machinery/computer/shuttle/interdyne_cargo{
+	dir = 8
+	},
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 4
 	},

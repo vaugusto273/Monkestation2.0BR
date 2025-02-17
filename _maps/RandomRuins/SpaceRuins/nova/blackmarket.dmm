@@ -331,7 +331,6 @@
 /area/ruin/space/has_grav/nova/blackmarket)
 "sB" = (
 /obj/structure/table,
-/obj/structure/towel_bin,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/blackmarket)
 "sQ" = (
@@ -361,30 +360,6 @@
 /area/ruin/space/has_grav/nova/blackmarket)
 "tI" = (
 /obj/structure/closet/crate/cardboard,
-/obj/item/folded_navigation_gigabeacon{
-	pixel_y = 6
-	},
-/obj/item/folded_navigation_gigabeacon{
-	pixel_y = 6
-	},
-/obj/item/folded_navigation_gigabeacon{
-	pixel_y = 6
-	},
-/obj/item/folded_navigation_gigabeacon,
-/obj/item/folded_navigation_gigabeacon,
-/obj/item/folded_navigation_gigabeacon,
-/obj/item/folded_navigation_gigabeacon{
-	pixel_y = -6
-	},
-/obj/item/folded_navigation_gigabeacon{
-	pixel_y = -6
-	},
-/obj/item/folded_navigation_gigabeacon{
-	pixel_y = -6
-	},
-/obj/item/folded_navigation_gigabeacon{
-	pixel_y = -6
-	},
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/blackmarket)
@@ -653,9 +628,6 @@
 /turf/open/floor/iron/smooth_large,
 /area/ruin/space/has_grav/nova/blackmarket)
 "Fq" = (
-/obj/structure/deployable_barricade/guardrail{
-	dir = 8
-	},
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 10
 	},
@@ -701,7 +673,6 @@
 "IS" = (
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/structure/closet/crate/cardboard/mothic,
-/obj/item/stock_parts/servo/nano,
 /obj/item/reagent_containers/cup/beaker,
 /obj/item/circuitboard/machine/protolathe/offstation,
 /obj/item/circuitboard/machine/circuit_imprinter/offstation{
@@ -809,9 +780,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/blackmarket)
 "Nf" = (
-/obj/structure/deployable_barricade/guardrail{
-	dir = 4
-	},
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 6
 	},
@@ -997,7 +965,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/blackmarket)
 "WA" = (
-/turf/open/floor/catwalk_floor/airless,
 /area/ruin/space/has_grav/nova/blackmarket)
 "WJ" = (
 /obj/effect/turf_decal/stripes/asteroid/corner,
