@@ -57,7 +57,8 @@
 	unregister_input_turf()
 	register_input_turf()
 
-/obj/structure/ore_box/boulder_collector/click_alt(mob/living/user)
+/obj/structure/ore_box/boulder_collector/alt_click_secondary(mob/user)
+	//. = ..()(mob/living/user)
 	input_dir = turn(input_dir, -90)
 	to_chat(user, span_notice("You change [src]'s I/O settings, setting the input to [dir2text(input_dir)]."))
 	unregister_input_turf() // someone just rotated the input directions, unregister the old turf

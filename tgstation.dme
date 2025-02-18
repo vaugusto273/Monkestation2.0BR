@@ -8697,5 +8697,8 @@
 #include "modular_nova\modules\mapping\code\interdyne_mining.dm"
 #include "modular_nova\modules\bluespace_miner\code\bluespace_miner.dm"
 #include "code\__DEFINES\traits\teatroespacial13\declarations.dm"
-// END_INCLUDE
+#include "modular_nova\modules\ghost_mining\code\boulder_collector.dm"
+#include "modular_nova\modules\ghost_mining\code\ghost_vent.dm"
+#include "code\modules\mapfluff\ruins\icemoonruin_code\mining_site.dm"
 
+// END_INCLUDE

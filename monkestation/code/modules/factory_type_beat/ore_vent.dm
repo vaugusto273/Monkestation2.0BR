@@ -38,7 +38,11 @@
 		MEDIUM_VENT_TYPE = 5,
 		SMALL_VENT_TYPE = 7,
 	)
+	// nova sector addition
 
+	var/wave_timer = WAVE_DURATION_SMALL
+
+	// end of nova sector
 	/// What string do we use to warn the player about the excavation event?
 	var/excavation_warning = "Are you ready to excavate this ore vent?"
 	///Are we currently spawning mobs?
