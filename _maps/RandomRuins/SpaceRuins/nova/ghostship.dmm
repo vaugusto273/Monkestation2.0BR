@@ -258,9 +258,6 @@
 	},
 /area/ruin/space/unpowered)
 "oc" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/unpowered)
