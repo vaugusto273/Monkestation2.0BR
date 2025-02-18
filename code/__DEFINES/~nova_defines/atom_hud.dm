@@ -7,7 +7,6 @@
 #define SECHUD_BOUNCER "hudbouncer"
 #define SECHUD_SCIENCE_GUARD "hudscienceguard"
 //SR Nanotrasen
-#define SECHUD_BLUESHIELD "hudblueshield"
 #define SECHUD_NT_CONSULTANT "hudnanotrasenconsultant"
 //SR DS2
 #define SECHUD_DS2_DOCTOR "hud_ds2doctor"
@@ -25,8 +24,5 @@
 #define SECHUD_SOLFED "hudsolfed"
 #define SECHUD_SOLFED_LIASON "hudsolfedliasion"
 //SR Misc
-#define SECHUD_BARBER "hudbarber"
 #define SECHUD_SCRAMBLED "hudscrambled"
 #define SECHUD_TELECOMMS_SPECIALIST "hudtelecommsspecialist"
-// Nova Medical
-#define SECHUD_VIROLOGIST "hudvirologist"

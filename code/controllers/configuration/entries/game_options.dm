@@ -157,38 +157,38 @@
 /datum/config_entry/flag/arrivals_shuttle_require_safe_latejoin //Require the arrivals shuttle to be operational in order for latejoiners to join
 
 /datum/config_entry/string/alert_green
-    default = "Todas as ameaças à estação passaram. A segurança não pode ter armas à mostra, e as leis de privacidade estão novamente plenamente em vigor."
+	default = "Todas as ameaças à estação passaram. A segurança não pode ter armas à mostra, e as leis de privacidade estão novamente plenamente em vigor."
 
 /datum/config_entry/string/alert_blue_upto
-    default = "A estação recebeu informações confiáveis sobre possível atividade hostil na estação. A equipe de segurança pode ter armas visíveis, e buscas aleatórias são permitidas."
+	default = "A estação recebeu informações confiáveis sobre possível atividade hostil na estação. A equipe de segurança pode ter armas visíveis, e buscas aleatórias são permitidas."
 
 /datum/config_entry/string/alert_blue_downto
-    default = "A ameaça imediata passou. A segurança não precisa mais manter as armas desembainhadas o tempo todo, mas pode continuar a tê-las à mostra. Buscas aleatórias ainda são permitidas."
+	default = "A ameaça imediata passou. A segurança não precisa mais manter as armas desembainhadas o tempo todo, mas pode continuar a tê-las à mostra. Buscas aleatórias ainda são permitidas."
 
 /datum/config_entry/string/alert_red_upto
-    default = "Há uma ameaça imediata e séria à estação. A segurança pode ter as armas desembainhadas o tempo todo. Buscas aleatórias são permitidas e recomendadas."
+	default = "Há uma ameaça imediata e séria à estação. A segurança pode ter as armas desembainhadas o tempo todo. Buscas aleatórias são permitidas e recomendadas."
 
 /datum/config_entry/string/alert_red_downto
-    default = "A destruição da estação foi evitada. No entanto, ainda há uma ameaça imediata e séria à estação. A segurança pode ter as armas desembainhadas o tempo todo; buscas aleatórias são permitidas e recomendadas."
+	default = "A destruição da estação foi evitada. No entanto, ainda há uma ameaça imediata e séria à estação. A segurança pode ter as armas desembainhadas o tempo todo; buscas aleatórias são permitidas e recomendadas."
 
 /datum/config_entry/string/alert_delta
-    default = "A destruição da estação é iminente. Toda a tripulação está instruída a obedecer a todas as ordens dos chefes de equipe. Qualquer violação dessas ordens poderá ser punida com a morte. Isto não é um exercício."
+	default = "A destruição da estação é iminente. Toda a tripulação está instruída a obedecer a todas as ordens dos chefes de equipe. Qualquer violação dessas ordens poderá ser punida com a morte. Isto não é um exercício."
 
 // monkestation start: additional alert levels
 /datum/config_entry/string/alert_epsilon
-    default = "O Comando Central determinou o nível de segurança Épsilon na estação. Considere todos os contratos rescindidos."
+	default = "O Comando Central determinou o nível de segurança Épsilon na estação. Considere todos os contratos rescindidos."
 
 /datum/config_entry/string/alert_yellow
-    default = "O nível de alerta de segurança foi alterado para amarelo. Atualmente, há um problema crítico de engenharia a bordo de %STATION_NAME%. Os tripulantes são aconselhados a evitar áreas danificadas e reportá-las conforme necessário."
+	default = "O nível de alerta de segurança foi alterado para amarelo. Atualmente, há um problema crítico de engenharia a bordo de %STATION_NAME%. Os tripulantes são aconselhados a evitar áreas danificadas e reportá-las conforme necessário."
 
 /datum/config_entry/string/alert_amber
-    default = "O nível de alerta de segurança foi alterado para âmbar. Há uma ameaça C-B-R-N em curso na estação. Os tripulantes são aconselhados a usar equipamentos de proteção e sistemas pessoais de oxigênio até que o alerta seja suspenso. Relate quaisquer sintomas imediatamente ao pessoal médico."
+	default = "O nível de alerta de segurança foi alterado para âmbar. Há uma ameaça C-B-R-N em curso na estação. Os tripulantes são aconselhados a usar equipamentos de proteção e sistemas pessoais de oxigênio até que o alerta seja suspenso. Relate quaisquer sintomas imediatamente ao pessoal médico."
 
 /datum/config_entry/string/alert_gamma
-    default = "O Comando Central emitiu um alerta de segurança elevado. Há uma ameaça elevada designada pelo Comando Central a bordo da estação. Todas as forças de segurança devem permanecer armadas e em alerta máximo; os demais funcionários são aconselhados a buscar abrigo em seus departamentos."
+	default = "O Comando Central emitiu um alerta de segurança elevado. Há uma ameaça elevada designada pelo Comando Central a bordo da estação. Todas as forças de segurança devem permanecer armadas e em alerta máximo; os demais funcionários são aconselhados a buscar abrigo em seus departamentos."
 
 /datum/config_entry/string/alert_lambda
-    default = "O Comando Central detectou um grande pico de energia dimensional, consistente com a convocação da entidade \[REDACTED\]. Você é aconselhado a fazer valer o pouco tempo que lhe resta; pois nenhum recurso adicional será despachado para %STATION_NAME% neste momento."
+	default = "O Comando Central detectou um grande pico de energia dimensional, consistente com a convocação da entidade \[REDACTED\]. Você é aconselhado a fazer valer o pouco tempo que lhe resta; pois nenhum recurso adicional será despachado para %STATION_NAME% neste momento."
 
 // monkestation end
 

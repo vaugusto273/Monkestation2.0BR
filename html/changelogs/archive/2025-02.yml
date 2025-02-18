@@ -386,3 +386,17 @@
   - bugfix: People with fear now appropriately lose it if the slasher isn't in range.
   distributivgesetz:
   - qol: Made reading text with the PDA retro theme a bit more accessible.
+2025-02-16:
+  Vaugusto273:
+  - qol: Added Chemical Beacon and Layer Manifold to RCPD.
+  - qol: Translated Round tips to Portuguese.
+  Cobrakan:
+  - rscadd: Added some novasector ruins to the map and ghost roles.
+  - qol: Translated policy.json into Portguese
+  Syndipudin:
+  - rscadd: Added jump mechanics to the game.
+  - qol: Added cooked meat cutting.
+2025-02-17:
+  Cobrakan:
+  - rscadd: Ported Bluespace Miner from NovaSector, get the circuit board from engi department console while having CE access.
+

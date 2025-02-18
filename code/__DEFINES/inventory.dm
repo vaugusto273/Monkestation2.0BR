@@ -150,7 +150,7 @@ DEFINE_BITFIELD(no_equip_flags, list(
 ///The sprite works fine for digitigrade legs as-is.
 #define CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON (1<<2)
 ///Has a sprite for snouted heads specifically.
-#define CLOTHING_SNOUTED_VARIATION (1<<3)
+#define CLOTHING_SNOUTED_VARIATION (1<<4) //nova edit addition normal 1<<3
 
 //flags for covering body parts
 #define GLASSESCOVERSEYES (1<<0)
@@ -176,8 +176,6 @@ DEFINE_BITFIELD(no_equip_flags, list(
 #define AFK_THEFT_TIME 3
 
 // NOVA EDIT ADDITION START
-/// The sprite works fine for snouts.
-#define CLOTHING_SNOUTED_VARIATION (1<<4)
 /// The sprite works fine for snouts as-is.
 #define CLOTHING_SNOUTED_VARIATION_NO_NEW_ICON (1<<5)
 /// The sprite works fine for vox snouts.
