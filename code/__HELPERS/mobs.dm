@@ -276,7 +276,18 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 
 /// An assoc list of species IDs to type paths
 GLOBAL_LIST_EMPTY(species_list)
+// NOVA ADDITION START
 
+/proc/init_species_prototypes()
+	var/list/species_list = list()
+	for(var/species_type in subtypesof(/datum/species))
+		species_list[species_type] = new species_type()
+	return species_list
+
+/// List of all species prototypes to reference, assoc [type] = prototype
+GLOBAL_LIST_INIT_TYPED(species_prototypes, /datum/species, init_species_prototypes())
+
+// NOVA ADDITION END
 /proc/age2agedescription(age)
 	switch(age)
 		if(0 to 1)

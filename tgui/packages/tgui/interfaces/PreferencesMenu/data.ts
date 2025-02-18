@@ -23,6 +23,7 @@ export enum Food {
   Sugar = 'SUGAR',
   Toxic = 'TOXIC',
   Vegetables = 'VEGETABLES',
+  Bloody = 'BLOODY', // NOVA EDIT ADDITION - Hemophage Food
 }
 
 export enum JobPriority {

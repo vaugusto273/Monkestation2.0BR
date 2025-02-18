@@ -34,6 +34,10 @@
 	var/datum/component/artifact/our_artifact
 	///Type of effect, shows up in Xray Machine
 	var/type_name = "Generic Artifact Effect"
+	// nova addition start
+	///used for logs and science tool
+	var/log_name = "unknown"
+	// nova addition end
 
 /datum/artifact_effect/New()
 	. = ..()

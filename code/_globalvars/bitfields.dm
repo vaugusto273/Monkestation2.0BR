@@ -290,6 +290,7 @@ DEFINE_BITFIELD(liked_foodtypes, list(
 	"ORANGES" = ORANGES,
 	"BUGS" = BUGS,
 	"GORE" = GORE,
+	"BLOODY" = BLOODY, // NOVA EDIT - Hemophage Food
 ))
 
 DEFINE_BITFIELD(disliked_foodtypes, list(
@@ -313,6 +314,7 @@ DEFINE_BITFIELD(disliked_foodtypes, list(
 	"ORANGES" = ORANGES,
 	"BUGS" = BUGS,
 	"GORE" = GORE,
+	"BLOODY" = BLOODY, // NOVA EDIT - Hemophage Food
 ))
 
 DEFINE_BITFIELD(toxic_foodtypes, list(
@@ -336,6 +338,7 @@ DEFINE_BITFIELD(toxic_foodtypes, list(
 	"ORANGES" = ORANGES,
 	"BUGS" = BUGS,
 	"GORE" = GORE,
+	"BLOODY" = BLOODY, // NOVA EDIT - Hemophage Food
 ))
 
 DEFINE_BITFIELD(mobility_flags, list(
