@@ -64,10 +64,11 @@
 
 	deconstruct(disassembled = TRUE)
 	return ITEM_INTERACT_SUCCESS
-
+/*
 /obj/structure/reagent_water_basin/atom_deconstruct(disassembled = TRUE)
 	new /obj/item/stack/sheet/mineral/wood(drop_location(), 5)
-
+	*/
+/* meh if you want to make this work here you go modular_nova\modules\reagent_forging\code\forge_items.dm
 /obj/structure/reagent_water_basin/tong_act(mob/living/user, obj/item/tool)
 	var/obj/item/forging/incomplete/search_incomplete = locate(/obj/item/forging/incomplete) in tool.contents
 	if(!search_incomplete)
@@ -91,7 +92,7 @@
 		qdel(search_incomplete)
 		tool.icon_state = "tong_empty"
 	return ITEM_INTERACT_SUCCESS
-
+*/
 /// Fishing source for fishing out of basins that have been upgraded, contains saltwater fish (lizard fish fall under this too!)
 /datum/fish_source/water_basin
 	catalog_description = "Bottomless Water Basins"
@@ -101,7 +102,7 @@
 		/obj/item/fish/cardinal = 15,
 		/obj/item/fish/greenchromis = 15,
 		/obj/item/fish/lanternfish = 5,
-		/obj/item/fish/moonfish/dwarf = 15,
+		///obj/item/fish/moonfish/dwarf = 15,
 		/obj/item/fish/gunner_jellyfish = 15,
 		/obj/item/fish/needlefish = 10,
 		/obj/item/fish/armorfish = 10,

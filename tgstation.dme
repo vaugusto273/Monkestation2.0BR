@@ -8700,8 +8700,6 @@
 #include "modular_nova\modules\ghost_mining\code\boulder_collector.dm"
 #include "modular_nova\modules\ghost_mining\code\ghost_vent.dm"
 #include "code\modules\mapfluff\ruins\icemoonruin_code\mining_site.dm"
-
+#include "modular_nova\modules\reagent_forging\code\water_basin.dm"
 // END_INCLUDE
 
-
-#include "modular_nova\modules\reagent_forging\code\water_basin.dm"
