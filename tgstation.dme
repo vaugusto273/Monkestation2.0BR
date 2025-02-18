@@ -8702,3 +8702,6 @@
 #include "code\modules\mapfluff\ruins\icemoonruin_code\mining_site.dm"
 
 // END_INCLUDE
+
+
+#include "modular_nova\modules\reagent_forging\code\water_basin.dm"

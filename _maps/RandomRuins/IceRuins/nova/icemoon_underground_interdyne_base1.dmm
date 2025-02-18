@@ -82,7 +82,6 @@
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "ap" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east,
-/obj/structure/towel_bin,
 /obj/structure/table,
 /obj/machinery/duct,
 /turf/open/floor/iron/showroomfloor,
@@ -103,7 +102,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/interdynefob/deckofficer_locker,
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "aw" = (
@@ -130,10 +128,6 @@
 	pixel_z = 6;
 	color = "#FFFFFF";
 	pixel_w = 3
-	},
-/obj/item/table_clock{
-	pixel_x = -6;
-	anchored_tabletop_offset = 8
 	},
 /obj/item/paper_bin{
 	pixel_x = 8;
@@ -814,18 +808,11 @@
 /obj/structure/railing,
 /obj/effect/turf_decal/box/white,
 /obj/structure/rack/shelf,
-/obj/item/construction/rcd/loaded/interdyne,
 /turf/open/floor/iron/diagonal,
 /area/ruin/interdyne_planetary_base/cargo)
 "co" = (
 /obj/structure/railing{
 	dir = 6
-	},
-/obj/machinery/vending/wardrobe/syndie_wardrobe{
-	contraband = list(/obj/item/knife/combat=1, /obj/item/clothing/under/syndicate/coldres=6, /obj/item/clothing/shoes/combat/coldres=6, /obj/item/flashlight/lantern/syndicate=4);
-	extended_inventory = 1;
-	onstation = 0;
-	all_products_free = 1
 	},
 /turf/open/floor/iron/diagonal,
 /area/ruin/interdyne_planetary_base/cargo)
@@ -910,14 +897,6 @@
 	dir = 5
 	},
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east,
-/obj/item/modular_computer/laptop/preset/syndicate,
-/obj/item/modular_computer/laptop/preset/syndicate,
-/obj/item/modular_computer/laptop/preset/syndicate,
-/obj/item/modular_computer/laptop/preset/syndicate,
-/obj/item/modular_computer/laptop/preset/syndicate,
-/obj/item/modular_computer/laptop/preset/syndicate,
-/obj/item/modular_computer/laptop/preset/syndicate,
-/obj/structure/closet/crate/centcom,
 /turf/open/floor/iron/smooth_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "cD" = (
@@ -949,7 +928,6 @@
 	},
 /obj/item/storage/toolbox/syndicate,
 /obj/structure/closet/crate/engineering,
-/obj/item/storage/inflatable,
 /turf/open/floor/iron/smooth_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "cI" = (
@@ -1470,7 +1448,6 @@
 	dir = 1;
 	id = "interdynedisp"
 	},
-/obj/item/serviette_used,
 /obj/item/shard/plastitanium,
 /obj/item/paper/valentine,
 /obj/machinery/light/small/directional/west,
@@ -1715,7 +1692,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "eG" = (
-/obj/machinery/cryo_cell,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "eH" = (
@@ -1996,7 +1972,6 @@
 /area/ruin/interdyne_planetary_base/main)
 "fu" = (
 /obj/machinery/cell_charger_multi,
-/obj/item/stock_parts/power_store/cell/bluespace,
 /obj/machinery/airalarm/directional/west{
 	req_access = list("syndicate")
 	},
@@ -2086,7 +2061,6 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
 	},
-/obj/item/storage/backpack/duffelbag/synth_treatment_kit/trauma/advanced,
 /obj/structure/railing/corner/end,
 /turf/open/floor/iron/white/textured_large,
 /area/ruin/interdyne_planetary_base/med)
@@ -2184,9 +2158,6 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main)
 "fW" = (
-/obj/machinery/door/airlock/multi_tile/public/glass{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -2325,16 +2296,13 @@
 /area/ruin/interdyne_planetary_base/med)
 "go" = (
 /obj/structure/sign/poster/contraband/interdyne_gene_clinics/directional/north,
-/obj/structure/chair/sofa/bench/color/interdyne/icemoon_blue/right,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "gp" = (
 /obj/structure/sign/poster/official/moth_epi/directional/north,
-/obj/structure/chair/sofa/bench/color/interdyne/icemoon_blue/left,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "gq" = (
-/obj/structure/reagent_dispensers/water_cooler/directional/north,
 /obj/machinery/airalarm/directional/east{
 	req_access = list("syndicate")
 	},
@@ -2441,9 +2409,6 @@
 /obj/item/disk/design_disk/limbs/ethereal{
 	pixel_y = 2
 	},
-/obj/item/disk/design_disk/limbs/felinid{
-	pixel_y = 4
-	},
 /obj/item/disk/design_disk/limbs/lizard{
 	pixel_y = 6
 	},
@@ -2477,7 +2442,6 @@
 	pixel_x = 8;
 	pixel_y = 5
 	},
-/obj/item/mmi/posibrain/syndie/interdyne,
 /obj/item/storage/box/beakers/bluespace,
 /obj/structure/table/glass/plasmaglass,
 /obj/item/storage/part_replacer/bluespace{
@@ -2547,12 +2511,6 @@
 /area/ruin/interdyne_planetary_base/main)
 "gR" = (
 /obj/machinery/firealarm/directional/west,
-/obj/machinery/vending/medical/syndicate{
-	onstation = 0;
-	contraband = list(/obj/item/storage/box/gum/happiness=3, /obj/item/storage/box/hug/medical=3, /obj/item/mmi/syndie/interdyne=3);
-	extended_inventory = 1;
-	all_products_free = 1
-	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "gS" = (
@@ -2651,7 +2609,6 @@
 	control_area = "/area/ruin/interdyne_planetary_base";
 	ailock = 1
 	},
-/obj/item/folder/syndicate/red/secretformula,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "hi" = (
@@ -2826,7 +2783,6 @@
 /area/ruin/interdyne_planetary_base/main)
 "hI" = (
 /obj/machinery/light/small/directional/east,
-/obj/machinery/suit_storage_unit/syndicate/chameleon,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "hJ" = (
@@ -2854,7 +2810,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "hN" = (
-/obj/structure/plaque/static_plaque/golden/commission/interdyne_planetary_base/icemoon,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "hO" = (
@@ -2896,10 +2851,6 @@
 /obj/structure/safe{
 	dir = 4
 	},
-/obj/item/storage/box/syndie_kit/chameleon/ghostcafe{
-	name = "chameleon kit";
-	desc = "It's a box, for storing things."
-	},
 /obj/item/disk/ammo_workbench/advanced,
 /obj/item/suppressor,
 /obj/item/toy/redbutton,
@@ -2918,7 +2869,6 @@
 	id = "interdynescience";
 	req_access = list("syndicate")
 	},
-/obj/machinery/skill_station/plasmaglass,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science)
 "hU" = (
@@ -3067,9 +3017,6 @@
 /obj/structure/table/glass,
 /obj/machinery/reagentgrinder{
 	pixel_x = 5
-	},
-/obj/item/storage/box/syndie_kit/sansufentanyl{
-	pixel_x = -9
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med/pharm)
@@ -3316,7 +3263,7 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/interdyne_planetary_base/main)
 "iT" = (
-/obj/machinery/processor/slime,
+/obj/machinery/processor,
 /obj/structure/sign/xenobio_guide/directional/west,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
@@ -3328,9 +3275,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "iV" = (
-/obj/machinery/computer/camera_advanced/xenobio{
-	dir = 8
-	},
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
@@ -3617,7 +3561,7 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "jC" = (
-/obj/machinery/monkey_recycler,
+/obj/machinery/biogenerator,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
@@ -3682,9 +3626,6 @@
 /area/ruin/interdyne_planetary_base/main/dorms/lib)
 "jL" = (
 /obj/machinery/photocopier/gratis,
-/obj/structure/sign/flag/interdyne/directional/north{
-	pixel_x = -13
-	},
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/main/dorms/lib)
 "jM" = (
@@ -3692,7 +3633,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/obj/structure/sign/flag/interdyne/directional/east,
 /turf/open/floor/iron/white/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "jN" = (
@@ -3736,7 +3676,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /obj/machinery/light/small/directional/east,
-/obj/structure/towel_bin,
 /obj/structure/table,
 /obj/effect/turf_decal/siding/dark{
 	dir = 4
@@ -4712,10 +4651,6 @@
 /obj/machinery/light/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/vending/imported/tiziran{
-	onstation = 0;
-	all_products_free = 1
-	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "mk" = (
@@ -4906,12 +4841,7 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "mE" = (
-/obj/structure/chair/sofa/bench/color/interdyne/icemoon_blue/right,
 /turf/open/floor/iron/dark/textured_corner,
-/area/ruin/interdyne_planetary_base/serv)
-"mF" = (
-/obj/structure/chair/sofa/bench/color/interdyne/icemoon_blue/left,
-/turf/open/floor/iron/dark/small,
 /area/ruin/interdyne_planetary_base/serv)
 "mH" = (
 /obj/structure/table,
@@ -5033,11 +4963,6 @@
 "mZ" = (
 /turf/open/floor/plating/reinforced,
 /area/ruin/interdyne_planetary_base/eng)
-"na" = (
-/obj/structure/table,
-/obj/item/serviette_pack,
-/turf/open/floor/iron/dark/small,
-/area/ruin/interdyne_planetary_base/serv)
 "nb" = (
 /turf/open/floor/iron/dark/small,
 /area/ruin/interdyne_planetary_base/serv)
@@ -5199,20 +5124,9 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "nt" = (
-/obj/structure/chair/sofa/bench/color/interdyne/icemoon_blue/left{
-	dir = 1;
-	pixel_z = 8
-	},
 /turf/open/floor/iron/dark/textured_corner{
 	dir = 4
 	},
-/area/ruin/interdyne_planetary_base/serv)
-"nu" = (
-/obj/structure/chair/sofa/bench/color/interdyne/icemoon_blue/right{
-	dir = 1;
-	pixel_z = 8
-	},
-/turf/open/floor/iron/dark/small,
 /area/ruin/interdyne_planetary_base/serv)
 "nv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5722,7 +5636,6 @@
 "oF" = (
 /obj/structure/table,
 /obj/effect/turf_decal/stripes/line,
-/obj/item/toy/tennis/red,
 /obj/effect/turf_decal/weather/snow,
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 1
@@ -5883,7 +5796,7 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "oU" = (
-/obj/machinery/vending/dorms{
+/obj/machinery/vending/autodrobe{
 	onstation = 0;
 	all_products_free = 1;
 	extended_inventory = 1
@@ -6086,10 +5999,6 @@
 "pu" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/visible,
-/obj/structure/closet/secure_closet/ds2atmos{
-	anchored = 1;
-	anchorable = 0
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/reinforced,
 /area/ruin/interdyne_planetary_base/eng)
@@ -6244,11 +6153,6 @@
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/interdyne_planetary_base/main)
 "pQ" = (
-/obj/machinery/vending/boozeomat/syndicate{
-	onstation = 0;
-	extended_inventory = 1;
-	all_products_free = 1
-	},
 /obj/machinery/light/directional/south,
 /obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron/dark/textured_large,
@@ -6782,10 +6686,6 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/main/dorms/lib)
-"rq" = (
-/obj/effect/mapping_helpers/turn_off_lights_with_lightswitch,
-/turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/ruin/interdyne_planetary_base/med/morgue)
 "rF" = (
 /turf/open/floor/plating/reinforced{
 	initial_gas_mix = "ICEMOON_ATMOS"
@@ -7356,15 +7256,6 @@
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/iron/submarine_vents,
 /area/ruin/interdyne_planetary_base/eng)
-"Sp" = (
-/obj/structure/cable,
-/obj/machinery/vending/wardrobe/syndie_wardrobe/interdyne{
-	onstation = 0;
-	all_products_free = 1;
-	extended_inventory = 1
-	},
-/turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/interdyne_planetary_base/main/dorms)
 "Sq" = (
 /obj/effect/turf_decal/box/red/corners,
 /obj/effect/turf_decal/box/red/corners{
@@ -8839,7 +8730,7 @@ lU
 lU
 lU
 lU
-Sp
+lU
 nP
 oi
 oT
@@ -9014,9 +8905,9 @@ jo
 lG
 mg
 mn
-mF
-na
-nu
+nb
+mH
+nb
 nR
 ok
 oB
@@ -10360,7 +10251,7 @@ fI
 fW
 gx
 qY
-rq
+ha
 ha
 ha
 jE

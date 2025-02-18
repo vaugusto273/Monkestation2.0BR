@@ -38,13 +38,6 @@
 /obj/structure/wall_torch/directional/south,
 /turf/open/floor/wood/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
-"cp" = (
-/obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/forging/reagent_weapon/sword,
-/obj/structure/window/reinforced/plasma/spawner/directional/north,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/icemoon,
-/area/ruin/unpowered/abandoned_sacred_temple)
 "cr" = (
 /obj/structure/wall_torch/directional/west,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -98,7 +91,7 @@
 "dM" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/mineral/gold/icemoon,
+/turf/open/floor/mineral/gold,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "dO" = (
 /obj/effect/turf_decal/siding/wood,
@@ -114,7 +107,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/mineral/gold/icemoon,
+/turf/open/floor/mineral/gold,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "eE" = (
 /obj/effect/turf_decal/siding/wood{
@@ -277,13 +270,12 @@
 "kN" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/gold/icemoon,
+/turf/open/floor/mineral/gold,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "kO" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
 	},
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "lh" = (
 /turf/template_noop,
@@ -328,7 +320,6 @@
 /area/ruin/unpowered/abandoned_sacred_temple)
 "mF" = (
 /obj/structure/millstone,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "mW" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
@@ -345,7 +336,7 @@
 /area/ruin/unpowered/abandoned_sacred_temple)
 "nf" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/gold/icemoon,
+/turf/open/floor/mineral/gold,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "nX" = (
 /obj/structure/spacevine{
@@ -379,7 +370,7 @@
 "pk" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/wall_torch/spawns_lit/directional/north,
-/turf/open/floor/mineral/gold/icemoon,
+/turf/open/floor/mineral/gold,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "pu" = (
 /obj/effect/turf_decal/siding/wood{
@@ -399,7 +390,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/gold/icemoon,
+/turf/open/floor/mineral/gold,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "qm" = (
 /obj/effect/turf_decal/siding/wood{
@@ -511,7 +502,6 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/weather/snow/corner,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "xv" = (
 /obj/item/reagent_containers/cup/bucket/wooden,
@@ -588,13 +578,6 @@
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Ee" = (
 /obj/item/reagent_containers/cup/bucket/wooden,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/icemoon,
-/area/ruin/unpowered/abandoned_sacred_temple)
-"Ex" = (
-/obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/forging/reagent_weapon/dagger,
-/obj/structure/window/reinforced/plasma/spawner/directional/north,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
@@ -701,25 +684,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
-"JA" = (
-/obj/structure/table/reinforced/plastitaniumglass,
-/obj/structure/window/reinforced/plasma/spawner/directional/north,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/forging/reagent_weapon/hammer,
-/turf/open/floor/wood/icemoon,
-/area/ruin/unpowered/abandoned_sacred_temple)
 "JN" = (
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Kd" = (
 /obj/structure/table/reinforced/plastitaniumglass,
-/obj/structure/window/reinforced/plasma/spawner/directional/north,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/icemoon,
-/area/ruin/unpowered/abandoned_sacred_temple)
-"Kl" = (
-/obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/forging/reagent_weapon/staff,
 /obj/structure/window/reinforced/plasma/spawner/directional/north,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/icemoon,
@@ -756,7 +725,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/gold/icemoon,
+/turf/open/floor/mineral/gold,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Mi" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -796,8 +765,7 @@
 /obj/item/seeds/potato,
 /obj/item/seeds/potato/sweet,
 /obj/item/seeds/carrot,
-/obj/item/seeds/honeysuckle,
-/turf/open/misc/dirt/icemoon,
+/obj/item/seeds/cannabis,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "MN" = (
 /obj/structure/flora/bush/fullgrass/style_random,
@@ -875,7 +843,6 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
 	},
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Pe" = (
 /obj/structure/flora/bush/fullgrass/style_random,
@@ -910,7 +877,6 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
 	},
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Qs" = (
 /obj/structure/fireplace{
@@ -978,7 +944,6 @@
 /area/ruin/unpowered/abandoned_sacred_temple)
 "SK" = (
 /obj/structure/water_source/puddle,
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "SS" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -988,7 +953,7 @@
 "SX" = (
 /obj/effect/turf_decal/siding/wood/corner,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/gold/icemoon,
+/turf/open/floor/mineral/gold,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Tb" = (
 /obj/structure/flora/bush/fullgrass/style_random,
@@ -1031,7 +996,6 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
 	},
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Uv" = (
 /obj/structure/closet/cabinet,
@@ -1137,7 +1101,6 @@
 /turf/open/floor/wood/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Yi" = (
-/turf/open/misc/dirt/icemoon,
 /area/ruin/unpowered/abandoned_sacred_temple)
 "Yo" = (
 /obj/structure/flora/bush/fullgrass/style_random,
@@ -1908,7 +1871,7 @@ Vd
 th
 zL
 zL
-JA
+Kd
 bu
 cu
 Ee
@@ -1965,7 +1928,7 @@ PV
 dO
 zL
 zL
-Kl
+Kd
 NN
 NN
 NN
@@ -2250,7 +2213,7 @@ AA
 Zg
 zL
 zL
-cp
+Kd
 NN
 NN
 NN
@@ -2307,7 +2270,7 @@ Gz
 oV
 zL
 zL
-Ex
+Kd
 bu
 GW
 zL
