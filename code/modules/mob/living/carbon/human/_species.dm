@@ -483,6 +483,13 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				current_organ.before_organ_replacement(replacement)
 			// organ.Insert will qdel any current organs in that slot, so we don't need to.
 			replacement.Insert(organ_holder, special=TRUE, drop_if_replaced=FALSE)
+// nova addition start
+
+
+/// Returns a list of the default mutant bodyparts, and whether or not they can be randomized or not
+/datum/species/proc/get_default_mutant_bodyparts()
+	return list()
+// end of nova addition
 
 /datum/species/proc/worn_items_fit_body_check(mob/living/carbon/wearer)
 	for(var/obj/item/equipped_item in wearer.get_all_worn_items())

@@ -18,6 +18,7 @@
 #define ORANGES (1<<17)
 #define BUGS (1<<18)
 #define GORE (1<<19)
+#define BLOODY (1<<21) // NOVA EDIT - Hemophage Food
 
 DEFINE_BITFIELD(foodtypes, list(
 	"MEAT" = MEAT,
@@ -40,6 +41,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"ORANGES" = ORANGES,
 	"BUGS" = BUGS,
 	"GORE" = GORE,
+	"BLOODY" = BLOODY, // NOVA EDIT - Hemophage Food
 ))
 
 /// A list of food type names, in order of their flags
@@ -64,6 +66,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"ORANGES", \
 	"BUGS", \
 	"GORE", \
+	"BLOODY", /* NOVA EDIT - Hemophage Food */ \
 )
 
 /// IC meaning (more or less) for food flags
@@ -88,6 +91,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"Oranges", \
 	"Bugs", \
 	"Gore", \
+	"Bloody", /* NOVA EDIT - Hemophage Food */ \
 )
 
 #define DRINK_NICE 1
@@ -95,6 +99,7 @@ DEFINE_BITFIELD(foodtypes, list(
 #define DRINK_VERYGOOD 3
 #define DRINK_FANTASTIC 4
 #define FOOD_AMAZING 5
+#define RACE_DRINK 7 // NOVA EDIT ADDITION
 
 /// Food is "in a container", not in a code sense, but in a literal sense (canned foods)
 #define FOOD_IN_CONTAINER (1<<0)
