@@ -121,7 +121,7 @@
 "bn" = (
 /obj/machinery/vending/dinnerware{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /obj/effect/turf_decal/siding/thinplating{
@@ -1661,7 +1661,7 @@
 /obj/effect/turf_decal/tile/dark_green,
 /obj/machinery/vending/coffee{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /turf/open/floor/iron/dark/textured,
@@ -2148,7 +2148,7 @@
 /obj/machinery/vending/clothing{
 	onstation = 0;
 	extended_inventory = 1;
-	all_products_free = 1
+	default_price = 0
 	},
 /obj/effect/turf_decal/siding/dark_green{
 	dir = 8
@@ -3663,7 +3663,7 @@
 "Ey" = (
 /obj/machinery/vending/drugs{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /turf/open/floor/iron/dark/herringbone,
@@ -3845,7 +3845,7 @@
 	},
 /obj/machinery/vending/cigarette{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /turf/open/floor/iron/dark/textured,
@@ -4805,7 +4805,7 @@
 "Ou" = (
 /obj/machinery/vending/hydronutrients{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /obj/effect/turf_decal/siding/dark_green{
@@ -4847,7 +4847,7 @@
 /obj/structure/table,
 /obj/machinery/light/cold/directional/north,
 /obj/machinery/vending/wallmed/directional/north{
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1;
 	onstation = 0
 	},
@@ -5600,7 +5600,7 @@
 "Un" = (
 /obj/machinery/vending/syndichem{
 	onstation = 0;
-	all_products_free = 1
+	default_price = 0
 	},
 /obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron/dark/small,
@@ -5656,7 +5656,7 @@
 "UW" = (
 /obj/machinery/vending/games{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /obj/effect/turf_decal/siding/dark_green{
@@ -5764,7 +5764,7 @@
 /obj/machinery/vending/autodrobe{
 	onstation = 0;
 	extended_inventory = 1;
-	all_products_free = 1
+	default_price = 0
 	},
 /obj/effect/turf_decal/siding/dark_green{
 	dir = 8
@@ -6021,7 +6021,7 @@
 	},
 /obj/machinery/vending/barbervend{
 	onstation = 0;
-	all_products_free = 1
+	default_price = 0
 	},
 /turf/open/floor/iron/white/small,
 /area/ruin/interdyne_planetary_base/main)
@@ -6273,7 +6273,7 @@
 "ZW" = (
 /obj/machinery/vending/hydroseeds{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /obj/machinery/light/small/directional/north,

@@ -2674,7 +2674,7 @@
 	name = "\improper SyndiDrug Plus";
 	onstation = 0;
 	extended_inventory = 1;
-	all_products_free = 1
+	default_price = 0
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
@@ -2716,7 +2716,7 @@
 "hx" = (
 /obj/machinery/vending/syndichem{
 	onstation = 0;
-	all_products_free = 1
+	default_price = 0
 	},
 /obj/machinery/light_switch/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4001,7 +4001,7 @@
 	},
 /obj/machinery/vending/games{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /turf/open/floor/glass/reinforced,
@@ -4327,7 +4327,7 @@
 /obj/structure/sign/poster/contraband/cybersun_six_hundred/directional/west,
 /obj/machinery/vending/imported/mothic{
 	onstation = 0;
-	all_products_free = 1
+	default_price = 0
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
@@ -4404,7 +4404,7 @@
 /obj/structure/cable,
 /obj/machinery/vending/cigarette{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -5292,7 +5292,7 @@
 /obj/machinery/vending/clothing{
 	onstation = 0;
 	extended_inventory = 1;
-	all_products_free = 1
+	default_price = 0
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
@@ -5394,7 +5394,7 @@
 /obj/machinery/vending/hydronutrients{
 	onstation = 0;
 	extended_inventory = 1;
-	all_products_free = 1
+	default_price = 0
 	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark/textured_large,
@@ -5439,7 +5439,7 @@
 /obj/machinery/vending/autodrobe{
 	onstation = 0;
 	extended_inventory = 1;
-	all_products_free = 1
+	default_price = 0
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
@@ -5477,7 +5477,7 @@
 /obj/machinery/vending/hydroseeds{
 	onstation = 0;
 	extended_inventory = 1;
-	all_products_free = 1
+	default_price = 0
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/serv/hydr)
@@ -5485,7 +5485,7 @@
 /obj/machinery/vending/dinnerware{
 	onstation = 0;
 	extended_inventory = 1;
-	all_products_free = 1
+	default_price = 0
 	},
 /obj/machinery/duct,
 /turf/open/floor/iron/dark/textured_large,
@@ -5798,7 +5798,7 @@
 "oU" = (
 /obj/machinery/vending/autodrobe{
 	onstation = 0;
-	all_products_free = 1;
+	default_price = 0;
 	extended_inventory = 1
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -7111,7 +7111,7 @@
 "JN" = (
 /obj/machinery/vending/barbervend{
 	onstation = 0;
-	all_products_free = 1
+	default_price = 0
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/serv/rstrm)
@@ -7311,7 +7311,7 @@
 /obj/structure/sign/poster/contraband/interdyne_gene_clinics/directional/west,
 /obj/machinery/vending/imported/yangyu{
 	onstation = 0;
-	all_products_free = 1
+	default_price = 0
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
