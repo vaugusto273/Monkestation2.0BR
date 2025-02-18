@@ -4948,7 +4948,6 @@
 	name = "stationary very-high-capacity water tank";
 	desc = "A stationary, plumbed, very-high-capacity water tank.";
 	dir = 8;
-	prevent_rcd_deconstruction = 1;
 	tank_volume = 5000
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
