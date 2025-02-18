@@ -723,7 +723,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "cd" = (
-/obj/machinery/computer/order_console/mining/interdyne,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -2670,12 +2669,6 @@
 	},
 /area/ruin/interdyne_planetary_base/main)
 "hs" = (
-/obj/machinery/vending/drugs{
-	name = "\improper SyndiDrug Plus";
-	onstation = 0;
-	extended_inventory = 1;
-	default_price = 0
-	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "ht" = (
@@ -2714,10 +2707,6 @@
 /turf/open/floor/iron/white/textured_large,
 /area/ruin/interdyne_planetary_base/med/pharm)
 "hx" = (
-/obj/machinery/vending/syndichem{
-	onstation = 0;
-	default_price = 0
-	},
 /obj/machinery/light_switch/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3263,7 +3252,6 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/interdyne_planetary_base/main)
 "iT" = (
-/obj/machinery/processor,
 /obj/structure/sign/xenobio_guide/directional/west,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
@@ -3558,11 +3546,6 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /obj/structure/table/glass/plasmaglass,
-/turf/open/floor/iron/dark/textured_large,
-/area/ruin/interdyne_planetary_base/science/xeno)
-"jC" = (
-/obj/machinery/biogenerator,
-/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "jD" = (
@@ -3999,11 +3982,6 @@
 /obj/machinery/light/directional/east{
 	pixel_y = 16
 	},
-/obj/machinery/vending/games{
-	onstation = 0;
-	default_price = 0;
-	extended_inventory = 1
-	},
 /turf/open/floor/glass/reinforced,
 /area/ruin/interdyne_planetary_base/main/dorms/lib)
 "kL" = (
@@ -4325,10 +4303,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/sign/poster/contraband/cybersun_six_hundred/directional/west,
-/obj/machinery/vending/imported/mothic{
-	onstation = 0;
-	default_price = 0
-	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "lz" = (
@@ -4402,11 +4376,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/obj/machinery/vending/cigarette{
-	onstation = 0;
-	default_price = 0;
-	extended_inventory = 1
-	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/serv)
 "lI" = (
@@ -4948,7 +4917,6 @@
 	name = "stationary very-high-capacity water tank";
 	desc = "A stationary, plumbed, very-high-capacity water tank.";
 	dir = 8;
-	prevent_rcd_deconstruction = 1;
 	tank_volume = 5000
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -5289,11 +5257,6 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
-/obj/machinery/vending/clothing{
-	onstation = 0;
-	extended_inventory = 1;
-	default_price = 0
-	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "nQ" = (
@@ -5391,11 +5354,6 @@
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/interdyne_planetary_base/serv/kitchen)
 "oc" = (
-/obj/machinery/vending/hydronutrients{
-	onstation = 0;
-	extended_inventory = 1;
-	default_price = 0
-	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/serv/hydr)
@@ -5436,11 +5394,6 @@
 /area/ruin/interdyne_planetary_base/main/dorms)
 "oi" = (
 /obj/structure/cable,
-/obj/machinery/vending/autodrobe{
-	onstation = 0;
-	extended_inventory = 1;
-	default_price = 0
-	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "oj" = (
@@ -5474,19 +5427,9 @@
 /turf/open/floor/iron/freezer,
 /area/ruin/interdyne_planetary_base/serv/kitchen)
 "oo" = (
-/obj/machinery/vending/hydroseeds{
-	onstation = 0;
-	extended_inventory = 1;
-	default_price = 0
-	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/serv/hydr)
 "op" = (
-/obj/machinery/vending/dinnerware{
-	onstation = 0;
-	extended_inventory = 1;
-	default_price = 0
-	},
 /obj/machinery/duct,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/serv/kitchen)
@@ -5793,14 +5736,6 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "oT" = (
-/turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/interdyne_planetary_base/main/dorms)
-"oU" = (
-/obj/machinery/vending/autodrobe{
-	onstation = 0;
-	default_price = 0;
-	extended_inventory = 1
-	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "oV" = (
@@ -7109,10 +7044,6 @@
 	},
 /area/icemoon/underground/explored)
 "JN" = (
-/obj/machinery/vending/barbervend{
-	onstation = 0;
-	default_price = 0
-	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/serv/rstrm)
 "Ki" = (
@@ -7309,10 +7240,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/sign/poster/contraband/interdyne_gene_clinics/directional/west,
-/obj/machinery/vending/imported/yangyu{
-	onstation = 0;
-	default_price = 0
-	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "VH" = (
@@ -7348,7 +7275,6 @@
 /turf/open/floor/iron/smooth_large,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "Wi" = (
-/obj/machinery/power/micro_reactor,
 /obj/structure/cable,
 /turf/open/floor/iron/submarine,
 /area/ruin/interdyne_planetary_base/eng)
@@ -8011,7 +7937,7 @@ ib
 iu
 iw
 iW
-jC
+jP
 ju
 jV
 kw
@@ -8734,7 +8660,7 @@ lU
 nP
 oi
 oT
-oU
+oT
 mQ
 ab
 ab
