@@ -5,6 +5,8 @@
 /turf/open/floor/wood/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "aQ" = (
+/obj/structure/bonfire/prelit,
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/stone/icemoon,
@@ -24,10 +26,12 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt)
+/obj/effect/decal/cleanable/dirt,
+/area/ruin/unpowered/abandoned_hearth)
 "bp" = (
 /obj/item/stack/sheet/mineral/stone,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "bw" = (
@@ -40,7 +44,8 @@
 /area/ruin/unpowered/abandoned_hearth)
 "bS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/mineral/wood)
+/obj/item/stack/sheet/mineral/wood,
+/area/ruin/unpowered/abandoned_hearth)
 "ci" = (
 /obj/structure/closet/crate/wooden,
 /turf/open/misc/asteroid/snow/icemoon,
@@ -87,20 +92,23 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt/dust)
+/obj/effect/decal/cleanable/dirt/dust,
+/area/ruin/unpowered/abandoned_hearth)
 "dq" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt/dust)
+/obj/effect/decal/cleanable/dirt/dust,
+/area/ruin/unpowered/abandoned_hearth)
 "dy" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/effect/decal/cleanable/blood/gibs,
-/obj/effect/decal/cleanable/blood)
+/obj/effect/decal/cleanable/blood,
+/area/ruin/unpowered/abandoned_hearth)
 "dE" = (
 /obj/structure/closet/crate/wooden/storage_barrel,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -123,13 +131,13 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt/dust)
-"dR" = (
+/obj/effect/decal/cleanable/dirt/dust,
 /area/ruin/unpowered/abandoned_hearth)
 "ed" = (
 /obj/effect/turf_decal/siding/wood/corner,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt/dust)
+/obj/effect/decal/cleanable/dirt/dust,
+/area/ruin/unpowered/abandoned_hearth)
 "ft" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
@@ -1048,6 +1056,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/stone/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
+"Pg" = (
+/turf/open/misc/asteroid/snow/icemoon,
+/area/ruin/unpowered/abandoned_hearth)
 "Pi" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 1
@@ -1109,6 +1120,7 @@
 /mob/living/basic/mining/wolf,
 /area/ruin/unpowered/abandoned_hearth)
 "Si" = (
+/obj/structure/reagent_water_basin,
 /obj/effect/decal/cleanable/cobweb{
 	dir = 1
 	},
@@ -1174,9 +1186,6 @@
 /area/ruin/unpowered/abandoned_hearth)
 "UO" = (
 /obj/structure/fermenting_barrel,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/ruin/unpowered/abandoned_hearth)
-"Vz" = (
 /turf/open/misc/asteroid/snow/icemoon,
 /area/ruin/unpowered/abandoned_hearth)
 "Wa" = (
@@ -1288,7 +1297,7 @@ Yf
 Yf
 Yf
 nq
-Vz
+Pg
 Yf
 Yf
 Yf
@@ -1309,10 +1318,10 @@ Yf
 Yf
 Yf
 Yf
-Vz
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
+Pg
 Yf
 Yf
 Yf
@@ -1331,11 +1340,11 @@ Yf
 (3,1,1) = {"
 Yf
 Yf
-Vz
-Vz
+Pg
+Pg
 oa
-Vz
-Vz
+Pg
+Pg
 lz
 Ib
 KZ
@@ -1344,8 +1353,8 @@ Gy
 Yf
 Yf
 Yf
-Vz
-Vz
+Pg
+Pg
 Yf
 Yf
 Yf
@@ -1355,8 +1364,8 @@ Yf
 Yf
 Yf
 xG
-Vz
-Vz
+Pg
+Pg
 Gy
 Gy
 lz
@@ -1366,10 +1375,10 @@ Oo
 lz
 Eq
 Gy
-Vz
-Vz
+Pg
+Pg
 mr
-Vz
+Pg
 Yf
 Yf
 Yf
@@ -1379,8 +1388,8 @@ Yf
 xG
 KZ
 Xt
-Vz
-Vz
+Pg
+Pg
 Jn
 uS
 DQ
@@ -1388,11 +1397,11 @@ dq
 Ey
 HI
 xG
-Vz
-Vz
+Pg
+Pg
 DV
-Vz
-Vz
+Pg
+Pg
 Yf
 Yf
 Yf
@@ -1401,31 +1410,31 @@ Yf
 Gy
 Gy
 Si
-Vz
-Vz
-dR
+Pg
+Pg
+Pg
 xj
 cE
 ap
 vN
 PL
 Oo
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
 GW
 xG
-Vz
-Vz
+Pg
+Pg
 Yf
 Yf
 "}
 (7,1,1) = {"
 PT
 iJ
-Vz
+Pg
 mr
-Vz
+Pg
 ci
 cq
 Oi
@@ -1435,10 +1444,10 @@ oi
 ba
 KZ
 mr
-Vz
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
+Pg
 tU
 Yf
 Yf
@@ -1446,9 +1455,9 @@ Yf
 (8,1,1) = {"
 lx
 kf
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
 Gy
 lu
 lz
@@ -1457,22 +1466,22 @@ CL
 yw
 lz
 Eq
-Vz
-Vz
+Pg
+Pg
 kh
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
 Yf
 Yf
 "}
 (9,1,1) = {"
 Gy
 hJ
-Vz
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
+Pg
 rC
 pf
 ty
@@ -1480,22 +1489,22 @@ CX
 qU
 Nc
 xG
-Vz
+Pg
 EX
 gD
 UO
 rB
-Vz
+Pg
 Yf
 Yf
 "}
 (10,1,1) = {"
 Gy
 Gy
-Vz
-Vz
+Pg
+Pg
 oa
-Vz
+Pg
 xj
 EC
 QY
@@ -1503,11 +1512,11 @@ PL
 fL
 lH
 tB
-Vz
+Pg
 Eu
 nP
 xG
-Vz
+Pg
 Yf
 Yf
 Yf
@@ -1516,9 +1525,9 @@ Yf
 Yf
 xG
 NX
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
 Xx
 PC
 dy
@@ -1526,11 +1535,11 @@ CX
 qU
 oR
 xG
-Vz
+Pg
 Dc
-Vz
+Pg
 QO
-Vz
+Pg
 Yf
 Yf
 Yf
@@ -1540,7 +1549,7 @@ Yf
 HK
 HK
 Us
-Vz
+Pg
 Gy
 Gy
 Gy
@@ -1551,20 +1560,20 @@ Wa
 Gy
 Gy
 rP
-Vz
+Pg
 tU
-Vz
-Vz
+Pg
+Pg
 Yf
 Yf
 "}
 (13,1,1) = {"
 Yf
 Yf
-Vz
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
+Pg
 xG
 nA
 Lf
@@ -1575,9 +1584,9 @@ xG
 jS
 gM
 mr
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
 Yf
 Yf
 "}
@@ -1585,9 +1594,9 @@ Yf
 Yf
 Yf
 nq
-Vz
+Pg
 Xt
-Vz
+Pg
 Uz
 Ym
 Fu
@@ -1596,9 +1605,9 @@ rl
 Kw
 EC
 Nj
-Vz
+Pg
 kh
-Vz
+Pg
 CA
 Lv
 Yf
@@ -1607,9 +1616,9 @@ Yf
 (15,1,1) = {"
 Yf
 Yf
-Vz
+Pg
 rB
-Vz
+Pg
 mr
 xG
 rz
@@ -1619,20 +1628,20 @@ qO
 xS
 xG
 sH
-Vz
-Vz
+Pg
+Pg
 Xt
 xG
-Vz
-Vz
+Pg
+Pg
 Yf
 "}
 (16,1,1) = {"
 Yf
 Yf
 Yf
-Vz
-Vz
+Pg
+Pg
 Gy
 Gy
 Gy
@@ -1643,20 +1652,20 @@ Gy
 Gy
 Gy
 fN
-Vz
-Vz
+Pg
+Pg
 XW
 xG
-Vz
+Pg
 Yf
 "}
 (17,1,1) = {"
 Yf
 Yf
 Yf
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
 xG
 KG
 ed
@@ -1667,19 +1676,19 @@ xG
 pd
 UM
 Di
-Vz
+Pg
 ED
 zz
-Vz
-Vz
+Pg
+Pg
 "}
 (18,1,1) = {"
 Yf
 Yf
 Yf
 Yf
-Vz
-Vz
+Pg
+Pg
 KZ
 dJ
 Cc
@@ -1691,10 +1700,10 @@ Yj
 qF
 Do
 ZO
-Vz
+Pg
 NG
 rJ
-Vz
+Pg
 "}
 (19,1,1) = {"
 Yf
@@ -1715,9 +1724,9 @@ bw
 we
 or
 rP
-Vz
+Pg
 pV
-Vz
+Pg
 "}
 (20,1,1) = {"
 Yf
@@ -1740,7 +1749,7 @@ xs
 gM
 nE
 Cl
-Vz
+Pg
 "}
 (21,1,1) = {"
 Yf
@@ -1757,13 +1766,13 @@ lG
 Xh
 lE
 oG
-Vz
+Pg
 co
 qJ
 SZ
 Ec
-Vz
-Vz
+Pg
+Pg
 "}
 (22,1,1) = {"
 Yf
@@ -1785,7 +1794,7 @@ mr
 Pi
 EV
 wd
-Vz
+Pg
 Yf
 "}
 (23,1,1) = {"
@@ -1804,9 +1813,9 @@ Bm
 xG
 GC
 nh
-Vz
+Pg
 Qo
-Vz
+Pg
 xG
 Yf
 Yf
@@ -1828,8 +1837,8 @@ Us
 Gy
 co
 Eu
-Vz
-Vz
+Pg
+Pg
 Yf
 Yf
 Yf
@@ -1848,11 +1857,11 @@ lE
 xG
 Gy
 Yf
-Vz
+Pg
 fQ
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
 Yf
 Yf
 Yf
@@ -1872,9 +1881,9 @@ Yf
 Yf
 Yf
 Yf
-Vz
-Vz
-Vz
+Pg
+Pg
+Pg
 Yf
 Yf
 Yf

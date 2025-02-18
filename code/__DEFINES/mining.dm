@@ -47,3 +47,15 @@
 //String defines to use with CaveGenerator presets for what ore breakdown to use.
 #define OREGEN_PRESET_LAVALAND "lavaland"
 #define OREGEN_PRESET_TRIPLE_Z "triple_z"
+
+// novasector addition
+
+// Timers for the ore vents to perform wave defense.
+/// Duration for wave defense for a small vent.
+#define WAVE_DURATION_SMALL 60 SECONDS
+/// Duration for wave defense for a medium vent.
+#define WAVE_DURATION_MEDIUM 90 SECONDS
+/// Duration for wave defense for a large vent.
+#define WAVE_DURATION_LARGE 150 SECONDS
+
+// end of nova sector

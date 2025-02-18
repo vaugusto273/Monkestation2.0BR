@@ -74,3 +74,14 @@
 #define SCIENTIFIC_COOPERATION_PURCHASE_MULTIPLIER 0.01
 /// How much money is one point of gain worth.
 #define SCIPAPER_GAIN_TO_MONEY 125
+
+// Nova addition start
+
+//!  Amount of points required to unlock nodes of corresponding tiers
+#define TECHWEB_TIER_1_POINTS 40
+#define TECHWEB_TIER_2_POINTS 80
+#define TECHWEB_TIER_3_POINTS 120
+#define TECHWEB_TIER_4_POINTS 160
+#define TECHWEB_TIER_5_POINTS 200
+
+// end of nova addition
