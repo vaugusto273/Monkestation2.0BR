@@ -1,253 +1,3155 @@
-"ab" = (/obj/effect/turf_decal/siding/wood{dir = 4},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"ax" = (/obj/effect/turf_decal/siding/wood/corner{dir = 1},/turf/open/floor/wood/icemoon)
-"aL" = (/obj/effect/turf_decal/weather/snow/corner{dir = 9})
-"aM" = (/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/stone/icemoon)
-"bc" = (/obj/effect/decal/cleanable/dirt/dust,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"bl" = (/obj/effect/turf_decal/siding/wood{dir = 1},/obj/structure/railing/wooden_fencing{dir = 1},/turf/open/floor/wood/icemoon)
-"bs" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1},/obj/structure/railing/wooden_fencing{dir = 1})
-"bu" = (/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/railing/wooden_fencing{dir = 8},/turf/open/floor/wood/icemoon)
-"bJ" = (/obj/structure/window/green_glass_pane,/obj/structure/curtain/bounty,/turf/open/misc/asteroid/snow/icemoon)
-"bW" = (/obj/effect/decal/cleanable/dirt/dust,/obj/structure/wall_torch/spawns_lit/directional/north,/turf/open/floor/wood/icemoon)
-"cp" = (/obj/structure/railing/wooden_fencing/gate{dir = 1},/turf/open/misc/asteroid/snow/icemoon)
-"cq" = (/obj/structure/railing/wooden_fencing{dir = 8},/turf/open/misc/asteroid/snow/icemoon)
-"cA" = (/obj/structure/flora/ash/chilly,/turf/open/misc/asteroid/snow/icemoon)
-"cB" = (/obj/effect/turf_decal/siding/wood{dir = 6},/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/railing/wooden_fencing,/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"cD" = (/obj/effect/turf_decal/siding/wood{dir = 8},/obj/effect/turf_decal/weather/snow/corner{dir = 8},/turf/open/floor/wood/icemoon)
-"cI" = (/obj/effect/turf_decal/siding/wood{dir = 8},/obj/effect/turf_decal/siding/wood{dir = 4},/obj/effect/turf_decal/weather/snow/corner{dir = 8},/obj/effect/turf_decal/weather/snow/corner{dir = 4},/turf/open/floor/wood/icemoon)
-"cZ" = (/obj/structure/closet/crate/wooden/storage_barrel,/obj/item/stack/medical/aloe{pixel_y = -2},/obj/item/stack/medical/aloe{pixel_y = 2; pixel_x = 2},/obj/item/stack/medical/gauze/improvised{pixel_y = 6},/obj/item/bedsheet/black{pixel_x = 5; pixel_y = -2},/obj/item/bedsheet/black{pixel_x = 5; pixel_y = 12},/turf/open/floor/stone/icemoon)
-"df" = (/obj/effect/turf_decal/siding/wood{dir = 1},/obj/structure/wall_torch/spawns_lit/directional/east,/turf/open/floor/wood/icemoon)
-"dh" = (/obj/effect/turf_decal/siding/wood{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"di" = (/obj/effect/turf_decal/weather/snow/corner{dir = 10},/turf/open/openspace/icemoon)
-"dk" = (/obj/structure/railing/wooden_fencing{dir = 1},/turf/open/misc/asteroid/snow/icemoon)
-"dH" = (/obj/effect/turf_decal/siding/wood{dir = 10},/turf/open/floor/stone/icemoon)
-"dO" = (/obj/effect/decal/cleanable/blood,/turf/open/floor/stone/icemoon)
-"dX" = (/obj/effect/turf_decal/siding/wood{dir = 9},/turf/open/floor/wood/icemoon)
-"eA" = (/obj/structure/railing/wooden_fencing/gate)
-"eO" = (/obj/structure/railing/wooden_fencing{dir = 1},/obj/effect/decal/cleanable/dirt)
-"fr" = (/obj/structure/railing/wooden_fencing{dir = 8},/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/floor/wood/icemoon)
-"fx" = (/obj/effect/turf_decal/weather/snow/corner{dir = 4},/obj/effect/turf_decal/weather/snow/corner{dir = 8})
-"fN" = (/obj/effect/turf_decal/weather/snow/corner{dir = 6},/obj/effect/turf_decal/weather/snow/corner{dir = 1})
-"fV" = (/obj/effect/turf_decal/siding/wood{dir = 9},/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/railing/wooden_fencing{dir = 8},/turf/open/floor/wood/icemoon)
-"gq" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1},/turf/open/openspace/icemoon)
-"gu" = (/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/flora/ash/chilly,/turf/open/misc/asteroid/snow/icemoon)
-"gG" = (/obj/effect/turf_decal/weather/snow/corner{dir = 8},/turf/open/openspace/icemoon)
-"gS" = (/obj/effect/decal/cleanable/dirt,/obj/structure/wall_torch/spawns_lit/directional/south)
-"gW" = (/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/stone/icemoon)
-"im" = (/obj/effect/turf_decal/weather/snow/corner,/obj/effect/turf_decal/weather/snow/corner{dir = 1})
-"is" = (/obj/structure/flora/bush/sparsegrass/style_random,/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/misc/asteroid/snow/icemoon)
-"iJ" = (/obj/effect/turf_decal/siding/wood{dir = 10},/turf/open/floor/wood/icemoon)
-"iO" = (/obj/structure/railing/wooden_fencing{dir = 8},/turf/open/floor/wood/icemoon)
-"iX" = (/obj/effect/turf_decal/weather/snow/corner,/obj/machinery/smartfridge/wooden/produce_bin,/turf/open/misc/asteroid/snow/icemoon)
-"jt" = (/obj/structure/wall_torch/spawns_lit/directional/south,/turf/open/misc/asteroid/snow/icemoon)
-"jT" = (/obj/structure/curtain/bounty,/obj/effect/decal/cleanable/dirt,/turf/open/floor/stone/icemoon)
-"kd" = (/obj/structure/mirror/directional/east,/turf/open/openspace/icemoon)
-"ki" = (/obj/structure/railing/wooden_fencing{dir = 1},/turf/open/openspace/icemoon)
-"kO" = (/obj/structure/wall_torch/spawns_lit/directional/south,/obj/effect/turf_decal/weather/snow/corner{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"li" = (/obj/effect/turf_decal/siding/wood{dir = 8},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"lu" = (/obj/structure/railing/wooden_fencing/gate{dir = 1})
-"lv" = (/obj/structure/wall_torch/spawns_lit/directional/north)
-"lL" = (/obj/structure/mineral_door/wood/large_gate{dir = 1},/obj/effect/turf_decal/weather/dirt{dir = 1},/turf/open/floor/wood/icemoon)
-"lN" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1})
-"mg" = (/obj/effect/decal/cleanable/dirt/dust,/obj/structure/wall_torch/spawns_lit/directional/south)
-"mm" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1},/obj/effect/turf_decal/weather/snow/corner)
-"mH" = (/obj/structure/mineral_door/wood/large_gate{dir = 8},/turf/open/floor/wood/icemoon)
-"mM" = (/obj/effect/turf_decal/siding/wood{dir = 6},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"mO" = (/obj/structure/wall_torch/spawns_lit/directional/south,/turf/open/floor/stone/icemoon)
-"mZ" = (/obj/structure/curtain/bounty,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"na" = (/obj/structure/flora/tree/pine/style_random,/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/misc/asteroid/snow/icemoon)
-"nd" = (/turf/open/misc/asteroid/snow/icemoon)
-"nu" = (/obj/effect/turf_decal/weather/snow/corner{dir = 10},/obj/effect/turf_decal/weather/snow/corner{dir = 1})
-"nz" = (/obj/structure/rack/wooden,/obj/item/reagent_containers/cup/bucket/wooden,/obj/item/reagent_containers/cup/bucket/wooden{pixel_y = -3; pixel_x = 8},/obj/structure/wall_torch/spawns_lit/directional/east,/turf/open/misc/asteroid/snow/icemoon)
-"nV" = (/obj/effect/turf_decal/weather/snow/corner{dir = 8},/turf/open/floor/wood/icemoon)
-"os" = (/obj/structure/flora/bush/sparsegrass/style_random,/turf/open/misc/asteroid/snow/icemoon)
-"ox" = (/obj/effect/turf_decal/weather/snow/corner{dir = 9},/turf/open/openspace/icemoon)
-"pa" = (/obj/structure/wall_torch/spawns_lit/directional/north,/obj/item/pillow/random{pixel_y = 4},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"pk" = (/obj/structure/table/wood,/obj/item/food/grown/poppy/lily,/turf/open/floor/stone/icemoon)
-"pl" = (/obj/effect/turf_decal/siding/wood{dir = 1},/obj/effect/decal/cleanable/dirt/dust,/obj/structure/wall_torch/spawns_lit/directional/west,/turf/open/floor/wood/icemoon)
-"pq" = (/obj/effect/turf_decal/siding/wood{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/structure/wall_torch/spawns_lit/directional/north,/turf/open/floor/stone/icemoon)
-"pQ" = (/obj/effect/turf_decal/weather/snow/corner{dir = 6})
-"pU" = (/obj/structure/wall_torch/spawns_lit/directional/south,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"pX" = (/obj/effect/turf_decal/weather/snow/corner{dir = 8},/obj/effect/turf_decal/weather/snow/corner,/turf/open/openspace/icemoon)
-"qj" = (/obj/effect/turf_decal/siding/wood{dir = 8},/obj/structure/railing/wooden_fencing{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"qn" = (/obj/structure/wall_torch/spawns_lit/directional/east,/turf/open/floor/wood/icemoon)
-"qQ" = (/turf/closed/wall/mineral/stone)
-"qR" = (/obj/structure/wall_torch/spawns_lit/directional/north,/obj/effect/decal/cleanable/dirt/dust)
-"qU" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1},/obj/effect/turf_decal/weather/snow/corner{dir = 4},/turf/open/openspace/icemoon)
-"ry" = (/obj/effect/turf_decal/siding/wood/corner{dir = 8},/turf/open/floor/wood/icemoon)
-"rA" = (/obj/structure/rack/wooden,/obj/item/food/grown/poppy/geranium,/turf/open/floor/wood/icemoon)
-"rC" = (/obj/structure/railing/wooden_fencing{dir = 8},/turf/open/openspace/icemoon)
-"rT" = (/obj/effect/turf_decal/siding/wood{dir = 8},/obj/structure/railing/wooden_fencing{dir = 8},/obj/effect/turf_decal/weather/snow/corner{dir = 8},/turf/open/floor/wood/icemoon)
-"sO" = (/obj/structure/railing/wooden_fencing,/turf/open/misc/asteroid/snow/icemoon)
-"ta" = (/obj/effect/turf_decal/weather/snow/corner,/turf/open/misc/asteroid/snow/icemoon)
-"tx" = (/obj/structure/mineral_door/wood/large_gate{dir = 1},/obj/effect/turf_decal/siding/wood/corner,/turf/open/floor/wood/icemoon)
-"tB" = (/obj/structure/curtain/bounty,/obj/effect/decal/cleanable/dirt/dust,/obj/structure/wall_torch/spawns_lit/directional/north,/turf/open/floor/stone/icemoon)
-"ua" = (/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/misc/asteroid/snow/icemoon)
-"ue" = (/obj/structure/railing/wooden_fencing,/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/misc/asteroid/snow/icemoon)
-"uj" = (/obj/structure/table/wood,/obj/structure/large_mortar,/obj/item/pestle{pixel_y = -1; pixel_x = -8},/obj/effect/decal/cleanable/dirt/dust)
-"ur" = (/obj/effect/turf_decal/siding/wood/corner{dir = 8},/obj/structure/mineral_door/wood/large_gate,/turf/open/floor/wood/icemoon)
-"uC" = (/obj/structure/mineral_door/wood/large_gate{dir = 8},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"uO" = (/obj/structure/window/green_glass_pane,/obj/structure/curtain/bounty,/turf/open/floor/stone/icemoon)
-"vH" = (/obj/effect/turf_decal/siding/wood{dir = 9},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"vW" = (/obj/structure/railing/wooden_fencing)
-"wl" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/stone/icemoon)
-"wF" = (/obj/effect/turf_decal/siding/wood{dir = 10},/obj/structure/railing/wooden_fencing{dir = 8},/obj/structure/railing/wooden_fencing,/turf/open/floor/wood/icemoon)
-"xA" = (/obj/effect/turf_decal/weather/snow/corner{dir = 8})
-"xM" = (/obj/effect/turf_decal/weather/snow/corner{dir = 4},/obj/structure/railing/wooden_fencing{dir = 4})
-"yn" = (/obj/structure/flora/bush/snow/style_random,/turf/open/misc/asteroid/snow/icemoon)
-"yA" = (/obj/structure/mineral_door/wood/large_gate,/obj/effect/turf_decal/weather/dirt{dir = 1},/turf/open/floor/wood/icemoon)
-"yE" = (/obj/structure/railing/wooden_fencing{dir = 8},/obj/structure/railing/wooden_fencing,/turf/open/misc/asteroid/snow/icemoon)
-"yL" = (/obj/effect/turf_decal/siding/wood{dir = 1},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"yT" = (/obj/structure/rack/wooden,/obj/item/reagent_containers/cup/glass/bottle/small{pixel_x = -8},/obj/item/reagent_containers/cup/glass/bottle/small{pixel_x = 1},/obj/item/reagent_containers/cup/glass/bottle/small{pixel_x = 7},/obj/effect/decal/cleanable/dirt/dust)
-"zr" = (/turf/open/floor/stone/icemoon)
-"zO" = (/obj/effect/turf_decal/siding/wood{dir = 6},/turf/open/floor/stone/icemoon)
-"Ac" = (/obj/structure/wall_torch/spawns_lit/directional/south,/obj/effect/decal/cleanable/dirt,/turf/open/floor/stone/icemoon)
-"Ak" = (/obj/item/pillow/random{pixel_y = 4},/turf/open/floor/stone/icemoon)
-"Al" = (/obj/structure/rack/wooden,/obj/item/food/grown/tobacco{pixel_y = -4; pixel_x = -4},/obj/item/food/grown/tobacco{pixel_y = -4; pixel_x = 2},/obj/item/plate/oven_tray/material/fake_tin{pixel_y = 5},/obj/item/plate/oven_tray/material/fake_brass{pixel_y = 8; pixel_x = 1},/obj/effect/decal/cleanable/dirt/dust,/obj/structure/wall_torch/spawns_lit/directional/east,/turf/open/floor/wood/icemoon)
-"AT" = (/obj/effect/turf_decal/siding/wood{dir = 1},/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/chair/wood,/turf/open/floor/wood/icemoon)
-"AV" = (/obj/effect/turf_decal/weather/snow/corner{dir = 4},/obj/effect/turf_decal/weather/snow/corner{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"Bf" = (/obj/structure/railing/wooden_fencing,/obj/effect/decal/cleanable/dirt)
-"Bi" = (/obj/structure/flora/ash/chilly,/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/misc/asteroid/snow/icemoon)
-"Bs" = (/obj/effect/decal/cleanable/dirt)
-"Bt" = (/turf/open/floor/wood/icemoon)
-"BE" = (/obj/effect/turf_decal/weather/snow/corner{dir = 8},/obj/effect/turf_decal/weather/snow/corner{dir = 4})
-"BR" = (/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/wood/icemoon)
-"BW" = (/obj/structure/dresser,/obj/structure/mirror/directional/south,/turf/open/floor/stone/icemoon)
-"Cn" = (/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"Cp" = (/obj/structure/railing/wooden_fencing{dir = 1},/obj/effect/decal/cleanable/dirt/dust)
-"Dc" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1},/obj/effect/decal/cleanable/dirt)
-"Dl" = (/obj/structure/wall_torch/spawns_lit/directional/south,/turf/open/openspace/icemoon)
-"Dm" = (/obj/effect/turf_decal/siding/wood,/turf/open/floor/stone/icemoon)
-"Ei" = (/obj/effect/turf_decal/weather/snow/corner{dir = 8},/obj/structure/railing/wooden_fencing{dir = 8},/turf/open/openspace/icemoon)
-"Ej" = (/obj/structure/curtain/bounty,/obj/effect/decal/cleanable/blood,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"Ez" = (/turf/open/openspace/icemoon)
-"EB" = (/obj/effect/turf_decal/weather/snow/corner{dir = 9},/obj/structure/railing/wooden_fencing{dir = 1},/turf/open/openspace/icemoon)
-"Fc" = (/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/flora/bush/snow/style_random,/turf/open/misc/asteroid/snow/icemoon)
-"FJ" = (/obj/effect/turf_decal/siding/wood{dir = 5},/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/chair/wood{dir = 8},/turf/open/floor/wood/icemoon)
-"FV" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1},/obj/structure/railing/wooden_fencing{dir = 1},/turf/open/openspace/icemoon)
-"Gn" = (/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/misc/asteroid/snow/icemoon)
-"Gp" = (/obj/effect/turf_decal/siding/wood,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"Gr" = (/obj/effect/turf_decal/siding/wood{dir = 9},/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/railing/wooden_fencing{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"GH" = (/obj/structure/railing/wooden_fencing{dir = 8},/obj/structure/wall_torch/spawns_lit/directional/south,/turf/open/misc/asteroid/snow/icemoon)
-"GO" = (/obj/structure/closet/crate/wooden/storage_barrel,/obj/item/reagent_containers/cup/glass/bottle/moonshine{pixel_x = -6},/obj/item/reagent_containers/cup/glass/bottle/moonshine{pixel_x = 8},/obj/item/reagent_containers/cup/glass/bottle/hooch{pixel_y = 8},/obj/effect/decal/cleanable/dirt/dust)
-"Hg" = (/obj/effect/decal/cleanable/dirt/dust,/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"Hi" = (/obj/effect/turf_decal/weather/snow/corner,/turf/open/openspace/icemoon)
-"Hx" = (/obj/structure/flora/bush/sparsegrass/style_random,/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/misc/asteroid/snow/icemoon)
-"HF" = (/obj/structure/table/wood,/obj/item/reagent_containers/cup/primitive_centrifuge{pixel_x = -14; pixel_y = -1},/obj/item/paper_bin/bundlenatural{pixel_y = 8; pixel_x = 3},/obj/item/pen/charcoal,/obj/effect/decal/cleanable/dirt/dust)
-"HW" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1},/turf/open/floor/wood/icemoon)
-"IC" = (/obj/effect/turf_decal/siding/wood/corner,/obj/effect/turf_decal/siding/wood/corner{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"Jw" = (/obj/structure/curtain/bounty,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"Jz" = (/obj/effect/turf_decal/siding/wood,/obj/structure/railing/wooden_fencing,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"JC" = (/obj/structure/mineral_door/wood/large_gate{dir = 1},/turf/open/floor/wood/icemoon)
-"JT" = (/obj/structure/closet/crate/wooden/storage_barrel,/obj/item/instrument/guitar,/obj/item/instrument/glockenspiel,/turf/open/floor/stone/icemoon)
-"Kc" = (/obj/effect/turf_decal/siding/wood{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/stone/icemoon)
-"Kf" = (/obj/effect/turf_decal/siding/wood{dir = 5},/turf/open/floor/stone/icemoon)
-"Kg" = (/obj/structure/wall_torch/spawns_lit/directional/west,/obj/effect/turf_decal/weather/snow/corner{dir = 4})
-"Kh" = (/obj/structure/railing/wooden_fencing{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"Kq" = (/obj/structure/mineral_door/wood/large_gate,/turf/open/floor/wood/icemoon)
-"La" = (/obj/structure/rack/wooden,/obj/item/retractor/ashwalker{pixel_y = -9},/obj/item/hemostat/ashwalker{pixel_y = 6},/obj/structure/wall_torch/spawns_lit/directional/north,/turf/open/floor/stone/icemoon)
-"Lf" = (/obj/effect/turf_decal/weather/snow/corner)
-"LK" = (/obj/structure/wall_torch/spawns_lit/directional/west,/obj/structure/flora/bush/snow/style_random,/turf/open/misc/asteroid/snow/icemoon)
-"Mb" = (/obj/structure/rack/wooden,/obj/item/reagent_containers/cup/mortar{pixel_y = 9; pixel_x = 5},/obj/effect/decal/cleanable/dirt/dust)
-"Mh" = (/obj/effect/turf_decal/weather/snow/corner{dir = 4},/turf/open/openspace/icemoon)
-"Mn" = (/obj/structure/railing/wooden_fencing{dir = 1})
-"MD" = (/obj/effect/turf_decal/weather/snow/corner{dir = 6},/obj/structure/railing/wooden_fencing,/obj/structure/railing/wooden_fencing{dir = 4})
-"MK" = (/obj/structure/railing/wooden_fencing{dir = 8},/obj/structure/railing/wooden_fencing,/obj/structure/railing/wooden_fencing{dir = 1},/turf/open/misc/asteroid/snow/icemoon)
-"Nu" = (/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/wood/icemoon)
-"NA" = ()
-"NX" = (/obj/effect/turf_decal/weather/snow/corner{dir = 4})
-"Ou" = (/obj/structure/curtain/bounty,/turf/open/floor/stone/icemoon)
-"OG" = (/obj/effect/decal/cleanable/dirt/dust,/obj/structure/rack/wooden,/obj/item/food/grown/poppy/geranium/fraxinella,/turf/open/floor/stone/icemoon)
-"Pe" = (/obj/structure/wall_torch/spawns_lit/directional/west,/turf/open/misc/asteroid/snow/icemoon)
-"Pr" = (/obj/structure/rack/wooden,/obj/item/cautery/ashwalker{pixel_y = 10},/obj/item/scalpel/ashwalker{pixel_y = 6},/obj/item/circular_saw/ashwalker{pixel_y = -9},/obj/item/surgicaldrill/ashwalker{pixel_y = -7; pixel_x = 7},/turf/open/floor/stone/icemoon)
-"PK" = (/obj/effect/turf_decal/siding/wood,/obj/structure/railing/wooden_fencing,/turf/open/floor/wood/icemoon)
-"PN" = (/obj/structure/wall_torch/spawns_lit/directional/east,/obj/effect/turf_decal/siding/wood{dir = 4},/turf/open/floor/wood/icemoon)
-"PY" = (/obj/effect/turf_decal/weather/snow/corner{dir = 10},/obj/structure/railing/wooden_fencing,/turf/open/openspace/icemoon)
-"Qi" = (/obj/effect/turf_decal/siding/wood{dir = 10},/obj/structure/railing/wooden_fencing{dir = 8},/obj/structure/railing/wooden_fencing,/obj/effect/turf_decal/weather/snow/corner{dir = 8},/turf/open/floor/wood/icemoon)
-"Rb" = (/obj/effect/turf_decal/siding/wood{dir = 4},/turf/open/floor/wood/icemoon)
-"Ri" = (/obj/effect/turf_decal/weather/snow/corner{dir = 6},/turf/open/openspace/icemoon)
-"Rj" = (/obj/effect/turf_decal/siding/wood,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"Rk" = (/obj/effect/turf_decal/siding/wood{dir = 4},/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/floor/wood/icemoon)
-"Rq" = (/obj/effect/turf_decal/siding/wood{dir = 6},/turf/open/floor/wood/icemoon)
-"RI" = (/obj/effect/turf_decal/siding/wood/corner,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"RW" = (/obj/effect/turf_decal/weather/snow/corner,/obj/structure/railing/wooden_fencing)
-"Sj" = (/obj/effect/turf_decal/siding/wood{dir = 5},/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/chair/wood,/turf/open/floor/wood/icemoon)
-"Sl" = (/obj/structure/wall_torch/spawns_lit/directional/north,/turf/open/misc/asteroid/snow/icemoon)
-"Sq" = (/obj/structure/flora/tree/pine/style_random,/turf/open/misc/asteroid/snow/icemoon)
-"St" = (/obj/structure/railing/wooden_fencing{dir = 8},/obj/structure/railing/wooden_fencing{dir = 1},/turf/open/misc/asteroid/snow/icemoon)
-"Su" = (/obj/effect/turf_decal/weather/snow/corner{dir = 5},/turf/open/openspace/icemoon)
-"SA" = (/obj/effect/turf_decal/siding/wood{dir = 5},/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/railing/wooden_fencing{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"SU" = (/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/railing/wooden_fencing{dir = 1},/turf/open/misc/asteroid/snow/icemoon)
-"Tg" = (/obj/effect/turf_decal/siding/wood{dir = 5},/obj/structure/railing/wooden_fencing{dir = 1},/obj/structure/railing/wooden_fencing{dir = 4},/turf/open/floor/wood/icemoon)
-"Tn" = (/obj/machinery/cauldron,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"Tu" = (/obj/structure/wall_torch/spawns_lit/directional/south,/obj/item/pillow/random{pixel_y = 4},/turf/open/floor/stone/icemoon)
-"TM" = (/obj/effect/turf_decal/weather/snow/corner{dir = 5},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"TP" = (/obj/effect/decal/cleanable/dirt/dust,/obj/structure/wall_torch/spawns_lit/directional/north,/turf/open/floor/stone/icemoon)
-"Ua" = (/obj/item/pillow/random{pixel_y = 4},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/stone/icemoon)
-"Ub" = (/obj/effect/decal/cleanable/dirt/dust)
-"Uo" = (/turf/closed/wall/mineral/wood/nonmetal)
-"Ut" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood/icemoon)
-"UD" = (/obj/effect/turf_decal/siding/wood{dir = 6},/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/railing/wooden_fencing,/turf/open/floor/wood/icemoon)
-"Va" = (/obj/structure/wall_torch/spawns_lit/directional/north,/obj/effect/decal/cleanable/dirt,/turf/open/floor/stone/icemoon)
-"Vj" = (/obj/effect/turf_decal/siding/wood,/turf/open/floor/wood/icemoon)
-"Vv" = (/obj/structure/window/green_glass_pane,/obj/structure/curtain/bounty,/turf/open/floor/wood/icemoon)
-"Vw" = (/obj/effect/turf_decal/weather/snow/corner{dir = 10})
-"VY" = (/obj/effect/turf_decal/weather/snow/corner{dir = 5})
-"Wc" = (/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/railing/wooden_fencing,/turf/open/misc/asteroid/snow/icemoon)
-"Wz" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/wood/icemoon)
-"WB" = (/obj/effect/turf_decal/siding/wood/corner,/obj/structure/closet/crate/wooden/storage_barrel,/obj/item/reagent_containers/cup/glass/bottle/moonshine{pixel_x = -6},/obj/item/reagent_containers/cup/glass/bottle/moonshine{pixel_x = 8},/obj/item/reagent_containers/cup/glass/bottle/hooch{pixel_y = 8},/turf/open/floor/stone/icemoon)
-"WI" = (/obj/effect/turf_decal/weather/snow/corner{dir = 6},/obj/structure/railing/wooden_fencing,/turf/open/openspace/icemoon)
-"WO" = (/obj/effect/turf_decal/weather/snow/corner,/obj/structure/geyser,/turf/open/misc/asteroid/snow/icemoon)
-"Xa" = (/obj/structure/table/wood,/obj/structure/chem_separator{pixel_y = 12},/obj/effect/decal/cleanable/dirt/dust)
-"Xo" = (/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/railing/wooden_fencing{dir = 8},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
-"Xu" = (/obj/structure/rack/wooden,/obj/item/hairbrush,/obj/structure/railing/wooden_fencing{dir = 4},/obj/structure/railing/wooden_fencing{dir = 8},/turf/open/floor/wood/icemoon)
-"XA" = (/obj/structure/curtain/bounty,/turf/open/floor/wood/icemoon)
-"XQ" = (/obj/structure/mineral_door/wood/large_gate{dir = 8},/obj/effect/turf_decal/weather/snow/corner{dir = 8})
-"Yb" = (/obj/effect/turf_decal/weather/snow/corner{dir = 1},/obj/effect/turf_decal/weather/snow/corner,/obj/effect/decal/cleanable/dirt)
-"Yh" = (/obj/effect/turf_decal/siding/wood{dir = 8},/obj/structure/railing/wooden_fencing{dir = 8},/turf/open/floor/wood/icemoon)
-"Yn" = (/turf/template_noop,/area/template_noop)
-"YD" = (/obj/item/food/grown/aloe{pixel_x = 5},/obj/item/food/grown/aloe,/obj/item/food/grown/aloe{pixel_y = 5},/obj/structure/closet/crate/wooden/storage_barrel,/obj/effect/decal/cleanable/dirt/dust,/obj/structure/wall_torch/spawns_lit/directional/west,/turf/open/floor/wood/icemoon)
-"ZA" = (/obj/structure/mineral_door/wood/large_gate{dir = 8},/obj/effect/turf_decal/weather/snow/corner{dir = 4})
-"ZR" = (/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/wood/icemoon)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"ax" = (
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/floor/wood/icemoon)
+"aL" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	})
+"aM" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/stone/icemoon)
+"bc" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"bl" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/floor/wood/icemoon)
+"bs" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	})
+"bu" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"bJ" = (
+/obj/structure/window/green_glass_pane,
+/obj/structure/curtain/bounty,
+/turf/open/misc/asteroid/snow/icemoon)
+"bW" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/turf/open/floor/wood/icemoon)
+"cp" = (
+/obj/structure/railing/wooden_fencing/gate{
+	dir = 1
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"cq" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"cA" = (
+/obj/structure/flora/ash/chilly,
+/turf/open/misc/asteroid/snow/icemoon)
+"cB" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"cD" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"cI" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	},
+/turf/open/floor/wood/icemoon)
+"cZ" = (
+/obj/structure/closet/crate/wooden/storage_barrel,
+/obj/item/stack/medical/aloe{
+	pixel_y = -2
+	},
+/obj/item/stack/medical/aloe{
+	pixel_y = 2;
+	pixel_x = 2
+	},
+/obj/item/stack/medical/gauze/improvised{
+	pixel_y = 6
+	},
+/obj/item/bedsheet/black{
+	pixel_x = 5;
+	pixel_y = -2
+	},
+/obj/item/bedsheet/black{
+	pixel_x = 5;
+	pixel_y = 12
+	},
+/turf/open/floor/stone/icemoon)
+"df" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/structure/wall_torch/spawns_lit/directional/east,
+/turf/open/floor/wood/icemoon)
+"dh" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"di" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 10
+	},
+/turf/open/openspace/icemoon)
+"dk" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"dH" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 10
+	},
+/turf/open/floor/stone/icemoon)
+"dO" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/stone/icemoon)
+"dX" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/turf/open/floor/wood/icemoon)
+"eA" = (
+/obj/structure/railing/wooden_fencing/gate)
+"eO" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt)
+"fr" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/floor/wood/icemoon)
+"fx" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	})
+"fN" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	})
+"fV" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"gq" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/turf/open/openspace/icemoon)
+"gu" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/flora/ash/chilly,
+/turf/open/misc/asteroid/snow/icemoon)
+"gG" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/turf/open/openspace/icemoon)
+"gS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/wall_torch/spawns_lit/directional/south)
+"gW" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/stone/icemoon)
+"im" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	})
+"is" = (
+/obj/structure/flora/bush/sparsegrass/style_random,
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"iJ" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 10
+	},
+/turf/open/floor/wood/icemoon)
+"iO" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"iX" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/machinery/smartfridge/wooden/produce_bin,
+/turf/open/misc/asteroid/snow/icemoon)
+"jt" = (
+/obj/structure/wall_torch/spawns_lit/directional/south,
+/turf/open/misc/asteroid/snow/icemoon)
+"jT" = (
+/obj/structure/curtain/bounty,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/stone/icemoon)
+"kd" = (
+/obj/structure/mirror/directional/east,
+/turf/open/openspace/icemoon)
+"ki" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/openspace/icemoon)
+"kO" = (
+/obj/structure/wall_torch/spawns_lit/directional/south,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"li" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"lu" = (
+/obj/structure/railing/wooden_fencing/gate{
+	dir = 1
+	})
+"lv" = (
+/obj/structure/wall_torch/spawns_lit/directional/north)
+"lL" = (
+/obj/structure/mineral_door/wood/large_gate{
+	dir = 1
+	},
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
+	},
+/turf/open/floor/wood/icemoon)
+"lN" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	})
+"mg" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wall_torch/spawns_lit/directional/south)
+"mm" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/weather/snow/corner)
+"mH" = (
+/obj/structure/mineral_door/wood/large_gate{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"mM" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"mO" = (
+/obj/structure/wall_torch/spawns_lit/directional/south,
+/turf/open/floor/stone/icemoon)
+"mZ" = (
+/obj/structure/curtain/bounty,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"na" = (
+/obj/structure/flora/tree/pine/style_random,
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"nd" = (
+/turf/open/misc/asteroid/snow/icemoon)
+"nu" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 10
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	})
+"nz" = (
+/obj/structure/rack/wooden,
+/obj/item/reagent_containers/cup/bucket/wooden,
+/obj/item/reagent_containers/cup/bucket/wooden{
+	pixel_y = -3;
+	pixel_x = 8
+	},
+/obj/structure/wall_torch/spawns_lit/directional/east,
+/turf/open/misc/asteroid/snow/icemoon)
+"nV" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"os" = (
+/obj/structure/flora/bush/sparsegrass/style_random,
+/turf/open/misc/asteroid/snow/icemoon)
+"ox" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	},
+/turf/open/openspace/icemoon)
+"pa" = (
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/obj/item/pillow/random{
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"pk" = (
+/obj/structure/table/wood,
+/obj/item/food/grown/poppy/lily,
+/turf/open/floor/stone/icemoon)
+"pl" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wall_torch/spawns_lit/directional/west,
+/turf/open/floor/wood/icemoon)
+"pq" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/turf/open/floor/stone/icemoon)
+"pQ" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	})
+"pU" = (
+/obj/structure/wall_torch/spawns_lit/directional/south,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"pX" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/snow/corner,
+/turf/open/openspace/icemoon)
+"qj" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"qn" = (
+/obj/structure/wall_torch/spawns_lit/directional/east,
+/turf/open/floor/wood/icemoon)
+"qQ" = (
+/turf/closed/wall/mineral/stone)
+"qR" = (
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/obj/effect/decal/cleanable/dirt/dust)
+"qU" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	},
+/turf/open/openspace/icemoon)
+"ry" = (
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"rA" = (
+/obj/structure/rack/wooden,
+/obj/item/food/grown/poppy/geranium,
+/turf/open/floor/wood/icemoon)
+"rC" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/openspace/icemoon)
+"rT" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"sO" = (
+/obj/structure/railing/wooden_fencing,
+/turf/open/misc/asteroid/snow/icemoon)
+"ta" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/turf/open/misc/asteroid/snow/icemoon)
+"tx" = (
+/obj/structure/mineral_door/wood/large_gate{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/corner,
+/turf/open/floor/wood/icemoon)
+"tB" = (
+/obj/structure/curtain/bounty,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/turf/open/floor/stone/icemoon)
+"ua" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"ue" = (
+/obj/structure/railing/wooden_fencing,
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"uj" = (
+/obj/structure/table/wood,
+/obj/structure/large_mortar,
+/obj/item/pestle{
+	pixel_y = -1;
+	pixel_x = -8
+	},
+/obj/effect/decal/cleanable/dirt/dust)
+"ur" = (
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/obj/structure/mineral_door/wood/large_gate,
+/turf/open/floor/wood/icemoon)
+"uC" = (
+/obj/structure/mineral_door/wood/large_gate{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"uO" = (
+/obj/structure/window/green_glass_pane,
+/obj/structure/curtain/bounty,
+/turf/open/floor/stone/icemoon)
+"vH" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"vW" = (
+/obj/structure/railing/wooden_fencing)
+"wl" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/stone/icemoon)
+"wF" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 10
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing,
+/turf/open/floor/wood/icemoon)
+"xA" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	})
+"xM" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	})
+"yn" = (
+/obj/structure/flora/bush/snow/style_random,
+/turf/open/misc/asteroid/snow/icemoon)
+"yA" = (
+/obj/structure/mineral_door/wood/large_gate,
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
+	},
+/turf/open/floor/wood/icemoon)
+"yE" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing,
+/turf/open/misc/asteroid/snow/icemoon)
+"yL" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"yT" = (
+/obj/structure/rack/wooden,
+/obj/item/reagent_containers/cup/glass/bottle/small{
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/cup/glass/bottle/small{
+	pixel_x = 1
+	},
+/obj/item/reagent_containers/cup/glass/bottle/small{
+	pixel_x = 7
+	},
+/obj/effect/decal/cleanable/dirt/dust)
+"zr" = (
+/turf/open/floor/stone/icemoon)
+"zO" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/turf/open/floor/stone/icemoon)
+"Ac" = (
+/obj/structure/wall_torch/spawns_lit/directional/south,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/stone/icemoon)
+"Ak" = (
+/obj/item/pillow/random{
+	pixel_y = 4
+	},
+/turf/open/floor/stone/icemoon)
+"Al" = (
+/obj/structure/rack/wooden,
+/obj/item/food/grown/tobacco{
+	pixel_y = -4;
+	pixel_x = -4
+	},
+/obj/item/food/grown/tobacco{
+	pixel_y = -4;
+	pixel_x = 2
+	},
+/obj/item/plate/oven_tray/material/fake_tin{
+	pixel_y = 5
+	},
+/obj/item/plate/oven_tray/material/fake_brass{
+	pixel_y = 8;
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wall_torch/spawns_lit/directional/east,
+/turf/open/floor/wood/icemoon)
+"AT" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/chair/wood,
+/turf/open/floor/wood/icemoon)
+"AV" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"Bf" = (
+/obj/structure/railing/wooden_fencing,
+/obj/effect/decal/cleanable/dirt)
+"Bi" = (
+/obj/structure/flora/ash/chilly,
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"Bs" = (
+/obj/effect/decal/cleanable/dirt)
+"Bt" = (
+/turf/open/floor/wood/icemoon)
+"BE" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	})
+"BR" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/wood/icemoon)
+"BW" = (
+/obj/structure/dresser,
+/obj/structure/mirror/directional/south,
+/turf/open/floor/stone/icemoon)
+"Cn" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"Cp" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust)
+"Dc" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt)
+"Dl" = (
+/obj/structure/wall_torch/spawns_lit/directional/south,
+/turf/open/openspace/icemoon)
+"Dm" = (
+/obj/effect/turf_decal/siding/wood,
+/turf/open/floor/stone/icemoon)
+"Ei" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/openspace/icemoon)
+"Ej" = (
+/obj/structure/curtain/bounty,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"Ez" = (
+/turf/open/openspace/icemoon)
+"EB" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/openspace/icemoon)
+"Fc" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/flora/bush/snow/style_random,
+/turf/open/misc/asteroid/snow/icemoon)
+"FJ" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 5
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/chair/wood{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"FV" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/openspace/icemoon)
+"Gn" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"Gp" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"Gr" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"GH" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/structure/wall_torch/spawns_lit/directional/south,
+/turf/open/misc/asteroid/snow/icemoon)
+"GO" = (
+/obj/structure/closet/crate/wooden/storage_barrel,
+/obj/item/reagent_containers/cup/glass/bottle/moonshine{
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/cup/glass/bottle/moonshine{
+	pixel_x = 8
+	},
+/obj/item/reagent_containers/cup/glass/bottle/hooch{
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust)
+"Hg" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"Hi" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/turf/open/openspace/icemoon)
+"Hx" = (
+/obj/structure/flora/bush/sparsegrass/style_random,
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"HF" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/cup/primitive_centrifuge{
+	pixel_x = -14;
+	pixel_y = -1
+	},
+/obj/item/paper_bin/bundlenatural{
+	pixel_y = 8;
+	pixel_x = 3
+	},
+/obj/item/pen/charcoal,
+/obj/effect/decal/cleanable/dirt/dust)
+"HW" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/turf/open/floor/wood/icemoon)
+"IC" = (
+/obj/effect/turf_decal/siding/wood/corner,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"Jw" = (
+/obj/structure/curtain/bounty,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"Jz" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/structure/railing/wooden_fencing,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"JC" = (
+/obj/structure/mineral_door/wood/large_gate{
+	dir = 1
+	},
+/turf/open/floor/wood/icemoon)
+"JT" = (
+/obj/structure/closet/crate/wooden/storage_barrel,
+/obj/item/instrument/guitar,
+/obj/item/instrument/glockenspiel,
+/turf/open/floor/stone/icemoon)
+"Kc" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/stone/icemoon)
+"Kf" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 5
+	},
+/turf/open/floor/stone/icemoon)
+"Kg" = (
+/obj/structure/wall_torch/spawns_lit/directional/west,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	})
+"Kh" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"Kq" = (
+/obj/structure/mineral_door/wood/large_gate,
+/turf/open/floor/wood/icemoon)
+"La" = (
+/obj/structure/rack/wooden,
+/obj/item/retractor/ashwalker{
+	pixel_y = -9
+	},
+/obj/item/hemostat/ashwalker{
+	pixel_y = 6
+	},
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/turf/open/floor/stone/icemoon)
+"Lf" = (
+/obj/effect/turf_decal/weather/snow/corner)
+"LK" = (
+/obj/structure/wall_torch/spawns_lit/directional/west,
+/obj/structure/flora/bush/snow/style_random,
+/turf/open/misc/asteroid/snow/icemoon)
+"Mb" = (
+/obj/structure/rack/wooden,
+/obj/item/reagent_containers/cup/mortar{
+	pixel_y = 9;
+	pixel_x = 5
+	},
+/obj/effect/decal/cleanable/dirt/dust)
+"Mh" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	},
+/turf/open/openspace/icemoon)
+"Mn" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	})
+"MD" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	},
+/obj/structure/railing/wooden_fencing,
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	})
+"MK" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing,
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"Nu" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"NA" = (
+)
+"NX" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	})
+"Ou" = (
+/obj/structure/curtain/bounty,
+/turf/open/floor/stone/icemoon)
+"OG" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack/wooden,
+/obj/item/food/grown/poppy/geranium/fraxinella,
+/turf/open/floor/stone/icemoon)
+"Pe" = (
+/obj/structure/wall_torch/spawns_lit/directional/west,
+/turf/open/misc/asteroid/snow/icemoon)
+"Pr" = (
+/obj/structure/rack/wooden,
+/obj/item/cautery/ashwalker{
+	pixel_y = 10
+	},
+/obj/item/scalpel/ashwalker{
+	pixel_y = 6
+	},
+/obj/item/circular_saw/ashwalker{
+	pixel_y = -9
+	},
+/obj/item/surgicaldrill/ashwalker{
+	pixel_y = -7;
+	pixel_x = 7
+	},
+/turf/open/floor/stone/icemoon)
+"PK" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/structure/railing/wooden_fencing,
+/turf/open/floor/wood/icemoon)
+"PN" = (
+/obj/structure/wall_torch/spawns_lit/directional/east,
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/turf/open/floor/wood/icemoon)
+"PY" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 10
+	},
+/obj/structure/railing/wooden_fencing,
+/turf/open/openspace/icemoon)
+"Qi" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 10
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"Rb" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/turf/open/floor/wood/icemoon)
+"Ri" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	},
+/turf/open/openspace/icemoon)
+"Rj" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"Rk" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/floor/wood/icemoon)
+"Rq" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/turf/open/floor/wood/icemoon)
+"RI" = (
+/obj/effect/turf_decal/siding/wood/corner,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"RW" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/structure/railing/wooden_fencing)
+"Sj" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 5
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/chair/wood,
+/turf/open/floor/wood/icemoon)
+"Sl" = (
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/turf/open/misc/asteroid/snow/icemoon)
+"Sq" = (
+/obj/structure/flora/tree/pine/style_random,
+/turf/open/misc/asteroid/snow/icemoon)
+"St" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"Su" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/turf/open/openspace/icemoon)
+"SA" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 5
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"SU" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/misc/asteroid/snow/icemoon)
+"Tg" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 5
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/turf/open/floor/wood/icemoon)
+"Tn" = (
+/obj/machinery/cauldron,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"Tu" = (
+/obj/structure/wall_torch/spawns_lit/directional/south,
+/obj/item/pillow/random{
+	pixel_y = 4
+	},
+/turf/open/floor/stone/icemoon)
+"TM" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"TP" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/turf/open/floor/stone/icemoon)
+"Ua" = (
+/obj/item/pillow/random{
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/stone/icemoon)
+"Ub" = (
+/obj/effect/decal/cleanable/dirt/dust)
+"Uo" = (
+/turf/closed/wall/mineral/wood/nonmetal)
+"Ut" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/icemoon)
+"UD" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing,
+/turf/open/floor/wood/icemoon)
+"Va" = (
+/obj/structure/wall_torch/spawns_lit/directional/north,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/stone/icemoon)
+"Vj" = (
+/obj/effect/turf_decal/siding/wood,
+/turf/open/floor/wood/icemoon)
+"Vv" = (
+/obj/structure/window/green_glass_pane,
+/obj/structure/curtain/bounty,
+/turf/open/floor/wood/icemoon)
+"Vw" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 10
+	})
+"VY" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	})
+"Wc" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing,
+/turf/open/misc/asteroid/snow/icemoon)
+"Wz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"WB" = (
+/obj/effect/turf_decal/siding/wood/corner,
+/obj/structure/closet/crate/wooden/storage_barrel,
+/obj/item/reagent_containers/cup/glass/bottle/moonshine{
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/cup/glass/bottle/moonshine{
+	pixel_x = 8
+	},
+/obj/item/reagent_containers/cup/glass/bottle/hooch{
+	pixel_y = 8
+	},
+/turf/open/floor/stone/icemoon)
+"WI" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	},
+/obj/structure/railing/wooden_fencing,
+/turf/open/openspace/icemoon)
+"WO" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/structure/geyser,
+/turf/open/misc/asteroid/snow/icemoon)
+"Xa" = (
+/obj/structure/table/wood,
+/obj/structure/chem_separator{
+	pixel_y = 12
+	},
+/obj/effect/decal/cleanable/dirt/dust)
+"Xo" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
+"Xu" = (
+/obj/structure/rack/wooden,
+/obj/item/hairbrush,
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"XA" = (
+/obj/structure/curtain/bounty,
+/turf/open/floor/wood/icemoon)
+"XQ" = (
+/obj/structure/mineral_door/wood/large_gate{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	})
+"Yb" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/effect/decal/cleanable/dirt)
+"Yh" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/floor/wood/icemoon)
+"Yn" = (
+/turf/template_noop,
+/area/template_noop)
+"YD" = (
+/obj/item/food/grown/aloe{
+	pixel_x = 5
+	},
+/obj/item/food/grown/aloe,
+/obj/item/food/grown/aloe{
+	pixel_y = 5
+	},
+/obj/structure/closet/crate/wooden/storage_barrel,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/wall_torch/spawns_lit/directional/west,
+/turf/open/floor/wood/icemoon)
+"ZA" = (
+/obj/structure/mineral_door/wood/large_gate{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	})
+"ZR" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood/icemoon)
 
 (1,1,1) = {"
-YnYnYnYnYnYnYnEzEzEzEzEzEzEzEzEzEzYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYn
-YnYnYnEzEzEzEzEzEzEzqQVvVvqQqQEzEzEzYnEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzYnYn
-YnEzEzEzEzEzEzEzqQqQqQAkUarCqQqQEzHiHiHiEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzYn
-YnEzEzEzEzEzEzEzVvJTpazrzrrCEzUoWIStcpSUPYfVblFJEzEzfVblTgEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzEzEzNAEzVvAkzrwldXrCkdUondndndndndrTBtRkEzEzYhBtRkEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzEzEzNANAVvAkzrdXaxBtHgUondSqndcAndQiVjUDEzEzwFVjUDEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzNANANANAVvOGTuWzHgrAqQqQndndndndndEiEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzNANANANAqQqQqQqQKqqQqQynndosndndsOEiEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzNANANANANANAxMSlAVSlndndndndndnaoxEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzNANANANANANAMDndnVkOHWTMjtndndGndiHiHiHiHiHiHiHiEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzNANAEzEzEzRicqqQUoUourtxUoUoqQnddkdkdkdkdkdkdkdkdkFcSUHiHiHiHiHiEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzNANAEzEzMhStndUozrmZliRbmZzrUondcAndaLlNlNlNVYndndndnddkdkdkguuadiHiHiEzEzEzEzEzEzEz
-YnEzEzEzNANAEzEzRicqnduOAcOudhRbOuzruOndndnuNANANANANAlNmmlNmmfNndndndnddkdkuadiEzEzEzEzEzEz
-YnEzEzEzNANAEzMhMKsOndUoUoUoNuabOuAcUondndosVwLfLfLfLfpQndBEndndqQUouOuOUoqQnduagGEzEzEzEzEz
-YnEzEzEzNANAEzEzgqSucquOzrOuNuPNUoUoUoLKndndndndndndndndndBEndndUotBPrEjLaUondGnEzEzEzEzEzEz
-YnEzEzfVATTgEzEzEzRicqUopUjTliICBtUtmHDcYbmmmmmmmmmmmmmmmmNXndndVvdOzrzrCnVvndGngGEzEzEzEzEz
-YnEzEzqjBtabEzEzMhStndUoUoUoNuPNUoUoUoKgtataiXtataWOtatataxAVYosUocZzrbcWBUondBigGEzEzEzEzEz
-YnEzEzwFPKUDEzEzMhcqosuOVaOuiJmMOuwluONXndaLlNlNlNlNlNlNlNNANXndqQqQpldfqQqQndGndiEzEzEzEzEz
-YnEzEzEzEzEzEzEzMhyEndUozrUoBWzrUomOUoNAmmNANANANANANALfLfLfNXndndbJZRBtbJndynndSUpXHiEzEzEz
-YnEzEzEzEzEzEzEzEzSucqqQUoUoUoUoUoUoqQNXndxANANANANANXosndndfxnzqQqQXAJwqQqQPendnddkisgGEzEz
-YnEzEzfVblSAEzEzEzMhyEsOsOndoscDRbRWLfpQndVwNANANANANXndndndVwimmHbWZRBtbWuCmmimimVYGngGEzEz
-YnEzEzYhBtRbEzEzEzEzgqgqSuyEWcgGEzSuyEsOsOndxANANANANXndndndndqQqQYDBtZRAlqQqQndcAfxGngGEzEz
-YnEzEzwFJzUDEzEzEzEzEzEzEzgqgqEzEzEzgqgqqUcqxANALfLfpQndndynndXQTnBtZRZRBtZRZAndndfxGngGEzEz
-YnEzEzEzEzEzNAEzEzNANAEzEzNANAEzEzNANAEzNXGHxANXjtndndsOsOndosqQqQGpryRIVjqQqQndsOcIWcgGEzEz
-YnEzEzEzNANANANANANANANANANANANANANANANANAUoyAlLUoyEueaLNXcqndndbJGOiJRqyTbJndGnoxEzgqEzEzEz
-YnEzEzNANANAUoUoUobJbJUoUobJbJUoUobJbJUoUoUoZRBtUoNANANANXcqndcAbJXaujHFMbbJndGngGEzEzEzEzEz
-YnEzEzEzNANAUoUblvNAfrBsqRNAXuUblvNAbuNAqRNAiOBtUoNANANANXyEndndbJbJbJbJbJbJndGngGEzEzEzEzEz
-YnEzEzEzNANAbJvWeABffrvWeAvWXovWeABfbuBfeAvWKhBtUoNANANANAVYyEndndndndndndndndHxgGEzEzEzEzEz
-YnEzEzNANANAbJBtBtBtBtBtBtBtBtBtBtBtBtBtBtBtBtZRUoNANANANANAVYcqosndndndndynGnEBEzEzEzEzEzEz
-YnEzEzNANANAbJUtvHgWgWgWgWKcgWgWgWgWgWgWgWgWKfqnUoNANANANANANAbsFVFVFVFVFVFVFVEzEzEzEzEzEzEz
-YnEzEzEzNANAbJBtdHDmDmDmDmDmDmDmDmDmDmRjDmDmzOBtUoNANANANANAEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzNANANAbJBtBtBtBtZRBtBtBtBtBtUtBtBtBtBtZRBtUoNANANANANAEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzNANAbJCpeOluMnMnMnCpUoKqJCUoUoUoUoUoUoUoUoNANANANANAGrBRTgEzEzfVyLSjEzEzEzEzEzEzEzEz
-YnEzEzEzNANAUoNANANANAUbNANAUoUtBtBtpqzrAkpkAkTPUoNANANANAEzYhZRRkEzEzYhBtRkEzEzEzEzEzEzEzEz
-YnEzEzEzEzNAUoUomgBsNANANAgSUoBtBtZRaMzrwlzrzrzrUoNANAEzEzEzwFPKUDEzEzwFPKcBEzEzEzEzEzEzEzEz
-YnEzEzEzEzNANAUoUobJbJbJbJUoUoBtBtUtkikikikikikiUoNAEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzEzEzNANANANANANANANAUoUoUoZRDlEzEzEzEzDlUoNAEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEz
-YnEzEzEzEzEzEzEzNAEzEzNAEzNANANAUoUoUoUoUoUoUoUoUoEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzYn
-YnYnEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzEzYn
-YnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYnYn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+"}
+(2,1,1) = {"
+Yn
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+Yn
+"}
+(3,1,1) = {"
+Yn
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(4,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+fV
+qj
+wF
+Ez
+Ez
+fV
+Yh
+wF
+Ez
+Ez
+NA
+Ez
+Ez
+NA
+NA
+Ez
+NA
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(5,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+AT
+Bt
+PK
+Ez
+Ez
+bl
+Bt
+Jz
+Ez
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(6,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+Tg
+ab
+UD
+Ez
+Ez
+SA
+Rb
+UD
+Ez
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Ez
+Yn
+"}
+(7,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+NA
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+NA
+NA
+Uo
+Uo
+bJ
+bJ
+bJ
+bJ
+bJ
+bJ
+Uo
+Uo
+NA
+NA
+Ez
+Ez
+Yn
+"}
+(8,1,1) = {"
+Ez
+Ez
+Ez
+Ez
+Ez
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Ez
+Mh
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+NA
+Uo
+Ub
+vW
+Bt
+Ut
+Bt
+Bt
+Cp
+NA
+Uo
+Uo
+NA
+Ez
+Ez
+Yn
+"}
+(9,1,1) = {"
+Ez
+Ez
+qQ
+Vv
+Vv
+Vv
+Vv
+qQ
+NA
+NA
+Ez
+Mh
+Ri
+MK
+gq
+Ez
+Mh
+Mh
+Mh
+Ez
+Ez
+Ez
+Ez
+Ez
+NA
+Uo
+lv
+eA
+Bt
+vH
+dH
+Bt
+eO
+NA
+mg
+Uo
+NA
+NA
+Ez
+Yn
+"}
+(10,1,1) = {"
+Ez
+Ez
+qQ
+JT
+Ak
+Ak
+OG
+qQ
+NA
+NA
+Ri
+St
+cq
+sO
+Su
+Ri
+St
+cq
+yE
+Su
+Mh
+Ez
+Ez
+NA
+NA
+bJ
+NA
+Bf
+Bt
+gW
+Dm
+Bt
+lu
+NA
+Bs
+bJ
+NA
+Ez
+Ez
+Yn
+"}
+(11,1,1) = {"
+Ez
+qQ
+qQ
+pa
+zr
+zr
+Tu
+qQ
+xM
+MD
+cq
+nd
+nd
+nd
+cq
+cq
+nd
+os
+nd
+cq
+yE
+gq
+Ez
+NA
+NA
+bJ
+fr
+fr
+Bt
+gW
+Dm
+Bt
+Mn
+NA
+NA
+bJ
+NA
+Ez
+Ez
+Yn
+"}
+(12,1,1) = {"
+Ez
+Vv
+Ak
+zr
+wl
+dX
+Wz
+qQ
+Sl
+nd
+qQ
+Uo
+uO
+Uo
+uO
+Uo
+Uo
+uO
+Uo
+qQ
+sO
+gq
+Ez
+Ez
+NA
+Uo
+Bs
+vW
+Bt
+gW
+Dm
+ZR
+Mn
+Ub
+NA
+bJ
+NA
+NA
+Ez
+Yn
+"}
+(13,1,1) = {"
+Ez
+Vv
+Ua
+zr
+dX
+ax
+Hg
+Kq
+AV
+nV
+Uo
+zr
+Ac
+Uo
+zr
+pU
+Uo
+Va
+zr
+Uo
+sO
+Su
+Ez
+Ez
+NA
+Uo
+qR
+eA
+Bt
+gW
+Dm
+Bt
+Mn
+NA
+NA
+bJ
+NA
+Ez
+Ez
+Yn
+"}
+(14,1,1) = {"
+Ez
+qQ
+rC
+rC
+rC
+Bt
+rA
+qQ
+Sl
+kO
+Uo
+mZ
+Ou
+Uo
+Ou
+jT
+Uo
+Ou
+Uo
+Uo
+nd
+yE
+gq
+NA
+NA
+bJ
+NA
+vW
+Bt
+Kc
+Dm
+Bt
+Cp
+NA
+gS
+Uo
+NA
+NA
+Ez
+Yn
+"}
+(15,1,1) = {"
+Ez
+qQ
+qQ
+Ez
+kd
+Hg
+qQ
+qQ
+nd
+HW
+ur
+li
+dh
+Nu
+Nu
+li
+Nu
+iJ
+BW
+Uo
+os
+Wc
+gq
+NA
+NA
+bJ
+Xu
+Xo
+Bt
+gW
+Dm
+Bt
+Uo
+Uo
+Uo
+Uo
+Uo
+NA
+Ez
+Yn
+"}
+(16,1,1) = {"
+Ez
+Ez
+qQ
+Uo
+Uo
+Uo
+qQ
+yn
+nd
+TM
+tx
+Rb
+Rb
+ab
+PN
+IC
+PN
+mM
+zr
+Uo
+cD
+gG
+Ez
+Ez
+NA
+Uo
+Ub
+vW
+Bt
+gW
+Dm
+Bt
+Kq
+Ut
+Bt
+Bt
+Uo
+NA
+Ez
+Yn
+"}
+(17,1,1) = {"
+Ez
+Ez
+Ez
+WI
+nd
+nd
+nd
+nd
+nd
+jt
+Uo
+mZ
+Ou
+Ou
+Uo
+Bt
+Uo
+Ou
+Uo
+Uo
+Rb
+Ez
+Ez
+Ez
+NA
+Uo
+lv
+eA
+Bt
+gW
+Dm
+Bt
+JC
+Bt
+Bt
+Bt
+Uo
+Uo
+Ez
+Yn
+"}
+(18,1,1) = {"
+Yn
+Ez
+Hi
+St
+nd
+Sq
+nd
+os
+nd
+nd
+Uo
+zr
+zr
+Ac
+Uo
+Ut
+Uo
+wl
+mO
+Uo
+RW
+Su
+Ez
+NA
+NA
+bJ
+NA
+Bf
+Bt
+gW
+Dm
+Ut
+Uo
+Bt
+ZR
+Ut
+ZR
+Uo
+Ez
+Yn
+"}
+(19,1,1) = {"
+Yn
+Yn
+Hi
+cp
+nd
+nd
+nd
+nd
+nd
+nd
+qQ
+Uo
+uO
+Uo
+Uo
+mH
+Uo
+uO
+Uo
+qQ
+Lf
+yE
+gq
+NA
+NA
+bJ
+bu
+bu
+Bt
+gW
+Dm
+Bt
+Uo
+pq
+aM
+ki
+Dl
+Uo
+Ez
+Yn
+"}
+(20,1,1) = {"
+Yn
+Ez
+Hi
+SU
+nd
+cA
+nd
+nd
+na
+Gn
+nd
+nd
+nd
+nd
+LK
+Dc
+Kg
+NX
+NA
+NX
+pQ
+sO
+gq
+Ez
+NA
+Uo
+NA
+Bf
+Bt
+gW
+Rj
+Bt
+Uo
+zr
+zr
+ki
+Ez
+Uo
+Ez
+Yn
+"}
+(21,1,1) = {"
+Yn
+Ez
+Ez
+PY
+nd
+nd
+nd
+sO
+ox
+di
+dk
+cA
+nd
+nd
+nd
+Yb
+ta
+nd
+mm
+nd
+nd
+sO
+qU
+NX
+NA
+Uo
+qR
+eA
+Bt
+gW
+Dm
+Bt
+Uo
+Ak
+wl
+ki
+Ez
+Uo
+Ez
+Yn
+"}
+(22,1,1) = {"
+Yn
+Ez
+Ez
+fV
+rT
+Qi
+Ei
+Ei
+Ez
+Hi
+dk
+nd
+nu
+os
+nd
+mm
+ta
+aL
+NA
+xA
+Vw
+nd
+cq
+GH
+Uo
+Uo
+NA
+vW
+Bt
+gW
+Dm
+Bt
+Uo
+pk
+zr
+ki
+Ez
+Uo
+Ez
+Yn
+"}
+(23,1,1) = {"
+Yn
+Ez
+Ez
+bl
+Bt
+Vj
+Ez
+Ez
+Ez
+Hi
+dk
+aL
+NA
+Vw
+nd
+mm
+iX
+lN
+NA
+NA
+NA
+xA
+xA
+xA
+yA
+ZR
+iO
+Kh
+Bt
+Kf
+zO
+ZR
+Uo
+Ak
+zr
+ki
+Ez
+Uo
+Ez
+Yn
+"}
+(24,1,1) = {"
+Yn
+Ez
+Ez
+FJ
+Rk
+UD
+Ez
+Ez
+Ez
+Hi
+dk
+lN
+NA
+Lf
+nd
+mm
+ta
+lN
+NA
+NA
+NA
+NA
+NA
+NX
+lL
+Bt
+Bt
+Bt
+ZR
+qn
+Bt
+Bt
+Uo
+TP
+zr
+ki
+Dl
+Uo
+Ez
+Yn
+"}
+(25,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+dk
+lN
+NA
+Lf
+nd
+mm
+ta
+lN
+NA
+NA
+NA
+NA
+Lf
+jt
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Uo
+Ez
+Yn
+"}
+(26,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+dk
+lN
+NA
+Lf
+nd
+mm
+WO
+lN
+NA
+NA
+NA
+NA
+Lf
+nd
+yE
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Yn
+"}
+(27,1,1) = {"
+Yn
+Ez
+Ez
+fV
+Yh
+wF
+Ez
+Ez
+Ez
+Hi
+dk
+VY
+NA
+Lf
+nd
+mm
+ta
+lN
+NA
+NX
+NX
+NX
+pQ
+nd
+ue
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(28,1,1) = {"
+Yn
+Ez
+Ez
+bl
+Bt
+Vj
+Ez
+Ez
+Ez
+Hi
+dk
+nd
+lN
+pQ
+nd
+mm
+ta
+lN
+Lf
+os
+nd
+nd
+nd
+sO
+aL
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(29,1,1) = {"
+Yn
+Ez
+Ez
+Tg
+Rk
+UD
+Ez
+Ez
+Ez
+Ez
+dk
+nd
+mm
+nd
+nd
+mm
+ta
+lN
+Lf
+nd
+nd
+nd
+nd
+sO
+NX
+NX
+NX
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(30,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Fc
+nd
+lN
+BE
+BE
+NX
+xA
+NA
+Lf
+nd
+nd
+nd
+yn
+nd
+cq
+cq
+yE
+VY
+NA
+NA
+NA
+NA
+NA
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(31,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+SU
+nd
+mm
+nd
+nd
+nd
+VY
+NX
+NX
+fx
+Vw
+nd
+nd
+os
+nd
+nd
+nd
+yE
+VY
+NA
+Ez
+Ez
+Gr
+Yh
+wF
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(32,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+dk
+fN
+nd
+nd
+nd
+os
+nd
+nd
+nz
+im
+qQ
+XQ
+qQ
+nd
+cA
+nd
+nd
+cq
+bs
+Ez
+Ez
+BR
+ZR
+PK
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(33,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+dk
+nd
+qQ
+Uo
+Vv
+Uo
+qQ
+nd
+qQ
+mH
+qQ
+Tn
+qQ
+bJ
+bJ
+bJ
+nd
+os
+FV
+Ez
+Ez
+Tg
+Rk
+UD
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(34,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+dk
+nd
+Uo
+tB
+dO
+cZ
+qQ
+bJ
+qQ
+bW
+YD
+Bt
+Gp
+GO
+Xa
+bJ
+nd
+nd
+FV
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(35,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+gu
+nd
+uO
+Pr
+zr
+zr
+pl
+ZR
+XA
+ZR
+Bt
+ZR
+ry
+iJ
+uj
+bJ
+nd
+nd
+FV
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(36,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+ua
+nd
+uO
+Ej
+zr
+bc
+df
+Bt
+Jw
+Bt
+ZR
+ZR
+RI
+Rq
+HF
+bJ
+nd
+nd
+FV
+Ez
+Ez
+fV
+Yh
+wF
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(37,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+di
+dk
+Uo
+La
+Cn
+WB
+qQ
+bJ
+qQ
+bW
+Al
+Bt
+Vj
+yT
+Mb
+bJ
+nd
+nd
+FV
+Ez
+Ez
+yL
+Bt
+PK
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(38,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+dk
+qQ
+Uo
+Vv
+Uo
+qQ
+nd
+qQ
+uC
+qQ
+ZR
+qQ
+bJ
+bJ
+bJ
+nd
+yn
+FV
+Ez
+Ez
+Sj
+Rk
+cB
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(39,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+ua
+nd
+nd
+nd
+nd
+nd
+yn
+Pe
+mm
+qQ
+ZA
+qQ
+nd
+nd
+nd
+nd
+Gn
+FV
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(40,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+di
+ua
+Gn
+Gn
+Bi
+Gn
+nd
+nd
+im
+nd
+nd
+nd
+Gn
+Gn
+Gn
+Hx
+EB
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(41,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+gG
+Ez
+gG
+gG
+di
+SU
+nd
+im
+cA
+nd
+sO
+ox
+gG
+gG
+gG
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(42,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+pX
+dk
+VY
+fx
+fx
+cI
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(43,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Hi
+is
+Gn
+Gn
+Gn
+Wc
+gq
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(44,1,1) = {"
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+gG
+gG
+gG
+gG
+gG
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(45,1,1) = {"
+Yn
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+"}
+(46,1,1) = {"
+Yn
+Yn
+Yn
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Yn
+Yn
+Yn
 "}
