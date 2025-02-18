@@ -78,9 +78,6 @@
 /turf/open/floor/plating,
 /area/ruin/space/unpowered)
 "hf" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/unpowered)
@@ -234,11 +231,11 @@
 /area/ruin/space/unpowered)
 "mx" = (
 /obj/structure/table,
-/obj/item/stock_parts/power_store/cell/hyper{
+/obj/item/stock_parts/cell/hyper{
 	pixel_x = -3;
 	pixel_y = -2
 	},
-/obj/item/stock_parts/power_store/cell/hyper{
+/obj/item/stock_parts/cell/hyper{
 	pixel_y = 7
 	},
 /obj/item/stack/cable_coil,
@@ -261,9 +258,6 @@
 	},
 /area/ruin/space/unpowered)
 "oc" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/unpowered)
@@ -436,7 +430,7 @@
 "yU" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stock_parts/power_store/cell/hyper{
+/obj/item/stock_parts/cell/hyper{
 	pixel_y = -10
 	},
 /turf/open/floor/plating,

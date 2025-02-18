@@ -1,0 +1,6 @@
+author: "JohnnySilverhand123"
+delete-after: True
+changes:
+  - rscadd: "Added the missing ships' map files and other relevant files needed for them to function properly"
+  - rscadd: "Added the micro reactor, including it's own custom sprite, meant to be powering the APCs on both of the ghost roles"
+  - rscadd: "Added a new variant of the mining vendor which was missing from the Interdyne base"

@@ -149,8 +149,6 @@
 	name = "Prefab homestead gag";
 	skin_tone = null;
 	hairstyle = "bald";
-	corpse_description = "Named after one of Tizira's first extraplanetary colonists, but clearly not as successful.";
-	naive_corpse_description = "I'd be napping too if I thought mining would wake up a bunch of angry bugs."
 	},
 /turf/open/floor/iron/colony/bolts,
 /area/ruin/colonist_homestead)
