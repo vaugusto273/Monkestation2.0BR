@@ -228,6 +228,7 @@
 	var/obj/item/robot_model/new_model = new new_config_type(cyborg)
 	new_model.robot = cyborg
 	cyborg.icon = 'icons/mob/silicon/robots.dmi' //reset our icon to default, but before a new custom icon may be applied by be_transformed_to
+	cyborg.set_base_pixel_x(0)
 	if(!new_model.be_transformed_to(src, forced))
 		qdel(new_model)
 		return
@@ -257,6 +258,9 @@
 		for(var/skin in borg_skins)
 			var/list/details = borg_skins[skin]
 			reskin_icons[skin] = image(icon = details[SKIN_ICON] || 'icons/mob/silicon/robots.dmi', icon_state = details[SKIN_ICON_STATE])
+			if(!isnull(details["drake"]))
+				var/image/reskin = reskin_icons[skin]
+				reskin.pixel_x = -16
 		var/borg_skin = show_radial_menu(cyborg, cyborg, reskin_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), cyborg, old_model), radius = 38, require_near = TRUE)
 		if(!borg_skin)
 			return FALSE
@@ -274,6 +278,8 @@
 			hat_offset = details[SKIN_HAT_OFFSET]
 		if(!isnull(details[SKIN_TRAITS]))
 			model_traits += details[SKIN_TRAITS]
+		if(details["drake"] == 1)
+			cyborg.set_base_pixel_x(-16)
 	for(var/i in old_model.added_modules)
 		added_modules += i
 		old_model.added_modules -= i
@@ -400,6 +406,10 @@
 	model_select_icon = "engineer"
 	model_traits = list(TRAIT_NEGATES_GRAVITY)
 	hat_offset = -4
+	borg_skins = list(
+		"Engineer" = list(SKIN_ICON_STATE = "engineer"),
+		"Drakeeng" = list(SKIN_ICON_STATE = "drakeeng", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+	)
 
 /obj/item/robot_model/janitor
 	name = "Janitor"
@@ -427,6 +437,10 @@
 	cyborg_base_icon = "janitor"
 	model_select_icon = "janitor"
 	hat_offset = -5
+	borg_skins = list(
+		"Janitor" = list(SKIN_ICON_STATE = "janitor"),
+		"Drakejanit" = list(SKIN_ICON_STATE = "drakejanit", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+	)
 	/// Weakref to the wash toggle action we own
 	var/datum/weakref/wash_toggle_ref
 
@@ -699,6 +713,7 @@
 	borg_skins = list(
 		"Machinified Doctor" = list(SKIN_ICON_STATE = "medical"),
 		"Qualified Doctor" = list(SKIN_ICON_STATE = "qualified_doctor"),
+		"Drakemed" = list(SKIN_ICON_STATE = "drakemed", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
 	)
 
 /obj/item/robot_model/miner
@@ -728,6 +743,7 @@
 		"Asteroid Miner" = list(SKIN_ICON_STATE = "minerOLD"),
 		"Spider Miner" = list(SKIN_ICON_STATE = "spidermin"),
 		"Lavaland Miner" = list(SKIN_ICON_STATE = "miner"),
+		"Drakemine" = list(SKIN_ICON_STATE = "drakemine", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
 	)
 	var/obj/item/t_scanner/adv_mining_scanner/cyborg/mining_scanner //built in memes. //fuck you
 
@@ -759,6 +775,10 @@
 	model_select_icon = "standard"
 	model_traits = list(TRAIT_PUSHIMMUNE)
 	hat_offset = -2
+	borg_skins = list(
+		"Peace" = list(SKIN_ICON_STATE = "peace"),
+		"Drakepeace" = list(SKIN_ICON_STATE = "drakepeace", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+	)
 
 /obj/item/robot_model/peacekeeper/do_transform_animation()
 	..()
@@ -783,6 +803,10 @@
 	model_select_icon = "security"
 	model_traits = list(TRAIT_PUSHIMMUNE)
 	hat_offset = 3
+	borg_skins = list(
+		"Sec" = list(SKIN_ICON_STATE = "sec"),
+		"Drakesec" = list(SKIN_ICON_STATE = "drakesec", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+	)
 
 /obj/item/robot_model/security/do_transform_animation()
 	..()
@@ -844,6 +868,7 @@
 		"Tophat" = list(SKIN_ICON_STATE = "tophat", SKIN_LIGHT_KEY = NONE, SKIN_HAT_OFFSET = INFINITY),
 		"Waitress" = list(SKIN_ICON_STATE = "service_f"),
 		"Kerfus" = list(SKIN_ICON_STATE = "kerfus_service", SKIN_LIGHT_KEY = NONE, SKIN_ICON = CYBORG_ICON_CARGO, SKIN_TRAITS = list(TRAIT_CAT)),
+		"Drakesv" = list(SKIN_ICON_STATE = "drakesv", SKIN_LIGHT_KEY = "drakesv", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
 	)
 
 /obj/item/robot_model/service/respawn_consumable(mob/living/silicon/robot/cyborg, coeff = 1)
