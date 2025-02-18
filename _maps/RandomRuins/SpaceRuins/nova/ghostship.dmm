@@ -78,9 +78,6 @@
 /turf/open/floor/plating,
 /area/ruin/space/unpowered)
 "hf" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/unpowered)
