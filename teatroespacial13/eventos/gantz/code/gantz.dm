@@ -1,5 +1,3 @@
-
-
 /obj/structure/gantz
 	name = "black sphere"
 	desc = "Gantz? que porra é essa aí?"
@@ -34,11 +32,26 @@
 	name = "Teleporte Gantz"
 
 /datum/smite/gantztp/effect(client/user, mob/living/target)
-	. = ..()
-	var/mutable_appearance/invisible = mutable_appearance('icons/effects/effects.dmi', "nothing")
-	var/mutable_appearance/transform_scanline = mutable_appearance('icons/effects/effects.dmi', "transform_effect")
-	target.transformation_animation(invisible, BREADIFY_TIME, transform_scanline.appearance)
-	addtimer(CALLBACK(target, "admin_teleport", user.mob.loc), BREADIFY_TIME)
+    . = ..()
+    var/mutable_appearance/invisible = mutable_appearance('icons/effects/effects.dmi', "nothing")
+    var/mutable_appearance/transform_scanline = mutable_appearance('icons/effects/effects.dmi', "transform_effect")
+
+    var/turf/user_turf = get_turf(user.mob)
+    var/obj/effect/temp_visual/puppet/teleport_effect = new(user_turf)
+
+    teleport_effect.transformation_animation(target.appearance, BREADIFY_TIME, transform_scanline.appearance)
+
+    target.transformation_animation(invisible, BREADIFY_TIME, transform_scanline.appearance)
+
+    addtimer(CALLBACK(target, "admin_teleport", user_turf), BREADIFY_TIME)
+
+// Objeto temporário para o efeito visual
+/obj/effect/temp_visual/puppet
+    icon = 'icons/effects/effects.dmi'
+    icon_state = "nothing"
+    layer = ABOVE_MOB_LAYER
+    randomdir = FALSE
+    duration = BREADIFY_TIME
 
 #undef BREADIFY_TIME
 
