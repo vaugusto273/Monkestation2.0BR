@@ -8692,4 +8692,5 @@
 #include "code\datums\elements\watery_tile.dm"
 #include "teatroespacial13\modules\jump\code\jump.dm"
 #include "teatroespacial13/modules/kitchen-plus/code/kitchenplus_qol.dm"
+#include "teatroespacial13/eventos/gantz/code/gantz.dm"
 // END_INCLUDE
