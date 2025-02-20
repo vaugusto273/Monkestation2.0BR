@@ -360,6 +360,9 @@ ROUNDSTART_RACES apid
 ROUNDSTART_RACES satyr
 ROUNDSTART_RACES ornithid
 
+## Races ported from nova sector here
+ROUNDSTART_RACES hemophage
+
 ## Races that are better than humans in some ways, but worse in others
 ROUNDSTART_RACES ethereal
 ROUNDSTART_RACES goblin

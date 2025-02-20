@@ -1001,7 +1001,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Atoms with this trait can be right-clicked with a fish to release them, presumably back in the fishing spot they were caught from.
 #define TRAIT_CATCH_AND_RELEASE "catch_and_release"
-
+#define TRAIT_CORONER_METABOLISM "coroner_metabolism"
+/// Trait that was granted by a reagent.
+#define TRAIT_REAGENT "reagent"
 // end of nova addition
 
 /// Trait given to angelic constructs to let them purge cult runes

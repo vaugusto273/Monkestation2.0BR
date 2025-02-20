@@ -16,6 +16,7 @@
 		"cloneable" = null, // Tracks if the guy who the blood came from suicided or not
 		"factions" = null, // Factions the guy who the blood came from was in
 		"quirks" = null, // Quirk typepaths of the guy who the blood came from had
+		"monkey_origins" = FALSE // Nova Addition hemophage
 		)
 	name = "Blood"
 	color = COLOR_BLOOD
@@ -55,8 +56,14 @@
 		if(data["blood_type"] in blood.compatible_types)
 			exposed_mob.blood_volume = min(exposed_mob.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
 		else
+			// Nova edit start
+			/* // original
 			exposed_mob.reagents.add_reagent(/datum/reagent/toxin, reac_volume * 0.5)
-
+			*/
+         	// We do a max() here so that being injected with monkey blood when you're past 560u doesn't reset you back to 560
+			var/max_blood_volume = data["monkey_origins"] ? max(exposed_mob.blood_volume, BLOOD_VOLUME_NORMAL) : BLOOD_VOLUME_MAXIMUM
+			exposed_mob.blood_volume = min(exposed_mob.blood_volume + round(reac_volume, 0.1), max_blood_volume)
+			// nova edit end
 		exposed_mob.reagents.remove_reagent(type, reac_volume) // Because we don't want blood to just lie around in the patient's blood, makes no sense.
 
 
