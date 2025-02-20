@@ -408,7 +408,7 @@
 	hat_offset = -4
 	borg_skins = list(
 		"Engineer" = list(SKIN_ICON_STATE = "engineer"),
-		"Drakeeng" = list(SKIN_ICON_STATE = "drakeeng", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+		"Drakeeng" = list(SKIN_ICON_STATE = "drakeeng", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
 	)
 
 /obj/item/robot_model/janitor
@@ -439,7 +439,7 @@
 	hat_offset = -5
 	borg_skins = list(
 		"Janitor" = list(SKIN_ICON_STATE = "janitor"),
-		"Drakejanit" = list(SKIN_ICON_STATE = "drakejanit", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+		"Drakejanit" = list(SKIN_ICON_STATE = "drakejanit", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
 	)
 	/// Weakref to the wash toggle action we own
 	var/datum/weakref/wash_toggle_ref
@@ -713,7 +713,7 @@
 	borg_skins = list(
 		"Machinified Doctor" = list(SKIN_ICON_STATE = "medical"),
 		"Qualified Doctor" = list(SKIN_ICON_STATE = "qualified_doctor"),
-		"Drakemed" = list(SKIN_ICON_STATE = "drakemed", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+		"Drakemed" = list(SKIN_ICON_STATE = "drakemed", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
 	)
 
 /obj/item/robot_model/miner
@@ -743,7 +743,7 @@
 		"Asteroid Miner" = list(SKIN_ICON_STATE = "minerOLD"),
 		"Spider Miner" = list(SKIN_ICON_STATE = "spidermin"),
 		"Lavaland Miner" = list(SKIN_ICON_STATE = "miner"),
-		"Drakemine" = list(SKIN_ICON_STATE = "drakemine", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+		"Drakemine" = list(SKIN_ICON_STATE = "drakemine", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
 	)
 	var/obj/item/t_scanner/adv_mining_scanner/cyborg/mining_scanner //built in memes. //fuck you
 
@@ -777,7 +777,7 @@
 	hat_offset = -2
 	borg_skins = list(
 		"Peace" = list(SKIN_ICON_STATE = "peace"),
-		"Drakepeace" = list(SKIN_ICON_STATE = "drakepeace", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+		"Drakepeace" = list(SKIN_ICON_STATE = "drakepeace", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
 	)
 
 /obj/item/robot_model/peacekeeper/do_transform_animation()
@@ -805,7 +805,7 @@
 	hat_offset = 3
 	borg_skins = list(
 		"Sec" = list(SKIN_ICON_STATE = "sec"),
-		"Drakesec" = list(SKIN_ICON_STATE = "drakesec", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+		"Drakesec" = list(SKIN_ICON_STATE = "drakesec", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
 	)
 
 /obj/item/robot_model/security/do_transform_animation()
@@ -868,7 +868,7 @@
 		"Tophat" = list(SKIN_ICON_STATE = "tophat", SKIN_LIGHT_KEY = NONE, SKIN_HAT_OFFSET = INFINITY),
 		"Waitress" = list(SKIN_ICON_STATE = "service_f"),
 		"Kerfus" = list(SKIN_ICON_STATE = "kerfus_service", SKIN_LIGHT_KEY = NONE, SKIN_ICON = CYBORG_ICON_CARGO, SKIN_TRAITS = list(TRAIT_CAT)),
-		"Drakesv" = list(SKIN_ICON_STATE = "drakesv", SKIN_LIGHT_KEY = "drakesv", SKIN_ICON = 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi', "drake" = 1),
+		"Drakesv" = list(SKIN_ICON_STATE = "drakesv", SKIN_LIGHT_KEY = "drakesv", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
 	)
 
 /obj/item/robot_model/service/respawn_consumable(mob/living/silicon/robot/cyborg, coeff = 1)

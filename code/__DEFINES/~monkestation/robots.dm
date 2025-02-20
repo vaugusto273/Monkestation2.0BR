@@ -7,6 +7,7 @@ GLOBAL_LIST_EMPTY(cyborg_all_models_icon_list)
 
 
 #define CYBORG_ICON_CARGO 'monkestation/code/modules/cargoborg/icons/robots_cargo.dmi'
+#define CYBORG_ICON_DRAKE 'monkestation/code/modules/drakeborg/icons/robots_drakes.dmi'
 
 /// Module is compatible with Cargo Cyborg model
 #define BORG_MODEL_CARGO (BORG_MODEL_ENGINEERING<<1)
