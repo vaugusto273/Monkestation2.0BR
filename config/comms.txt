@@ -20,3 +20,11 @@
 
 ##Github API 'slug' for issue reporting, format owner/repo
 ISSUE_SLUG Monkestation/Monkestation2.0
+
+## Communication key for receiving data through world/Topic(), you don't want to give this out
+COMMS_KEY SomeKeyHere
+
+[...]
+
+## Bot IP:Port for discord notifications
+BOT_IP 127.0.0.1:8081
