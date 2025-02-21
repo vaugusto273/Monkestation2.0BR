@@ -1,3 +1,4 @@
+/* removal of florida man
 /datum/antagonist/florida_man
 	name = "Space Florida Man"
 	roundend_category = "Florida Men"
@@ -100,3 +101,4 @@
 		new_mob.mind.add_antag_datum(/datum/antagonist/florida_man)
 	else
 		hosts_mind.add_antag_datum(/datum/antagonist/florida_man)
+*/

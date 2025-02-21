@@ -45,7 +45,7 @@
 #define ROLE_PLAGUERAT "Plague Rat"
 #define ROLE_CORTICAL_BORER "Cortical Borer"
 #define ROLE_DRIFTING_CONTRACTOR "Drifting Contractor"
-#define ROLE_FLORIDA_MAN "Florida Man"
+//#define ROLE_FLORIDA_MAN "Florida Man" removal of florida man
 #define ROLE_SLASHER "Slasher"
 #define ROLE_MONSTERHUNTER "Monster Hunter"
 

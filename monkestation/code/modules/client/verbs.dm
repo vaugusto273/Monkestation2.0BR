@@ -137,7 +137,7 @@ GLOBAL_LIST(antag_token_config)
 			/datum/antagonist/cortical_borer/hivemind,
 		)),
 		LOW_THREAT = init_antag_list(list(
-			/datum/antagonist/florida_man,
+			///datum/antagonist/florida_man, removal of florida man
 			/datum/antagonist/traitor,
 			/datum/antagonist/paradox_clone,
 			/datum/antagonist/cortical_borer,

@@ -1,3 +1,4 @@
+/* florida man removal
 import { Antagonist, Category } from '../base';
 import { multiline } from 'common/string';
 
@@ -23,3 +24,4 @@ const FloridaMan: Antagonist = {
 };
 
 export default FloridaMan;
+*/
