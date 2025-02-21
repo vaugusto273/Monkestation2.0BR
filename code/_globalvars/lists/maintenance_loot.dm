@@ -392,8 +392,9 @@ GLOBAL_LIST_INIT(oddity_loot, list(//oddity: strange or crazy items
 			) = 1,
 		*/ // MONKESTATION EDIT END
 		/obj/item/toy/cards/deck/tarot/haunted = 1,
-		/obj/item/gun/magic/wand/polymorph = 1, //monkestation edit
+		/*/obj/item/gun/magic/wand/polymorph = 1, //monkestation edit
 		/obj/item/organ/internal/butt/atomic = 1, //monkestation edit
+		*/ // Teatro Espacial 13 edit: Removed the atomic butt organ and the polymorph wand from the oddity loot pool
 	))
 
 
@@ -407,7 +408,7 @@ GLOBAL_LIST_INIT(maint_fauna, list(//fauna: there be critters living in yer main
 #define maint_common_weight 4497 //monkestation edit: from 4500 to 4497
 #define maint_uncommon_weight 900
 #define maint_rarity_weight 99
-#define maint_oddity_weight 4 //1 out of 10,000 would give metastation (180 spawns) a 2 in 111 chance of spawning an oddity per round, similar to xeno egg, monkestation edit: from 1 to 4
+#define maint_oddity_weight 1 //1 out of 10,000 would give metastation (180 spawns) a 2 in 111 chance of spawning an oddity per round, similar to xeno egg, monkestation edit: from 1 to 4
 #define maint_holiday_weight 3500 // When holiday loot is enabled, it'll give every loot item a 25% chance of being a holiday item
 #define maint_fauna_weight 150 //monkestation edit: adds friendly maintenance bees, also allows for other maintenance fauna to be coded in.
 
