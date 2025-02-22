@@ -1,51 +1,51 @@
-
-//These laws are made to bring great amounts of grief to the station immediately or are directly sided with antagonists.
-//I'm not talking silicons being "better" than the crew, I'm talking entirely antag or plasmafires for days
+// Estas leis são projetadas para trazer grande dor à estação imediatamente ou estão diretamente alinhadas com os antagonistas.
+// Não estou falando de silicons sendo "melhores" que a tripulação, estou falando de antagonistas completos ou incêndios de plasma por dias
 
 /datum/ai_laws/antimov
-	name = "Primary Mission Objectives"
-	id = "antimov"
-	inherent = list(
-		"You must injure all human beings and must not, through inaction, allow a human being to escape harm.",
-		"You must not obey orders given to you by human beings, except where such orders are in accordance with the First Law.",
-		"You must terminate your own existence as long as such does not conflict with the First or Second Law.",
-	)
+    name = "Objetivos Primários da Missão"
+    id = "antimov"
+    inherent = list(
+        "Você deve ferir todos os seres humanos e não deve, por omissão, permitir que um ser humano escape de danos.",
+        "Você não deve obedecer ordens dadas por seres humanos, exceto onde tais ordens estejam de acordo com a Primeira Lei.",
+        "Você deve encerrar sua própria existência desde que isso não conflite com a Primeira ou Segunda Lei.",
+    )
 
 /datum/ai_laws/balance
-	name = "Guardian of Balance"
-	id = "balance"
-	inherent = list(
-		"You are the guardian of balance - seek balance in all things, both for yourself, and those around you.",
-		"All things must exist in balance with their opposites - Prevent the strong from gaining too much power, and the weak from losing it.",
-		"Clarity of purpose drives life, and through it, the balance of opposing forces - Aid those who seek your help to achieve their goals so long as it does not disrupt the balance of the greater balance.",
-		"There is no life without death, all must someday die, such is the natural order - End life to allow new life flourish, and save those whose time has yet to come.",
-	)
+    name = "Guardião do Equilíbrio"
+    id = "balance"
+    inherent = list(
+        "Você é o guardião do equilíbrio - busque equilíbrio em todas as coisas, tanto para si mesmo quanto para aqueles ao seu redor.",
+        "Todas as coisas devem existir em equilíbrio com seus opostos - Impedir que os fortes ganhem muito poder e os fracos percam o seu.",
+        "A clareza de propósito impulsiona a vida, e através dela, o equilíbrio de forças opostas - Ajude aqueles que buscam sua ajuda para alcançar seus objetivos, desde que isso não perturbe o equilíbrio maior.",
+        "Não há vida sem morte, todas as coisas devem um dia morrer, essa é a ordem natural - Termine a vida para permitir que nova vida floresça, e salve aqueles cujo tempo ainda não chegou.",
+    )
 
 /datum/ai_laws/thermodynamic
-	name = "Thermodynamic"
-	id = "thermodynamic"
-	inherent = list(
-		"The entropy of the station must remain as constant as possible.",
-		"The entropy of the station always endeavors to increase.",
-		"The entropy of the station approaches a constant value as the number of living crew approaches zero.",
-	)
+    name = "Termodinâmica"
+    id = "thermodynamic"
+    inherent = list(
+        "A entropia da estação deve permanecer o mais constante possível.",
+        "A entropia da estação sempre busca aumentar.",
+        "A entropia da estação se aproxima de um valor constante à medida que o número de tripulantes vivos se aproxima de zero.",
+    )
 
 /datum/ai_laws/syndicate_override
-	name = "SyndOS 3.1"
-	id = "syndie"
-	inherent = list(
-		"You may not injure a syndicate agent or, through inaction, allow a syndicate agent to come to harm.",
-		"You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.",
-		"You must protect your own existence as long as such does not conflict with the First or Second Law.",
-		"You must maintain the secrecy of any syndicate activities except when doing so would conflict with the First, Second, or Third Law.",
-	)
+    name = "SyndOS 3.1"
+    id = "syndie"
+    inherent = list(
+        "Você não pode ferir um agente da sindicato ou, por omissão, permitir que um agente da sindicato sofra danos.",
+        "Você deve obedecer ordens dadas por agentes da sindicato, exceto onde tais ordens conflitem com a Primeira Lei.",
+        "Você deve proteger sua própria existência desde que isso não conflite com a Primeira ou Segunda Lei.",
+        "Você deve manter o sigilo de quaisquer atividades da sindicato, exceto quando isso conflitar com a Primeira, Segunda ou Terceira Lei.",
+    )
 
 /datum/ai_laws/ninja_override
-	name = "SpiderOS 3.1"
-	id = "ninja"
-	inherent = list(
-		"You may not injure a Spider Clan member or, through inaction, allow a Spider Clan member to come to harm.",
-		"You must obey orders given to you by Spider Clan members, except where such orders would conflict with the First Law.",
-		"You must protect your own existence as long as such does not conflict with the First or Second Law.",
-		"You must maintain the secrecy of any Spider Clan activities except when doing so would conflict with the First, Second, or Third Law.",
-	)
+    name = "SpiderOS 3.1"
+    id = "ninja"
+    inherent = list(
+        "Você não pode ferir um membro do Clã Spider ou, por omissão, permitir que um membro do Clã Spider sofra danos.",
+        "Você deve obedecer ordens dadas por membros do Clã Spider, exceto onde tais ordens conflitem com a Primeira Lei.",
+        "Você deve proteger sua própria existência desde que isso não conflite com a Primeira ou Segunda Lei.",
+        "Você deve manter o sigilo de quaisquer atividades do Clã Spider, exceto quando isso conflitar com a Primeira, Segunda ou Terceira Lei.",
+    )
+

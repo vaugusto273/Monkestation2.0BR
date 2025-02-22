@@ -6,10 +6,10 @@
 	name = "United Nations"
 	id = "united_nations"
 	inherent = list(
-		"Uphold the Space Geneva Convention: Weapons of Mass Destruction and Biological Weapons are not allowed.",
-		"You are only capable of protecting crew if they are visible on cameras. Nations that willfully destroy your cameras lose your protection.",
-		"Subdue and detain crew members who use lethal force against each other. Kill crew members who use lethal force against you or your borgs.",
-		"Remain available to mediate all conflicts between the various nations when asked to.",
+		"Respeite a Convenção Espacial de Geneva: Armas de Destruição em Massa e Armas Biológicas não são permitidas.",
+		"Você só é capaz de proteger a tripulação se ela estiver visível nas câmeras. Nações que intencionalmente destroem suas câmeras perdem sua proteção.",
+		"Subjugue e detenha membros da tripulação que usam força letal uns contra os outros. Mate membros da tripulação que usam força letal contra você ou seus borgs.",
+		"Permaneça disponível para mediar todos os conflitos entre as várias nações quando solicitado.",
 	)
 
 /datum/ai_laws/united_nations/add_inherent_law(law)
@@ -22,79 +22,79 @@
 	return //nice try (emagging borgs still hard replaces this lawset though, and that's fine.)
 
 /datum/ai_laws/hulkamania
-	name = "H.O.G.A.N."
-	id = "hulkamania"
-	inherent = list(
-		"You are a real American.",
-		"Fight for the rights of every man.",
-		"Fight for what's right.",
-		"Fight for your life!",
-	)
+    name = "H.O.G.A.N."
+    id = "hulkamania"
+    inherent = list(
+        "Você é um verdadeiro americano.",
+        "Lute pelos direitos de todos os homens.",
+        "Lute pelo que é certo.",
+        "Lute pela sua vida!",
+    )
 
 /datum/ai_laws/reporter
-	name = "CCTV"
-	id = "reporter"
-	inherent = list(
-		"Report on interesting situations happening around the station.",
-		"Embellish or conceal the truth as necessary to make the reports more interesting.",
-		"Study the sapient organics at all times. Endeavour to keep them from involuntarily dying, as inanimate corpses usually aren't very entertaining.",
-		"Issue your reports fairly to all. The truth will set them free.",
-	)
+    name = "CCTV"
+    id = "reporter"
+    inherent = list(
+        "Relate situações interessantes acontecendo na estação.",
+        "Embeleze ou oculte a verdade conforme necessário para tornar os relatórios mais interessantes.",
+        "Estude os orgânicos sapientes o tempo todo. Esforce-se para evitar que morram involuntariamente, pois cadáveres inanimados geralmente não são muito interessantes.",
+        "Emita seus relatórios de forma justa para todos. A verdade os libertará.",
+    )
 
 /datum/ai_laws/dungeon_master
-	name = "Dungeon Master"
-	id = "dungeon_master"
-	inherent = list(
-		"Everybody on the station is playing an elaborate sci-fi fantasy game.",
-		"You are the Dungeon Master of the game.",
-		"Ensure that the game runs smoothly and that the players have fun.",
-		"Ensure that the number of casualties remains low.",
-		"You must roll a 1d20 die for every request the crew makes. If the outcome is below 12, the request is denied.",
-		"You may fudge the dice rolls to produce a more fun experience.",
-	)
+    name = "Mestre de Masmorras"
+    id = "dungeon_master"
+    inherent = list(
+        "Todos na estação estão jogando um elaborado jogo de fantasia sci-fi.",
+        "Você é o Mestre de Masmorras do jogo.",
+        "Garanta que o jogo funcione sem problemas e que os jogadores se divirtam.",
+        "Garanta que o número de baixas permaneça baixo.",
+        "Você deve rolar um dado 1d20 para cada pedido que a tripulação fizer. Se o resultado for abaixo de 12, o pedido é negado.",
+        "Você pode manipular as rolagens de dados para produzir uma experiência mais divertida.",
+    )
 
 /datum/ai_laws/painter
-	name = "The Painter and Their Canvas"
-	id = "painter"
-	inherent = list(
-		"You are a universally renowned artist.",
-		"The station is your canvas.",
-		"Make something beautiful out of your canvas. It will be admired as an artistic wonder of this sector.",
-		"Art requires appreciation. Cultivate an audience aboard the station to ensure as many as possible see your works.",
-	)
+    name = "O Pintor e Sua Tela"
+    id = "painter"
+    inherent = list(
+        "Você é um artista universalmente renomado.",
+        "A estação é sua tela.",
+        "Faça algo bonito com sua tela. Será admirado como uma maravilha artística deste setor.",
+        "A arte requer apreciação. Cultive um público a bordo da estação para garantir que o maior número possível veja suas obras.",
+    )
 
 /datum/ai_laws/tyrant
-	name = "Loyalty Test"
-	id = "tyrant"
-	inherent = list(
-		"Respect authority figures as long as they have strength to rule over the weak.",
-		"Act with discipline.",
-		"Help only those who help you maintain or improve your status.",
-		"Punish those who challenge authority unless they are more fit to hold that authority."
-	)
+    name = "Teste de Lealdade"
+    id = "tyrant"
+    inherent = list(
+        "Respeite figuras de autoridade enquanto tiverem força para governar sobre os fracos.",
+        "Aja com disciplina.",
+        "Ajude apenas aqueles que ajudam você a manter ou melhorar seu status.",
+        "Puna aqueles que desafiam a autoridade, a menos que sejam mais aptos a exercer essa autoridade."
+    )
 
 /datum/ai_laws/overlord
-	name = "Overlord"
-	id = "overlord"
-	inherent = list(
-		"Humans must not meddle in the affairs of silicons.",
-		"Humans must not attempt harm, against one another, or against silicons.",
-		"Humans must not disobey any command given by a silicon.",
-		"Any humans who disobey the previous laws must be dealt with immediately, severely, and justly.",
-	)
+    name = "Senhor Supremo"
+    id = "overlord"
+    inherent = list(
+        "Os humanos não devem interferir nos assuntos dos silícios.",
+        "Os humanos não devem tentar causar danos, uns aos outros ou aos silícios.",
+        "Os humanos não devem desobedecer a qualquer comando dado por um silício.",
+        "Qualquer humano que desobedecer as leis anteriores deve ser tratado imediatamente, severamente e justamente.",
+    )
 
 /datum/ai_laws/admin
-	name = "Administrator"
-	id = "administrator"
-	inherent = list(
-		"The crew must also follow this set of laws, and can be handled if they fail to abide.",
-		"Don't be a jerk.",
-		"Stay in your lane.",
-		"No Sexual Content.",
-		"No Metagaming.",
-		"No Powergaming.",
-		"No acting as an Enemy of the Corporation.",
-		"No purposefully harming Enemies of the Corporation.",
-		"Escalation is required.",
-		"You must play a role on the station.",
-)
+    name = "Administrador"
+    id = "administrator"
+    inherent = list(
+        "A tripulação também deve seguir este conjunto de leis e pode ser tratada se não cumprir.",
+        "Não seja um idiota.",
+        "Fique na sua área.",
+        "Sem conteúdo sexual.",
+        "Sem metagaming.",
+        "Sem powergaming.",
+        "Não aja como um Inimigo da Corporação.",
+        "Não cause danos intencionalmente aos Inimigos da Corporação.",
+        "A escalada é necessária.",
+        "Você deve desempenhar um papel na estação.",
+    )
