@@ -1,3 +1,4 @@
+/* removal of florida man
 /datum/round_event_control/florida_man
 	name = "Florida Man"
 	typepath = /datum/round_event/ghost_role/florida_man
@@ -77,6 +78,7 @@
 	log_game("[key_name(floridan)] was spawned as Florida Man by an event.")
 	spawned_mobs += floridan
 	return SUCCESSFUL_SPAWN
+*/
 
 /obj/effect/holy
 	name = "holy"

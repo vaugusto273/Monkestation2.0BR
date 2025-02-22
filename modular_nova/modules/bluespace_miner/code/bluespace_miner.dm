@@ -181,7 +181,7 @@
 	build_path = /obj/machinery/bluespace_miner
 	req_components = list(
 		/obj/item/stack/sheet/glass = 1,
-		/obj/item/stack/ore/bluespace_crystal/refined = 1,
+		/obj/item/stack/ore/bluespace_crystal = 1,
 		/datum/stock_part/matter_bin = 2,
 		/datum/stock_part/micro_laser = 2,
 		/obj/item/stock_parts/manipulator = 2,

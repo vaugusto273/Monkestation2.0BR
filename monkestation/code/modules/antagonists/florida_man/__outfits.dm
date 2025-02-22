@@ -1,3 +1,4 @@
+/* Removal of florida man
 /datum/outfit/florida_man_one
 	name = "Florida Man Casual"
 	uniform = /obj/item/clothing/under/pants/jeans
@@ -23,3 +24,4 @@
 	name = "Florida Man Nudist"
 	shoes = /obj/item/clothing/shoes/sandal
 	back = /obj/item/storage/backpack
+*/
