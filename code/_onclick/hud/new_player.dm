@@ -120,7 +120,6 @@
 	. = ..()
 	if(!.)
 		return
-
 	var/datum/preferences/preferences = hud.mymob.client.prefs
 	preferences.current_window = PREFERENCE_TAB_CHARACTER_PREFERENCES
 	preferences.update_static_data(usr)
