@@ -126,6 +126,7 @@
 	preferences.update_static_data(usr)
 	preferences.ui_interact(usr)
 
+
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
 	screen_loc = "TOP:-54,CENTER:-35"
