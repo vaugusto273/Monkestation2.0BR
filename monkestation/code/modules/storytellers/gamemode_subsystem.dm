@@ -331,6 +331,8 @@ SUBSYSTEM_DEF(gamemode)
 
 		if(job_ban && is_banned_from(candidate.ckey, list(job_ban, ROLE_SYNDICATE)))
 			continue
+		if(!candidate.client.prefs.read_preference(/datum/preference/toggle/beantagpref))
+			continue
 		candidates += candidate
 	return candidates
 
