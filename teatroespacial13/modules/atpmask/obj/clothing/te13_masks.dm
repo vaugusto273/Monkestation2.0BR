@@ -55,11 +55,13 @@
 	worn_icon = 'monkestation/icons/mob/clothing/mask.dmi'
 	icon_state = "atp_mask"
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+
 	var/static/list/atp_voicelines = list(
 		"Stay Alert" = 'teatroespacial13/modules/atpmask/sound/atpmask/stayalert.ogg',
 		"Hostile" = 'teatroespacial13/modules/atpmask/sound/atpmask/hostile.ogg',
 		"Check In" = 'teatroespacial13/modules/atpmask/sound/atpmask/checkin.ogg'
 	)
+
 //	inhand_icon_state = "gas_alt"
 	modifies_speech = TRUE
 	COOLDOWN_DECLARE(spamcheck)
@@ -69,6 +71,7 @@
 	if(slot & ITEM_SLOT_MASK)
 		RegisterSignal(equipee, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(item_removed))
 		RegisterSignal(equipee, COMSIG_LIVING_DEATH, PROC_REF(death_sound))
+		RegisterSignal(equipee, COMSIG_MOB_POINTED, PROC_REF(point_handler))
 		if(istype(equipee))
 			equipee.bubble_icon = "atp"
 
@@ -97,5 +100,21 @@
 	SIGNAL_HANDLER
 	playsound(src, 'monkestation/sound/items/atp_death_sound.ogg', 20, FALSE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 
+/obj/item/clothing/mask/gas/atp/proc/point_handler(mob/living/pointing_mob, mob/pointed_at)
+	SIGNAL_HANDLER
+
+	if(!COOLDOWN_FINISHED(src, spamcheck))
+		return
+
+
+	if(!isliving(pointed_at))
+		return
+
+	if(pointing_mob == pointed_at)
+		return
+
+	pointing_mob.say("HOSTILE!!")
+	playsound(src, atp_voicelines[2], 35, FALSE, SHORT_RANGE_SOUND_EXTRARANGE-2, falloff_exponent = 0, ignore_walls = FALSE, use_reverb = FALSE)
+	pointed_at.do_alert_animation()
 
 ////////////////////// MÁSCARA DO TRICKY ////////////////////////////
