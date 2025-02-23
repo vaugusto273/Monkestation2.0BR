@@ -8728,4 +8728,5 @@
 #include "modular_nova\master_files\code\modules\reagents\chemistry\holder.dm"
 #include "teatroespacial13\modules\kitchen-plus\code\kitchenplus_qol.dm"
 #include "code\controllers\subsystem\redbot.dm"
+#include "teatroespacial13\modules\atpmask\obj\clothing\te13_masks.dm"
 // END_INCLUDE
