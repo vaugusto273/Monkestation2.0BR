@@ -117,8 +117,8 @@
 			)
 		if(COLONY_THREAT_PIRATES) // Pirates. Ranged could become a problem fast
 			defending_mobs = list(
-				/mob/living/simple_animal/hostile/pirate/melee/space,
-				/mob/living/simple_animal/hostile/pirate/ranged/space,
+				/mob/living/basic/trooper/pirate/melee/space,
+				/mob/living/basic/trooper/pirate/ranged/space,
 			)
 		if(COLONY_THREAT_XENOS) // i lub tgmc
 			defending_mobs = list(
@@ -185,8 +185,8 @@
 
 /obj/structure/ore_vent/ghost_mining/pirate
 	defending_mobs = list(
-		/mob/living/simple_animal/hostile/pirate/melee,
-		/mob/living/simple_animal/hostile/pirate/ranged,
+		/mob/living/basic/trooper/pirate/melee,
+		/mob/living/basic/trooper/pirate/ranged,
 	) //you can space cheese the starting ones, but only the starting ones
 	threat_pool = list(COLONY_THREAT_PIRATES)
 
