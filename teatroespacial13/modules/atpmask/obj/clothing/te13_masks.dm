@@ -6,7 +6,7 @@
 /obj/item/clothing/mask/gas/sechailer
 	var/obj/item/radio/intercom/radio
 	actions_types = list(/datum/action/item_action/backup, /datum/action/item_action/halt, /datum/action/item_action/adjust)
-	COOLDOWN_DECLARE(backup_cooldown)
+	COOLDOWN_DECLARE(backup_cooldown2)
 
 /obj/item/clothing/mask/gas/sechailer/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/halt))
@@ -32,7 +32,7 @@
 
 	if (!isliving(usr) || !can_use(usr))
 		return
-	if (!COOLDOWN_FINISHED(src, backup_cooldown))
+	if (!COOLDOWN_FINISHED(src, backup_cooldown2))
 		usr.balloon_alert(usr, "On Cooldown!")
 		return
 	if (!safety)
@@ -42,7 +42,7 @@
 		usr.balloon_alert(usr, "Out of Range!")
 		return
 
-	COOLDOWN_START(src, backup_cooldown, 1 MINUTES)
+	COOLDOWN_START(src, backup_cooldown2, 1 MINUTES)
 	radio.talk_into(usr, "REQUISITANDO REFORÇOS EM: [location]!", RADIO_CHANNEL_SECURITY)
 	usr.audible_message("<font color='red' size='5'><b>REFORÇO REQUISITADO!</b></font>")
 	usr.balloon_alert_to_viewers("Backup Requested!", "Backup Requested!", 7)
