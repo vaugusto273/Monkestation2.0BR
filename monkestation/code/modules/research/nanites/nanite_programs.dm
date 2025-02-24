@@ -338,6 +338,12 @@
 /datum/nanite_program/proc/send_code_inverted()
 	send_code_any(NES_SENT_CODE_INVERTED)
 
+/datum/nanite_program/proc/send_code_signal()
+	send_code_any(NES_SENT_CODE_SIGNAL)
+
+/datum/nanite_program/proc/send_code_signal_inverted()
+	send_code_any(NES_SENT_CODE_SIGNAL_INVERTED)
+
 /datum/nanite_program/proc/send_trigger_code()
 	send_code_any(NES_SENT_CODE_TRIGGER)
 
