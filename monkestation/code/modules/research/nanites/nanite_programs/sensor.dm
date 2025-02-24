@@ -26,10 +26,12 @@
 	var/event_result = check_event()
 
 	if (spendable ? check_spent(event_result) : event_result)
-		send_code()
+		send_code_signal()
+		send_trigger_code()
 
 	if (spendable && check_spent_inverted(event_result))
-		send_code_inverted()
+		send_code_signal_inverted()
+		send_trigger_code_inverted()
 
 /datum/nanite_program/sensor/on_trigger(comm_message)
 	if (check_event())
@@ -41,22 +43,22 @@
 	return
 
 /datum/nanite_program/sensor/proc/check_spent(event_result)
-	if(check_event())
-		if(!spent)
-			spent = TRUE
-			return TRUE
-		return FALSE
-	spent = FALSE
-	return FALSE
+    if (event_result)
+        if (!spent)
+            spent = TRUE
+            return TRUE
+        return FALSE
+    spent = FALSE
+    return FALSE
 
 /datum/nanite_program/sensor/proc/check_spent_inverted(event_result)
-	if(!check_event())
-		if(!spent_inverted)
-			spent_inverted = TRUE
-			return TRUE
-		return FALSE
-	spent_inverted = FALSE
-	return FALSE
+    if (!event_result)
+        if (!spent_inverted)
+            spent_inverted = TRUE
+            return TRUE
+        return FALSE
+    spent_inverted = FALSE
+    return FALSE
 
 /datum/nanite_program/sensor/health
 	name = "Health Sensor"
