@@ -68,10 +68,10 @@
 
 /obj/item/clothing/mask/gas/atp/equipped(mob/living/equipee, slot)
 	. = ..()
+	RegisterSignal(equipee, COMSIG_MOB_POINTED, PROC_REF(point_handler))
 	if(slot & ITEM_SLOT_MASK)
 		RegisterSignal(equipee, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(item_removed))
 		RegisterSignal(equipee, COMSIG_LIVING_DEATH, PROC_REF(death_sound))
-		RegisterSignal(equipee, COMSIG_MOB_POINTED, PROC_REF(point_handler))
 		if(istype(equipee))
 			equipee.bubble_icon = "atp"
 
@@ -103,9 +103,10 @@
 /obj/item/clothing/mask/gas/atp/proc/point_handler(mob/living/pointing_mob, mob/pointed_at)
 	SIGNAL_HANDLER
 
+
+	if (!)
 	if(!COOLDOWN_FINISHED(src, spamcheck))
 		return
-
 
 	if(!isliving(pointed_at))
 		return
