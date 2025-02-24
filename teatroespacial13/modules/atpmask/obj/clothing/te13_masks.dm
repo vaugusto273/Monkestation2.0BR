@@ -1,4 +1,8 @@
 //////////// PORTA O SISTEMA DE BACKUP DO BUBBER ///////////////////////////
+/obj/item/clothing/mask/gas/sechailer/swat
+	actions_types = list(/datum/action/item_action/backup, /datum/action/item_action/halt)
+	COOLDOWN_DECLARE(backup_cooldown)
+
 /obj/item/clothing/mask/gas/sechailer
 	var/obj/item/radio/intercom/radio
 	actions_types = list(/datum/action/item_action/backup, /datum/action/item_action/halt, /datum/action/item_action/adjust)
@@ -68,10 +72,10 @@
 
 /obj/item/clothing/mask/gas/atp/equipped(mob/living/equipee, slot)
 	. = ..()
+	RegisterSignal(equipee, COMSIG_MOB_POINTED, PROC_REF(point_handler))
 	if(slot & ITEM_SLOT_MASK)
 		RegisterSignal(equipee, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(item_removed))
 		RegisterSignal(equipee, COMSIG_LIVING_DEATH, PROC_REF(death_sound))
-		RegisterSignal(equipee, COMSIG_MOB_POINTED, PROC_REF(point_handler))
 		if(istype(equipee))
 			equipee.bubble_icon = "atp"
 
@@ -79,7 +83,7 @@
 	SIGNAL_HANDLER
 	if(dropped_item != src)
 		return
-	UnregisterSignal(wearer, list(COMSIG_MOB_UNEQUIPPED_ITEM, COMSIG_LIVING_DEATH))
+	UnregisterSignal(wearer, list(COMSIG_MOB_UNEQUIPPED_ITEM, COMSIG_LIVING_DEATH, COMSIG_MOB_POINTED))
 	if(istype(wearer))
 		wearer.bubble_icon = initial(wearer.bubble_icon)
 
@@ -105,7 +109,6 @@
 
 	if(!COOLDOWN_FINISHED(src, spamcheck))
 		return
-
 
 	if(!isliving(pointed_at))
 		return
