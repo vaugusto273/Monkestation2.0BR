@@ -4,12 +4,12 @@ GLOBAL_LIST_INIT(store_accessory, generate_store_items(/datum/store_item/accesso
 
 /datum/store_item/accessory
 	category = LOADOUT_ITEM_ACCESSORY
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/accessory/maid_apron
 	name = "Maid Apron"
 	item_path = /obj/item/clothing/accessory/maidapron
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/accessory/waistcoat
 	name = "Waistcoat"

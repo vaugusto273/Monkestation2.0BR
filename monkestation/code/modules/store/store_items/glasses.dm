@@ -6,7 +6,7 @@ GLOBAL_LIST_INIT(store_glasses, generate_store_items(/datum/store_item/glasses))
 /datum/store_item/glasses/prescription_glasses
 	name = "Glasses"
 	item_path = /obj/item/clothing/glasses/regular
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/glasses/prescription_glasses/circle_glasses
 	name = "Circle Glasses"
@@ -31,17 +31,17 @@ GLOBAL_LIST_INIT(store_glasses, generate_store_items(/datum/store_item/glasses))
 /datum/store_item/glasses/cold_glasses
 	name = "Cold Glasses"
 	item_path = /obj/item/clothing/glasses/cold
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/glasses/heat_glasses
 	name = "Heat Glasses"
 	item_path = /obj/item/clothing/glasses/heat
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/glasses/geist_glasses
 	name = "Geist Gazers"
 	item_path = /obj/item/clothing/glasses/geist_gazers
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/glasses/orange_glasses
 	name = "Orange Glasses"
@@ -50,7 +50,7 @@ GLOBAL_LIST_INIT(store_glasses, generate_store_items(/datum/store_item/glasses))
 /datum/store_item/glasses/psych_glasses
 	name = "Psych Glasses"
 	item_path = /obj/item/clothing/glasses/psych
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/glasses/red_glasses
 	name = "Red Glasses"
@@ -87,7 +87,7 @@ GLOBAL_LIST_INIT(store_glasses, generate_store_items(/datum/store_item/glasses))
 /datum/store_item/glasses/sechud
 	name = "Security HUD"
 	item_path = /obj/item/clothing/glasses/hud/security
-	item_cost = 5000
+	item_cost = 500
 
 /*
 *	FAMILIES
@@ -96,9 +96,9 @@ GLOBAL_LIST_INIT(store_glasses, generate_store_items(/datum/store_item/glasses))
 /datum/store_item/glasses/osi
 	name = "OSI Glasses"
 	item_path = /obj/item/clothing/glasses/osi
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/glasses/phantom
 	name = "Phantom Glasses"
 	item_path = /obj/item/clothing/glasses/phantom
-	item_cost = 7500
+	item_cost = 750
