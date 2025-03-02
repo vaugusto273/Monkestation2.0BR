@@ -62,22 +62,22 @@ GLOBAL_LIST_INIT(store_pockets, generate_store_items(/datum/store_item/pocket))
 /datum/store_item/pocket/zippolighter/bright
 	name = "Illuminative Lighter"
 	item_path = /obj/item/lighter/bright
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/pocket/zippolighter/mime
 	name = "Mime's Lighter"
 	item_path = /obj/item/lighter/mime
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/pocket/zippolighter/skull
 	name = "Skull Zippo Lighter"
 	item_path = /obj/item/lighter/skull
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/pocket/paicard
 	name = "Personal AI Device"
 	item_path = /obj/item/pai_card
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/pocket/cigarettes
 	name = "Cigarette Pack"
@@ -86,12 +86,12 @@ GLOBAL_LIST_INIT(store_pockets, generate_store_items(/datum/store_item/pocket))
 /datum/store_item/pocket/cigar //smoking is bad mkay
 	name = "Cigar"
 	item_path = /obj/item/clothing/mask/cigarette/cigar
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/pocket/flask
 	name = "Flask"
 	item_path = /obj/item/reagent_containers/cup/glass/flask
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/pocket/multipen
 	name = "Multicolored Pen"
@@ -104,12 +104,12 @@ GLOBAL_LIST_INIT(store_pockets, generate_store_items(/datum/store_item/pocket))
 /datum/store_item/pocket/tapeplayer
 	name = "Universal Recorder"
 	item_path = /obj/item/taperecorder
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/pocket/tape
 	name = "Spare Cassette Tape"
 	item_path = /obj/item/tape/random
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/pocket/newspaper
 	name = "Newspaper"
@@ -122,9 +122,9 @@ GLOBAL_LIST_INIT(store_pockets, generate_store_items(/datum/store_item/pocket))
 /datum/store_item/pocket/brush
 	name = "Hairbrush"
 	item_path = /obj/item/hairbrush
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/pocket/comb
 	name = "Comb"
 	item_path = /obj/item/hairbrush/comb
-	item_cost = 5000
+	item_cost = 500
