@@ -8745,4 +8745,7 @@
 #include "teatroespacial13\modules\atpmask\obj\clothing\te13_masks.dm"
 #include "teatroespacial13\code\datums\announcers\orchestrator.dm"
 #include "teatroespacial13\code\datums\station_traits\neutral_traits.dm"
+#include "code\__DEFINES\~nova_defines\keybindings.dm"
+#include "modular_nova\master_files\code\modules\mob\living\emote_popup.dm"
+#include "modular_nova\modules\indicators\code\combat_indicator.dm"
 // END_INCLUDE
