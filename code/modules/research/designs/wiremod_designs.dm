@@ -10,6 +10,18 @@
 	materials = list(/datum/material/glass =HALF_SHEET_MATERIAL_AMOUNT, /datum/material/iron =HALF_SHEET_MATERIAL_AMOUNT)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design/integrated_circuit/chemical
+	name = "Medical Circuit Board"
+	id = "integrated_circuit_chemical"
+	desc = "This lets you use chemicals in your circuits."
+	build_path = /obj/item/integrated_circuit/chemical
+	build_type = COMPONENT_PRINTER
+	category = list(
+		RND_CATEGORY_CIRCUITRY + RND_CATEGORY_CIRCUITRY_CORE
+	)
+	materials = list(/datum/material/glass =HALF_SHEET_MATERIAL_AMOUNT, /datum/material/iron =HALF_SHEET_MATERIAL_AMOUNT)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
 /datum/design/circuit_multitool
 	name = "Circuit Multitool"
 	desc = "A circuit multitool to mark entities and load them into."

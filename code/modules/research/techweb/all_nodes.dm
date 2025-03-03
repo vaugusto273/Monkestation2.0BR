@@ -333,6 +333,7 @@
 	description = "Research on how to fully exploit the power of integrated circuits"
 	design_ids = list(
 		"circuit_multitool",
+		"integrated_circuit_chemical",
 		"comp_access_checker",
 		"comp_arithmetic",
 		"comp_assoc_list_pick",
