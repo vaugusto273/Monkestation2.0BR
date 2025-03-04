@@ -53,6 +53,9 @@
 /datum/proc/p_es(temp_gender)
 	. = "es"
 
+/datum/proc/p_themselves(temp_gender)
+	return "itself"
+
 /datum/proc/plural_s(pluralize)
 	switch(copytext_char(pluralize, -2))
 		if ("ss")
@@ -80,6 +83,32 @@
 			. = "he"
 	if(capitalized)
 		. = capitalize(.)
+
+/client/p_themselves(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	switch(temp_gender)
+		if(FEMALE)
+			return "herself"
+		if(MALE)
+			return "himself"
+		if(PLURAL)
+			return "themselves"
+		else
+			return "itself"
+
+/mob/p_themselves(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	switch(temp_gender)
+		if(FEMALE)
+			return "herself"
+		if(MALE)
+			return "himself"
+		if(PLURAL)
+			return "themselves"
+		else
+			return "itself"
 
 /client/p_their(capitalized, temp_gender)
 	if(!temp_gender)
@@ -262,6 +291,13 @@
 		temp_gender = PLURAL
 	return ..()
 
+/mob/living/carbon/human/p_themselves(temp_gender)
+	var/obscured = check_obscured_slots()
+	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	if((obscured & ITEM_SLOT_ICLOTHING) && skipface)
+		temp_gender = PLURAL
+	return ..()
+
 /mob/living/carbon/human/p_their(capitalized, temp_gender)
 	var/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
@@ -336,6 +372,19 @@
 	if(capitalized)
 		. = capitalize(.)
 
+/obj/item/clothing/p_themselves(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	switch(temp_gender)
+		if(FEMALE)
+			return "herself"
+		if(MALE)
+			return "himself"
+		if(PLURAL)
+			return "themselves"
+		else
+			return "itself"
+
 /obj/item/clothing/p_their(capitalized, temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
@@ -405,6 +454,9 @@
 
 /datum/mind/p_they(capitalized, temp_gender)
 	return current?.p_they(capitalized, temp_gender) || ..()
+
+/datum/mind/p_themselves(temp_gender)
+	return current?.p_themselves(temp_gender) || ..()
 
 /datum/mind/p_their(capitalized, temp_gender)
 	return current?.p_their(capitalized, temp_gender) || ..()

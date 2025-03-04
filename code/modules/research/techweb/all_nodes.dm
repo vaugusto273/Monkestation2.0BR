@@ -21,6 +21,7 @@
 		"manipulator_filter_cargo",
 		"manipulator_filter_internal",
 		"bodybag",
+		"shuttle_eng",
 		"bounced_radio",
 		"bowl",
 		"bucket",
@@ -613,6 +614,12 @@
 	prereq_ids = list("base")
 	design_ids = list(
 		"adv_capacitor",
+		"borg_upgrade_engineering_shuttle_blueprints",
+		"propulsion_engine",
+		"shuttle_blueprints",
+		"shuttle_control",
+		"shuttle_docker",
+		"shuttlerods",
 		"adv_matter_bin",
 		"adv_scanning",
 		"airalarm_electronics",

@@ -493,7 +493,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Mob has fov applied to it
 /* #define TRAIT_FOV_APPLIED "fov_applied" */
 /// Mob is using the scope component
-/* #define TRAIT_USER_SCOPED "user_scoped" */
+#define TRAIT_USER_SCOPED "user_scoped"
 /// Mob is unable to feel pain
 #define TRAIT_ANALGESIA "analgesia"
 
@@ -1305,4 +1305,17 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Trait applied to objects and mobs that can attack a boulder and break it down. (See /obj/item/boulder/manual_process())
 #define TRAIT_BOULDER_BREAKER "boulder_breaker"
 
+/**
+ * This trait is given to turfs that have had shuttle frame parts built on them, but are not yet part of a shuttle.
+ * When attempting custom shuttle creation, a flood fill algorithm
+ * checks for turfs with this trait to determine the turfs
+ * that will constitute the created shuttle.
+ */
+#define TRAIT_SHUTTLE_CONSTRUCTION_TURF "shuttle_construction_turf"
+
+// Trait given to areas with a shuttle construction turf in them
+#define TRAIT_HAS_SHUTTLE_CONSTRUCTION_TURF "has_shuttle_construction_turf"
+
+///A trait given to users as a mutex to prevent repeated unresolved attempts to christen a shuttle
+#define TRAIT_ATTEMPTING_CHRISTENING "attempting_christening"
 // END TRAIT DEFINES

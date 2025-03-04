@@ -6,3 +6,6 @@
 #define CRAFTING_MACHINERY_USE 0
 ///If the structure is only "used" i.e. it checks to see if it's nearby and allows crafting, but doesn't delete it
 #define CRAFTING_STRUCTURE_USE 0
+
+///If the ingredient is only "used" i.e. it checks to see if it's nearby and allows crafting, but doesn't delete it
+#define CRAFTING_INGREDIENT_USE 0

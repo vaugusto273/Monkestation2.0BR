@@ -30,3 +30,11 @@
 // Area fire signals
 /// Sent when an area's fire var changes: (fire_value)
 #define COMSIG_AREA_FIRE_CHANGED "area_fire_set"
+
+
+
+/// From base of turf/change_area(area/old_area)
+#define COMSIG_AREA_TURF_ADDED "area_turf_added"
+
+/// From base of turf/change_area(area/new_area)
+#define COMSIG_AREA_TURF_REMOVED "area_turf_removed"

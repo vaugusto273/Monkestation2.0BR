@@ -1150,6 +1150,22 @@
 		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_JANITOR
 	)
 
+/datum/design/borg_upgrade_shuttle_blueprints
+	name = "Engineering Shuttle Blueprints"
+	id = "borg_upgrade_engineering_shuttle_blueprints"
+	build_type = MECHFAB
+	build_path = /obj/item/borg/upgrade/shuttle_blueprints
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT*5,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT*2.5,
+	)
+	construction_time = 4 SECONDS
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ENGINEERING
+	)
+
+
+
 /datum/design/borg_upgrade_expand
 	name = "Expand Module"
 	id = "borg_upgrade_expand"
@@ -1979,3 +1995,14 @@
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
 
 // MONKE END - changed/added lots of department_flags
+
+
+/datum/design/board/propulsion_engine
+	name = "Propulsion Engine Board"
+	desc = "The circuit for a propulsion engine."
+	id = "propulsion_engine"
+	build_path = /obj/item/circuitboard/machine/engine/propulsion
+	category = list(
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_ENGINEERING
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_CARGO | DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING

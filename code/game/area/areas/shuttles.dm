@@ -2,11 +2,12 @@
 //These are shuttle areas; all subtypes are only used as teleportation markers, they have no actual function beyond that.
 //Multi area shuttles are a thing now, use subtypes! ~ninjanomnom
 
+
 /area/shuttle
 	name = "Shuttle"
 	requires_power = FALSE
 	static_lighting = TRUE
-	has_gravity = STANDARD_GRAVITY
+	//default_gravity = STANDARD_GRAVITY
 	always_unpowered = FALSE
 	// Loading the same shuttle map at a different time will produce distinct area instances.
 	area_flags = NONE
@@ -16,15 +17,21 @@
 	area_limited_icon_smoothing = /area/shuttle
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 
-
-/area/shuttle/PlaceOnTopReact(list/new_baseturfs, turf/fake_turf_type, flags)
+/area/shuttle/PlaceOnTopReact(list/new_baseturfs, turf/added_layer, flags)
 	. = ..()
-	if(length(new_baseturfs) > 1 || fake_turf_type)
-		return // More complicated larger changes indicate this isn't a player
-	if(ispath(new_baseturfs[1], /turf/open/floor/plating))
+	if(ispath(added_layer, /turf/open/floor/plating))
+		new_baseturfs.Add(/turf/baseturf_skipover/shuttle)
+		. |= CHANGETURF_GENERATE_SHUTTLE_CEILING
+	else if(ispath(new_baseturfs[1], /turf/open/floor/plating))
 		new_baseturfs.Insert(1, /turf/baseturf_skipover/shuttle)
+		. |= CHANGETURF_GENERATE_SHUTTLE_CEILING
 
-////////////////////////////Multi-area shuttles////////////////////////////
+////////////////////////////Custom Shuttles////////////////////////////
+
+/area/shuttle/custom
+	requires_power = TRUE
+
+////////////////////////////Multi-area shuttles//////////////////////////////
 
 ////////////////////////////Syndicate infiltrator////////////////////////////
 
