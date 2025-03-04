@@ -2,6 +2,7 @@
 #define REAGENT_ORGANIC 1
 #define REAGENT_SYNTHETIC 2
 #define SPECIES_HEMOPHAGE "hemophage"
+#define SPECIES_XENO "xeno"
 /*
 //Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
 #define SPECIES_AKULA "akula"
