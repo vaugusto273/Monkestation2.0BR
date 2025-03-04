@@ -7295,6 +7295,8 @@
 #include "monkestation\code\modules\coin-events\challenges\challenge\no_healing.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\no_sprint.dm"
 #include "monkestation\code\modules\coin-events\challenges\challenge\paranoia.dm"
+#include "monkestation\code\modules\coin-events\challenges\challenge\hemiplegia.dm"
+#include "monkestation\code\modules\coin-events\challenges\challenge\degraded_genes.dm"
 #include "monkestation\code\modules\conveyor\code\conveyor.dm"
 #include "monkestation\code\modules\conveyor_sorter\code\conveyor_sorter.dm"
 #include "monkestation\code\modules\cryopods\_cryopod.dm"
