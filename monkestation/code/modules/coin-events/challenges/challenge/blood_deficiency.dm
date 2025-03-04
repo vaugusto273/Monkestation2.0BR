@@ -2,4 +2,4 @@
     challenge_name = "Sem produção de sangue"
     challenge_payout = 300
     difficulty = "hardish"
-    applied_trait = TRAIT_BLOOD_DEFICIENCY
+    applied_trait = list(TRAIT_BLOOD_DEFICIENCY,TRAIT_NO_CLONING)
