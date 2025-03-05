@@ -19,7 +19,7 @@
 	challenge_name = "Paranoia"
 	challenge_payout = 600
 	difficulty = "Hellish"
-	applied_trait = TRAIT_PARANOIA
+	applied_trait = list(TRAIT_PARANOIA,TRAIT_NO_CLONING)
 	var/added = FALSE
 
 /datum/challenge/paranoia/on_apply()
