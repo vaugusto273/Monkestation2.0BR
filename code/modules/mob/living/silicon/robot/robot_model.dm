@@ -362,6 +362,17 @@
 	model_select_icon = "service"
 	cyborg_base_icon = "clown"
 	hat_offset = -2
+	borg_skins = list(
+		"Clown" = list(SKIN_ICON_STATE = "clown"),
+		"k4tclown" = list(SKIN_ICON_STATE = "k4tclown", SKIN_ICON = CYBORG_ICON_TALLCLOWN),
+		"Clownman" = list(SKIN_ICON_STATE = "clownman", SKIN_ICON = CYBORG_ICON_NEWCLOWN),
+		"Clownbot" = list(SKIN_ICON_STATE = "clownbot", SKIN_ICON = CYBORG_ICON_NEWCLOWN),
+		"Garish" = list(SKIN_ICON_STATE = "garish", SKIN_ICON = CYBORG_ICON_NEWCLOWN),
+		"Marinamommy" = list(SKIN_ICON_STATE = "marina_mommy", SKIN_ICON = CYBORG_ICON_NEWCLOWN),
+		"Bootyclown" = list(SKIN_ICON_STATE = "bootyclown", SKIN_ICON = CYBORG_ICON_NEWCLOWN),
+		"Slipperclown" = list(SKIN_ICON_STATE = "slipper_clown", SKIN_ICON = CYBORG_ICON_NEWCLOWN),
+		"Arachneclown" = list(SKIN_ICON_STATE = "arachne_clown", SKIN_ICON = CYBORG_ICON_NEWCLOWN),
+	)
 
 /obj/item/robot_model/clown/respawn_consumable(mob/living/silicon/robot/cyborg, coeff = 1)
 	. = ..()
@@ -409,6 +420,29 @@
 	borg_skins = list(
 		"Engineer" = list(SKIN_ICON_STATE = "engineer"),
 		"Drakeeng" = list(SKIN_ICON_STATE = "drakeeng", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
+		"Mekaengi" = list(SKIN_ICON_STATE = "mekaengi", SKIN_ICON = CYBORG_ICON_TALLENG),
+		"K4tengi" = list(SKIN_ICON_STATE = "k4tengi", SKIN_ICON = CYBORG_ICON_TALLENG),
+		"K4tengialt1" = list(SKIN_ICON_STATE = "k4tengi_alt1", SKIN_ICON = CYBORG_ICON_TALLENG),
+		"Fmekaeng" = list(SKIN_ICON_STATE = "fmekaeng", SKIN_ICON = CYBORG_ICON_TALLENG),
+		"Mmekaeng" = list(SKIN_ICON_STATE = "mmekaeng", SKIN_ICON = CYBORG_ICON_TALLENG),
+		"Sfmekaengi" = list(SKIN_ICON_STATE = "sfmekaengi", SKIN_ICON = CYBORG_ICON_TALLENG),
+		"Loaderborg" = list(SKIN_ICON_STATE = "loaderborg", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Spidereng" = list(SKIN_ICON_STATE = "spidereng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Handyeng" = list(SKIN_ICON_STATE = "handyeng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Heavyeng" = list(SKIN_ICON_STATE = "heavyeng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Marinaeng" = list(SKIN_ICON_STATE = "marinaeng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Sleekeng" = list(SKIN_ICON_STATE = "sleekeng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Caneng" = list(SKIN_ICON_STATE = "caneng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Bootyeng" = list(SKIN_ICON_STATE = "bootyeng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Missmeng" = list(SKIN_ICON_STATE = "missm_eng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Protectroneng" = list(SKIN_ICON_STATE = "protectron_eng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Zoombaengi" = list(SKIN_ICON_STATE = "zoomba_engi", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Conagher" = list(SKIN_ICON_STATE = "conagher", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Eyeboteng" = list(SKIN_ICON_STATE = "eyeboteng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Wideengi" = list(SKIN_ICON_STATE = "wide-engi", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Birdeng" = list(SKIN_ICON_STATE = "bird_eng", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Slipperengi" = list(SKIN_ICON_STATE = "slipper_engi", SKIN_ICON = CYBORG_ICON_NEWENG),
+		"Arachneengi" = list(SKIN_ICON_STATE = "arachne_engi", SKIN_ICON = CYBORG_ICON_NEWENG),
 	)
 
 /obj/item/robot_model/janitor
@@ -440,6 +474,27 @@
 	borg_skins = list(
 		"Janitor" = list(SKIN_ICON_STATE = "janitor"),
 		"Drakejanit" = list(SKIN_ICON_STATE = "drakejanit", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
+		"Mekajani" = list(SKIN_ICON_STATE = "mekajani", SKIN_ICON = CYBORG_ICON_TALLJANI),
+		"K4tjani" = list(SKIN_ICON_STATE = "k4tjani", SKIN_ICON = CYBORG_ICON_TALLJANI),
+		"K4tjanialt1" = list(SKIN_ICON_STATE = "k4tjani_alt1", SKIN_ICON = CYBORG_ICON_TALLJANI),
+		"Fmekajani" = list(SKIN_ICON_STATE = "fmekajani", SKIN_ICON = CYBORG_ICON_TALLJANI),
+		"Mmekajani" = list(SKIN_ICON_STATE = "mmekajani", SKIN_ICON = CYBORG_ICON_TALLJANI),
+		"Heavyres" = list(SKIN_ICON_STATE = "heavyres", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Marinajan" = list(SKIN_ICON_STATE = "marinajan", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Sleekjan" = list(SKIN_ICON_STATE = "sleekjan", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Canjan" = list(SKIN_ICON_STATE = "canjan", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Bootyjanitor" = list(SKIN_ICON_STATE = "bootyjanitor", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Missmjanitor" = list(SKIN_ICON_STATE = "missm_janitor", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Protectronjanitor" = list(SKIN_ICON_STATE = "protectron_janitor", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Zoombajani" = list(SKIN_ICON_STATE = "zoomba_jani", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Flynn" = list(SKIN_ICON_STATE = "flynn", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Eyebotjani" = list(SKIN_ICON_STATE = "eyebotjani", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"InsektSci" = list(SKIN_ICON_STATE = "insekt-Sci", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Widejani" = list(SKIN_ICON_STATE = "wide-jani", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Spidersci" = list(SKIN_ICON_STATE = "spidersci", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Birdjani" = list(SKIN_ICON_STATE = "bird_jani", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Slipperjanitor" = list(SKIN_ICON_STATE = "slipper_janitor", SKIN_ICON = CYBORG_ICON_NEWJANI),
+		"Arachnejani" = list(SKIN_ICON_STATE = "arachne_jani", SKIN_ICON = CYBORG_ICON_NEWJANI),
 	)
 	/// Weakref to the wash toggle action we own
 	var/datum/weakref/wash_toggle_ref
@@ -714,6 +769,26 @@
 		"Machinified Doctor" = list(SKIN_ICON_STATE = "medical"),
 		"Qualified Doctor" = list(SKIN_ICON_STATE = "qualified_doctor"),
 		"Drakemed" = list(SKIN_ICON_STATE = "drakemed", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
+		"Mekamed" = list(SKIN_ICON_STATE = "mekamed", SKIN_ICON = CYBORG_ICON_TALLMED),
+		"K4tmed" = list(SKIN_ICON_STATE = "k4tmed", SKIN_ICON = CYBORG_ICON_TALLMED),
+		"K4tmedalt1" = list(SKIN_ICON_STATE = "k4tmed_alt1", SKIN_ICON = CYBORG_ICON_TALLMED),
+		"Fmekamed" = list(SKIN_ICON_STATE = "fmekamed", SKIN_ICON = CYBORG_ICON_TALLMED),
+		"Mmekamed" = list(SKIN_ICON_STATE = "mmekamed", SKIN_ICON = CYBORG_ICON_TALLMED),
+		"sfmekamed" = list(SKIN_ICON_STATE = "sfmekamed", SKIN_ICON = CYBORG_ICON_TALLMED),
+		"Medical" = list(SKIN_ICON_STATE = "medical", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Eyebotmed" = list(SKIN_ICON_STATE = "eyebotmed", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Heavymed" = list(SKIN_ICON_STATE = "heavymed", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Marinamed" = list(SKIN_ICON_STATE = "marinamed", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Sleekmed" = list(SKIN_ICON_STATE = "sleekmed", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Bootymedical" = list(SKIN_ICON_STATE = "bootymedical", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Missmmed" = list(SKIN_ICON_STATE = "missm_med", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Protectronmedical" = list(SKIN_ICON_STATE = "protectron_medical", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Zoombamed" = list(SKIN_ICON_STATE = "zoomba_med", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Slippermed" = list(SKIN_ICON_STATE = "slipper_med", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Arachnemed" = list(SKIN_ICON_STATE = "arachne_med", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"InsektMed" = list(SKIN_ICON_STATE = "insekt-Med", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Gibbs" = list(SKIN_ICON_STATE = "gibbs", SKIN_ICON = CYBORG_ICON_NEWMED),
+		"Birdmed" = list(SKIN_ICON_STATE = "bird_med", SKIN_ICON = CYBORG_ICON_NEWMED),
 	)
 
 /obj/item/robot_model/miner
@@ -744,6 +819,26 @@
 		"Spider Miner" = list(SKIN_ICON_STATE = "spidermin"),
 		"Lavaland Miner" = list(SKIN_ICON_STATE = "miner"),
 		"Drakemine" = list(SKIN_ICON_STATE = "drakemine", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
+		"Mekamine" = list(SKIN_ICON_STATE = "mekamine", SKIN_ICON = CYBORG_ICON_TALLMINE),
+		"K4tmine" = list(SKIN_ICON_STATE = "k4tmine", SKIN_ICON = CYBORG_ICON_TALLMINE),
+		"K4tminealt1" = list(SKIN_ICON_STATE = "k4tmine_alt1", SKIN_ICON = CYBORG_ICON_TALLMINE),
+		"Fmekamine" = list(SKIN_ICON_STATE = "fmekamine", SKIN_ICON = CYBORG_ICON_TALLMINE),
+		"Mmekamine" = list(SKIN_ICON_STATE = "mmekamine", SKIN_ICON = CYBORG_ICON_TALLMINE),
+		"Sfmekamine" = list(SKIN_ICON_STATE = "sfmekamine", SKIN_ICON = CYBORG_ICON_TALLMINE),
+		"Miner" = list(SKIN_ICON_STATE = "miner", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Spidermin" = list(SKIN_ICON_STATE = "spidermin", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Heavymin" = list(SKIN_ICON_STATE = "heavymin", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Marinamin" = list(SKIN_ICON_STATE = "marinamin", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Sleekmin" = list(SKIN_ICON_STATE = "sleekmin", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Canmin" = list(SKIN_ICON_STATE = "canmin", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Bootyminer" = list(SKIN_ICON_STATE = "bootyminer", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Missmminer" = list(SKIN_ICON_STATE = "missm_miner", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Protectronminer" = list(SKIN_ICON_STATE = "protectron_miner", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Zoombaminer" = list(SKIN_ICON_STATE = "zoomba_miner", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Ishimura" = list(SKIN_ICON_STATE = "ishimura", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Miningdrone" = list(SKIN_ICON_STATE = "miningdrone", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Birdmine" = list(SKIN_ICON_STATE = "bird_mine", SKIN_ICON = CYBORG_ICON_NEWMINE),
+		"Slippermine" = list(SKIN_ICON_STATE = "slipper_mine", SKIN_ICON = CYBORG_ICON_NEWMINE),
 	)
 	var/obj/item/t_scanner/adv_mining_scanner/cyborg/mining_scanner //built in memes. //fuck you
 
@@ -778,6 +873,21 @@
 	borg_skins = list(
 		"Peace" = list(SKIN_ICON_STATE = "peace"),
 		"Drakepeace" = list(SKIN_ICON_STATE = "drakepeace", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
+		"Mekapeace" = list(SKIN_ICON_STATE = "mekapeace", SKIN_ICON = CYBORG_ICON_TALLPK),
+		"K4tpeace" = list(SKIN_ICON_STATE = "k4tpeace", SKIN_ICON = CYBORG_ICON_TALLPK),
+		"Fmekapeace" = list(SKIN_ICON_STATE = "fmekapeace", SKIN_ICON = CYBORG_ICON_TALLPK),
+		"Mmekapeace" = list(SKIN_ICON_STATE = "mmekapeace", SKIN_ICON = CYBORG_ICON_TALLPK),
+		"Sfmekapeace" = list(SKIN_ICON_STATE = "sfmekapeace", SKIN_ICON = CYBORG_ICON_TALLPK),
+		"Whitespider" = list(SKIN_ICON_STATE = "whitespider", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"Bootypeace" = list(SKIN_ICON_STATE = "bootypeace", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"Protectronpeacekeeper" = list(SKIN_ICON_STATE = "protectron_peacekeeper", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"Marinapeace" = list(SKIN_ICON_STATE = "marinapeace", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"Sleekpeace" = list(SKIN_ICON_STATE = "sleekpeace", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"Omoikane" = list(SKIN_ICON_STATE = "omoikane", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"InsektDefault" = list(SKIN_ICON_STATE = "insekt-Default", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"Birdpk" = list(SKIN_ICON_STATE = "bird_pk", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"Zoombapeace" = list(SKIN_ICON_STATE = "zoomba_peace", SKIN_ICON = CYBORG_ICON_NEWPK),
+		"Arachnepeacekeeper" = list(SKIN_ICON_STATE = "arachne_peacekeeper", SKIN_ICON = CYBORG_ICON_NEWPK),
 	)
 
 /obj/item/robot_model/peacekeeper/do_transform_animation()
@@ -806,6 +916,22 @@
 	borg_skins = list(
 		"Sec" = list(SKIN_ICON_STATE = "sec"),
 		"Drakesec" = list(SKIN_ICON_STATE = "drakesec", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
+		"Mekasec" = list(SKIN_ICON_STATE = "mekasec", SKIN_ICON = CYBORG_ICON_TALLSEC),
+		"K4tsec" = list(SKIN_ICON_STATE = "k4tsec", SKIN_ICON = CYBORG_ICON_TALLSEC),
+		"Fmekasec" = list(SKIN_ICON_STATE = "fmekasec", SKIN_ICON = CYBORG_ICON_TALLSEC),
+		"Mmekasec" = list(SKIN_ICON_STATE = "mmekasec", SKIN_ICON = CYBORG_ICON_TALLSEC),
+		"Spidersec" = list(SKIN_ICON_STATE = "spidersec", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Heavysec" = list(SKIN_ICON_STATE = "heavysec", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Marinasec" = list(SKIN_ICON_STATE = "marinasec", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Sleeksec" = list(SKIN_ICON_STATE = "sleeksec", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Cansec" = list(SKIN_ICON_STATE = "cansec", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Bootysecurity" = list(SKIN_ICON_STATE = "bootysecurity", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Missmsecurity" = list(SKIN_ICON_STATE = "missm_security", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Protectronsecurity" = list(SKIN_ICON_STATE = "protectron_security", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Zoombasec" = list(SKIN_ICON_STATE = "zoomba_sec", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Woody" = list(SKIN_ICON_STATE = "woody", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"Eyebotsec" = list(SKIN_ICON_STATE = "eyebotsec", SKIN_ICON = CYBORG_ICON_NEWSEC),
+		"InsektSec" = list(SKIN_ICON_STATE = "insekt-Sec", SKIN_ICON = CYBORG_ICON_NEWSEC),
 	)
 
 /obj/item/robot_model/security/do_transform_animation()
@@ -869,6 +995,25 @@
 		"Waitress" = list(SKIN_ICON_STATE = "service_f"),
 		"Kerfus" = list(SKIN_ICON_STATE = "kerfus_service", SKIN_LIGHT_KEY = NONE, SKIN_ICON = CYBORG_ICON_CARGO, SKIN_TRAITS = list(TRAIT_CAT)),
 		"Drakesv" = list(SKIN_ICON_STATE = "drakesv", SKIN_LIGHT_KEY = "drakesv", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
+		"Mekaserve" = list(SKIN_ICON_STATE = "mekaserve", SKIN_ICON = CYBORG_ICON_TALLSERV),
+		"Mekaservealt" = list(SKIN_ICON_STATE = "mekaserve_alt", SKIN_ICON = CYBORG_ICON_TALLSERV),
+		"K4tserve" = list(SKIN_ICON_STATE = "k4tserve", SKIN_ICON = CYBORG_ICON_TALLSERV),
+		"K4tservealt1" = list(SKIN_ICON_STATE = "k4tserve_alt1", SKIN_ICON = CYBORG_ICON_TALLSERV),
+		"K4tservealt2" = list(SKIN_ICON_STATE = "k4tserve_alt2", SKIN_ICON = CYBORG_ICON_TALLSERV),
+		"Fmekaserv" = list(SKIN_ICON_STATE = "fmekaserv", SKIN_ICON = CYBORG_ICON_TALLSERV),
+		"Mmekaserv" = list(SKIN_ICON_STATE = "mmekaserv", SKIN_ICON = CYBORG_ICON_TALLSERV),
+		"Sfmekaserv" = list(SKIN_ICON_STATE = "sfmekaserv", SKIN_ICON = CYBORG_ICON_TALLSERV),
+		"Heavyserv" = list(SKIN_ICON_STATE = "heavyserv", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Sleekserv" = list(SKIN_ICON_STATE = "sleekserv", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Bootyservice" = list(SKIN_ICON_STATE = "bootyservice", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Missmservice" = list(SKIN_ICON_STATE = "missm_service", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Protectronservice" = list(SKIN_ICON_STATE = "protectron_service", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Zoombagreen" = list(SKIN_ICON_STATE = "zoomba_green", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Lloyd" = list(SKIN_ICON_STATE = "lloyd", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Handyservice" = list(SKIN_ICON_STATE = "handy-service", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Birdserv" = list(SKIN_ICON_STATE = "bird_serv", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Slipperservice" = list(SKIN_ICON_STATE = "slipper_service", SKIN_ICON = CYBORG_ICON_NEWSERV),
+		"Arachneservice" = list(SKIN_ICON_STATE = "arachne_service", SKIN_ICON = CYBORG_ICON_NEWSERV),
 	)
 
 /obj/item/robot_model/service/respawn_consumable(mob/living/silicon/robot/cyborg, coeff = 1)
