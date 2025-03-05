@@ -37,4 +37,11 @@
 		"Zoomba" = list(SKIN_ICON_STATE = "zoomba_cargo", SKIN_ICON = CYBORG_ICON_CARGO),
 		"Kerfus" = list(SKIN_ICON_STATE = "kerfus_cargo", SKIN_LIGHT_KEY = NONE, SKIN_ICON = CYBORG_ICON_CARGO, SKIN_TRAITS = list(TRAIT_CAT)),
 		"Drakecargo" = list(SKIN_ICON_STATE = "drakecargo", SKIN_ICON = CYBORG_ICON_DRAKE, "drake" = 1),
+		"Mekacargo" = list(SKIN_ICON_STATE = "mekacargo", SKIN_ICON = CYBORG_ICON_TALLCARGO),
+		"K4tcargo" = list(SKIN_ICON_STATE = "k4tcargo", SKIN_ICON = CYBORG_ICON_TALLCARGO),
+		"K4tcargoalt1" = list(SKIN_ICON_STATE = "k4tcargo_alt1", SKIN_ICON = CYBORG_ICON_TALLCARGO),
+		"Fmekacargo" = list(SKIN_ICON_STATE = "fmekacargo", SKIN_ICON = CYBORG_ICON_TALLCARGO),
+		"Mmekacargo" = list(SKIN_ICON_STATE = "mmekacargo", SKIN_ICON = CYBORG_ICON_TALLCARGO),
+		"Sfmekacargo" = list(SKIN_ICON_STATE = "sfmekacargo", SKIN_ICON = CYBORG_ICON_TALLCARGO),
+		"Birdcargo" = list(SKIN_ICON_STATE = "bird_cargo", SKIN_ICON = CYBORG_ICON_NEWCARGO),
 	)
