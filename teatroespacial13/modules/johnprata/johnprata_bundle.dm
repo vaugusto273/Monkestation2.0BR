@@ -12,7 +12,7 @@
 	new /obj/item/clothing/suit/armor/bulletproof/robohand(src)
 	new /obj/item/autosurgeon/organ/syndicate/esword_arm(src)
 	new /obj/item/autosurgeon/organ/syndicate/nodrop(src)
-
+	new /obj/item/autosurgeon/syndicate/cyberlink_syndicate(src)
 
 /obj/item/autosurgeon/organ/syndicate/esword_arm
 	starting_organ = /obj/item/organ/internal/cyberimp/arm/item_set/esword
