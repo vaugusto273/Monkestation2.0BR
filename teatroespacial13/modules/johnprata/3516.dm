@@ -25,6 +25,7 @@
 	rack_sound = 'teatroespacial13/modules/johnprata/sounds/slide.ogg'
 	fire_sound_volume = 100
 	bolt_wording = "fuckin' slide"
+	pin = /obj/item/firing_pin/dna
 
 //Gun actions
 
