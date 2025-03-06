@@ -449,12 +449,3 @@
 
 /datum/config_entry/string/metacurrency_name
 	config_entry_value = "Monkecoins"
-
-
-//Custom Shuttles
-//Shuttle size limiter
-/datum/config_entry/number/max_shuttle_count
-	default = 6
-
-/datum/config_entry/number/max_shuttle_size
-	default = 250

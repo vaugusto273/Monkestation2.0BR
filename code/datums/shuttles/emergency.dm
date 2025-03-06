@@ -30,13 +30,13 @@
 	credit_cost = CARGO_CRATE_VALUE * 5
 	who_can_purchase = list(ACCESS_CAPTAIN, ACCESS_CE)
 	occupancy_limit = "Flexible"
-/* Removed from Custom Shuttle PR
+
 /datum/map_template/shuttle/emergency/construction/post_load()
 	. = ..()
 	//enable buying engines from cargo
 	var/datum/supply_pack/P = SSshuttle.supply_packs[/datum/supply_pack/engineering/shuttle_engine]
 	P.special_enabled = TRUE
-*/
+
 /datum/map_template/shuttle/emergency/asteroid
 	suffix = "asteroid"
 	name = "Asteroid Station Emergency Shuttle"

@@ -83,19 +83,10 @@
 		new /obj/structure/lattice/catwalk(turf)
 		return TRUE
 	return FALSE
-// Custom Shuttle PR i need to come back here^^ aaaahhh!!
+
 /obj/structure/lattice/singularity_pull(S, current_size)
 	if(current_size >= STAGE_FOUR)
 		deconstruct()
-
-/obj/structure/lattice/proc/replace_with_catwalk()
-	var/list/post_replacement_callbacks = list()
-	SEND_SIGNAL(src, COMSIG_LATTICE_PRE_REPLACE_WITH_CATWALK, post_replacement_callbacks)
-	var/turf/turf = loc
-	qdel(src)
-	var/new_catwalk = new /obj/structure/lattice/catwalk(turf)
-	for(var/datum/callback/callback as anything in post_replacement_callbacks)
-		callback.Invoke(new_catwalk)
 
 /obj/structure/lattice/catwalk
 	name = "catwalk"

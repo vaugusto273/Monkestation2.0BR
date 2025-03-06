@@ -114,8 +114,3 @@
 #define TURRET_INCOMPATIBLE (1<<2)
 
 // NOVA ADDITION END
-
-/// Flags for specifically what kind of items to get in get_equipped_items
-#define INCLUDE_POCKETS (1<<0)
-#define INCLUDE_ACCESSORIES (1<<1)
-#define INCLUDE_HELD (1<<2)
