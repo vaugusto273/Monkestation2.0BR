@@ -6,7 +6,7 @@
 	///the path of the item
 	var/atom/item_path
 	///the cost of the item
-	var/item_cost = 1000
+	var/item_cost = 100
 	///hidden from general store
 	var/hidden = FALSE
 	///is this a one time purchase for a roundstart?
