@@ -1,5 +1,6 @@
 /datum/species/xeno
 	// A cloning mistake, crossing human and xenomorph DNA
+	var/xeno_color = "#525288"
 	name = "Xenomorph Hybrid"
 	id = SPECIES_XENO
 	family_heirlooms = list(/obj/item/toy/plush/rouny, /obj/item/clothing/mask/facehugger/toy)
@@ -19,10 +20,9 @@
 		/obj/item/organ/alien/resinspinner/roundstart,
 		/obj/item/organ/alien/hivenode,
 		)
-	exotic_blood = /datum/reagent/toxin/acid
-	exotic_bloodtype = "X*"
+	exotic_bloodtype = /datum/reagent/toxin/acid
 	heatmod = 2.5
-	mutant_bodyparts = list()
+	mutant_bodyparts = list("tail" = list(MUTANT_INDEX_NAME = "Xenomorph Tail", MUTANT_INDEX_COLOR_LIST = list(xeno_color, xeno_color, xeno_color)), "xenodorsal" = list(MUTANT_INDEX_NAME = "Standard", MUTANT_INDEX_COLOR_LIST = list(xeno_color)),"xenohead" = list(MUTANT_INDEX_NAME = "Standard", MUTANT_INDEX_COLOR_LIST = list(xeno_color, xeno_color, xeno_color)))
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	bodypart_overrides = list(
@@ -49,10 +49,10 @@
 	)
 
 /datum/species/xeno/get_species_description()
-	return placeholder_description
+	return "placeholder_description"
 
 /datum/species/xeno/get_species_lore()
-	return list(placeholder_lore)
+	return list("placeholder_lore")
 
 /datum/species/xeno/create_pref_unique_perks()
 	var/list/to_add = list()
@@ -74,13 +74,9 @@
 	return to_add
 
 /datum/species/xeno/prepare_human_for_preview(mob/living/carbon/human/xeno)
-	var/xeno_color = "#525288"
 	xeno.dna.features["mcolor"] = xeno_color
 	xeno.eye_color_left = "#30304F"
 	xeno.eye_color_right = "#30304F"
-	xeno.dna.mutant_bodyparts["tail"] = list(MUTANT_INDEX_NAME = "Xenomorph Tail", MUTANT_INDEX_COLOR_LIST = list(xeno_color, xeno_color, xeno_color))
-	xeno.dna.mutant_bodyparts["xenodorsal"] = list(MUTANT_INDEX_NAME = "Standard", MUTANT_INDEX_COLOR_LIST = list(xeno_color))
-	xeno.dna.mutant_bodyparts["xenohead"] = list(MUTANT_INDEX_NAME = "Standard", MUTANT_INDEX_COLOR_LIST = list(xeno_color, xeno_color, xeno_color))
 	regenerate_organs(xeno, src, visual_only = TRUE)
 	xeno.update_body(TRUE)
 
@@ -94,8 +90,8 @@
 
 //Xenohybrid blood trails
 /mob/living/carbon/human/getTrail()
-	if(get_blood_id() != /datum/reagent/toxin/acid)
-		return ..()
+	/*if(get_blood_id() != /datum/reagent/toxin/acid)
+		return ..()*/ //disabled for now
 	if(getBruteLoss() < 300)
 		return pick (list("xltrails_1", "xltrails2"))
 	else
@@ -121,7 +117,7 @@
 	icon = 'modular_nova/master_files/icons/effects/x_blood.dmi'
 	icon_state = "xdrip5"
 	random_icon_states = list("xdrip1","xdrip2","xdrip3","xdrip4","xdrip5")
-	should_dry = FALSE //human only thing
+	can_dry = FALSE //human only thing
 	blood_state = BLOOD_STATE_XENO
 	beauty = -150
 
@@ -133,7 +129,7 @@
 #define BUILD_DURATION 0.5 SECONDS
 
 //Plasma vessel
-/obj/item/organ/alien/plasmavessel/roundstart
+/obj/item/organ/internal/alien/plasmavessel/roundstart
 	stored_plasma = 55
 	max_plasma = 55
 	plasma_rate = 2
@@ -177,7 +173,7 @@
 	icon_state = "liver-x"
 
 //Liver modification (xenohybrids can process plasma!)
-/obj/item/organ/liver/xeno_hybrid/handle_chemical(mob/living/carbon/owner, datum/reagent/toxin/chem, seconds_per_tick, times_fired)
+/obj/item/organ/internal/liver/xeno_hybrid/handle_chemical(mob/living/carbon/owner, datum/reagent/toxin/chem, seconds_per_tick, times_fired)
 	. = ..()
 	if(. & COMSIG_MOB_STOP_REAGENT_CHECK)
 		return
