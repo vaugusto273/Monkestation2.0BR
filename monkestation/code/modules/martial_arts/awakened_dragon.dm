@@ -2,8 +2,8 @@
 	name = "The Awakened Dragon"
 	id = MARTIALART_AWAKENEDDRAGON
 	help_verb = /mob/living/proc/awakened_dragon_help
-	deflect_cooldown = 0
-	deflect_stamcost = 10
+	deflect_cooldown = 3 SECONDS // teatro espacial edit
+	deflect_stamcost = 25 // teatro espacial edit
 	log_name = "Awakened Dragon"
 	scarp_traits = list(TRAIT_NOGUNS, TRAIT_NEVER_WOUNDED, TRAIT_NODISMEMBER, TRAIT_LIGHT_SLEEPER, TRAIT_THROW_GUNS, TRAIT_BATON_RESISTANCE)
 	counter = TRUE
