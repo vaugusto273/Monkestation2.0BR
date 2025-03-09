@@ -1,11 +1,10 @@
 /obj/item/bodypart/head/synth
-	// parent_type = /obj/item/bodypart/head/ipc
 	icon_greyscale = 'monkestation/icons/mob/species/synth/bodyparts.dmi'
 	limb_id = "synth" //Overriden in /species/ipc/replace_body()
 	icon_state = "synth_head"
 	is_dimorphic = TRUE
 	should_draw_greyscale = TRUE
-	palette = /datum/color_palette/generic_colors
+	palette = SKIN_COLOR
 	palette_key = MUTANT_COLOR
 	biological_state = BIO_ROBOTIC | BIO_BLOODED
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
@@ -29,7 +28,7 @@
 	icon_state = "synth_chest"
 	is_dimorphic = TRUE
 	should_draw_greyscale = TRUE
-	palette = /datum/color_palette/generic_colors
+	palette = SKIN_COLOR
 	palette_key = MUTANT_COLOR
 	biological_state = BIO_ROBOTIC | BIO_BLOODED
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
@@ -53,7 +52,7 @@
 	icon_state = "synth_l_arm"
 	flags_1 = CONDUCT_1
 	should_draw_greyscale = TRUE
-	palette = /datum/color_palette/generic_colors
+	palette = SKIN_COLOR
 	palette_key = MUTANT_COLOR
 	biological_state = BIO_ROBOTIC | BIO_JOINTED | BIO_BLOODED
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
@@ -77,7 +76,7 @@
 	icon_state = "synth_r_arm"
 	flags_1 = CONDUCT_1
 	should_draw_greyscale = TRUE
-	palette = MUTANT_COLOR
+	palette = SKIN_COLOR
 	palette_key = MUTANT_COLOR
 	biological_state = BIO_ROBOTIC | BIO_JOINTED | BIO_BLOODED
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
@@ -101,7 +100,7 @@
 	icon_state = "synth_l_leg"
 	flags_1 = CONDUCT_1
 	should_draw_greyscale = TRUE
-	palette = MUTANT_COLOR
+	palette = SKIN_COLOR
 	palette_key = MUTANT_COLOR
 	biological_state = BIO_ROBOTIC | BIO_JOINTED | BIO_BLOODED
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
@@ -123,7 +122,7 @@
 	icon_state = "synth_r_leg"
 	flags_1 = CONDUCT_1
 	should_draw_greyscale = TRUE
-	palette = /datum/color_palette/generic_colors
+	palette = SKIN_COLOR
 	palette_key = MUTANT_COLOR
 	biological_state = BIO_ROBOTIC | BIO_JOINTED | BIO_BLOODED
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
