@@ -1,10 +1,3 @@
-#define SYNTH_CHARGE_MAX 150
-#define SYNTH_CHARGE_MIN 50
-#define SYNTH_CHARGE_PER_NUTRITION 10
-#define SYNTH_CHARGE_DELAY_PER_100 10
-#define SYNTH_DRAW_NUTRITION_BUFFER 30
-#define SYNTH_APC_MINIMUM_PERCENT 20
-
 /datum/species/synth
 	name = "\improper Synthetic Person"
 	id = SPECIES_SYNTHPERSON
@@ -32,7 +25,7 @@
 	)
 	external_organs = list()
 
-	mutant_bodyparts = null
+	mutant_bodyparts = list()
 
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	reagent_tag = PROCESS_SYNTHETIC
@@ -243,11 +236,6 @@
 
 	powerdraw_loop(target_apc, ipc)
 
-
-#undef SYNTH_CHARGE_MAX
-#undef SYNTH_CHARGE_MIN
-#undef SYNTH_CHARGE_PER_NUTRITION
-#undef SYNTH_CHARGE_DELAY_PER_100
 
 /datum/species/synth/create_pref_unique_perks()
 	var/list/to_add = list()
