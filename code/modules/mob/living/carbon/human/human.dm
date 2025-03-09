@@ -1049,6 +1049,9 @@
 /mob/living/carbon/human/species/jelly/new_slime_person
 	race = /datum/species/jelly/new_slime_person
 
+/mob/living/carbon/human/species/synth
+	race = /datum/species/synth
+
 /mob/living/carbon/human/species/lizard
 	race = /datum/species/lizard
 

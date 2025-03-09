@@ -65,29 +65,33 @@
 	slot = ORGAN_SLOT_TONGUE
 	organ_flags = ORGAN_ROBOTIC | ORGAN_SYNTHETIC_FROM_SPECIES
 
+/obj/item/organ/internal/tongue/synth/person
+	parent_type = /obj/item/organ/internal/tongue/synth
+	modifies_speech = FALSE
+
 /obj/item/organ/internal/tongue/synth/get_scream_sound()
 	return 'monkestation/sound/voice/screams/silicon/scream_silicon.ogg'
 
 /obj/item/organ/internal/tongue/synth/get_laugh_sound()
 	if(owner.gender == FEMALE)
 		return pick(
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconF0.ogg', 
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconF1.ogg', 
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconF0.ogg',
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconF1.ogg',
 			'monkestation/sound/voice/laugh/silicon/laugh_siliconF2.ogg',
-		)		
+		)
 	if(owner.gender == MALE)
 		return pick(
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconE1M0.ogg', 
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconE1M1.ogg', 
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconE1M0.ogg',
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconE1M1.ogg',
 			'monkestation/sound/voice/laugh/silicon/laugh_siliconM2.ogg',
 		)
 	else
 		return pick(
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconE1M0.ogg', 
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconE1M1.ogg', 
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconM2.ogg', 
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconF0.ogg', 
-			'monkestation/sound/voice/laugh/silicon/laugh_siliconF1.ogg', 
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconE1M0.ogg',
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconE1M1.ogg',
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconM2.ogg',
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconF0.ogg',
+			'monkestation/sound/voice/laugh/silicon/laugh_siliconF1.ogg',
 			'monkestation/sound/voice/laugh/silicon/laugh_siliconF2.ogg',
 		)
 

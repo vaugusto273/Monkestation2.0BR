@@ -107,6 +107,7 @@
 #define SPECIES_JELLYPERSON "jelly"
 #define SPECIES_SLIMEPERSON "slime"
 #define SPECIES_NEWSLIMEPERSON "nslime"
+#define SPECIES_SYNTHPERSON "synthperson"
 #define SPECIES_LUMINESCENT "luminescent"
 #define SPECIES_STARGAZER "stargazer"
 #define SPECIES_LIZARD "lizard"

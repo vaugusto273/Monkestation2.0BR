@@ -13,8 +13,6 @@
 	..()
 	slime_split.Remove(C)
 	swap_body.Remove(C)
-	bodies = null
-
 
 
 /datum/species/jelly/new_slime_person/get_species_description()
