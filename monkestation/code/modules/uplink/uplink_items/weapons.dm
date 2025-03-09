@@ -19,7 +19,7 @@
 	name = "Blood-stained Martial Arts Scroll"
 	desc = "A scroll penned by the infamous Awakened Dragon, penned with the blood of their \
 			disciples, it appears to have clues towards true enlightenment in the path of the Sleeping Carp."
-	cost = 20
+	cost = 50
 	item = /obj/item/book/granter/martial/carp/true
 	lock_other_purchases = TRUE
 	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)

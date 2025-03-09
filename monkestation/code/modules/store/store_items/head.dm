@@ -196,7 +196,7 @@ GLOBAL_LIST_INIT(store_head, generate_store_items(/datum/store_item/head))
 /datum/store_item/head/tiara
 	name = "Tiara"
 	item_path = /obj/item/clothing/head/costume/tiara
-	item_cost = 1000
+	item_cost = 100
 
 /*
 *	HALLOWEEN

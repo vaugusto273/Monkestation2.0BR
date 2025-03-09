@@ -77,6 +77,8 @@ export const DmTarget = new Juke.Target({
     'interface/**',
     'monkestation/code/**', // monke edit: ensure it also checks for updates in modular code
     'monkestation/icons/**',
+    'teatroespacial13/**', //Teatro exclusive
+    'modular_nova/**', //Teatro exclusive
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],

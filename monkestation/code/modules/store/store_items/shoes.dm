@@ -220,7 +220,7 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 /datum/store_item/shoes/wheelys
 	name = "Wheely-Heels"
 	item_path = /obj/item/clothing/shoes/wheelys
-	item_cost = 250
+	item_cost = 2500
 
 /*
 *	SEASONAL

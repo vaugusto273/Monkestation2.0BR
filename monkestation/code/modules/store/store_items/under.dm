@@ -399,7 +399,7 @@ GLOBAL_LIST_INIT(store_miscunders, generate_store_items(/datum/store_item/under/
 	name = "Butler Uniform"
 	item_path = /obj/item/clothing/under/suit/butler
 
-/datum/store_item/under/formal/butler
+/datum/store_item/under/formal/silk_suit
 	name = "Black Silk Suit"
 	item_path = /obj/item/clothing/under/suit/fancysuit
 
@@ -470,12 +470,12 @@ GLOBAL_LIST_INIT(store_miscunders, generate_store_items(/datum/store_item/under/
 /datum/store_item/under/formal/formal_ball
 	name = "Regal Ball Gown"
 	item_path = /obj/item/clothing/under/dress/gown
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/under/formal/moonlit
 	name = "Regal Ball Gown"
 	item_path = /obj/item/clothing/under/dress/moonlit
-	item_cost = 10000
+	item_cost = 100
 
 //FAMILIES GEAR
 /datum/store_item/under/formal/osi
