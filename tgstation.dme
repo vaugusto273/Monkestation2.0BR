@@ -8710,6 +8710,7 @@
 #include "modular_nova\modules\customization\modules\food_and_drinks\food\hemophage_food.dm"
 #include "modular_nova\modules\customization\modules\mob\living\carbon\human\species\xeno.dm"
 #include "modular_nova\modules\customization\modules\mob\dead\new_player\sprite_accessories\xeno.dm"
+#include "modular_nova\modules\customization\modules\mob\dead\new_player\sprite_accessories.dm"
 #include "modular_nova\modules\customization\modules\mob\living\carbon\human\species\hemophage\_hemophage_defines.dm"
 #include "modular_nova\modules\customization\modules\mob\living\carbon\human\species\hemophage\_organ_corruption.dm"
 #include "modular_nova\modules\customization\modules\mob\living\carbon\human\species\hemophage\corrupted_liver.dm"
