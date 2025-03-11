@@ -1,6 +1,5 @@
 /datum/species/xeno
 	// A cloning mistake, crossing human and xenomorph DNA
-	var/xeno_color = "#525288"
 	name = "Xenomorph Hybrid"
 	id = SPECIES_XENO
 	family_heirlooms = list(/obj/item/toy/plush/rouny, /obj/item/clothing/mask/facehugger/toy)
@@ -22,16 +21,17 @@
 		)
 	exotic_bloodtype = /datum/reagent/toxin/acid
 	heatmod = 2.5
-	mutant_bodyparts = list("tail" = list(MUTANT_INDEX_NAME = "Xenomorph Tail", MUTANT_INDEX_COLOR_LIST = list(xeno_color, xeno_color, xeno_color)), "xenodorsal" = list(MUTANT_INDEX_NAME = "Standard", MUTANT_INDEX_COLOR_LIST = list(xeno_color)),"xenohead" = list(MUTANT_INDEX_NAME = "Standard", MUTANT_INDEX_COLOR_LIST = list(xeno_color, xeno_color, xeno_color)))
+	digitigrade_customization = DIGITIGRADE_FORCED
+	mutant_bodyparts = list()
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	bodypart_overrides = list(
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/mutant/xenohybrid,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/mutant/xenohybrid,
-		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/mutant/xenohybrid,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/mutant/xenohybrid,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/digitigrade/xenohybrid,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade/xenohybrid,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/xenohybrid,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/xenohybrid,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/xenohybrid,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/xenohybrid,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/xenohybrid,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/xenohybrid,
 	)
 
 	meat = /obj/item/food/meat/slab/xeno
@@ -41,10 +41,10 @@
 
 /datum/species/xeno/get_default_mutant_bodyparts()
 	return list(
-		"tail" = list("Xenomorph Tail", FALSE),
+		"tail" = list("Xenomorph Tail", TRUE),
 		"xenodorsal" = list("Standard", TRUE),
 		"xenohead" = list("Standard", TRUE),
-		"legs" = list(DIGITIGRADE_LEGS,FALSE),
+		"legs" = list(DIGITIGRADE_LEGS,TRUE),
 		"taur" = list("None", FALSE),
 	)
 

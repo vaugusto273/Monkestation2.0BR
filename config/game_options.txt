@@ -362,6 +362,7 @@ ROUNDSTART_RACES ornithid
 
 ## Races ported from nova sector here
 ROUNDSTART_RACES hemophage
+ROUNDSTART_RACES xeno
 
 ## Races that are better than humans in some ways, but worse in others
 ROUNDSTART_RACES ethereal

@@ -3,6 +3,7 @@
 #define REAGENT_SYNTHETIC 2
 #define SPECIES_HEMOPHAGE "hemophage"
 #define SPECIES_XENO "xeno"
+#define SPECIES_MAMMAL "mammal"
 #define USE_ONE_COLOR		31
 
 #define DEFAULT_PRIMARY		1
