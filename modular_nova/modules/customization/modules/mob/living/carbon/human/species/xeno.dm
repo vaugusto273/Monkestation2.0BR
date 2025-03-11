@@ -11,14 +11,14 @@
 		TRAIT_MUTANT_COLORS,
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	mutantbrain = /obj/item/organ/brain/xeno_hybrid
-	mutanttongue = /obj/item/organ/tongue/xeno_hybrid
-	mutantliver = /obj/item/organ/liver/xeno_hybrid
-	mutantstomach = /obj/item/organ/stomach/xeno_hybrid
+	mutantbrain = /obj/item/organ/internal/brain/xeno_hybrid
+	mutanttongue = /obj/item/organ/internal/tongue/xeno_hybrid
+	mutantliver = /obj/item/organ/internal/liver/xeno_hybrid
+	mutantstomach = /obj/item/organ/internal/stomach/xeno_hybrid
 	mutant_organs = list(
-		/obj/item/organ/alien/plasmavessel/roundstart,
-		/obj/item/organ/alien/resinspinner/roundstart,
-		/obj/item/organ/alien/hivenode,
+		/obj/item/organ/internal/alien/plasmavessel/roundstart,
+		/obj/item/organ/internal/alien/resinspinner/roundstart,
+		/obj/item/organ/internal/alien/hivenode,
 		)
 	exotic_bloodtype = /datum/reagent/toxin/acid
 	heatmod = 2.5
@@ -36,7 +36,7 @@
 
 	meat = /obj/item/food/meat/slab/xeno
 	skinned_type = /obj/item/stack/sheet/animalhide/xeno
-	death_sound = 'sound/mobs/non-humanoids/hiss/hiss6.ogg'
+	death_sound = 'sound/voice/hiss6.ogg'
 	gib_anim = "gibbed-a"
 
 /datum/species/xeno/get_default_mutant_bodyparts()
@@ -152,7 +152,7 @@
 	return ..()
 
 //Resin spinner
-/obj/item/organ/alien/resinspinner/roundstart
+/obj/item/organ/internal/alien/resinspinner/roundstart
 	actions_types = list(/datum/action/cooldown/alien/make_structure/resin/roundstart)
 
 /datum/action/cooldown/alien/make_structure/resin
@@ -163,13 +163,13 @@
 	//Non-modularly checked in `code\modules\mob\living\carbon\alien\adult\alien_powers.dm`
 
 //Organ resprites
-/obj/item/organ/brain/xeno_hybrid
+/obj/item/organ/internal/brain/xeno_hybrid
 	icon_state = "brain-x" //rebranding
 
-/obj/item/organ/stomach/xeno_hybrid
+/obj/item/organ/internal/stomach/xeno_hybrid
 	icon_state = "stomach-x"
 
-/obj/item/organ/liver/xeno_hybrid
+/obj/item/organ/internal/liver/xeno_hybrid
 	icon_state = "liver-x"
 
 //Liver modification (xenohybrids can process plasma!)
