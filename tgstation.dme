@@ -9634,4 +9634,5 @@
 #include "teatroespacial13\modules\MiningBallistics\ammo.dm"
 #include "teatroespacial13\modules\MiningBallistics\bundle.dm"
 #include "teatroespacial13\modules\MiningBallistics\guns.dm"
+#include "teatroespacial13\modules\MiningBallistics\projectile.dm"
 // END_INCLUDE

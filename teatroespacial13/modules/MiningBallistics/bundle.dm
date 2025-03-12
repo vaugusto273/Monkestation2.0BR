@@ -11,3 +11,18 @@
     set_items = list(
 		/obj/item/storage/box/shotminer
 		)
+
+/obj/item/storage/box/smghunter/PopulateContents()
+	new /obj/item/ammo_box/magazine/miecz/hunter (src)
+	new /obj/item/ammo_box/magazine/miecz/hunter (src)
+	new /obj/item/ammo_box/magazine/miecz/hunter (src)
+	new /obj/item/gun/ballistic/automatic/xhihao_smg/no_mag/miner (src)
+
+/datum/voucher_set/mining/smghunter
+	name = "Smg miner"
+	description = "Shooting monsters?..."
+	icon = 'monkestation/code/modules/blueshift/icons/obj/company_and_or_faction_based/xhihao_light_arms/guns32x.dmi'
+	icon_state = "bogseo"
+	set_items = list(
+		/obj/item/storage/box/smghunter
+	)
