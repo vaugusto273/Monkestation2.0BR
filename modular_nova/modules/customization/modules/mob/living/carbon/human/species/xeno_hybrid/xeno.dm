@@ -41,10 +41,10 @@
 
 /datum/species/xeno/get_default_mutant_bodyparts()
 	return list(
-		"tail" = list("Xenomorph Tail", TRUE),
+		"tail" = list("Xenomorph Tail", FALSE),
 		"xenodorsal" = list("Standard", TRUE),
 		"xenohead" = list("Standard", TRUE),
-		"legs" = list(DIGITIGRADE_LEGS,TRUE),
+		"legs" = list(DIGITIGRADE_LEGS,FALSE),
 		"taur" = list("None", FALSE),
 	)
 
