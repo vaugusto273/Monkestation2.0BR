@@ -703,13 +703,9 @@
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/evacuation/ship)
 "abO" = (
-/obj/machinery/door/airlock/centcom{
-	dir = 4;
-	name = "Ook's Streamer Den"
-	},
-/obj/effect/mapping_helpers/airlock/access/any/admin/captain,
-/turf/open/floor/iron/dark,
-/area/centcom/central_command_areas/admin)
+/obj/machinery/door/poddoor/ert,
+/turf/open/floor/iron,
+/area/centcom/central_command_areas/ferry)
 "abP" = (
 /obj/structure/railing{
 	dir = 1
@@ -8002,12 +7998,9 @@
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/ferry)
 "avF" = (
-/obj/machinery/door/airlock/centcom{
-	name = "AdminLand"
-	},
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/any/admin/captain,
+/obj/machinery/door/poddoor/ert,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/ferry)
 "avG" = (
@@ -8592,6 +8585,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/door/poddoor/ert,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/ferry)
 "axl" = (
@@ -20075,6 +20069,11 @@
 	},
 /turf/open/floor/carpet/neon/simple/blue/nodots,
 /area/centcom/central_command_areas/prison)
+"cCf" = (
+/obj/effect/turf_decal/tile/green,
+/obj/machinery/door/poddoor/ert,
+/turf/open/floor/iron,
+/area/centcom/central_command_areas/ferry)
 "cCn" = (
 /obj/effect/turf_decal/weather,
 /obj/effect/turf_decal/weather,
@@ -21994,15 +21993,11 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
 "gFL" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Jay's Armory"
-	},
-/obj/effect/mapping_helpers/airlock/access/any/admin/captain,
 /obj/machinery/door/poddoor/shutters/indestructible/preopen{
 	dir = 2;
 	id = "donutstealthisid"
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/closed/indestructible/riveted,
 /area/centcom/central_command_areas/adminroom)
 "gGe" = (
 /obj/machinery/computer/terminal,
@@ -26640,6 +26635,13 @@
 /obj/effect/mapping_helpers/airlock/access/any/admin/general,
 /turf/open/floor/carpet/red,
 /area/centcom/central_command_areas/admin)
+"qEW" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/machinery/door/poddoor/ert,
+/turf/open/floor/iron,
+/area/centcom/central_command_areas/ferry)
 "qGq" = (
 /obj/machinery/light/floor/has_bulb,
 /obj/structure/table/reinforced/rglass,
@@ -26705,13 +26707,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/cruiser_dock)
 "qKg" = (
-/obj/effect/mapping_helpers/airlock/access/any/admin/captain,
-/obj/machinery/door/airlock/wood{
-	name = "Licht's Domain";
-	normal_integrity = 1000;
-	security_level = 6
-	},
-/turf/open/floor/iron/dark/diagonal,
+/turf/open/space/basic,
 /area/centcom/central_command_areas/adminroom)
 "qKL" = (
 /obj/effect/turf_decal/sand/plating,
@@ -55220,7 +55216,7 @@ inN
 nva
 dfU
 sUG
-qLQ
+xtv
 qKg
 hnK
 nId
@@ -58559,7 +58555,7 @@ agn
 aOn
 aOn
 aOn
-abO
+aOn
 eSA
 aOn
 aOn
@@ -59101,7 +59097,7 @@ adQ
 aMc
 eit
 anp
-eit
+abO
 apR
 asu
 ats
@@ -63991,9 +63987,9 @@ aNE
 aNE
 aNE
 amD
-asu
+qEW
 axk
-ats
+cCf
 amD
 ayl
 abH
