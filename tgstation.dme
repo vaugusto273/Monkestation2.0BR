@@ -8783,4 +8783,7 @@
 #include "code\__DEFINES\~nova_defines\keybindings.dm"
 #include "modular_nova\master_files\code\modules\mob\living\emote_popup.dm"
 #include "modular_nova\modules\indicators\code\combat_indicator.dm"
+#include "teatroespacial13\modules\MiningBallistics\ammo.dm"
+#include "teatroespacial13\modules\MiningBallistics\bundle.dm"
+#include "teatroespacial13\modules\MiningBallistics\guns.dm"
 // END_INCLUDE
