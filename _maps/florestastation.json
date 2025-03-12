@@ -1,0 +1,27 @@
+{
+	"version": 1,
+	"map_name": "Floresta Station",
+	"map_path": "map_files/FlorestaStation",
+	"map_file": "FlorestaStation.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"shuttles": {
+		"cargo": "cargo_box",
+		"emergency": "emergency_cere",
+		"ferry": "ferry_kilo",
+		"whiteship": "whiteship_box"
+	},
+	"traits": [
+		{
+			"Linkage": "Cross",
+			"Bombcap Multiplier": 0.8,
+			"Gravity": true,
+			"Mining": true,
+			"Daycycle": true,
+			"No Parallax": true,
+			"Baseturf": "/turf/open/misc/grass/jungle/planet"
+
+		}
+	]
+}

@@ -76,3 +76,8 @@ endmap
 
 map graveyard
 endmap
+
+map florestastation
+	minplayers 10
+	votable
+endmap
