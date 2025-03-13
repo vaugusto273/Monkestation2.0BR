@@ -26,3 +26,4 @@
 	set_items = list(
 		/obj/item/storage/box/smghunter
 	)
+
