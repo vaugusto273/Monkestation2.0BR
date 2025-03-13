@@ -2,7 +2,7 @@
 	name = "double-barreled miner shotgun"
 	desc = "A cheap and reliable weapon that was converted to be more useful in harsh conditions, commonly used during mining operations at dangereous planets as self-defense."
 	icon = 'teatroespacial13/modules/MiningBallistics/dbarrelnormal.dmi'
-	icon_state = "dbarrel"
+	icon_state = "dshotgun"
 	pin = /obj/item/firing_pin/wastes
 
 /obj/item/gun/ballistic/automatic/xhihao_smg/no_mag/miner
