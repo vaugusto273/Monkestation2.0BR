@@ -94,18 +94,13 @@ DEFINE_BITFIELD(foodtypes, list(
 	"Bloody", /* NOVA EDIT - Hemophage Food */ \
 )
 
-#define DRINK_NICE 1
-#define DRINK_GOOD 2
-#define DRINK_VERYGOOD 3
-#define DRINK_FANTASTIC 4
-#define FOOD_AMAZING 5
-#define RACE_DRINK 7 // NOVA EDIT ADDITION
 #define DRINK_REVOLTING 1
 #define DRINK_NICE 2
 #define DRINK_GOOD 3
 #define DRINK_VERYGOOD 4
 #define DRINK_FANTASTIC 5
 #define FOOD_AMAZING 6
+#define RACE_DRINK 7 // NOVA EDIT ADDITION
 
 #define FOOD_QUALITY_NORMAL 1
 #define FOOD_QUALITY_NICE 2

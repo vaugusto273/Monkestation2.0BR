@@ -2,20 +2,12 @@
 "aa" = (
 /obj/effect/turf_decal/siding/dark,
 /obj/machinery/light/cold/directional/west,
-/obj/structure/closet/secure_closet/des_two/prisoner_locker,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/structure/cable,
 /obj/item/restraints/handcuffs,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security/prison)
-"ac" = (
-/obj/effect/turf_decal/siding/dark{
-	dir = 8
-	},
-/obj/structure/closet/secure_closet/des_two/mod_locker,
-/turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav/nova/des_two/security/armory)
 "ae" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/spawner/random/decoration/carpet,
@@ -140,7 +132,6 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/des_two/brig_officer_locker,
 /obj/item/clothing/mask/gas/syndicate/ds,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security)
@@ -762,7 +753,6 @@
 /area/ruin/space/has_grav/nova/des_two/service/dorms)
 "dq" = (
 /obj/effect/turf_decal/siding/dark,
-/obj/structure/closet/secure_closet/des_two/prisoner_locker,
 /obj/item/restraints/handcuffs,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security/prison)
@@ -843,7 +833,6 @@
 	},
 /obj/structure/bed/dogbed,
 /obj/effect/decal/cleanable/oil,
-/mob/living/basic/pet/syndifox,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/nova/des_two/bridge/admiral)
 "dG" = (
@@ -880,27 +869,6 @@
 	},
 /turf/open/floor/iron/dark/side,
 /area/ruin/space/has_grav/nova/des_two/research/robotics)
-"dN" = (
-/obj/effect/turf_decal/siding/yellow{
-	dir = 8
-	},
-/obj/effect/turf_decal/trimline/yellow/filled/line{
-	dir = 4
-	},
-/obj/effect/turf_decal/trimline/yellow/warning{
-	dir = 8
-	},
-/obj/effect/turf_decal/trimline/yellow/line{
-	dir = 4
-	},
-/obj/structure/closet/secure_closet/ds2atmos{
-	anchorable = 0;
-	anchored = 1
-	},
-/turf/open/floor/iron/dark/side{
-	dir = 8
-	},
-/area/ruin/space/has_grav/nova/des_two/engineering)
 "dO" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -1081,9 +1049,6 @@
 	},
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/effect/turf_decal/trimline/dark_red/line,
-/obj/structure/sign/flag/syndicate/directional/south{
-	pixel_x = 16
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
@@ -1143,7 +1108,6 @@
 /obj/item/storage/medkit/robotic_repair/preemo/stocked{
 	pixel_y = 6
 	},
-/obj/item/storage/backpack/duffelbag/synth_treatment_kit,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/research/robotics)
 "eO" = (
@@ -1275,7 +1239,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/obj/item/storage/briefcase/secure/white,
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/nova/des_two/bridge/cl)
 "fo" = (
@@ -1363,7 +1326,6 @@
 /obj/effect/turf_decal/trimline/dark_red/mid_joiner{
 	dir = 4
 	},
-/obj/structure/sign/flag/syndicate/directional/north,
 /obj/structure/showcase/cyborg{
 	desc = "A stand with the empty body of a Cybersun cyborg bolted to it.";
 	dir = 8;
@@ -1518,7 +1480,6 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/des_two/brig_officer_locker,
 /obj/item/clothing/mask/gas/syndicate/ds,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /turf/open/floor/mineral/plastitanium/red,
@@ -1642,7 +1603,6 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/engineering)
 "hg" = (
-/obj/machinery/suit_storage_unit/syndicate/softsuit,
 /obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
 /turf/open/floor/iron/dark/small,
@@ -1731,13 +1691,6 @@
 	},
 /obj/item/tank/internals/plasmaman/belt{
 	pixel_x = 3
-	},
-/obj/item/tank/internals/nitrogen/belt{
-	pixel_x = -6
-	},
-/obj/item/tank/internals/nitrogen/belt,
-/obj/item/tank/internals/nitrogen/belt{
-	pixel_x = 6
 	},
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
@@ -2146,10 +2099,6 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/nova/des_two/cargo)
 "jr" = (
-/obj/item/sign/flag/syndicate{
-	pixel_x = 3;
-	pixel_y = 6
-	},
 /obj/item/flashlight/lamp/green{
 	pixel_x = -6;
 	pixel_y = 4
@@ -2735,7 +2684,6 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/line{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/des_two/robotics,
 /obj/item/clothing/suit/toggle/labcoat/roboticist{
 	pixel_y = 3
 	},
@@ -3134,16 +3082,6 @@
 	},
 /obj/effect/turf_decal/siding/dark,
 /obj/structure/rack/shelf,
-/obj/item/circuitboard/machine/xenoarch_machine/xenoarch_researcher{
-	pixel_y = -6
-	},
-/obj/item/circuitboard/machine/xenoarch_machine/xenoarch_digger{
-	pixel_y = -3
-	},
-/obj/item/circuitboard/machine/xenoarch_machine/xenoarch_recoverer,
-/obj/item/circuitboard/machine/xenoarch_machine/xenoarch_scanner{
-	pixel_y = 3
-	},
 /obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/dark/side{
 	dir = 4
@@ -3316,10 +3254,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/obj/item/sign/flag/syndicate{
-	pixel_x = -3;
-	pixel_y = 6
-	},
 /obj/structure/table/glass,
 /obj/item/reagent_containers/cup/glass/waterbottle{
 	pixel_x = 8;
@@ -3459,13 +3393,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/des_two/service/diner)
-"oW" = (
-/obj/effect/turf_decal/tile/bar/opposingcorners{
-	dir = 8
-	},
-/obj/machinery/vending/imported/tiziran,
-/turf/open/floor/iron/cafeteria,
-/area/ruin/space/has_grav/nova/des_two/service/diner)
 "oX" = (
 /obj/machinery/door/airlock/research{
 	name = "Robotics"
@@ -3535,14 +3462,6 @@
 	dir = 4
 	},
 /obj/structure/safe,
-/obj/item/storage/box/syndie_kit/chameleon/ghostcafe{
-	desc = "A sleek, sturdy box.";
-	name = "Chameleon Kit"
-	},
-/obj/item/reagent_containers/heroinbrick{
-	desc = "A brick of stimulants meant for use by Tiger Cooperative agents. It seems this one's just a brittle block of heroin.";
-	name = "Tiger Coop stimulant brick"
-	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/bridge/vault)
 "pk" = (
@@ -3823,10 +3742,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/des_two/halls)
 "qw" = (
-/obj/machinery/suit_storage_unit/syndicate/chameleon{
-	name = "suit storage unit";
-	req_access = list("syndicate_leader")
-	},
 /obj/effect/turf_decal/siding/dark{
 	dir = 8
 	},
@@ -4786,15 +4701,6 @@
 	dir = 4
 	},
 /obj/structure/rack/shelf,
-/obj/item/stock_parts/power_store/cell/lead{
-	pixel_x = 4;
-	pixel_y = -6
-	},
-/obj/item/stock_parts/power_store/cell/lead,
-/obj/item/stock_parts/power_store/cell/lead{
-	pixel_x = -4;
-	pixel_y = -8
-	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -4969,7 +4875,6 @@
 /turf/template_noop,
 /area/template_noop)
 "wj" = (
-/obj/machinery/vending/wardrobe/sec_wardrobe/red,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/nova/des_two/service/dorms)
 "wk" = (
@@ -5008,7 +4913,6 @@
 	dir = 4;
 	network = list("ds2")
 	},
-/obj/structure/sign/flag/syndicate/directional/west,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security)
 "wC" = (
@@ -5246,10 +5150,6 @@
 /area/ruin/space/has_grav/nova/des_two/security/prison)
 "yb" = (
 /obj/effect/turf_decal/stripes/red/corner,
-/mob/living/basic/pet/cat/kitten{
-	desc = "What appears to be a single-celled organism with a pronounced low-level intelligence.";
-	name = "Murder-Mittens"
-	},
 /obj/structure/cable,
 /obj/structure/bed/dogbed,
 /turf/open/floor/mineral/plastitanium,
@@ -5279,10 +5179,6 @@
 	pixel_y = 1
 	},
 /obj/item/food/canned/tomatoes,
-/obj/item/food/canned/tuna{
-	pixel_x = -6;
-	pixel_y = -5
-	},
 /obj/item/food/canned/pine_nuts{
 	pixel_x = 10;
 	pixel_y = -9
@@ -5543,7 +5439,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/des_two/cargo)
 "zk" = (
-/obj/structure/closet/secure_closet/des_two/cl_locker,
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
@@ -5905,10 +5800,6 @@
 /obj/item/kirbyplants/organic/plant21,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/security/lawyer)
-"AZ" = (
-/obj/machinery/vending/boozeomat/syndicate,
-/turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/ruin/space/has_grav/nova/des_two/service/diner)
 "Bb" = (
 /obj/effect/turf_decal/vg_decals/atmos/oxygen{
 	dir = 4
@@ -5991,10 +5882,6 @@
 /turf/template_noop,
 /area/template_noop)
 "Bu" = (
-/obj/machinery/suit_storage_unit/syndicate/chameleon{
-	name = "suit storage unit";
-	req_access = list("syndicate_leader")
-	},
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/structure/cable,
@@ -6162,7 +6049,6 @@
 /turf/open/floor/iron/half,
 /area/ruin/space/has_grav/nova/des_two/research/robotics)
 "Cc" = (
-/obj/structure/closet/secure_closet/des_two/sa_locker,
 /obj/item/clothing/head/hats/hos/beret/syndicate,
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -6287,7 +6173,6 @@
 	c_tag = "DS-2 Hangar Airlock";
 	network = list("ds2")
 	},
-/obj/structure/sign/flag/syndicate/directional/north,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/cargo)
 "CT" = (
@@ -6579,23 +6464,13 @@
 /area/ruin/space/has_grav/nova/des_two/engineering)
 "Em" = (
 /obj/effect/turf_decal/tile/yellow/half,
-/obj/structure/sign/flag/syndicate/directional/south{
-	pixel_x = -16
-	},
 /obj/structure/rack/shelf,
 /obj/item/tank/internals/emergency_oxygen/double{
 	pixel_x = -2;
 	pixel_y = 3
 	},
-/obj/item/clothing/mask/gas/alt{
-	pixel_x = -2
-	},
 /obj/item/tank/internals/emergency_oxygen/double{
 	pixel_x = 6
-	},
-/obj/item/clothing/mask/gas/alt{
-	pixel_x = 6;
-	pixel_y = -3
 	},
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/nova/des_two/cargo)
@@ -6866,7 +6741,6 @@
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/closet/secure_closet/des_two/brig_officer_locker,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/nova/des_two/halls)
 "Fx" = (
@@ -6946,7 +6820,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/des_two/armory_gear_locker,
 /obj/machinery/light_switch/directional/north,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security/armory)
@@ -7256,9 +7129,6 @@
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/nova/des_two/bridge/admiral)
 "GX" = (
-/obj/structure/sign/flag/syndicate/directional/south{
-	pixel_x = 16
-	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/plating/elevatorshaft,
@@ -7430,9 +7300,6 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/halls)
 "HF" = (
-/obj/machinery/suit_storage_unit/syndicate/chameleon{
-	name = "suit storage unit"
-	},
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
@@ -7499,7 +7366,6 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/nova/des_two/cargo/hangar)
 "Ic" = (
-/obj/structure/closet/secure_closet/des_two/maa_locker,
 /obj/item/clothing/suit/armor/hos/trenchcoat{
 	desc = "A trenchcoat enhanced with a special lightweight kevlar. It has little Syndicate logos sewn onto the shoulder badges with the letters 'MAA' just under it.";
 	name = "Master at arms' armored trenchcoat"
@@ -7512,7 +7378,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/item/clothing/mask/neck_gaiter/syndicate,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security)
 "If" = (
@@ -7535,7 +7400,6 @@
 /obj/effect/turf_decal/trimline/yellow/line{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/des_two/electrical_supplies,
 /obj/item/electronics/airlock{
 	pixel_x = 5;
 	pixel_y = -7
@@ -7557,25 +7421,6 @@
 	},
 /obj/item/electronics/airalarm{
 	pixel_x = 2
-	},
-/obj/item/stock_parts/power_store/battery/high{
-	pixel_x = -8;
-	pixel_y = -8
-	},
-/obj/item/stock_parts/power_store/battery/high{
-	pixel_x = -4;
-	pixel_y = -8
-	},
-/obj/item/stock_parts/power_store/battery/high{
-	pixel_y = -8
-	},
-/obj/item/stock_parts/power_store/cell/high{
-	pixel_x = 4;
-	pixel_y = -8
-	},
-/obj/item/stock_parts/power_store/cell/high{
-	pixel_x = 8;
-	pixel_y = -8
 	},
 /obj/item/clothing/glasses/meson/engine,
 /turf/open/floor/iron/dark/side{
@@ -7691,10 +7536,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/obj/item/sign/flag/syndicate{
-	pixel_x = -3;
-	pixel_y = 6
-	},
 /obj/item/reagent_containers/cup/maunamug{
 	pixel_x = 4
 	},
@@ -7740,7 +7581,7 @@
 /obj/machinery/suit_storage_unit{
 	mask_type = /obj/item/clothing/mask/gas/syndicate;
 	mod_type = /obj/item/mod/control/pre_equipped/traitor_elite;
-	storage_type = /obj/item/tank/jetpack/oxygen/harness
+	storage_type = /obj/item/tank/jetpack/harness
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/nova/des_two/bridge/admiral)
@@ -7758,7 +7599,6 @@
 	},
 /area/ruin/space/has_grav/nova/des_two/service/diner)
 "Jf" = (
-/obj/structure/closet/secure_closet/freezer/kitchen/all_access,
 /obj/item/food/breadslice/plain,
 /obj/item/food/breadslice/plain,
 /obj/item/food/breadslice/plain,
@@ -8358,7 +8198,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/des_two/halls)
 "LK" = (
-/obj/structure/sign/flag/syndicate/directional/south,
 /obj/machinery/light/warm/directional/south,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -8403,7 +8242,6 @@
 	dir = 1
 	},
 /obj/item/food/cookie/sugar,
-/obj/item/food/cookie/shortbread,
 /obj/item/food/cookie/chocolate_chip_cookie,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/cargo)
@@ -8609,7 +8447,6 @@
 /obj/effect/turf_decal/trimline/dark_red/mid_joiner{
 	dir = 4
 	},
-/obj/structure/sign/flag/syndicate/directional/north,
 /obj/structure/showcase/cyborg{
 	desc = "A stand with the empty body of a Cybersun cyborg bolted to it.";
 	dir = 4;
@@ -8717,16 +8554,6 @@
 	},
 /turf/open/floor/wood/tile,
 /area/ruin/space/has_grav/nova/des_two/service/diner)
-"Ns" = (
-/obj/structure/sign/flag/syndicate/directional/north{
-	pixel_x = 16
-	},
-/obj/effect/turf_decal/tile/dark_red/half,
-/obj/effect/turf_decal/siding/wideplating_new/dark,
-/turf/open/floor/iron/dark/textured_half{
-	dir = 4
-	},
-/area/ruin/space/has_grav/nova/des_two/cargo/hangar)
 "Ny" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/delivery/red,
@@ -8889,7 +8716,6 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 4
 	},
-/obj/item/reagent_containers/condiment/olive_oil,
 /turf/open/floor/iron/kitchen{
 	dir = 4
 	},
@@ -9071,7 +8897,6 @@
 	dir = 1
 	},
 /obj/machinery/light/cold/directional/north,
-/obj/structure/closet/secure_closet/des_two/science_gear,
 /obj/item/clothing/under/rank/rnd/scientist/nova/utility/syndicate,
 /obj/item/clothing/suit/hooded/wintercoat/science,
 /obj/item/clothing/suit/toggle/labcoat/science,
@@ -9202,7 +9027,6 @@
 	},
 /area/ruin/space/has_grav/nova/des_two/service/diner)
 "PC" = (
-/obj/effect/spawner/surgery_tray/full,
 /obj/structure/table,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9
@@ -9536,10 +9360,6 @@
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/halls)
-"Rp" = (
-/obj/structure/sign/flag/syndicate/directional/north,
-/turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav/nova/des_two/security)
 "Rr" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners{
 	dir = 8
@@ -9698,10 +9518,6 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/ds2atmos{
-	anchorable = 0;
-	anchored = 1
-	},
 /obj/effect/turf_decal/trimline/dark_red/corner,
 /obj/effect/turf_decal/trimline/dark_red/corner{
 	dir = 8
@@ -9800,7 +9616,6 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/cargo)
 "SB" = (
-/obj/machinery/chem_master/fullupgrade,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
 	},
@@ -9913,7 +9728,6 @@
 /obj/item/clothing/under/rank/engineering/engineer/nova/utility/syndicate,
 /obj/item/clothing/suit/jacket/gorlex_harness,
 /obj/item/clothing/suit/hazardvest,
-/obj/structure/closet/secure_closet/des_two/engie_locker,
 /obj/item/clothing/accessory/armband/engine{
 	desc = "An armband, worn by the FOB's operatives to display which department they're assigned to.";
 	name = "engine technician armband"
@@ -10339,7 +10153,6 @@
 	dir = 6
 	},
 /obj/machinery/light/warm/directional/east,
-/obj/machinery/vending/dorms,
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/nova/des_two/service/dorms)
 "UX" = (
@@ -10980,9 +10793,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/trimline/dark_red/line,
-/obj/structure/sign/flag/syndicate/directional/south{
-	pixel_x = -16
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
@@ -11045,7 +10855,6 @@
 /obj/effect/turf_decal/trimline/yellow/line{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/des_two/electrical_supplies,
 /obj/item/weldingtool/largetank{
 	pixel_y = 4
 	},
@@ -11170,10 +10979,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/des_two/service/dorms/fitness)
-"YN" = (
-/obj/machinery/vending/wardrobe/syndie_wardrobe,
-/turf/open/floor/iron/dark/smooth_large,
-/area/ruin/space/has_grav/nova/des_two/service/dorms)
 "YQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -11192,7 +10997,6 @@
 /turf/open/floor/iron/small,
 /area/ruin/space/has_grav/nova/des_two/halls)
 "Zg" = (
-/obj/machinery/suit_storage_unit/syndicate/softsuit,
 /turf/open/floor/iron/dark/small,
 /area/ruin/space/has_grav/nova/des_two/bridge/eva)
 "Zh" = (
@@ -11238,7 +11042,6 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/cargo)
 "Zq" = (
-/obj/structure/sign/flag/syndicate/directional/south,
 /obj/machinery/light/warm/directional/south,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -12070,7 +11873,7 @@ PX
 ki
 IU
 oR
-ac
+qw
 Bu
 qw
 gy
@@ -12094,7 +11897,7 @@ rI
 vD
 qY
 Kf
-YN
+wj
 rj
 DJ
 ZP
@@ -12390,7 +12193,7 @@ zl
 lp
 BO
 Xh
-Rp
+Wq
 Wq
 tf
 Hx
@@ -12881,7 +12684,7 @@ lN
 KW
 Xq
 KL
-dN
+HF
 HF
 JO
 iT
@@ -13581,7 +13384,7 @@ bw
 Lr
 FY
 wU
-oW
+Qa
 Iw
 uf
 DH
@@ -13747,7 +13550,7 @@ Fi
 Nr
 Mk
 kG
-AZ
+bw
 jj
 Cf
 Cf
@@ -13762,7 +13565,7 @@ eF
 fl
 Yc
 Hz
-Ns
+Lb
 Lc
 nm
 nm
