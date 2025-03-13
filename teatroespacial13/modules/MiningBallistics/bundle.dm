@@ -7,7 +7,7 @@
     name = "Shotgun Miner Kit"
     description = "Clearly made for shooting monsters!"
     icon = 'teatroespacial13/modules/MiningBallistics/dbarrelnormal.dmi'
-    icon_state = "dbarrel"
+    icon_state = "dshotgun"
     set_items = list(
 		/obj/item/storage/box/shotminer
 		)
