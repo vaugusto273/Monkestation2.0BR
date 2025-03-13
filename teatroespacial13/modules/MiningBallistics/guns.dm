@@ -1,11 +1,15 @@
 /obj/item/gun/ballistic/shotgun/doublebarrel/miner
 	name = "double-barreled miner shotgun"
 	desc = "A true classic."
+	icon = 'teatroespacial13/modules/MiningBallistics/dbarrelnormal.dmi'
+	icon_state = "dbarrel"
 	pin = /obj/item/firing_pin/wastes
 
 /obj/item/gun/ballistic/automatic/xhihao_smg/no_mag/miner
 	name = "Miner smg"
 	desc = "To do"
+	icon = 'teatroespacial13/modules/MiningBallistics/ballseo_1.dmi'
+	icon_state = "ballseo"
 	pin = /obj/item/firing_pin/wastes
 
 /obj/item/gun/ballistic/shotgun/bulldog/hunter

@@ -6,8 +6,8 @@
 /datum/voucher_set/mining/doublebarrelminer
     name = "Shotgun Miner Kit"
     description = "Clearly made for shooting monsters!"
-    icon = 'icons/obj/weapons/guns/ballistic.dmi'
-    icon_state = "dshotgun"
+    icon = 'teatroespacial13/modules/MiningBallistics/dbarrelnormal.dmi'
+    icon_state = "dbarrel"
     set_items = list(
 		/obj/item/storage/box/shotminer
 		)
@@ -21,8 +21,8 @@
 /datum/voucher_set/mining/smghunter
 	name = "Smg miner"
 	description = "Shooting monsters?..."
-	icon = 'monkestation/code/modules/blueshift/icons/obj/company_and_or_faction_based/xhihao_light_arms/guns32x.dmi'
-	icon_state = "bogseo"
+	icon = 'teatroespacial13/modules/MiningBallistics/ballseo_1.dmi'
+	icon_state = "ballseo"
 	set_items = list(
 		/obj/item/storage/box/smghunter
 	)
