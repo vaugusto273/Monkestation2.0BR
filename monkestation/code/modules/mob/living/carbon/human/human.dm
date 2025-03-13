@@ -16,22 +16,22 @@
 /mob/living/carbon/human/species/ipc_empty
 	parent_type = /mob/living/carbon/human/species/ipc
 	// Override New() to remove organs and limbs
-	New()
-		..()
-		// Remove all organs
-		for (var/obj/item/organ/internal/O in organs_slot)
-			qdel(O)
 
-		for (var/obj/item/organ/internal/M in organs)
-			qdel(M)
-		// Remove all limbs
-		for (var/obj/item/bodypart/L in bodyparts)
-			if (L.body_part == CHEST)
-				continue
-			qdel(L)
-		underwear = "Nude"
-		facial_hairstyle = "Shaved"
-		hairstyle = "Bald"
-		update_body()
-		set_stat(DEAD)
-		timeofdeath = world.time + 100000000000000000000
+/mob/living/carbon/human/species/ipc_empty/New()
+	..()
+	// Remove all organs
+	for (var/obj/item/organ/internal/O in organs_slot)
+		qdel(O)
+	for (var/obj/item/organ/internal/M in organs)
+		qdel(M)
+	// Remove all limbs
+	for (var/obj/item/bodypart/L in bodyparts)
+		if (L.body_part == CHEST)
+			continue
+		qdel(L)
+	underwear = "Nude"
+	facial_hairstyle = "Shaved"
+	hairstyle = "Bald"
+	update_body()
+	set_stat(DEAD)
+	timeofdeath = world.time + INFINITY
