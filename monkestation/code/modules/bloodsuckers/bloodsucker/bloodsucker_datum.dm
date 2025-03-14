@@ -15,6 +15,8 @@
 	var/bloodsucker_blood_volume = BLOOD_VOLUME_NORMAL
 	/// How much blood we can have at once, increases per level.
 	var/max_blood_volume = 600
+	/// Key variable for bloodsucker
+	var/key
 
 	var/datum/bloodsucker_clan/my_clan
 
@@ -531,3 +533,12 @@
 			gourmand_objective.owner = owner
 			gourmand_objective.objective_name = "Optional Objective"
 			objectives += gourmand_objective
+
+/datum/antagonist/bloodsucker/antag_token(datum/mind/hosts_mind, mob/spender)
+	if(isliving(spender) && hosts_mind)
+		var/datum/antagonist/bloodsucker/bloodsucker = new
+		var/key = spender.ckey
+		bloodsucker.owner = hosts_mind
+		hosts_mind.add_antag_datum(bloodsucker)
+		bloodsucker.key = key
+		bloodsucker.owner.add_antag_datum(bloodsucker)
