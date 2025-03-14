@@ -27,3 +27,4 @@
 		/obj/item/storage/box/smghunter
 	)
 
+

@@ -13,3 +13,30 @@
 	desc = "[initial(desc)]\n"
 	desc += "Strength: [effect.multiplier]\n"
 	desc += "Occurrence: [effect.chance]"
+
+/obj/item/disk/disease/premade/immortal
+	name = "Longevity Syndrome"
+	effect = new /datum/symptom/immortal
+
+/obj/item/disk/disease/premade/oxygen
+	name = "Oxygen"
+	effect = new /datum/symptom/oxygen
+
+/obj/item/disk/disease/premade/spaceadapt
+	name = "Space Adapt"
+	effect = new /datum/symptom/spaceadapt
+
+/obj/item/disk/disease/premade/coma
+	name = "coma"
+	effect = new/datum/symptom/coma
+
+/obj/item/disk/disease/premade/sensory
+	name = "sensory restoration"
+	effect = new/datum/symptom/sensory_restoration
+
+/obj/item/storage/box/diskvirusbox/PopulateContents()
+	new /obj/item/disk/disease/premade/immortal (src)
+	new /obj/item/disk/disease/premade/oxygen (src)
+	new /obj/item/disk/disease/premade/spaceadapt (src)
+	new /obj/item/disk/disease/premade/coma (src)
+	new /obj/item/disk/disease/premade/sensory (src)
