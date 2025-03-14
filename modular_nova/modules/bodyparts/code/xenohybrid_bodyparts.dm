@@ -3,10 +3,12 @@ var/xeno_color = "#525288"
 /obj/item/bodypart/head/xenohybrid
 	icon_greyscale = 'modular_nova/modules/bodyparts/icons/xeno_parts_greyscale.dmi'
 	limb_id = SPECIES_XENO
-	is_dimorphic = FALSE
+	is_dimorphic = TRUE
 	head_flags = HEAD_HAIR / HEAD_EYESPRITES | HEAD_EYEHOLES | HEAD_DEBRAIN | HEAD_EYECOLOR
 	palette = /datum/color_palette/generic_colors
 	palette_key = MUTANT_COLOR
+
+
 /obj/item/bodypart/chest/xenohybrid
 	icon_greyscale = 'modular_nova/modules/bodyparts/icons/xeno_parts_greyscale.dmi'
 	limb_id = SPECIES_XENO
