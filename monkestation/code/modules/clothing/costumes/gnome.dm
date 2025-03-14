@@ -62,24 +62,24 @@
 /datum/store_item/under/jumpsuit/gnome_green
 	name = "Green Gnome Uniform"
 	item_path = /obj/item/clothing/under/gnome_green
-	item_cost = 1000
+	item_cost = 100
 
 /datum/store_item/under/jumpsuit/gnome_blue
 	name = "Blue Gnome Uniform"
 	item_path = /obj/item/clothing/under/gnome_blue
-	item_cost = 1000
+	item_cost = 100
 
 /datum/store_item/shoes/gnome_boots
 	name = "Leather Gnome Boots"
 	item_path = /obj/item/clothing/shoes/gnome_boots
-	item_cost = 1000
+	item_cost = 100
 
 /datum/store_item/head/gnome_hat
 	name = "Gnome Hat"
 	item_path = /obj/item/clothing/head/gnome_hat
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/head/gnome_hat_tall
 	name = "Tall Gnome Hat"
 	item_path = /obj/item/clothing/head/gnome_hat_tall
-	item_cost = 10000
+	item_cost = 100

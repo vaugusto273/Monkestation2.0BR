@@ -22,6 +22,9 @@
 		/obj/item/storage/bag/ore,
 		/obj/item/t_scanner/adv_mining_scanner,
 		/obj/item/tank/internals,
+		/obj/item/gun/ballistic/shotgun/doublebarrel/miner,
+		/obj/item/gun/ballistic/automatic/xhihao_smg/no_mag/miner,
+		/obj/item/gun/ballistic/shotgun/bulldog/hunter,
 		)
 	resistance_flags = FIRE_PROOF
 	clothing_traits = list(TRAIT_SNOWSTORM_IMMUNE)

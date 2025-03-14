@@ -86,7 +86,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/military_jacket
 	name = "Military Jacket"
 	item_path = /obj/item/clothing/suit/jacket/miljacket
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/suit/puffer_jacket
 	name = "Puffer Jacket"
@@ -95,7 +95,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/puffer_vest
 	name = "Puffer Vest"
 	item_path = /obj/item/clothing/suit/jacket/puffer/vest
-	item_cost = 6000
+	item_cost = 600
 
 /datum/store_item/suit/leather_jacket
 	name = "Leather Jacket"
@@ -104,32 +104,46 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/leather_jacket/biker
 	name = "Biker Jacket"
 	item_path = /obj/item/clothing/suit/jacket/leather/biker
-	item_cost = 2000
+	item_cost = 200
 
 /datum/store_item/suit/jacket_sweater
 	name = "Recolorable Sweater Jacket"
 	item_path = /obj/item/clothing/suit/toggle/jacket/sweater
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/jacket_oversized
 	name = "Recolorable Oversized Jacket"
 	item_path = /obj/item/clothing/suit/jacket/oversized
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/jacket_fancy
 	name = "Recolorable Fancy Fur Coat"
 	item_path = /obj/item/clothing/suit/jacket/fancy
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/jacket/tailcoat
 	name = "Recolorable Tailcoat"
 	item_path = /obj/item/clothing/suit/jacket/tailcoat
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/ethereal_raincoat
 	name = "Ethereal Raincoat"
 	item_path = /obj/item/clothing/suit/hooded/ethereal_raincoat
 
+/datum/store_item/suit/jacket/cover
+	name = "Perfumed Dress Cover"
+	item_path = /obj/item/clothing/suit/jacket/gown
+	item_cost = 5000
+
+/datum/store_item/suit/jacket/butler
+	name = "Butler Jacket"
+	item_path = /obj/item/clothing/suit/toggle/jacket/butler
+	item_cost = 5000
+
+/datum/store_item/suit/jacket/silk
+	name = "Silk Jacket"
+	item_path = /obj/item/clothing/suit/jacket/silk
+	item_cost = 5000
 
 /*
 *	COSTUMES
@@ -138,37 +152,37 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/owl
 	name = "Owl Cloak"
 	item_path = /obj/item/clothing/suit/toggle/owlwings
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/griffin
 	name = "Griffon Cloak"
 	item_path = /obj/item/clothing/suit/toggle/owlwings/griffinwings
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/syndi
 	name = "Black And Red Space Suit Replica"
 	item_path = /obj/item/clothing/suit/syndicatefake
-	item_cost = 15000
+	item_cost = 550
 
 /datum/store_item/suit/bee
 	name = "Bee Outfit"
 	item_path = /obj/item/clothing/suit/hooded/bee_costume
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/plague_doctor
 	name = "Plague Doctor Suit"
 	item_path = /obj/item/clothing/suit/bio_suit/plaguedoctorsuit
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/snowman
 	name = "Snowman Outfit"
 	item_path = /obj/item/clothing/suit/costume/snowman
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/chicken
 	name = "Chicken Suit"
 	item_path = /obj/item/clothing/suit/costume/chickensuit
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/suit/monkey
 	name = "Monkey Suit"
@@ -181,7 +195,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/xenos
 	name = "Xenos Suit"
 	item_path = /obj/item/clothing/suit/costume/xenos
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/ian_costume
 	name = "Corgi Costume"
@@ -199,12 +213,12 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/witch
 	name = "Witch Robe"
 	item_path = /obj/item/clothing/suit/wizrobe/marisa/fake
-	item_cost = 2000
+	item_cost = 200
 
 /datum/store_item/suit/dinojammies
 	name = "Dinosaur Pajamas"
 	item_path = /obj/item/clothing/suit/hooded/dinojammies
-	item_cost = 10000
+	item_cost = 100
 
 /*
 *	MISC
@@ -213,7 +227,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/purple_apron
 	name = "Purple Apron"
 	item_path = /obj/item/clothing/suit/apron/purple_bartender
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/denim_overalls
 	name = "Denim Overalls"
@@ -232,7 +246,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/hawaiian_shirt
 	name = "Hawaiian Shirt"
 	item_path = /obj/item/clothing/suit/costume/hawaiian
-	item_cost = 5000
+	item_cost = 500
 
 
 /*
@@ -305,37 +319,37 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/yuri
 	name = "Yuri Coat"
 	item_path = /obj/item/clothing/suit/costume/yuri
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/winter_coat/cosmic
 	name = "Cosmic Winter Coat"
 	item_path = /obj/item/clothing/suit/hooded/wintercoat/cosmic
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/winter_coat/ratvar
 	name = "Ratvar Winter Coat"
 	item_path = /obj/item/clothing/suit/hooded/wintercoat/ratvar
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/winter_coat/narsie
 	name = "Narsie Winter Coat"
 	item_path = /obj/item/clothing/suit/hooded/wintercoat/narsie
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/saints
 	name = "Third Street Saints fur coat"
 	item_path = /obj/item/clothing/suit/saints
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/heartcoat
 	name = "Heart coat"
 	item_path = /obj/item/clothing/suit/heartcoat
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/phantom
 	name = "Phantom Thief Coat"
 	item_path = /obj/item/clothing/suit/phantom
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/morningstar
 	name = "Morning Star Coat"
@@ -344,7 +358,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/driscoll
 	name = "driscoll poncho"
 	item_path = /obj/item/clothing/suit/driscoll
-	item_cost = 7500
+	item_cost = 750
 
 
 /// EVERYTHING NOVA RELATED
@@ -353,17 +367,17 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/korea
 	name = "Eastern Winter Coat"
 	item_path = /obj/item/clothing/suit/koreacoat
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/suit/czech
 	name = "Czech Winter Coat"
 	item_path = /obj/item/clothing/suit/modernwintercoatthing
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/suit/mantella
 	name = "Mothic Mantella"
 	item_path = /obj/item/clothing/suit/mothcoat/winter
-	item_cost = 5000
+	item_cost = 500
 
 /*
 *	SUITS / SUIT JACKETS
@@ -392,22 +406,22 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/tailored_jacket
 	name = "Recolorable Tailored Jacket"
 	item_path = /obj/item/clothing/suit/tailored_jacket
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/tailored_short_jacket
 	name = "Recolorable Tailored Short Jacket"
 	item_path = /obj/item/clothing/suit/tailored_jacket/short
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/mothcoat
 	name = "Mothic Flightsuit"
 	item_path = /obj/item/clothing/suit/mothcoat
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/gothcoat
 	name = "Gothic Coat"
 	item_path = /obj/item/clothing/suit/costume/gothcoat
-	item_cost = 5000
+	item_cost = 500
 
 /*
 *	VARSITY JACKET
@@ -416,7 +430,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/varsity
 	name = "Varsity Jacket"
 	item_path = /obj/item/clothing/suit/varsity
-	item_cost = 4500
+	item_cost = 450
 
 /*
 *	COSTUMES
@@ -425,7 +439,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/shark_costume
 	name = "Shark Costume"
 	item_path = /obj/item/clothing/suit/hooded/shark_costume
-	item_cost = 7500
+	item_cost = 750
 
 /*
 *	MISC
@@ -438,7 +452,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/redhood
 	name = "Red cloak"
 	item_path = /obj/item/clothing/suit/hooded/cloak/david
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/wornshirt
 	name = "Worn Shirt"
@@ -451,7 +465,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/peacoat
 	name = "Colorable Peacoat"
 	item_path = /obj/item/clothing/suit/toggle/peacoat
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/suit/trackjacket
 	name = "Track Jacket"
@@ -460,7 +474,7 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/croptop
 	name = "Crop Top Turtleneck"
 	item_path = /obj/item/clothing/suit/jacket/croptop
-	item_cost = 4000
+	item_cost = 400
 
 /*
 *	FLANNELS
@@ -493,37 +507,37 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/frenchtrench
 	name = "Blue Trenchcoat"
 	item_path = /obj/item/clothing/suit/frenchtrench
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/frontiertrench
 	name = "Frontier Trenchcoat"
 	item_path = /obj/item/clothing/suit/jacket/frontier_colonist
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/cossak
 	name = "Ukrainian Coat"
 	item_path = /obj/item/clothing/suit/cossack
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/parka
 	name = "Falls Parka"
 	item_path = /obj/item/clothing/suit/fallsparka
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/urban
 	name = "Urban Coat"
 	item_path = /obj/item/clothing/suit/urban
-	item_cost = 3500
+	item_cost = 350
 
 /datum/store_item/suit/maxson
 	name = "Fancy Brown Coat"
 	item_path = /obj/item/clothing/suit/brownbattlecoat
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/bossu
 	name = "Fancy Black Coat"
 	item_path = /obj/item/clothing/suit/blackfurrich
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/dutchjacket
 	name = "Western Jacket"
@@ -540,17 +554,17 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/frontierjacket/short
 	name = "Frontier Jacket (Short)"
 	item_path = /obj/item/clothing/suit/jacket/frontier_colonist/short
-	item_cost = 3500
+	item_cost = 350
 
 /datum/store_item/suit/frontierjacket/short/medical
 	name = "Frontier Medical Jacket (Short)"
 	item_path = /obj/item/clothing/suit/jacket/frontier_colonist/medical
-	item_cost = 3500
+	item_cost = 350
 
 /datum/store_item/suit/woolcoat
 	name = "Leather Overcoat"
 	item_path = /obj/item/clothing/suit/woolcoat
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/suit/flakjack
 	name = "Flak Jacket"
@@ -559,12 +573,12 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/bltrench
 	name = "Black Trenchcoat"
 	item_path = /obj/item/clothing/suit/trenchblack
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/brtrench
 	name = "Brown Trenchcoat"
 	item_path = /obj/item/clothing/suit/trenchbrown
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/suit/discojacket
 	name = "Disco Ass Blazer"
@@ -649,17 +663,17 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/offdep_jacket
 	name = "Off-Department Jacket"
 	item_path = /obj/item/clothing/suit/toggle/jacket/assistant
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/suit/digicoat_glitched //Public donator reward for Razurath.
 	name = "Glitched Digicoat"
 	item_path = /obj/item/clothing/suit/toggle/digicoat/glitched
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/suit/warm_coat
 	name = "Colourable Warm Coat"
 	item_path = /obj/item/clothing/suit/warm_coat
-	item_cost = 5500
+	item_cost = 550
 
 /datum/store_item/suit/warm_sweater
 	name = "Colourable Warm Sweater"
@@ -672,9 +686,9 @@ GLOBAL_LIST_INIT(store_suits, generate_store_items(/datum/store_item/suit))
 /datum/store_item/suit/crop_jacket
 	name = "Colourable Crop-Top Jacket"
 	item_path = /obj/item/clothing/suit/crop_jacket
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/suit/sleeveless_crop_jacket
 	name = "Colourable Sleeveless Crop-Top Jacket"
 	item_path = /obj/item/clothing/suit/crop_jacket/sleeveless
-	item_cost = 2500
+	item_cost = 250

@@ -39,12 +39,12 @@ GLOBAL_LIST_INIT(store_masks, generate_store_items(/datum/store_item/mask))
 /datum/store_item/mask/gas_mask
 	name = "Gas Mask"
 	item_path = /obj/item/clothing/mask/gas
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/mask/atp_mask
 	name = "ATP Engineer Mask"
 	item_path = /obj/item/clothing/mask/gas/atp
-	item_cost = 5000
+	item_cost = 500
 
 /*
 *	JOB-LOCKED
@@ -59,7 +59,7 @@ GLOBAL_LIST_INIT(store_masks, generate_store_items(/datum/store_item/mask))
 /datum/store_item/mask/driscoll
 	name = "Driscoll Mask"
 	item_path = /obj/item/clothing/mask/gas/driscoll
-	item_cost = 5000
+	item_cost = 500
 
 /*
 *	MISC
@@ -80,7 +80,7 @@ GLOBAL_LIST_INIT(store_masks, generate_store_items(/datum/store_item/mask))
 /datum/store_item/mask/plague_doctor
 	name = "Plague Doctor Mask"
 	item_path = /obj/item/clothing/mask/gas/plaguedoctor
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/mask/monkey
 	name = "Monkey Mask"
@@ -93,7 +93,7 @@ GLOBAL_LIST_INIT(store_masks, generate_store_items(/datum/store_item/mask))
 /datum/store_item/mask/joy
 	name = "Joy Mask"
 	item_path = /obj/item/clothing/mask/joy
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/mask/lollipop
 	name = "Lollipop"
@@ -106,24 +106,24 @@ GLOBAL_LIST_INIT(store_masks, generate_store_items(/datum/store_item/mask))
 /datum/store_item/mask/kitsunewhite
 	name = "White Kitsune Mask"
 	item_path = /obj/item/clothing/mask/kitsunewhite
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/mask/kitsuneblack
 	name = "Black Kitsune Mask"
 	item_path = /obj/item/clothing/mask/kitsuneblack
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/mask/kitsune
 	name = "Greyscale Kitsune Mask"
 	item_path = /obj/item/clothing/mask/kitsune
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/mask/ook
 	name = "Ook Mask"
 	item_path = /obj/item/clothing/mask/ookmask
-	item_cost = 15000
+	item_cost = 150
 
 /datum/store_item/mask/manhunt
 	name = "Smiley Mask"
 	item_path = /obj/item/clothing/mask/joy/manhunt
-	item_cost = 5000
+	item_cost = 500

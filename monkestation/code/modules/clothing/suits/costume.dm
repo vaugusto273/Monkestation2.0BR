@@ -87,7 +87,7 @@
 /datum/store_item/head/helldiverhelmet
 	name = "Helldiver Helmet"
 	item_path = /obj/item/clothing/head/helldiverhelmet
-	item_cost = 10000
+	item_cost = 500
 
 /obj/item/clothing/suit/helldiverarmor
 	name = "helldiver armor"
@@ -109,7 +109,7 @@
 /datum/store_item/suit/helldiverarmor
 	name = "Helldiver Armor"
 	item_path = /obj/item/clothing/suit/helldiverarmor
-	item_cost = 10000
+	item_cost = 500
 
 /obj/item/clothing/suit/hooded/ashsuit
 	name = "ashsuit suit"

@@ -532,7 +532,7 @@
 		var/obj/item/card/id/I = C.get_idcard(TRUE)
 		if(I)
 			has_bank_account = I.registered_account
-		if(!istype(dna) || HAS_TRAIT(mob_occupant, TRAIT_NO_DNA_COPY))
+		if(!istype(dna) || HAS_TRAIT(mob_occupant, TRAIT_NO_DNA_COPY) || HAS_TRAIT(mob_occupant, TRAIT_NO_CLONING))
 			scantemp = "<font class='bad'>Unable to locate valid genetic data.</font>"
 			playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
 			return

@@ -51,10 +51,30 @@ GLOBAL_LIST_INIT(store_gloves, generate_store_items(/datum/store_item/gloves))
 /datum/store_item/gloves/rainbow
 	name = "Rainbow Gloves"
 	item_path = /obj/item/clothing/gloves/color/rainbow
-	item_cost = 3000
+	item_cost = 300
 
 
 /datum/store_item/gloves/maid
 	name = "Maid Arm Covers"
 	item_path = /obj/item/clothing/gloves/maid
-	item_cost = 4000
+	item_cost = 400
+
+/datum/store_item/gloves/flowery
+	name = "Perfumed Gloves"
+	item_path = /obj/item/clothing/gloves/flowery
+	item_cost = 500
+
+/datum/store_item/gloves/starry
+	name = "Faux Leather Gloves"
+	item_path = /obj/item/clothing/gloves/starry
+	item_cost = 500
+
+/datum/store_item/gloves/wristlets
+	name = "Golden Wristlets"
+	item_path = /obj/item/clothing/gloves/wristlets
+	item_cost = 100
+
+/datum/store_item/gloves/butler
+	name = "Butler Gloves"
+	item_path = /obj/item/clothing/gloves/butler
+	item_cost = 500

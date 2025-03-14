@@ -6,7 +6,7 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 /datum/store_item/shoes/winter_boots
 	name = "Winter Boots"
 	item_path = /obj/item/clothing/shoes/winterboots
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/shoes/work_boots
 	name = "Work Boots"
@@ -15,17 +15,17 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 /datum/store_item/shoes/swat_replica
 	name = "Combat boots"
 	item_path = /obj/item/clothing/shoes/combat/swat_replica
-	item_cost = 1000
+	item_cost = 100
 
 /datum/store_item/shoes/mining_boots
 	name = "Mining Boots"
 	item_path = /obj/item/clothing/shoes/workboots/mining
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/shoes/russian_boots
 	name = "Russian Boots"
 	item_path = /obj/item/clothing/shoes/russian
-	item_cost = 4000
+	item_cost = 400
 
 /*
 *	COWBOY
@@ -34,17 +34,17 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 /datum/store_item/shoes/brown_cowboy_boots
 	name = "Brown Cowboy Boots"
 	item_path = /obj/item/clothing/shoes/cowboy
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/shoes/black_cowboy_boots
 	name = "Black Cowboy Boots"
 	item_path = /obj/item/clothing/shoes/cowboy/black
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/shoes/white_cowboy_boots
 	name = "White Cowboy Boots"
 	item_path = /obj/item/clothing/shoes/cowboy/white
-	item_cost = 2500
+	item_cost = 250
 
 
 /*
@@ -113,6 +113,36 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 	name = "Colorable Heels"
 	item_path = /obj/item/clothing/shoes/heels
 
+/datum/store_item/shoes/flats
+	name = "Perfumed Flats"
+	item_path = /obj/item/clothing/shoes/flowery
+	item_cost = 5000
+
+/datum/store_item/shoes/flats/alt
+	name = "Blue Flats"
+	item_path = /obj/item/clothing/shoes/starry
+	item_cost = 5000
+
+/datum/store_item/shoes/flats/ball_heel
+	name = "Ball Heels"
+	item_path = /obj/item/clothing/shoes/ballheels
+	item_cost = 5000
+
+/datum/store_item/shoes/flats/gilded_sandal
+	name = "Gilded Sandals"
+	item_path = /obj/item/clothing/shoes/sandal/gilded
+	item_cost = 5000
+
+/datum/store_item/shoes/angel
+	name = "Angel Boots"
+	item_path = /obj/item/clothing/shoes/angel
+	item_cost = 5000
+
+/datum/store_item/shoes/devil
+	name = "Devil Boots"
+	item_path = /obj/item/clothing/shoes/devil
+	item_cost = 5000
+
 /*
 *	JOB-RESTRICTED
 */
@@ -120,34 +150,34 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 /datum/store_item/shoes/jester
 	name = "Jester Shoes"
 	item_path = /obj/item/clothing/shoes/clown_shoes/clown_jester_shoes
-	item_cost = 4000
+	item_cost = 400
 
 /// EVERYTHING NOVA RELATED
 
 /datum/store_item/shoes/nova/wraps/swag
 	name = "gilded foot wraps"
 	item_path = /obj/item/clothing/shoes/wraps
-	item_cost = 4000 //The price of kissing glass shards
+	item_cost = 400 //The price of kissing glass shards
 
 /datum/store_item/shoes/nova/wraps/drip
 	name = "silver leg wraps"
 	item_path = /obj/item/clothing/shoes/wraps/silver
-	item_cost = 3000 //The price of kissing glass shards
+	item_cost = 300 //The price of kissing glass shards
 
 /datum/store_item/shoes/nova/jungleboots
 	name = "jungle boots"
 	item_path = /obj/item/clothing/shoes/jungleboots
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/shoes/nova/kimshoes
 	name = "aerostatic boots"
 	item_path = /obj/item/clothing/shoes/kimshoes
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/shoes/timbs
 	name = "Fashionable Boots"
 	item_path = /obj/item/clothing/shoes/jackboots/timbs
-	item_cost = 2500
+	item_cost = 250
 
 /*
 *	COWBOY
@@ -156,12 +186,12 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 /datum/store_item/shoes/cowboyboots
 	name = "Cowboy Boots (Brown)"
 	item_path = /obj/item/clothing/shoes/cowboyboots
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/shoes/cowboyboots_black
 	name = "Cowboy Boots (Black)"
 	item_path = /obj/item/clothing/shoes/cowboyboots/black
-	item_cost = 4000
+	item_cost = 400
 
 /*
 *	MISC
@@ -170,22 +200,22 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 /datum/store_item/shoes/high_heels
 	name = "High Heels"
 	item_path = /obj/item/clothing/shoes/high_heels
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/shoes/black_heels
 	name = "Fancy Heels"
 	item_path = /obj/item/clothing/shoes/fancy_heels
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/shoes/sportshoes
 	name = "Sport Shoes"
 	item_path = /obj/item/clothing/shoes/sports
-	item_cost = 1500
+	item_cost = 150
 
 /datum/store_item/shoes/rollerskates
 	name = "Roller Skates"
 	item_path = /obj/item/clothing/shoes/wheelys/rollerskates
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/shoes/wheelys
 	name = "Wheely-Heels"
@@ -199,9 +229,9 @@ GLOBAL_LIST_INIT(store_shoes, generate_store_items(/datum/store_item/shoes))
 /datum/store_item/shoes/christmas
 	name = "Red Christmas Boots"
 	item_path = /obj/item/clothing/shoes/winterboots/christmas
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/shoes/christmas/green
 	name = "Green Christmas Boots"
 	item_path = /obj/item/clothing/shoes/winterboots/christmas/green
-	item_cost = 10000
+	item_cost = 100

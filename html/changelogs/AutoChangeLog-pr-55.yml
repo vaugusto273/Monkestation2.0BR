@@ -1,0 +1,7 @@
+author: "JohnnySilverhand123"
+delete-after: True
+changes:
+  - map: "Removed missing objects from DS-2's map file"
+  - code_imp: "Removed duplicate defines"
+  - code_imp: "Changed a few lines related to IPC fabrication that were giving out a warning on VSCode"
+  - refactor: "Swapped the huge number on said code to \"INFINITY\", achieving the same effect"

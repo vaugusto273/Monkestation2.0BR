@@ -138,4 +138,5 @@
 /// The time needed to unlock the gamer cloak in preferences
 #define PLAYTIME_VETERAN 300000 // 5,000 hours
 
+/// The key used for sprite accessories that should never actually be applied to the player.
 #define SPRITE_ACCESSORY_NONE "None"

@@ -8,5 +8,5 @@
 
 /datum/store_item/roundstart/maint_pill_bottle
 	name = "Bottle of Maint Pills"
-	item_cost = 1000
+	item_cost = 500
 	item_path = /obj/item/storage/pill_bottle/maintenance_pill/full

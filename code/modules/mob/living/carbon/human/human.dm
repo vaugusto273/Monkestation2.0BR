@@ -412,6 +412,14 @@
 	if(istype(head, /obj/item/clothing/head/wizard))
 		threatcount += 2
 
+	//MONKESTATION EDIT START
+	if(istype(head, /obj/item/clothing/head/hats/tophat/syndicate))
+		threatcount += 2
+
+	if(istype(wear_neck, /obj/item/clothing/neck/cloak/syndicate))
+		threatcount += 2
+	//MONKESTATION EDIT STOP
+
 	//Check for nonhuman scum
 	if(dna && dna.species.id && dna.species.id != SPECIES_HUMAN)
 		threatcount += 1
@@ -1045,6 +1053,12 @@
 
 /mob/living/carbon/human/species/jelly/luminescent
 	race = /datum/species/jelly/luminescent
+
+/mob/living/carbon/human/species/jelly/new_slime_person
+	race = /datum/species/jelly/new_slime_person
+
+/mob/living/carbon/human/species/synth
+	race = /datum/species/synth
 
 /mob/living/carbon/human/species/lizard
 	race = /datum/species/lizard

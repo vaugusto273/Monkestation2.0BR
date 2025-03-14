@@ -161,7 +161,7 @@
 
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
-	ammo_type = /obj/item/ammo_casing/c27_54cesarzowa
+	ammo_type = /obj/item/ammo_casing/c27_54cesarzowa/hunter
 	caliber = CALIBER_CESARZOWA
 	max_ammo = 18
 

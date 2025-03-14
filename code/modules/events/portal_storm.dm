@@ -36,9 +36,9 @@
 /datum/round_event_control/portal_storm_monkey
 	name = "Portal Storm: Monkeys"
 	typepath = /datum/round_event/portal_storm/portal_storm_monkey
-	weight = 4
-	max_occurrences = 2
-	earliest_start = 20 MINUTES
+	weight = 1
+	max_occurrences = 1
+	earliest_start = 60 MINUTES
 	category = EVENT_CATEGORY_ENTITIES
 	track = EVENT_TRACK_MAJOR
 	description = "Angry monkies pour out of portals."

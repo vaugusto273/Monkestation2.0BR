@@ -106,6 +106,8 @@
 #define SPECIES_HUMAN "human"
 #define SPECIES_JELLYPERSON "jelly"
 #define SPECIES_SLIMEPERSON "slime"
+#define SPECIES_NEWSLIMEPERSON "nslime"
+#define SPECIES_SYNTHPERSON "synthperson"
 #define SPECIES_LUMINESCENT "luminescent"
 #define SPECIES_STARGAZER "stargazer"
 #define SPECIES_LIZARD "lizard"
@@ -114,7 +116,7 @@
 #define SPECIES_NIGHTMARE "nightmare"
 #define SPECIES_MONKEY "monkey"
 #define SPECIES_MOTH "moth"
-#define SPECIES_TUNDRA "tundra_moth" //Monkestation Addition
+#define SPECIES_TUNDRA "tundra" //Monkestation Addition
 #define SPECIES_MUSHROOM "mush"
 #define SPECIES_PLASMAMAN "plasmaman"
 #define SPECIES_PODPERSON "pod"

@@ -6,7 +6,7 @@ GLOBAL_LIST_INIT(store_inhand_items, generate_store_items(/datum/store_item/inha
 /datum/store_item/inhand/cane
 	name = "Cane"
 	item_path = /obj/item/cane
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/inhand/cane/white
 	name = "White Cane"
@@ -19,38 +19,53 @@ GLOBAL_LIST_INIT(store_inhand_items, generate_store_items(/datum/store_item/inha
 /datum/store_item/inhand/briefcase_secure
 	name = "Secure Briefcase"
 	item_path = /obj/item/storage/secure/briefcase
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/inhand/skub
 	name = "Skub"
 	item_path = /obj/item/skub
-	item_cost = 3500
+	item_cost = 350
 
 /datum/store_item/inhand/skateboard
 	name = "Skateboard"
 	item_path = /obj/item/melee/skateboard
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/inhand/bouquet_mixed
 	name = "Mixed Bouquet"
 	item_path = /obj/item/bouquet
-	item_cost = 2000
+	item_cost = 200
 
 /datum/store_item/inhand/bouquet_sunflower
 	name = "Sunflower Bouquet"
 	item_path = /obj/item/bouquet/sunflower
-	item_cost = 2000
+	item_cost = 200
 
 /datum/store_item/inhand/bouquet_poppy
 	name = "Poppy Bouquet"
 	item_path = /obj/item/bouquet/poppy
-	item_cost = 2000
+	item_cost = 200
 
 /datum/store_item/inhand/bouquet_rose
 	name = "Rose Bouquet"
 	item_path = /obj/item/bouquet/rose
-	item_cost = 2000
+	item_cost = 200
 
 /datum/store_item/inhand/smokingpipe
 	name = "Smoking Pipe"
 	item_path = /obj/item/clothing/mask/cigarette/pipe
+
+/datum/store_item/inhand/wingsatchel
+	name = "Angel Wing Satchel"
+	item_path = /obj/item/storage/backpack/satchel/wing
+	item_cost = 5000
+
+/datum/store_item/inhand/wingsatchel/alt
+	name = "Devil Wing Satchel"
+	item_path = /obj/item/storage/backpack/satchel/wing/alt
+	item_cost = 5000
+
+/datum/store_item/inhand/flowerysatchel
+	name = "Perfume Scented Satchel"
+	item_path = /obj/item/storage/backpack/satchel/flowery
+	item_cost = 5000

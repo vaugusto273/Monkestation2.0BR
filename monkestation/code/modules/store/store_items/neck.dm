@@ -15,7 +15,7 @@ GLOBAL_LIST_INIT(store_neck, generate_store_items(/datum/store_item/neck))
 /datum/store_item/neck/scarf_christmas
 	name = "Christmas Scarf"
 	item_path = /obj/item/clothing/neck/scarf/christmas
-	item_cost = 4000
+	item_cost = 400
 
 /datum/store_item/neck/scarf_cyan
 	name = "Cyan Scarf"
@@ -72,67 +72,71 @@ GLOBAL_LIST_INIT(store_neck, generate_store_items(/datum/store_item/neck))
 /datum/store_item/neck/scarf_infinity
 	name = "Infinity Scarf"
 	item_path = /obj/item/clothing/neck/infinity_scarf
-	item_cost = 7500
+	item_cost = 750
+
+/datum/store_item/neck/large_scarf
+	name = "Large Scarf"
+	item_path = /obj/item/clothing/neck/large_scarf
 
 /datum/store_item/neck/boatcloak
 	name = "Boat cloak"
 	item_path = /obj/item/clothing/neck/boatcloak
-	item_cost = 7500
+	item_cost = 750
 /datum/store_item/neck/ranger_poncho
 	name = "Ranger Poncho"
 	item_path = /obj/item/clothing/neck/ranger_poncho
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/neck/polycloak
 	name = "Poly cloak"
 	item_path = /obj/item/clothing/neck/polycloak
-	item_cost = 7500
+	item_cost = 750
 
 
 /datum/store_item/neck/trans
 	name = "Trans Pride Cloak"
 	item_path = /obj/item/clothing/neck/trans
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/neck/pan
 	name = "Pansexual Pride Cloak"
 	item_path = /obj/item/clothing/neck/pan
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/neck/les
 	name = "Lesbian Pride Cloak"
 	item_path = /obj/item/clothing/neck/les
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/neck/intersex
 	name = "Intersex Pride Cloak"
 	item_path = /obj/item/clothing/neck/intersex
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/neck/gay
 	name = "Gay Pride Cloak"
 	item_path = /obj/item/clothing/neck/gay
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/neck/enby
 	name = "Nonbinary Pride Cloak"
 	item_path = /obj/item/clothing/neck/enby
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/neck/bi
 	name = "Bisexual Pride Cloak"
 	item_path = /obj/item/clothing/neck/bi
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/neck/aro
 	name = "Aro Pride Cloak"
 	item_path = /obj/item/clothing/neck/aro
-	item_cost = 10000
+	item_cost = 100
 
 /datum/store_item/neck/ace
 	name = "Asexual Pride Cloak"
 	item_path = /obj/item/clothing/neck/ace
-	item_cost = 10000
+	item_cost = 100
 
 /*
 *	NECKTIES
@@ -161,7 +165,7 @@ GLOBAL_LIST_INIT(store_neck, generate_store_items(/datum/store_item/neck))
 /datum/store_item/neck/discoproper
 	name = "Horrible Necktie"
 	item_path = /obj/item/clothing/neck/tie/disco
-	item_cost = 10000
+	item_cost = 100
 
 /*
 *	MISC
@@ -174,7 +178,7 @@ GLOBAL_LIST_INIT(store_neck, generate_store_items(/datum/store_item/neck))
 /datum/store_item/neck/maid
 	name = "Maid Neck Cover"
 	item_path = /obj/item/clothing/neck/maid
-	item_cost = 7500 //work for it
+	item_cost = 750 //work for it nah let them be valided
 
 /datum/store_item/neck/bowtie_collar
 	name = "Colorable Bowtie Collar"
@@ -183,66 +187,66 @@ GLOBAL_LIST_INIT(store_neck, generate_store_items(/datum/store_item/neck))
 /datum/store_item/neck/straw_coat
 	name = "Straw Coat"
 	item_path = /obj/item/clothing/neck/straw_coat
-	item_cost = 3000
+	item_cost = 300
 
 /datum/store_item/neck/rainbow_bowtie
 	name = "Rainbow Bow Tie"
 	item_path = /obj/item/clothing/neck/bowtie/rainbow
-	item_cost = 10000
+	item_cost = 100
 
 /// EVERYTHING NOVA RELATED
 
 /datum/store_item/neck/gags_cloak //BUYABLE
 	name = "Colourable Cloak"
 	item_path = /obj/item/clothing/neck/cloak/colourable
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/neck/gags_veil //BUYABLE
 	name = "Colourable Veil"
 	item_path = /obj/item/clothing/neck/cloak/colourable/veil
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/neck/gags_shroud //BUYABLE
 	name = "Colourable Shroud"
 	item_path = /obj/item/clothing/neck/cloak/colourable/shroud
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/neck/gags_mantle //BUYABLE
 	name = "Colourable Mantle"
 	item_path = /obj/item/clothing/neck/mantle/recolorable
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/neck/long_cape //BUYABLE
 	name = "Long Colourable Cape"
 	item_path = /obj/item/clothing/neck/long_cape
-	item_cost = 7500
+	item_cost = 750
 
 /datum/store_item/neck/wide_cape //BUYABLE
 	name = "Wide Colourable Cape"
 	item_path = /obj/item/clothing/neck/wide_cape
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/neck/robe_cape //BUYABLE
 	name = "Robed Colourable Cape"
 	item_path = /obj/item/clothing/neck/robe_cape
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/neck/maid_neck_cover //BUYABLE
 	name = "Colourable Maid Neck Cover"
 	item_path = /obj/item/clothing/neck/maid_neck_cover
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/neck/face_scarf //BUYABLE
 	name = "Colourable Face Scarf"
 	item_path = /obj/item/clothing/neck/face_scarf
-	item_cost = 2500
+	item_cost = 250
 
 /datum/store_item/neck/mantle //BUYABLE
 	name = "Mantle"
 	item_path = /obj/item/clothing/neck/mantle
-	item_cost = 5000
+	item_cost = 500
 
 /datum/store_item/neck/imperial_police_cloak //BUYABLE
 	name = "Imperial Police Cloak"
 	item_path = /obj/item/clothing/neck/cloak/colonial/nri_police
-	item_cost = 7500
+	item_cost = 750

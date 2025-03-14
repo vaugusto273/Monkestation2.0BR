@@ -1,0 +1,4 @@
+author: "Fernandim"
+delete-after: True
+changes:
+  - rscadd: "Bloodsucker is now buyable from Antag Token"

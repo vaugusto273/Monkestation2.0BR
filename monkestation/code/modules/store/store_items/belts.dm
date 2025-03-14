@@ -2,7 +2,7 @@ GLOBAL_LIST_INIT(store_belts, generate_store_items(/datum/store_item/belts))
 
 /datum/store_item/belts
 	category = LOADOUT_ITEM_BELT
-	item_cost = 2000
+	item_cost = 200
 
 /datum/store_item/belts/fanny_pack_black
 	name = "Black Fannypack"
