@@ -2,8 +2,7 @@
 "ak" = (
 /obj/structure/wall_torch/spawns_lit/directional/north,
 /obj/effect/turf_decal/weather/snow/corner{
-	dir = 4
-	})
+	dir = 4})
 "ap" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/curtain/bounty,
