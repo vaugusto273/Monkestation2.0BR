@@ -14,29 +14,29 @@
 	desc += "Strength: [effect.multiplier]\n"
 	desc += "Occurrence: [effect.chance]"
 
-/obj/item/disk/disease/premade/immortal
+/obj/item/disk/disease/immortal
 	name = "Longevity Syndrome"
 	effect = new /datum/symptom/immortal
 
-/obj/item/disk/disease/premade/oxygen
+/obj/item/disk/disease/oxygen
 	name = "Oxygen"
 	effect = new /datum/symptom/oxygen
 
-/obj/item/disk/disease/premade/spaceadapt
+/obj/item/disk/disease/spaceadapt
 	name = "Space Adapt"
 	effect = new /datum/symptom/spaceadapt
 
-/obj/item/disk/disease/premade/coma
+/obj/item/disk/disease/coma
 	name = "coma"
-	effect = new/datum/symptom/coma
+	effect = new /datum/symptom/coma
 
-/obj/item/disk/disease/premade/sensory
+/obj/item/disk/disease/sensory
 	name = "sensory restoration"
-	effect = new/datum/symptom/sensory_restoration
+	effect = new /datum/symptom/sensory_restoration
 
 /obj/item/storage/box/diskvirusbox/PopulateContents()
-	new /obj/item/disk/disease/premade/immortal (src)
-	new /obj/item/disk/disease/premade/oxygen (src)
-	new /obj/item/disk/disease/premade/spaceadapt (src)
-	new /obj/item/disk/disease/premade/coma (src)
-	new /obj/item/disk/disease/premade/sensory (src)
+	new /obj/item/disk/disease/immortal (src)
+	new /obj/item/disk/disease/oxygen (src)
+	new /obj/item/disk/disease/spaceadapt (src)
+	new /obj/item/disk/disease/coma (src)
+	new /obj/item/disk/disease/sensory (src)
