@@ -117,6 +117,40 @@
 	build_path = /obj/item/organ/internal/tongue/lizard
 	category = list(SPECIES_LIZARD)
 
+/datum/design/monkey_leftarm
+	name = "Monkey Left Arm"
+	id = "monkeyleftarm"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/bodypart/arm/left/monkey
+	category = list(RND_CATEGORY_LIMBS_OTHER, RND_CATEGORY_INITIAL)
+
+/datum/design/monkey_rightarm
+	name = "Monkey Right Arm"
+	id = "monkeyrightarm"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/bodypart/arm/right/monkey
+	category = list(RND_CATEGORY_LIMBS_OTHER, RND_CATEGORY_INITIAL)
+
+/datum/design/monkey_leftleg
+	name = "Monkey Left Leg"
+	id = "monkeyleftleg"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/bodypart/leg/left/monkey
+	category = list(RND_CATEGORY_LIMBS_OTHER, RND_CATEGORY_INITIAL)
+
+
+/datum/design/monkey_rightleg
+	name = "Monkey Right Leg"
+	id = "monkeyrightleg"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/bodypart/leg/right/monkey
+	category = list(RND_CATEGORY_LIMBS_OTHER, RND_CATEGORY_INITIAL)
+
+
 /datum/design/monkey_tail
 	name = "Monkey Tail"
 	id = "monkeytail"
