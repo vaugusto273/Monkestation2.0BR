@@ -1,0 +1,5 @@
+author: "Wisemonster"
+delete-after: True
+changes:
+  - balance: "Junior operative max occurrences lowered from 20 to 5"
+  - balance: "Junior operative event category changed from moderate to major"
