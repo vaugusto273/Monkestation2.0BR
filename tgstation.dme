@@ -8782,6 +8782,8 @@
 #include "teatroespacial13\code\datums\station_traits\neutral_traits.dm"
 #include "teatroespacial13\eventos\gantz\code\gantz.dm"
 #include "teatroespacial13\eventos\stationvsstation\spawn.dm"
+#include "teatroespacial13\modules\admin\aooc.dm"
+#include "teatroespacial13\modules\admin\sooc.dm"
 #include "teatroespacial13\modules\atpmask\obj\clothing\te13_masks.dm"
 #include "teatroespacial13\modules\johnprata\3516.dm"
 #include "teatroespacial13\modules\johnprata\johnprata_bundle.dm"
