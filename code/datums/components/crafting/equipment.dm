@@ -113,6 +113,15 @@
 	)
 	category = CAT_EQUIPMENT
 
+/datum/crafting_recipe/garrote
+	name = "Makeshift Garrote"
+	result = list(/obj/item/garrote/improvised)
+	time = 15
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
+				/obj/item/stack/cable_coil = 5)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	category = CAT_EQUIPMENT
+
 /datum/crafting_recipe/extendohand_r
 	name = "Extendo-Hand (Right Arm)"
 	reqs = list(

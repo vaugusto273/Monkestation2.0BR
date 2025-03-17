@@ -8793,3 +8793,4 @@
 #include "teatroespacial13\modules\MiningBallistics\guns.dm"
 #include "teatroespacial13\modules\MiningBallistics\projectile.dm"
 // END_INCLUDE
+#include "code\game\objects\items\weapons\garrote.dm"
