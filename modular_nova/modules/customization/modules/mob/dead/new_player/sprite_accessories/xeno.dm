@@ -8,11 +8,11 @@
 //HEADS
 /datum/sprite_accessory/xenohead
 	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/xeno_parts.dmi'
-	generic = "Caste Head"
+	generic = "standard"
 	key = "xenohead"
 	relevent_layers = list(BODY_ADJ_LAYER)
 	genetic = TRUE
-	organ_type = /obj/item/bodypart/head/xenohead
+	// organ_type = /obj/item/organ/external/xenohead
 
 /datum/sprite_accessory/xenohead/none
 	name = SPRITE_ACCESSORY_NONE
@@ -24,12 +24,12 @@
 
 /datum/sprite_accessory/xenohead/royal
 	name = "Royal"
-	icon_state = "royal"
+	icon_state = "m_xenohead_royal_ADJ"
 
 /datum/sprite_accessory/xenohead/net
 	name = "Nethead"
-	icon_state = "net"
+	icon_state = "m_xenohead_net_ADJ"
 
 /datum/sprite_accessory/xenohead/warrior
 	name = "Warrior"
-	icon_state = "warrior"
+	icon_state = "m_xenohead_warrior_ADJ"
