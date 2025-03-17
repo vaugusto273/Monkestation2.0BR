@@ -5,6 +5,11 @@ import {
   FeatureValueProps,
   FeatureDropdownInput,
   StandardizedPalette,
+  CheckboxInput,
+  FeatureChoicedServerData,
+  FeatureToggle,
+  FeatureTriBoolInput,
+  FeatureTriColorInput,
 } from './base';
 
 const eyePresets = {
@@ -289,4 +294,54 @@ export const feature_vampire_status: Feature<string> = {
 export const heterochromatic: Feature<string> = {
   name: 'Heterochromatic (Right Eye) color',
   component: FeatureColorInput,
+};
+
+export const xenodorsal_toggle: FeatureToggle = {
+  name: 'Xenodorsal',
+  component: CheckboxInput,
+};
+
+export const feature_xenodorsal: Feature<string> = {
+  name: 'Xenodorsal Selection',
+  component: (
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
+  ) => {
+    return <FeatureDropdownInput buttons {...props} />;
+  },
+};
+
+export const xenodorsal_color: Feature<string[]> = {
+  name: 'Xenodorsal Colors',
+  component: FeatureTriColorInput,
+};
+
+export const xenodorsal_emissive: Feature<boolean[]> = {
+  name: 'Xenodorsal Emissives',
+  description: 'Emissive parts glow in the dark.',
+  component: FeatureTriBoolInput,
+};
+
+export const xenohead_toggle: FeatureToggle = {
+  name: 'Xeno Head',
+  component: CheckboxInput,
+};
+
+export const feature_xenohead: Feature<string> = {
+  name: 'Xeno Head Selection',
+  component: (
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
+  ) => {
+    return <FeatureDropdownInput buttons {...props} />;
+  },
+};
+
+export const xenohead_color: Feature<string[]> = {
+  name: 'Xeno Head Colors',
+  component: FeatureTriColorInput,
+};
+
+export const xenohead_emissive: Feature<boolean[]> = {
+  name: 'Xeno Head Emissives',
+  description: 'Emissive parts glow in the dark.',
+  component: FeatureTriBoolInput,
 };

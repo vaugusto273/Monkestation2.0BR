@@ -116,3 +116,11 @@
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_SYNTHETIC_ORGANS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
+
+/obj/item/organ/internal/tongue/xeno_hybrid
+	name = "alien tongue"
+	desc = "According to leading xenobiologists the evolutionary benefit of having a second mouth in your mouth is \"that it looks badass\"."
+	icon_state = "tonguexeno"
+	say_mod = "hisses"
+	taste_sensitivity = 10
+	liked_foodtypes = MEAT

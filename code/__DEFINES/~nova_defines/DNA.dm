@@ -2,6 +2,22 @@
 #define REAGENT_ORGANIC 1
 #define REAGENT_SYNTHETIC 2
 #define SPECIES_HEMOPHAGE "hemophage"
+#define SPECIES_XENO "xeno"
+#define SPECIES_MAMMAL "mammal"
+#define USE_ONE_COLOR		31
+
+#define DEFAULT_PRIMARY		1
+#define DEFAULT_SECONDARY	2
+#define DEFAULT_TERTIARY	3
+#define DEFAULT_MATRIXED	4 //uses all three colors for a matrix
+#define DEFAULT_SKIN_OR_PRIMARY	5 //Uses skin tone color if the character uses one, otherwise primary
+//We start from 30 to not interfere with TG species defines, should they add more
+/// We're using all three mutcolor features for our skin coloration
+#define MUTCOLOR_MATRIXED	30
+#define MUTCOLORS2			31
+#define MUTCOLORS3			32
+// Defines for whether an accessory should have one or three colors to choose for
+#define USE_MATRIXED_COLORS	32
 /*
 //Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
 #define SPECIES_AKULA "akula"
