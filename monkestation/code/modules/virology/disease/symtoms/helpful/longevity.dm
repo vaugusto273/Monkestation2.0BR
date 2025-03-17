@@ -4,6 +4,7 @@
 	stage = 4
 	badness = EFFECT_DANGER_HELPFUL
 	severity = 0
+	max_chance = 100
 	var/total_healed = 0
 
 /datum/symptom/immortal/activate(mob/living/carbon/mob)
