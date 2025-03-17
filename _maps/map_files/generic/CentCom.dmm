@@ -14747,6 +14747,7 @@
 /obj/machinery/door/airlock/centcom{
 	name = "Veth's Plantery"
 	},
+/obj/effect/mapping_helpers/airlock/cutaiwire,
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/evacuation)
 "aNP" = (
@@ -23956,6 +23957,7 @@
 /area/centcom/central_command_areas/admin)
 "kmd" = (
 /obj/machinery/door/airlock/centcom,
+/obj/effect/mapping_helpers/airlock/cutaiwire,
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/evacuation)
 "kmg" = (
