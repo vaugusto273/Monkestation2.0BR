@@ -97,10 +97,6 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/west,
 /turf/open/floor/plating/airless,
 /area/ruin/interdyne_planetary_base)
-"aW" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/engine/air,
-/area/ruin/interdyne_planetary_base/science/xeno)
 "aY" = (
 /obj/effect/turf_decal/tile/dark_green,
 /obj/structure/cable,
@@ -417,7 +413,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "du" = (
 /obj/machinery/light/small/directional/west,
@@ -693,7 +689,7 @@
 "gE" = (
 /obj/machinery/duct,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "gF" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -719,9 +715,6 @@
 /obj/machinery/duct,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
-"gQ" = (
-/turf/open/floor/engine/air,
-/area/ruin/interdyne_planetary_base/science/xeno)
 "gR" = (
 /obj/effect/turf_decal/siding/dark{
 	dir = 9
@@ -760,7 +753,7 @@
 "hn" = (
 /obj/machinery/duct,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "hq" = (
 /obj/effect/turf_decal/arrows{
@@ -886,7 +879,7 @@
 /area/ruin/interdyne_planetary_base/main/dorms)
 "ie" = (
 /obj/machinery/light/cold/directional/east,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "if" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1392,7 +1385,7 @@
 /obj/machinery/slime_pen_controller{
 	mapping_id = "5"
 	},
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "lL" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle{
@@ -1422,7 +1415,7 @@
 "lR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "lS" = (
 /obj/structure/bodycontainer/morgue,
@@ -1679,7 +1672,7 @@
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "on" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "op" = (
 /obj/structure/railing{
@@ -1943,7 +1936,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "ql" = (
 /obj/effect/turf_decal/trimline/dark_green/warning{
@@ -2365,7 +2358,7 @@
 	mapping_id = "5"
 	},
 /obj/machinery/duct,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "ud" = (
 /obj/effect/turf_decal/trimline/dark_green/warning,
@@ -2490,6 +2483,13 @@
 	},
 /turf/open/floor/iron/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
+"uS" = (
+/obj/machinery/duct,
+/turf/open/floor/engine,
+/area/ruin/interdyne_planetary_base/science/xeno)
+"uV" = (
+/turf/open/floor/engine,
+/area/ruin/interdyne_planetary_base/science/xeno)
 "uW" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix,
@@ -2519,7 +2519,7 @@
 "vm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "vu" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -2535,7 +2535,7 @@
 	mapping_id = "5"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "vG" = (
 /obj/structure/bed/double{
@@ -2736,7 +2736,7 @@
 	mapping_id = "5"
 	},
 /obj/machinery/duct,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "xB" = (
 /obj/structure/rack/shelf,
@@ -2758,6 +2758,10 @@
 	dir = 8
 	},
 /area/ruin/interdyne_planetary_base/cargo)
+"xD" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/engine,
+/area/ruin/interdyne_planetary_base/science/xeno)
 "xI" = (
 /obj/effect/turf_decal/tile/dark_green,
 /turf/open/floor/iron/dark/smooth_edge{
@@ -2807,11 +2811,7 @@
 "xZ" = (
 /obj/machinery/duct,
 /obj/machinery/light/floor,
-/turf/open/floor/engine/air,
-/area/ruin/interdyne_planetary_base/science/xeno)
-"yd" = (
-/obj/machinery/duct,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "yf" = (
 /obj/machinery/door/airlock{
@@ -2964,7 +2964,7 @@
 	mapping_id = "5"
 	},
 /obj/machinery/light/cold/directional/east,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "zB" = (
 /obj/structure/railing,
@@ -4063,7 +4063,7 @@
 	mapping_id = "5"
 	},
 /obj/machinery/light/cold/directional/west,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "Hy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4279,7 +4279,7 @@
 /obj/machinery/camera/autoname/directional/east{
 	network = list("intd13")
 	},
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "JD" = (
 /obj/effect/turf_decal/siding/dark{
@@ -4430,7 +4430,7 @@
 "KS" = (
 /obj/machinery/light/cold/directional/west,
 /obj/machinery/plumbing/ooze_compressor,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "Ll" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/pink,
@@ -4681,6 +4681,11 @@
 /obj/machinery/light/cold/directional/north,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
+"NA" = (
+/obj/machinery/plumbing/ooze_sucker,
+/obj/machinery/duct,
+/turf/open/floor/engine,
+/area/ruin/interdyne_planetary_base/science/xeno)
 "NL" = (
 /turf/open/floor/iron/dark/small,
 /area/ruin/interdyne_planetary_base/med)
@@ -4759,11 +4764,6 @@
 /obj/item/disk/surgery/brainwashing,
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
-"Om" = (
-/obj/machinery/plumbing/ooze_sucker,
-/obj/machinery/duct,
-/turf/open/floor/engine/air,
-/area/ruin/interdyne_planetary_base/science/xeno)
 "On" = (
 /obj/structure/ore_box,
 /obj/effect/turf_decal/delivery,
@@ -4851,7 +4851,7 @@
 /obj/machinery/duct,
 /obj/machinery/plumbing/ooze_sucker,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "OF" = (
 /obj/machinery/shower/directional/north,
@@ -5884,7 +5884,7 @@
 /obj/machinery/plumbing/ooze_sucker,
 /obj/machinery/duct,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "WG" = (
 /obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base{
@@ -5949,7 +5949,7 @@
 /obj/machinery/corral_corner{
 	mapping_id = "5"
 	},
-/turf/open/floor/engine/air,
+/turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "Xd" = (
 /obj/structure/plasticflaps,
@@ -6566,11 +6566,11 @@ yY
 sG
 KS
 tX
-yd
-gQ
+uS
+uV
 Hv
-gQ
-gQ
+uV
+uV
 Hv
 je
 fm
@@ -6605,14 +6605,14 @@ Ab
 Rk
 jl
 IN
-gQ
-gQ
-Om
-gQ
-gQ
-Om
-gQ
-gQ
+uV
+uV
+NA
+uV
+uV
+NA
+uV
+uV
 je
 fm
 ja
@@ -6646,14 +6646,14 @@ vB
 GN
 pd
 lT
-aW
-aW
+xD
+xD
 gE
 dq
-gQ
-yd
-gQ
-gQ
+uV
+uS
+uV
+uV
 je
 fm
 ja
@@ -6687,13 +6687,13 @@ CF
 GR
 Ll
 Ga
-aW
+xD
 lw
 xZ
-gQ
+uV
 lw
 xZ
-gQ
+uV
 WX
 je
 fm
@@ -6735,7 +6735,7 @@ on
 on
 WF
 qc
-gQ
+uV
 je
 fm
 ja
@@ -6769,14 +6769,14 @@ vB
 cx
 vB
 uE
-aW
-gQ
-yd
-gQ
+xD
+uV
+uS
+uV
 on
-yd
-gQ
-gQ
+uS
+uV
+uV
 je
 fm
 ja
@@ -6813,10 +6813,10 @@ CH
 gE
 xA
 xZ
-gQ
+uV
 vF
 xZ
-gQ
+uV
 WX
 je
 fm
@@ -6851,14 +6851,14 @@ vB
 So
 vB
 ZM
-aW
-gQ
-Om
-yd
+xD
+uV
+NA
+uS
 hn
-Om
-gQ
-gQ
+NA
+uV
+uV
 je
 fm
 ja
@@ -6892,14 +6892,14 @@ vB
 vB
 vB
 jj
-aW
+xD
 vm
-aW
+xD
 dq
 on
 qc
-gQ
-gQ
+uV
+uV
 je
 fm
 ja
@@ -6933,13 +6933,13 @@ Mi
 DV
 IT
 rW
-gQ
+uV
 WX
-gQ
-gQ
+uV
+uV
 WX
-gQ
-gQ
+uV
+uV
 zn
 je
 gv
@@ -6975,7 +6975,7 @@ je
 je
 je
 ie
-gQ
+uV
 Jz
 ie
 je
