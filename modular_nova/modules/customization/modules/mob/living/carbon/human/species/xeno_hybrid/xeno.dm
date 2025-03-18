@@ -35,7 +35,8 @@
 	)
 	external_organs = list(
 		/obj/item/organ/external/xenohead = "Standard",
-		// /obj/item/organ/external/xenotail= "xeno")
+		// /obj/item/organ/external/xenotail= "xeno"
+		)
 
 	meat = /obj/item/food/meat/slab/xeno
 	skinned_type = /obj/item/stack/sheet/animalhide/xeno
