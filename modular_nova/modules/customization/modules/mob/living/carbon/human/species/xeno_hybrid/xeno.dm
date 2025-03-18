@@ -34,7 +34,8 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/xenohybrid,
 	)
 	external_organs = list(
-		/obj/item/organ/external/xenohead = "Standard",)
+		/obj/item/organ/external/xenohead = "Standard",
+		// /obj/item/organ/external/xenotail= "xeno")
 
 	meat = /obj/item/food/meat/slab/xeno
 	skinned_type = /obj/item/stack/sheet/animalhide/xeno
@@ -85,6 +86,10 @@
 /datum/species/xeno/on_species_gain(mob/living/carbon/human/human_who_gained_species, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()
 	human_who_gained_species.gib_type = /obj/effect/decal/cleanable/xenoblood/xgibs
+
+// /datum/species/xeno/on_species_gain(mob/living/carbon/target)
+// 	. = ..()
+// 	target.dna.features["xeno"] = "xeno"
 
 /datum/species/xeno/on_species_loss(mob/living/carbon/human/human_who_lost_species, datum/species/new_species, pref_load)
 	. = ..()
