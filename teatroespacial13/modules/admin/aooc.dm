@@ -102,7 +102,7 @@ GLOBAL_LIST_EMPTY(ckey_to_aooc_name)
 		var/client/iterated_client = iterated_listener
 		to_chat(iterated_client, span_oocplain("<B>The AOOC channel has been globally [GLOB.aooc_allowed ? "enabled" : "disabled"].</B>"))
 
-/datum/admins/proc/toggle_aooc()
+/datum/admins/proc/toggleaooc()
 	set category = "Server"
 	set desc = "Toggle dis bitch"
 	set name = "Toggle AOOC"
