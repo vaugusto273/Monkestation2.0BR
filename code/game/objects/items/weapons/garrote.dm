@@ -38,15 +38,9 @@
 	if(!isliving(user))
 		return
 
-	var/datum/status_effect/strandling/strangle_effect = user.status_effects?.GetEffect("strandling")
+	var/datum/status_effect/strandling/strangle_effect = user.apply_status_effect(/datum/status_effect/strandling)
 	if(istype(strangle_effect))
 		strangle_effect.on_remove()
-
-/obj/item/garrote/attackby(obj/item/W, mob/living/carbon/user)
-	. = ..()
-	if(HAS_TRAIT(src, TRAIT_WIELDED) && istool(W, TOOL_WIRECUTTER))
-		user.visible_message("<span class='notice'>[user] cuts the wire on [src], making it unusable!</span>")
-		qdel(src)
 
 /obj/item/garrote/attack(mob/living/carbon/M as mob, mob/user as mob)
 	if(garrote_time > world.time)
@@ -71,12 +65,12 @@
 	if(improvised && ((M.head && (M.head.flags_cover & HEADCOVERSMOUTH)) || (M.wear_mask && (M.wear_mask.flags_cover & MASKCOVERSMOUTH))))
 		to_chat(user, "<span class = 'warning'>[M]'s neck is blocked by something [M.p_theyre()] wearing!</span>")
 
-	if(M.status_effects?.HasEffect("strandling"))
+	if(M.has_status_effect("strandling"))
 		return
 
-	var/datum/status_effect/strandling/strangle_effect = new /datum/status_effect/strandling()
-	M.status_effects?.AddEffect(strangle_effect)
-	strangle_effect.on_apply()
+	var/datum/status_effect/strandling/strangle_effect = M.apply_status_effect(/datum/status_effect/strandling)
+	if(istype(strangle_effect))
+		strangle_effect.on_apply()
 
 	garrote_time = world.time + 10
 	playsound(loc, 'sound/weapons/cablecuff.ogg', 15, TRUE, -10, ignore_walls = FALSE)
