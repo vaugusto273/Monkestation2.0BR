@@ -8784,7 +8784,6 @@
 #include "teatroespacial13\code\datums\station_traits\neutral_traits.dm"
 #include "teatroespacial13\eventos\gantz\code\gantz.dm"
 #include "teatroespacial13\eventos\stationvsstation\spawn.dm"
-#include "teatroespacial13\modules\Legion_tumourbenign.dm"
 #include "teatroespacial13\modules\admin\aooc.dm"
 #include "teatroespacial13\modules\admin\sooc.dm"
 #include "teatroespacial13\modules\atpmask\obj\clothing\te13_masks.dm"
