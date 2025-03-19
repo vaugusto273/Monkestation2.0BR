@@ -8797,5 +8797,6 @@
 #include "teatroespacial13\modules\MiningBallistics\bundle.dm"
 #include "teatroespacial13\modules\MiningBallistics\guns.dm"
 #include "teatroespacial13\modules\MiningBallistics\projectile.dm"
+#include "teatroespacial13\modules\mob\living\living_say.dm"
 #include "teatroespacial13\modules\SAD\self_actualization_device.dm"
 // END_INCLUDE
