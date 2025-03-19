@@ -72,8 +72,8 @@
 
 /obj/item/clothing/mask/gas/atp/equipped(mob/living/equipee, slot)
 	. = ..()
-	RegisterSignal(equipee, COMSIG_MOB_POINTED, PROC_REF(point_handler))
 	if(slot & ITEM_SLOT_MASK)
+		RegisterSignal(equipee, COMSIG_MOB_POINTED, PROC_REF(point_handler))
 		RegisterSignal(equipee, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(item_removed))
 		RegisterSignal(equipee, COMSIG_LIVING_DEATH, PROC_REF(death_sound))
 		if(istype(equipee))
@@ -105,7 +105,6 @@
 	playsound(src, 'monkestation/sound/items/atp_death_sound.ogg', 20, FALSE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 
 /obj/item/clothing/mask/gas/atp/proc/point_handler(mob/living/pointing_mob, mob/pointed_at)
-
 	if(!COOLDOWN_FINISHED(src, spamcheck))
 		return
 
