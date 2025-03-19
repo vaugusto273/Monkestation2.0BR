@@ -4,7 +4,6 @@ var/xeno_color = "#525288"
 	icon_greyscale = 'modular_nova/modules/bodyparts/icons/xeno_parts_greyscale.dmi'
 	limb_id = SPECIES_XENO
 	is_dimorphic = TRUE
-	// head_flags = HEAD_HAIR / HEAD_EYESPRITES | HEAD_EYEHOLES | HEAD_DEBRAIN | HEAD_EYECOLOR
 	head_flags = (HEAD_HAIR|HEAD_FACIAL_HAIR|HEAD_LIPS|HEAD_EYESPRITES|HEAD_EYECOLOR|HEAD_EYEHOLES|HEAD_DEBRAIN)
 	palette = /datum/color_palette/generic_colors
 	palette_key = MUTANT_COLOR

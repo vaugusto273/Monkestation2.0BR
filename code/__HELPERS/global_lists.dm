@@ -57,7 +57,7 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/arm_wingsopen, GLOB.arm_wingsopen_list) //NON-MODULE CHANGE
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/avian, GLOB.tails_list_avian) //NON-MODULE CHANGE
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/plumage, GLOB.avian_ears_list) //NON-MODULE CHANGE
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/xenohead, GLOB.xeno_heads_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/xenohead, GLOB.xeno_heads_list) //Novasector addition
 
 /// Inits GLOB.species_list. Not using GLOBAL_LIST_INIT b/c it depends on GLOB.string_lists
 /proc/init_species_list()
