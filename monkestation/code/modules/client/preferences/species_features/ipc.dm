@@ -113,16 +113,67 @@
 	return "Compact Positronic"
 
 /datum/preference/choiced/ipc_brain/apply_to_human(mob/living/carbon/human/target, value)
-	if (!istype(target.dna.species, /datum/species/ipc))
+	if (!(istype(target.dna.species, /datum/species/ipc) || istype(target.dna.species, /datum/species/synth)))
 		return
+
 	if (value == "Compact MMI")
-		var/obj/item/organ/internal/brain/synth/mmi/new_organ = new()
+		// Gets the target's current brain
 		var/obj/item/organ/internal/brain/existing_brain = target.get_organ_slot(ORGAN_SLOT_BRAIN)
-		if(istype(existing_brain) && !existing_brain.decoy_override)
-			existing_brain.before_organ_replacement(new_organ)
+		if (istype(existing_brain) && !existing_brain.decoy_override)
+			// Sets the name to use: if the existing brain's brainmob has a name, use it; otherwise, use the target's real_name
+			var/name_to_use = existing_brain.brainmob?.real_name
+			if (!name_to_use)
+				name_to_use = target.real_name
+
+			// --- Replicating make_mmi() inline ---
+			// Creates the new MMI from the target (note that we use the non-positronic version)
+			var/obj/item/mmi/new_mmi = new /obj/item/mmi(target)
+
+			// Creates a "standard" brain for the MMI
+			new_mmi.brain = new /obj/item/organ/internal/brain(new_mmi)
+			new_mmi.brain.organ_flags |= ORGAN_FROZEN
+			new_mmi.brain.name = "[name_to_use]'s brain"
+
+			// Updates the MMI name based on the first letter (or another desired format) and the chosen name
+			new_mmi.name = "[initial(new_mmi.name)]: [name_to_use]"
+
+			// Creates and assigns a new brainmob for the MMI
+			new_mmi.set_brainmob(new /mob/living/brain(new_mmi)) //existing_brain?.brainmob
+			new_mmi.brainmob.name = name_to_use
+			new_mmi.brainmob.real_name = name_to_use
+			new_mmi.brainmob.container = new_mmi
+
+			// Updates the MMI appearance
+			new_mmi.update_appearance()
+			// --- End of make_mmi() replication ---
+
+			// Now, let's transfer the human brain into the MMI.
+			// Creates a new brain that will receive the old human brainmob.
+			var/obj/item/organ/internal/brain/human_brain = new /obj/item/organ/internal/brain(new_mmi)
+			// Transfers the old brainmob to the new brain
+			human_brain.brainmob = existing_brain.brainmob
+			existing_brain.brainmob = null
+
+			// Performs the replacement routines for the old brain
+			existing_brain.before_organ_replacement(new_mmi)
 			existing_brain.Remove(target, special = TRUE, no_id_transfer = TRUE)
 			qdel(existing_brain)
-		new_organ.Insert(target, special = TRUE, drop_if_replaced = FALSE)
+
+			// Adjusts the flags and reapplies the appearance with the new (human) brain
+			human_brain.organ_flags |= ORGAN_FROZEN
+			new_mmi.brain = human_brain
+			new_mmi.update_appearance()
+			new_mmi.set_brainmob(human_brain.brainmob)
+			human_brain.brainmob = null
+
+			// If there is a brainmob, force its movement into the MMI and update the container
+			if (new_mmi.brainmob)
+			{
+				new_mmi.brainmob.forceMove(new_mmi)
+				new_mmi.brainmob.container = new_mmi
+			}
+			// Inserts the MMI into the target's body
+			new_mmi.Insert(target, special = TRUE, drop_if_replaced = FALSE)
 
 /datum/preference/choiced/ipc_brain/is_accessible(datum/preferences/preferences)
-	return ..() && preferences.read_preference(/datum/preference/choiced/species) == /datum/species/ipc
+	return ..() && (preferences.read_preference(/datum/preference/choiced/species) in list(/datum/species/ipc, /datum/species/synth))

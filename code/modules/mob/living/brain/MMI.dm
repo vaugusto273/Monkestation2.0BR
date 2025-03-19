@@ -1,13 +1,17 @@
 /obj/item/mmi
+	parent_type = /obj/item/organ/internal/brain/synth/mmi
 	name = "\improper Man-Machine Interface"
 	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity, that nevertheless has become standard-issue on Nanotrasen stations."
 	icon = 'icons/obj/assemblies/assemblies.dmi'
 	icon_state = "mmi_off"
 	base_icon_state = "mmi"
 	w_class = WEIGHT_CLASS_NORMAL
+	slot = ORGAN_SLOT_BRAIN
+	zone = BODY_ZONE_CHEST
+	organ_flags = ORGAN_ROBOTIC | ORGAN_SYNTHETIC_FROM_SPECIES
 	var/braintype = "Cyborg"
 	var/obj/item/radio/radio = null //Let's give it a radio.
-	var/mob/living/brain/brainmob = null //The current occupant.
+	brainmob = null //The current occupant.
 	var/mob/living/silicon/robot = null //Appears unused.
 	var/obj/vehicle/sealed/mecha = null //This does not appear to be used outside of reference in mecha.dm.
 	var/obj/item/organ/internal/brain/brain = null //The actual brain
@@ -131,13 +135,16 @@
 		brain.brainmob = brainmob //Set the brain to use the brainmob
 		user.log_message("has ejected the brain of [key_name(brainmob)] from an MMI", LOG_GAME)
 		brainmob = null //Set mmi brainmob var to null
+		// brainmob.mind.transfer_to(brain.brainmob)
 	brain.forceMove(drop_location())
+	// brain.brainmob.reset_perspective()
 	if(Adjacent(user))
 		user.put_in_hands(brain)
 	brain.organ_flags &= ~ORGAN_FROZEN
 	brain = null //No more brain in here
 
-/obj/item/mmi/proc/transfer_identity(mob/living/L) //Same deal as the regular brain proc. Used for human-->robot people.
+/obj/item/mmi/transfer_identity(mob/living/L) //Same deal as the regular brain proc. Used for human-->robot people.
+	..()
 	if(!brainmob)
 		set_brainmob(new /mob/living/brain(src))
 	brainmob.name = L.real_name
@@ -148,6 +155,8 @@
 			brainmob.stored_dna = new /datum/dna/stored(brainmob)
 		C.dna.copy_dna(brainmob.stored_dna)
 	brainmob.container = src
+	brainmob.set_stat(CONSCIOUS) //we manually revive the brain mob
+	L.mind.transfer_to(brainmob)
 
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -243,8 +252,8 @@
 		. += span_notice("There is a switch to toggle the radio system [radio.is_on() ? "off" : "on"].[brain ? " It is currently being covered by [brain]." : null]")
 	if(brainmob)
 		var/mob/living/brain/B = brainmob
-		if(!B.key || !B.mind || B.stat == DEAD)
-			. += span_warning("\The [src] indicates that the brain is completely unresponsive.")
+		if(!B.mind || B.stat == DEAD)
+			. += span_warning("\The [src] indicates that the brain is mostly unresponsive.")
 		else if(!B.client)
 			. += span_warning("\The [src] indicates that the brain is currently inactive; it might change.")
 		else
