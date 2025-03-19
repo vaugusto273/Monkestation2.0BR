@@ -12,7 +12,7 @@
 	key = "xenohead"
 	relevent_layers = list(BODY_ADJ_LAYER)
 	genetic = TRUE
-	organ_type = /obj/item/bodypart/head/xenohead
+	organ_type = /obj/item/organ/external/xenohead
 
 /datum/sprite_accessory/xenohead/none
 	name = SPRITE_ACCESSORY_NONE

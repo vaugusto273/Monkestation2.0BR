@@ -33,7 +33,9 @@
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/xenohybrid,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/xenohybrid,
 	)
-
+	external_organs = list(
+		/obj/item/organ/external/xenohead = "Standard",
+	)
 	meat = /obj/item/food/meat/slab/xeno
 	skinned_type = /obj/item/stack/sheet/animalhide/xeno
 	death_sound = 'sound/voice/hiss6.ogg'
