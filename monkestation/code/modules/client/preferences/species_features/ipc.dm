@@ -113,16 +113,44 @@
 	return "Compact Positronic"
 
 /datum/preference/choiced/ipc_brain/apply_to_human(mob/living/carbon/human/target, value)
-	if (!istype(target.dna.species, /datum/species/ipc))
+	if (!(istype(target.dna.species, /datum/species/ipc) || istype(target.dna.species, /datum/species/synth)))
 		return
+
 	if (value == "Compact MMI")
-		var/obj/item/organ/internal/brain/synth/mmi/new_organ = new()
-		var/obj/item/organ/internal/brain/existing_brain = target.get_organ_slot(ORGAN_SLOT_BRAIN)
-		if(istype(existing_brain) && !existing_brain.decoy_override)
-			existing_brain.before_organ_replacement(new_organ)
+		var/obj/item/mmi/new_mmi = new() // create a MMI
+		// create the brains
+		var/obj/item/organ/internal/brain/human_brain = new() //new
+		var/obj/item/organ/internal/brain/existing_brain = target.get_organ_slot(ORGAN_SLOT_BRAIN) //old
+
+		//new brain
+		human_brain.brainmob = existing_brain.brainmob
+		existing_brain.brainmob = null
+
+		if (istype(existing_brain) && !existing_brain.decoy_override)
+			existing_brain.before_organ_replacement(new_mmi)
 			existing_brain.Remove(target, special = TRUE, no_id_transfer = TRUE)
 			qdel(existing_brain)
-		new_organ.Insert(target, special = TRUE, drop_if_replaced = FALSE)
+
+			// Agora colocamos o cérebro dentro do MMI, sem deletá-lo
+			// Insere o cérebro humano dentro do MMI
+			human_brain.organ_flags |= ORGAN_FROZEN
+			new_mmi.brain = human_brain
+			new_mmi.update_appearance()
+			// new_mmi.brain = human_brain
+			new_mmi.set_brainmob(human_brain?.brainmob)
+			human_brain.brainmob = null
+
+			if (new_mmi.brainmob)
+				new_mmi.brainmob.forceMove(new_mmi)
+				new_mmi.brainmob.container = new_mmi
+
+			new_mmi.Insert(target, special = TRUE, drop_if_replaced = FALSE)
+
+
 
 /datum/preference/choiced/ipc_brain/is_accessible(datum/preferences/preferences)
-	return ..() && preferences.read_preference(/datum/preference/choiced/species) == /datum/species/ipc
+	return ..() && (preferences.read_preference(/datum/preference/choiced/species) in list(/datum/species/ipc, /datum/species/synth))
+
+// var/mob/living/brain/B = newbrain.brainmob
+// 		if(!B.key)
+// 			B.notify_ghost_cloning("Someone has put your brain in a MMI!", source = src)

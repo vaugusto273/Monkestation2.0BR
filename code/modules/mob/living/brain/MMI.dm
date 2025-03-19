@@ -1,13 +1,17 @@
 /obj/item/mmi
+	parent_type = /obj/item/organ/internal/brain/synth/mmi
 	name = "\improper Man-Machine Interface"
 	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity, that nevertheless has become standard-issue on Nanotrasen stations."
 	icon = 'icons/obj/assemblies/assemblies.dmi'
 	icon_state = "mmi_off"
 	base_icon_state = "mmi"
 	w_class = WEIGHT_CLASS_NORMAL
+	slot = ORGAN_SLOT_BRAIN
+	zone = BODY_ZONE_CHEST
+	organ_flags = ORGAN_ROBOTIC | ORGAN_SYNTHETIC_FROM_SPECIES
 	var/braintype = "Cyborg"
 	var/obj/item/radio/radio = null //Let's give it a radio.
-	var/mob/living/brain/brainmob = null //The current occupant.
+	brainmob = null //The current occupant.
 	var/mob/living/silicon/robot = null //Appears unused.
 	var/obj/vehicle/sealed/mecha = null //This does not appear to be used outside of reference in mecha.dm.
 	var/obj/item/organ/internal/brain/brain = null //The actual brain
@@ -137,7 +141,8 @@
 	brain.organ_flags &= ~ORGAN_FROZEN
 	brain = null //No more brain in here
 
-/obj/item/mmi/proc/transfer_identity(mob/living/L) //Same deal as the regular brain proc. Used for human-->robot people.
+/obj/item/mmi/transfer_identity(mob/living/L) //Same deal as the regular brain proc. Used for human-->robot people.
+	..()
 	if(!brainmob)
 		set_brainmob(new /mob/living/brain(src))
 	brainmob.name = L.real_name
