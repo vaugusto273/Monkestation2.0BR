@@ -105,7 +105,6 @@
 	playsound(src, 'monkestation/sound/items/atp_death_sound.ogg', 20, FALSE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 
 /obj/item/clothing/mask/gas/atp/proc/point_handler(mob/living/pointing_mob, mob/pointed_at)
-	SIGNAL_HANDLER
 
 	if(!COOLDOWN_FINISHED(src, spamcheck))
 		return
@@ -119,5 +118,7 @@
 	pointing_mob.say("HOSTILE!!")
 	playsound(src, atp_voicelines[2], 35, FALSE, SHORT_RANGE_SOUND_EXTRARANGE-2, falloff_exponent = 0, ignore_walls = FALSE, use_reverb = FALSE)
 	pointed_at.do_alert_animation()
+	SIGNAL_HANDLER
+
 
 ////////////////////// MÁSCARA DO TRICKY ////////////////////////////
