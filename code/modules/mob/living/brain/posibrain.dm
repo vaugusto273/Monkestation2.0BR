@@ -103,7 +103,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	activate(user)
 
 /obj/item/mmi/posibrain/proc/is_occupied()
-	if(brainmob.key)
+	if(brainmob.key || brainmob?.client)
 		return TRUE
 	if(iscyborg(loc))
 		var/mob/living/silicon/robot/R = loc
@@ -176,13 +176,13 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 
 /obj/item/mmi/posibrain/examine(mob/user)
 	. = ..()
-	if(brainmob?.key)
+	if(brainmob?.key || brainmob?.client)
 		switch(brainmob.stat)
 			if(CONSCIOUS)
 				if(!brainmob.client)
 					. += "It appears to be in stand-by mode." //afk
 			if(DEAD)
-				. += span_deadsay("It appears to be completely inactive.")
+				. += span_deadsay("It appears to be inactive.")
 	else
 		. += "[dead_message]"
 		if(ask_role)

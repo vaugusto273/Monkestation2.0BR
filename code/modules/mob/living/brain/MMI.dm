@@ -135,7 +135,9 @@
 		brain.brainmob = brainmob //Set the brain to use the brainmob
 		user.log_message("has ejected the brain of [key_name(brainmob)] from an MMI", LOG_GAME)
 		brainmob = null //Set mmi brainmob var to null
+		// brainmob.mind.transfer_to(brain.brainmob)
 	brain.forceMove(drop_location())
+	// brain.brainmob.reset_perspective()
 	if(Adjacent(user))
 		user.put_in_hands(brain)
 	brain.organ_flags &= ~ORGAN_FROZEN
@@ -153,6 +155,8 @@
 			brainmob.stored_dna = new /datum/dna/stored(brainmob)
 		C.dna.copy_dna(brainmob.stored_dna)
 	brainmob.container = src
+	brainmob.set_stat(CONSCIOUS) //we manually revive the brain mob
+	L.mind.transfer_to(brainmob)
 
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -248,8 +252,8 @@
 		. += span_notice("There is a switch to toggle the radio system [radio.is_on() ? "off" : "on"].[brain ? " It is currently being covered by [brain]." : null]")
 	if(brainmob)
 		var/mob/living/brain/B = brainmob
-		if(!B.key || !B.mind || B.stat == DEAD)
-			. += span_warning("\The [src] indicates that the brain is completely unresponsive.")
+		if(!B.mind || B.stat == DEAD)
+			. += span_warning("\The [src] indicates that the brain is mostly unresponsive.")
 		else if(!B.client)
 			. += span_warning("\The [src] indicates that the brain is currently inactive; it might change.")
 		else
