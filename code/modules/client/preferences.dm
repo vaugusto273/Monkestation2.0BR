@@ -538,5 +538,5 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	if(!added_tracker)
 		return FALSE
 
-	safe_transfer_prefs_to(character, icon_updates, is_antag, visuals_only = visuals_only)
+	safe_transfer_prefs_to(character, icon_updates, is_antag, visuals_only)
 	qdel(added_tracker)
