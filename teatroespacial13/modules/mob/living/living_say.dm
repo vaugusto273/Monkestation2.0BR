@@ -9,7 +9,6 @@
     message = replacetext(message, regex(@"\bvsf\b", "gi"), "vai se fuder")
     message = replacetext(message, regex(@"\btnc\b", "gi"), "tomar no cu")
     message = replacetext(message, regex(@"\bsfd\b", "gi"), "se fuder")
-    message = replacetext(message, regex(@"\bent\b", "gi"), "então")
     message = replacetext(message, regex(@"\bwtf\b", "gi"), "mas que porra")
     message = replacetext(message, regex(@"\bmds\b", "gi"), "meu Deus")
     message = replacetext(message, regex(@"\bdnd\b", "gi"), "de nada")
