@@ -14,10 +14,6 @@
 	genetic = TRUE
 	organ_type = /obj/item/organ/external/xenohead
 
-/datum/sprite_accessory/xenohead/none
-	name = SPRITE_ACCESSORY_NONE
-	icon_state = "none"
-
 /datum/sprite_accessory/xenohead/standard
 	name = "Standard"
 	icon_state = "standard"
