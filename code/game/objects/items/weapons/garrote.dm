@@ -43,42 +43,49 @@
 		strangle_effect.on_remove()
 
 /obj/item/garrote/attack(mob/living/carbon/M as mob, mob/user as mob)
-	if(garrote_time > world.time)
-		return
+    if(garrote_time > world.time)
+        return
 
-	if(!ishuman(user) || !ishuman(M))
-		return
+    if(!ishuman(user) || !ishuman(M))
+        return
 
-	if(!HAS_TRAIT(src, TRAIT_WIELDED))
-		to_chat(user, "<span class = 'warning'>You must use both hands to garrote [M]!</span>")
-		return
+    if(!HAS_TRAIT(src, TRAIT_WIELDED))
+        to_chat(user, "<span class = 'warning'>You must use both hands to garrote [M]!</span>")
+        return
 
-	if(M == user)
-		user.visible_message("<span class='suicide'>[user] is wrapping [src] around [user.p_their()] neck and pulling the handles! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-		playsound(loc, 'sound/weapons/cablecuff.ogg', 15, TRUE, -10, ignore_walls = FALSE)
-		return OXYLOSS
+    if(M == user)
+        user.visible_message("<span class='suicide'>[user] is wrapping [src] around [user.p_their()] neck and pulling the handles! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+        playsound(loc, 'sound/weapons/cablecuff.ogg', 15, TRUE, -10, ignore_walls = FALSE)
+        return OXYLOSS
 
-	if(M.dir != user.dir && !M.incapacitated())
-		to_chat(user, "<span class='warning'>You cannot use [src] on [M] from that angle!</span>")
-		return
+    if(M.dir != user.dir && !M.incapacitated())
+        to_chat(user, "<span class='warning'>You cannot use [src] on [M] from that angle!</span>")
+        return
 
-	if(improvised && ((M.head && (M.head.flags_cover & HEADCOVERSMOUTH)) || (M.wear_mask && (M.wear_mask.flags_cover & MASKCOVERSMOUTH))))
-		to_chat(user, "<span class = 'warning'>[M]'s neck is blocked by something [M.p_theyre()] wearing!</span>")
+    if(improvised && ((M.head && (M.head.flags_cover & HEADCOVERSMOUTH)) || (M.wear_mask && (M.wear_mask.flags_cover & MASKCOVERSMOUTH))))
+        to_chat(user, "<span class = 'warning'>[M]'s neck is blocked by something [M.p_theyre()] wearing!</span>")
+        return
 
-	if(M.has_status_effect("strandling"))
-		return
+    if(M.has_status_effect("strandling"))
+        return
 
-	var/datum/status_effect/strandling/strangle_effect = M.apply_status_effect(/datum/status_effect/strandling)
-	if(istype(strangle_effect))
-		strangle_effect.on_apply()
+    var/datum/status_effect/strandling/strangle_effect = M.apply_status_effect(/datum/status_effect/strandling)
+    if(istype(strangle_effect))
+        strangle_effect.on_apply()
 
-	garrote_time = world.time + 10
-	playsound(loc, 'sound/weapons/cablecuff.ogg', 15, TRUE, -10, ignore_walls = FALSE)
+    garrote_time = world.time + 10
+    playsound(loc, 'sound/weapons/cablecuff.ogg', 15, TRUE, -10, ignore_walls = FALSE)
 
-	M.visible_message("<span class='danger'>[user] comes from behind and begins garroting [M] with [src]!</span>",
-			"<span class='userdanger'>[user] begins garroting you with [src]![improvised ? "" : " You are unable to speak!"]</span>",
-			"You hear struggling and wire strain against flesh!")
+    M.visible_message("<span class='danger'>[user] comes from behind and begins garroting [M] with [src]!</span>",
+                        "<span class='userdanger'>[user] begins garroting you with [src]![improvised ? "" : " You are unable to speak!"]</span>",
+                        "You hear struggling and wire strain against flesh!")
 
+    // Add the grab effect
+    M.grabbedby(user, 1)
+
+    // Remove the effect if the user is no longer grabbing
+    if(M.pulledby != user && istype(strangle_effect))
+        strangle_effect.owner.remove_status_effect(strangle_effect)
 
 /*
 /obj/item/garrote/suicide_act(mob/user)
