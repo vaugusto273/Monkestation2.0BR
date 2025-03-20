@@ -1,7 +1,7 @@
 /obj/item/mmi
 	parent_type = /obj/item/organ/internal/brain/synth/mmi
 	name = "\improper Man-Machine Interface"
-	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity, that nevertheless has become standard-issue on Nanotrasen stations."
+	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity, that nevertheless has become standard-issue on Nanotrasen stations. Can be slotted into the chest of synthetic crewmembers"
 	icon = 'icons/obj/assemblies/assemblies.dmi'
 	icon_state = "mmi_off"
 	base_icon_state = "mmi"
@@ -52,8 +52,32 @@
 		. += "mmi_dead"
 
 /obj/item/mmi/attackby(obj/item/O, mob/user, params)
+
+// revive MMI
+	var/obj/item/item = O
+	if (item.tool_behaviour == TOOL_MULTITOOL) //attempt to repair the brain
+		if (brainmob.stat == CONSCIOUS)
+			to_chat(user, span_warning("[src] is fine, no need to repair."))
+			return TRUE
+		if (DOING_INTERACTION(user, src))
+			to_chat(user, span_warning("you're already repairing [src]!"))
+			return TRUE
+		user.visible_message(span_notice("[user] slowly starts to repair [src] with [item]."), span_notice("You slowly start to repair [src] with [item]."))
+		var/did_repair = FALSE
+		if(item.use_tool(src, user, 3 SECONDS, volume = 50))
+			did_repair = TRUE
+			brainmob.set_stat(CONSCIOUS)
+			if(!brainmob.key)
+				brainmob.notify_ghost_cloning("Someone has fixed your MMI !", source = src)
+
+		if (did_repair)
+			user.visible_message(span_notice("[user] fully repairs [src] with [item], causing its warning light to stop flashing."), span_notice("You fully repair [src] with [item], causing its warning light to stop flashing."))
+		else
+			to_chat(user, span_warning("You failed to repair [src] with [item]!"))
+// end revive MMI
+
 	user.changeNext_move(CLICK_CD_MELEE)
-	if(istype(O, /obj/item/organ/internal/brain)) //Time to stick a brain in it --NEO
+	if(istype(O, /obj/item/organ/internal/brain) && !istype(O, /obj/item/mmi)) //Time to stick a brain in it --NEO
 		var/obj/item/organ/internal/brain/newbrain = O
 		if(brain)
 			to_chat(user, span_warning("There's already a brain in the MMI!"))
@@ -155,7 +179,7 @@
 			brainmob.stored_dna = new /datum/dna/stored(brainmob)
 		C.dna.copy_dna(brainmob.stored_dna)
 	brainmob.container = src
-	brainmob.set_stat(CONSCIOUS) //we manually revive the brain mob
+	// brainmob.set_stat(CONSCIOUS) //we manually revive the brain mob
 	L.mind.transfer_to(brainmob)
 
 	if(ishuman(L))
@@ -250,11 +274,14 @@
 	. = ..()
 	if(radio)
 		. += span_notice("There is a switch to toggle the radio system [radio.is_on() ? "off" : "on"].[brain ? " It is currently being covered by [brain]." : null]")
-	if(brainmob)
+		// if(!brainmob && (brainmob.key || brainmob.stat in ELSE_CONSCIOUS))
+	if((brainmob && (brainmob.client || brainmob.get_ghost())) || decoy_override)
 		var/mob/living/brain/B = brainmob
-		if(!B.mind || B.stat == DEAD)
+		if(B.stat in ELSE_CONSCIOUS)
+			. += span_warning("\The [src] indicates that the MMI is a bit corrupted, you can fix this by swapping the brain to a new MMI shell, or using a multitool on it. [src] still good as a brain for a synthetic body.")
+		else if(!B.mind)
 			. += span_warning("\The [src] indicates that the brain is mostly unresponsive.")
-		else if(!B.client)
+		else if(!B.key)
 			. += span_warning("\The [src] indicates that the brain is currently inactive; it might change.")
 		else
 			. += span_notice("\The [src] indicates that the brain is active.")
