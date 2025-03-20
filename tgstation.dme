@@ -8783,6 +8783,7 @@
 #include "teatroespacial13\eventos\gantz\code\gantz.dm"
 #include "teatroespacial13\eventos\stationvsstation\spawn.dm"
 #include "teatroespacial13\modules\atpmask\obj\clothing\te13_masks.dm"
+#include "teatroespacial13\modules\ballistic-weapons\code\automatic.dm"
 #include "teatroespacial13\modules\johnprata\3516.dm"
 #include "teatroespacial13\modules\johnprata\johnprata_bundle.dm"
 #include "teatroespacial13\modules\johnprata\uplink_items.dm"
@@ -8792,4 +8793,6 @@
 #include "teatroespacial13\modules\MiningBallistics\bundle.dm"
 #include "teatroespacial13\modules\MiningBallistics\guns.dm"
 #include "teatroespacial13\modules\MiningBallistics\projectile.dm"
+#include "teatroespacial13\modules\teatro-loadout\code\teatro_clothing.dm"
+#include "teatroespacial13\modules\teatro-loadout\code\teatro_loadout.dm"
 // END_INCLUDE
