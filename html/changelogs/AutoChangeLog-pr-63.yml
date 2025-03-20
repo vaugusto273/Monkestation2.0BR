@@ -1,0 +1,4 @@
+author: "JohnnySilverhand123"
+delete-after: True
+changes:
+  - rscadd: "Added a system that replaces some internet lingo for full words"

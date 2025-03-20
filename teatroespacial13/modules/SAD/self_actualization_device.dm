@@ -187,7 +187,7 @@
 		player_consent = CONSENT_GRANTED
 		say("Starting procedure! Baking for a cycle time of [DisplayTimeText(processing_time)] at laser power [display_power(active_power_usage)].")
 		to_chat(occupant, span_warning("This will take [DisplayTimeText(processing_time)] to complete. To cancel the procedure, hit the RESIST button or hotkey."))
-		set_light(l_range = 1.5, l_power = 1.2, l_on = TRUE)
+		set_light(l_outer_range = 1.5, l_power = 1.2, l_on = TRUE)
 		sound_loop.start()
 		COOLDOWN_START(src, sad_processing_time, processing_time)
 		COOLDOWN_START(src, advert_time, rand(ADVERT_TIME * 0.75, ADVERT_TIME * 1.25))
