@@ -191,7 +191,7 @@
 
 /obj/item/gun/ballistic/automatic/rx7/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+	AddComponent(/datum/component/automatic_fire, fire_delay)
 
 /obj/item/gun/ballistic/automatic/rx7/examine_more(mob/user)
 	. = ..()
