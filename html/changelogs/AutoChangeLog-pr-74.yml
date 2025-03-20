@@ -1,0 +1,6 @@
+author: "ElderFireCracker"
+delete-after: True
+changes:
+  - rscadd: "Adicionado novas armas balisticas como a SPAS12, MAC10 e USAS10"
+  - rscadd: "Loadout de Biker do Hotline Miami 1"
+  - image: "Novo sprite pra Uzi"
