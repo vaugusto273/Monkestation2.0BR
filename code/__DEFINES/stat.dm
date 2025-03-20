@@ -9,6 +9,8 @@
 #define HARD_CRIT 3
 #define DEAD 4
 
+#define ELSE_CONSCIOUS list(SOFT_CRIT, UNCONSCIOUS, HARD_CRIT, DEAD)
+
 //Maximum healthiness an individual can have
 #define MAX_SATIETY 600
 
