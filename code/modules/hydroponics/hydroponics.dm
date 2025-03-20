@@ -273,7 +273,7 @@
 			apply_chemicals(lastuser?.resolve())
 			// Nutrients deplete slowly
 			if(bio_boosted)
-				adjust_plant_nutriments(max(reagents.total_volume * ((nutriment_drain_precent * 0.2) * 0.01), 0.05))
+				adjust_plant_nutriments(max(reagents.total_volume * (nutriment_drain_precent * 0.05), 0.05))
 			else
 				adjust_plant_nutriments(max(reagents.total_volume * (nutriment_drain_precent * 0.01), 0.05))
 

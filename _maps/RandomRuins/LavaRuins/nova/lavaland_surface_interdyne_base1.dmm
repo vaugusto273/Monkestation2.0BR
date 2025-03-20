@@ -2112,6 +2112,10 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
+"rD" = (
+/obj/machinery/suit_storage_unit/interdyne,
+/turf/open/floor/wood,
+/area/ruin/interdyne_planetary_base/cargo/deck)
 "rE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -6546,7 +6550,7 @@ ja
 fm
 Qf
 By
-Wa
+rD
 Wa
 By
 uX
