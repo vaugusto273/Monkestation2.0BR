@@ -437,7 +437,8 @@
 /obj/item/seeds/proc/adjust_maturation(adjustamt)
 	if(maturation == -1)
 		return
-	maturation = maturation + adjustamt
+	var/max_maturation = MAX_PLANT_MATURATION
+	maturation = clamp(maturation + adjustamt, 0, max_maturation)
 	var/datum/plant_gene/core/C = get_gene(/datum/plant_gene/core/maturation)
 	if(C)
 		C.value = maturation

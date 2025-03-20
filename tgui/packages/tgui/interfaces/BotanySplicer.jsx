@@ -334,7 +334,7 @@ export const BotanySplicer = (props) => {
   const [tab, setTab] = useSharedState('tab', 'splicing');
   const { working, timeleft, error } = data;
   return (
-    <Window title="Plant Splicer" width={390} height={525}>
+    <Window title="Plant Splicer" width={390} height={563}>
       <Window.Content>
         {!!error && <NoticeBox>{error}</NoticeBox>}
         {!!working && (
@@ -375,6 +375,9 @@ export const SplicingTab = (props) => {
   const { working, timeleft, error } = data;
   return (
     <Section fitted>
+      <Flex.Item>
+        <DamageBar />
+      </Flex.Item>
       <InsertedSeedOne />
       <InsertedSeedTwo />
       <SpliceButton />
