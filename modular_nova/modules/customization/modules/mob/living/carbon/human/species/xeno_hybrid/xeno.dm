@@ -35,20 +35,21 @@
 	)
 	external_organs = list(
 		/obj/item/organ/external/xenohead = "Standard",
+		/obj/item/organ/external/tail/tail_xeno = "Xeno"
 	)
 	meat = /obj/item/food/meat/slab/xeno
 	skinned_type = /obj/item/stack/sheet/animalhide/xeno
 	death_sound = 'sound/voice/hiss6.ogg'
 	gib_anim = "gibbed-a"
 
-/datum/species/xeno/get_default_mutant_bodyparts()
-	return list(
-		"tail" = list("Xenomorph Tail", FALSE),
-		"xenodorsal" = list("Standard", TRUE),
-		"xenohead" = list("Standard", TRUE),
-		"legs" = list(DIGITIGRADE_LEGS,FALSE),
-		"taur" = list("None", FALSE),
-	)
+// /datum/species/xeno/get_default_mutant_bodyparts()
+// 	return list(
+// 		"tail" = list("Xenomorph Tail", FALSE),
+// 		"xenodorsal" = list("Standard", TRUE),
+// 		"xenohead" = list("Standard", TRUE),
+// 		"legs" = list(DIGITIGRADE_LEGS,FALSE),
+// 		"taur" = list("None", FALSE),
+// 	)
 
 /datum/species/xeno/get_species_description()
 	return "placeholder_description"
@@ -83,6 +84,7 @@
 	xeno.update_body(TRUE)
 
 /datum/species/xeno/on_species_gain(mob/living/carbon/human/human_who_gained_species, datum/species/old_species, pref_load, regenerate_icons)
+	human_who_gained_species.dna.features["xenohybrid_tail"] = "Xeno"
 	. = ..()
 	human_who_gained_species.gib_type = /obj/effect/decal/cleanable/xenoblood/xgibs
 

@@ -1,9 +1,23 @@
 //TAILS
-/datum/sprite_accessory/tails/mammal/wagging/xeno_tail
+// /datum/bodypart_overlay/mutant/tail/avian
+	// feature_key = "xenohybrid_tail"
+/datum/sprite_accessory/tails/tail_xeno
 	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/xeno_parts.dmi'
-	name = "Xenomorph Tail"
-	icon_state = "xeno"
+	// name = "Xenomorph Tail"
+	// generic = "Caste Tail"
+	// icon_state = "xeno"
+	key = "xenohybrid_tail"
 	recommended_species = list(SPECIES_XENO)
+	organ_type = /obj/item/organ/external/tail/tail_xeno
+
+/datum/sprite_accessory/tails/tail_xeno/xeno
+	name = "Xeno"
+	icon_state = "xeno"
+
+// /datum/sprite_accessory/tails/wagging/tail_xeno
+// 	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/xeno_parts.dmi'
+// 	name = "Xenomorph Tail"
+// 	icon_state = "xeno"
 
 //HEADS
 /datum/sprite_accessory/xenohead
