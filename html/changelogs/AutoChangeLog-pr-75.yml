@@ -1,0 +1,6 @@
+author: "Caveirinha"
+delete-after: True
+changes:
+  - image: "new icon for the server"
+  - rscadd: "Ballistic Shield & Breach Hammer"
+  - bugfix: "Fixed ballistic.dm icons"
