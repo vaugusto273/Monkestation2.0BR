@@ -13,7 +13,7 @@
 		return
 	if (mob.reagents.get_reagent_amount(/datum/reagent/adrenaline) < 10)
 		if(prob(5 * multiplier) && multiplier >= 8)
-			mob.reagents.add_reagent(/datum/reagent/adrenaline, 8 //you are gonna probably die
+			mob.reagents.add_reagent(/datum/reagent/adrenaline, 8) //you are gonna probably die
 		else
 			mob.reagents.add_reagent(/datum/reagent/adrenaline, 4)
 	if (prob(30))
