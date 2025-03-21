@@ -187,6 +187,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/c40sol_rifle
 	bolt_type = BOLT_TYPE_STANDARD
 	show_bolt_icon = FALSE
+	spawnwithmagazine = TRUE
 	fire_sound = 'teatroespacial13/modules/ballistic-weapons/sound/rx_fire.ogg'
 
 /obj/item/gun/ballistic/automatic/rx7/Initialize(mapload)

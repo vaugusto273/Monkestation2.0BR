@@ -8806,6 +8806,8 @@
 #include "teatroespacial13\modules\admin\aooc.dm"
 #include "teatroespacial13\modules\admin\sooc.dm"
 #include "teatroespacial13\modules\atpmask\obj\clothing\te13_masks.dm"
+#include "teatroespacial13\modules\ballistic-weapons\code\automatic.dm"
+#include "teatroespacial13\modules\ballistic-weapons\code\security_gimmicks.dm"
 #include "teatroespacial13\modules\johnprata\3516.dm"
 #include "teatroespacial13\modules\johnprata\johnprata_bundle.dm"
 #include "teatroespacial13\modules\johnprata\uplink_items.dm"
@@ -8817,5 +8819,4 @@
 #include "teatroespacial13\modules\MiningBallistics\projectile.dm"
 #include "teatroespacial13\modules\mob\living\living_say.dm"
 #include "teatroespacial13\modules\SAD\self_actualization_device.dm"
-#include "teatroespacial13\modules\ballistic-weapons\code\automatic.dm"
 // END_INCLUDE
