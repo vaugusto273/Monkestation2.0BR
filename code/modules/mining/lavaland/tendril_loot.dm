@@ -691,9 +691,16 @@
 	fire = 100
 	acid = 100
 
+/datum/armor/drake_empowerment
+	melee = 35
+	laser = 30
+	energy = 20
+	bomb = 20
+
 /obj/item/clothing/suit/hooded/berserker/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/anti_magic, ALL, inventory_flags = ITEM_SLOT_OCLOTHING)
+	AddComponent(/datum/component/armor_plate, 1, /obj/item/drake_remains, /datum/armor/drake_empowerment) // TEATRO ADDITION
 
 #define MAX_BERSERK_CHARGE 100
 #define PROJECTILE_HIT_MULTIPLIER 1.5
@@ -724,6 +731,7 @@
 /obj/item/clothing/head/hooded/berserker/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, LOCKED_HELMET_TRAIT)
+	AddComponent(/datum/component/armor_plate, 1, /obj/item/drake_remains, /datum/armor/drake_empowerment) //TEATRO ADDITION
 
 /obj/item/clothing/head/hooded/berserker/examine()
 	. = ..()
