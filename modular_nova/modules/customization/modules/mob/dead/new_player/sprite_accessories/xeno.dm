@@ -27,6 +27,9 @@
 	relevent_layers = list(BODY_ADJ_LAYER)
 	genetic = TRUE
 	organ_type = /obj/item/organ/external/xenohead
+	palette = /datum/color_palette/generic_colors
+	palette_key = MUTANT_COLOR
+	// color_src = SKIN_COLOR
 
 /datum/sprite_accessory/xenohead/standard
 	name = "Standard"

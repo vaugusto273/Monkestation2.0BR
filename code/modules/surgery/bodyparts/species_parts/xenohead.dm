@@ -15,8 +15,6 @@
 	feature_key = "xenohead"
 	layers = EXTERNAL_ADJACENT
 	color_source = ORGAN_COLOR_OVERRIDE
-	palette = /datum/color_palette/generic_colors
-	palette_key = MUTANT_COLOR
 
 // /datum/bodypart_overlay/mutant/xenohead/override_color(rgb_value)
 // 	return draw_color
@@ -37,6 +35,8 @@
 	preference = "feature_xenotail"
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_EXTERNAL_TAIL
+
+	// bom para os antropomorficos: organ_flags = ORGAN_UNREMOVABLE
 
 	use_mob_sprite_as_obj_sprite = TRUE
 	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/tail_xeno

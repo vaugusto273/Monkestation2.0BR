@@ -22,7 +22,7 @@
 	exotic_bloodtype = /datum/reagent/toxin/acid
 	heatmod = 2.5
 	digitigrade_customization = DIGITIGRADE_FORCED
-	mutant_bodyparts = list()
+	mutant_bodyparts = list("xenohead" = "Standard")
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	bodypart_overrides = list(
@@ -34,7 +34,7 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/xenohybrid,
 	)
 	external_organs = list(
-		/obj/item/organ/external/xenohead = "Standard",
+		// /obj/item/organ/external/xenohead = "Standard",
 		/obj/item/organ/external/tail/tail_xeno = "Xeno"
 	)
 	meat = /obj/item/food/meat/slab/xeno
@@ -85,6 +85,7 @@
 
 /datum/species/xeno/on_species_gain(mob/living/carbon/human/human_who_gained_species, datum/species/old_species, pref_load, regenerate_icons)
 	human_who_gained_species.dna.features["xenohybrid_tail"] = "Xeno"
+	handle_mutant_bodyparts(human_who_gained_species)
 	. = ..()
 	human_who_gained_species.gib_type = /obj/effect/decal/cleanable/xenoblood/xgibs
 
