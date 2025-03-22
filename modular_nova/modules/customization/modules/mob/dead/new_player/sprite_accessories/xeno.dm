@@ -1,11 +1,6 @@
 //TAILS
-// /datum/bodypart_overlay/mutant/tail/avian
-	// feature_key = "xenohybrid_tail"
 /datum/sprite_accessory/tails/tail_xeno
 	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/xeno_parts.dmi'
-	// name = "Xenomorph Tail"
-	// generic = "Caste Tail"
-	// icon_state = "xeno"
 	key = "xenohybrid_tail"
 	recommended_species = list(SPECIES_XENO)
 	organ_type = /obj/item/organ/external/tail/tail_xeno
@@ -27,9 +22,6 @@
 	relevent_layers = list(BODY_ADJ_LAYER)
 	genetic = TRUE
 	organ_type = /obj/item/organ/external/xenohead
-	palette = /datum/color_palette/generic_colors
-	palette_key = MUTANT_COLOR
-	// color_src = SKIN_COLOR
 
 /datum/sprite_accessory/xenohead/standard
 	name = "Standard"
@@ -46,3 +38,28 @@
 /datum/sprite_accessory/xenohead/warrior
 	name = "Warrior"
 	icon_state = "warrior"
+
+
+//DORSAL
+
+/datum/sprite_accessory/xenodorsal
+	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/xeno_parts.dmi'
+	generic = "Caste Head"
+	key = "xenodorsal"
+	relevent_layers = list(BODY_ADJ_LAYER)
+	genetic = TRUE
+	organ_type = /obj/item/organ/external/xenodorsal
+	palette = /datum/color_palette/generic_colors
+	palette_key = MUTANT_COLOR
+
+/datum/sprite_accessory/xenodorsal/standard
+	name = "Standard"
+	icon_state = "standard"
+
+/datum/sprite_accessory/xenodorsal/royal
+	name = "Royal"
+	icon_state = "royal"
+
+/datum/sprite_accessory/xenodorsal/down
+	name = "downdorsal"
+	icon_state = "down"

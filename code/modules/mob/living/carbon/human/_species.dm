@@ -745,7 +745,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * * forced_colour - The forced color of an accessory. Leave null to use mutant color.
  */
 /datum/species/proc/handle_mutant_bodyparts(mob/living/carbon/human/source, forced_colour)
-	SEND_ADMINCHAT_MESSAGE(source.name)
 	var/list/bodyparts_to_add = mutant_bodyparts.Copy()
 	var/list/relevent_layers = list(BODY_BEHIND_LAYER, BODY_ADJ_LAYER, BODY_FRONT_LAYER)
 	var/list/standing = list()
@@ -795,8 +794,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.caps_list[source.dna.features["caps"]]
 				if("ipc_screen") // Monkestation Addition
 					accessory = GLOB.ipc_screens_list[source.dna.features["ipc_screen"]]
-				if("xenohead") // Novastation Addition
-					accessory = GLOB.xeno_heads_list[source.dna.features["xenohead"]]
+				if("xenodorsal") // Novastation Addition
+					accessory = GLOB.xeno_dorsals_list[source.dna.features["xenodorsal"]]
 
 			if(!accessory || accessory.icon_state == "none")
 				continue

@@ -22,7 +22,7 @@
 	exotic_bloodtype = /datum/reagent/toxin/acid
 	heatmod = 2.5
 	digitigrade_customization = DIGITIGRADE_FORCED
-	mutant_bodyparts = list("xenohead" = "Standard")
+	mutant_bodyparts = list("xenodorsal" = "Standard")
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	bodypart_overrides = list(
@@ -34,7 +34,7 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/xenohybrid,
 	)
 	external_organs = list(
-		// /obj/item/organ/external/xenohead = "Standard",
+		/obj/item/organ/external/xenohead = "Standard",
 		/obj/item/organ/external/tail/tail_xeno = "Xeno"
 	)
 	meat = /obj/item/food/meat/slab/xeno

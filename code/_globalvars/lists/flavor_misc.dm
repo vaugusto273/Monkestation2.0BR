@@ -61,6 +61,7 @@ GLOBAL_LIST_EMPTY(satyr_tail_list) //Monkestation Addition
 GLOBAL_LIST_EMPTY(satyr_horns_list) //Monkestation Addition
 GLOBAL_LIST_EMPTY(xeno_tail_list) //Novasector Addition
 GLOBAL_LIST_EMPTY(xeno_heads_list) //Novasector Addition
+GLOBAL_LIST_EMPTY(xeno_dorsals_list) //Novasector Addition
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"Blue" = "#3399ff",

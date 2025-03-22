@@ -150,6 +150,7 @@ INITIALIZE_IMMEDIATE(/mob/living/carbon/human/dummy)
 	target.dna.features["tail_avian"] = get_consistent_feature_entry(GLOB.tails_list_avian) //Monkestation Addition
 	target.dna.features["xenohybrid_tail"] = get_consistent_feature_entry(GLOB.xeno_tail_list) //Novasector addition
 	target.dna.features["xenohead"] = get_consistent_feature_entry(GLOB.xeno_heads_list) //Novasector addition
+	target.dna.features["xenodorsal"] = get_consistent_feature_entry(GLOB.xeno_dorsals_list) //Novasector addition
 
 	var/datum/color_palette/generic_colors/palette = target.dna.color_palettes[/datum/color_palette/generic_colors]
 	palette.mutant_color = COLOR_VIBRANT_LIME
