@@ -3,14 +3,14 @@
 /datum/nanite_program/nervous
 	name = "Nerve Support"
 	desc = "The nanites act as a secondary nervous system, reducing the amount of time the host is stunned."
-	use_rate = 1.5
+	use_rate = 2
 	rogue_types = list(/datum/nanite_program/nerve_decay)
 
 /datum/nanite_program/nervous/enable_passive_effect()
 	. = ..()
 	if(ishuman(host_mob))
 		var/mob/living/carbon/human/H = host_mob
-		H.physiology.stun_mod *= 0.5
+		H.physiology.stun_mod *= 0.2
 
 /datum/nanite_program/nervous/disable_passive_effect()
 	. = ..()
@@ -21,14 +21,14 @@
 /datum/nanite_program/hardening
 	name = "Dermal Hardening"
 	desc = "The nanites form a mesh under the host's skin, protecting them from melee and bullet impacts."
-	use_rate = 0.5
+	use_rate = 1
 	rogue_types = list(/datum/nanite_program/skin_decay)
 
 //TODO on_hit effect that turns skin grey for a moment
 
 /datum/armor/dermal_hardening
-	melee = 25
-	bullet = 20
+	melee = 15
+	bullet = 10
 
 /datum/nanite_program/hardening/enable_passive_effect()
 	. = ..()
@@ -43,13 +43,13 @@
 		H.set_armor(H.get_armor().subtract_other_armor(/datum/armor/dermal_hardening))
 
 /datum/armor/refractive
-	laser = 25
-	energy = 20
+	laser = 15
+	energy = 10
 
 /datum/nanite_program/refractive
 	name = "Dermal Refractive Surface"
 	desc = "The nanites form a membrane above the host's skin, reducing the effect of laser and energy impacts."
-	use_rate = 0.50
+	use_rate = 1
 	rogue_types = list(/datum/nanite_program/skin_decay)
 
 /datum/nanite_program/refractive/enable_passive_effect()
@@ -67,7 +67,7 @@
 /datum/nanite_program/coagulating
 	name = "Vein Repressurization"
 	desc = "The nanites re-route circulating blood away from open wounds, dramatically reducing bleeding rate."
-	use_rate = 0.20
+	use_rate = 5 // wounds like bleeding are a big deal
 	rogue_types = list(/datum/nanite_program/suffocating)
 
 /datum/nanite_program/coagulating/enable_passive_effect()
@@ -85,7 +85,7 @@
 /datum/nanite_program/conductive
 	name = "Electric Conduction"
 	desc = "The nanites act as a grounding rod for electric shocks, protecting the host. Shocks can still damage the nanites themselves."
-	use_rate = 0.20
+	use_rate = 1
 	program_flags = NANITE_SHOCK_IMMUNE
 	rogue_types = list(/datum/nanite_program/nerve_decay)
 
