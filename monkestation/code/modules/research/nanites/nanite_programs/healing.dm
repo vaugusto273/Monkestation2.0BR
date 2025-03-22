@@ -3,7 +3,7 @@
 /datum/nanite_program/regenerative
 	name = "Accelerated Regeneration"
 	desc = "The nanites boost the host's natural regeneration, increasing their healing speed. Will not consume nanites while the host is unharmed."
-	use_rate = 0.5
+	use_rate = 1
 	rogue_types = list(/datum/nanite_program/necrotic)
 
 /datum/nanite_program/regenerative/check_conditions()
@@ -23,11 +23,11 @@
 		if(!parts.len)
 			return
 		for(var/obj/item/bodypart/L in parts)
-			if(L.heal_damage(0.5/parts.len, 0.5/parts.len, null, BODYTYPE_ORGANIC))
+			if(L.heal_damage(0.2/parts.len, 0.2/parts.len, null, BODYTYPE_ORGANIC))
 				host_mob.update_damage_overlays()
 	else
-		host_mob.adjustBruteLoss(-0.5, TRUE)
-		host_mob.adjustFireLoss(-0.5, TRUE)
+		host_mob.adjustBruteLoss(-0.2, TRUE)
+		host_mob.adjustFireLoss(-0.2, TRUE)
 
 /datum/nanite_program/temperature
 	name = "Temperature Adjustment"
@@ -59,7 +59,7 @@
 		return FALSE // No trying to purge simple mobs
 
 /datum/nanite_program/purging/active_effect()
-	host_mob.adjustToxLoss(-1)
+	host_mob.adjustToxLoss(-0.5)
 	for(var/datum/reagent/R in host_mob.reagents.reagent_list)
 		if (istype(R, /datum/reagent/toxin/radiomagnetic_disruptor))
 			continue
@@ -89,7 +89,7 @@
 /datum/nanite_program/blood_restoring
 	name = "Blood Regeneration"
 	desc = "The nanites stimulate and boost blood cell production in the host. Will not consume nanites while the host has a safe blood level."
-	use_rate = 1
+	use_rate = 2
 	rogue_types = list(/datum/nanite_program/suffocating)
 
 /datum/nanite_program/blood_restoring/check_conditions()
@@ -155,7 +155,7 @@
 		return FALSE
 
 /datum/nanite_program/purging_advanced/active_effect()
-	host_mob.adjustToxLoss(-1)
+	host_mob.adjustToxLoss(-0.8)
 	for(var/datum/reagent/toxin/R in host_mob.reagents.reagent_list)
 		if (istype(R, /datum/reagent/toxin/radiomagnetic_disruptor))
 			continue
@@ -181,8 +181,8 @@
 		if(update)
 			host_mob.update_damage_overlays()
 	else
-		host_mob.adjustBruteLoss(-2, TRUE)
-		host_mob.adjustFireLoss(-2, TRUE)
+		host_mob.adjustBruteLoss(-1, TRUE)
+		host_mob.adjustFireLoss(-1, TRUE)
 
 /datum/nanite_program/brain_heal_advanced
 	name = "Neural Reimaging"
