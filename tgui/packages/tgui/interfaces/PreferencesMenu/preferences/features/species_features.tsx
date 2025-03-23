@@ -106,6 +106,30 @@ export const eye_color: Feature<string> = {
   },
 };
 
+export const feature_mcolor: Feature<string> = {
+  name: 'Skin Tone',
+  small_supplemental: false,
+  predictable: false,
+  component: (props: FeatureValueProps<string>) => {
+    const { handleSetValue, value, featureId, act } = props;
+
+    return (
+      <StandardizedPalette
+        choices={Object.keys(eyePresets)}
+        displayNames={eyePresets}
+        onSetValue={handleSetValue}
+        value={value}
+        hex_values
+        allow_custom
+        featureId={featureId}
+        act={act}
+        maxWidth="100%"
+        includeHex
+      />
+    );
+  },
+};
+
 export const gradient_color: Feature<string> = {
   name: 'Gradient Color',
   small_supplemental: false,
@@ -261,10 +285,10 @@ export const feature_lizard_tail: FeatureChoiced = {
   component: FeatureDropdownInput,
 };
 
-export const feature_mcolor: Feature<string> = {
-  name: 'Mutant color',
-  component: FeatureColorInput,
-};
+// export const feature_mcolor: Feature<string> = {
+//   name: 'Mutant color',
+//   component: FeatureColorInput,
+// };
 
 export const feature_mcolor_secondary: Feature<string> = {
   name: 'Mutant Secondary color',
