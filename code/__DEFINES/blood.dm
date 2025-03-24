@@ -19,3 +19,5 @@
 #define BLOOD_STATE_OIL "oil"
 /// No blood is present
 #define BLOOD_STATE_NOT_BLOODY "no blood whatsoever"
+/// Mobs will drop bodyparts (arms, legs, etc.) Nova addition
+#define DROP_BODYPARTS (1<<2)
