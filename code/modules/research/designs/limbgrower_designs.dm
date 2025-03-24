@@ -117,6 +117,40 @@
 	build_path = /obj/item/organ/internal/tongue/lizard
 	category = list(SPECIES_LIZARD)
 
+/datum/design/monkey_leftarm
+	name = "Monkey Left Arm"
+	id = "monkeyleftarm"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/bodypart/arm/left/monkey
+	category = list(RND_CATEGORY_LIMBS_OTHER, RND_CATEGORY_INITIAL)
+
+/datum/design/monkey_rightarm
+	name = "Monkey Right Arm"
+	id = "monkeyrightarm"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/bodypart/arm/right/monkey
+	category = list(RND_CATEGORY_LIMBS_OTHER, RND_CATEGORY_INITIAL)
+
+/datum/design/monkey_leftleg
+	name = "Monkey Left Leg"
+	id = "monkeyleftleg"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/bodypart/leg/left/monkey
+	category = list(RND_CATEGORY_LIMBS_OTHER, RND_CATEGORY_INITIAL)
+
+
+/datum/design/monkey_rightleg
+	name = "Monkey Right Leg"
+	id = "monkeyrightleg"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/bodypart/leg/right/monkey
+	category = list(RND_CATEGORY_LIMBS_OTHER, RND_CATEGORY_INITIAL)
+
+
 /datum/design/monkey_tail
 	name = "Monkey Tail"
 	id = "monkeytail"
@@ -197,6 +231,38 @@
 	build_path = /obj/item/organ/internal/lungs/ethereal
 	category = list(SPECIES_ETHEREAL)
 
+/datum/design/hemophage_heart
+	name = "pulsating tumor"
+	id = "hemophagetumor"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 50)
+	build_path = /obj/item/organ/internal/heart/hemophage
+	category = list(SPECIES_HEMOPHAGE)
+
+/datum/design/hemophage_liver
+	name = "liver"
+	id = "hemophageliver"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 40)
+	build_path = /obj/item/organ/internal/liver/hemophage
+	category = list(SPECIES_HEMOPHAGE)
+
+/datum/design/hemophage_stomach
+	name = "stomach"
+	id = "hemophagestomach"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 35)
+	build_path = /obj/item/organ/internal/stomach/hemophage
+	category = list(SPECIES_HEMOPHAGE)
+
+/datum/design/hemophage_tongue
+	name = "tongue"
+	id = "hemophagetongue"
+	build_type = LIMBGROWER
+	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 30)
+	build_path = /obj/item/organ/internal/tongue/hemophage
+	category = list(SPECIES_HEMOPHAGE)
+
 // Intentionally not growable by normal means - for balance conerns.
 /datum/design/ethereal_heart
 	name = "Crystal Core"
@@ -268,3 +334,13 @@
 	desc = "Contains designs for ethereal organs for the limbgrower - Ethereal tongue and stomach."
 	id = "limbdesign_ethereal"
 	build_path = /obj/item/disk/design_disk/limbs/ethereal
+
+/datum/design/limb_disk/hemophage
+	name = "Hemophage Organ Design Disk"
+	desc = "Contains designs for Hemophage organs for the limbgrower - Hemophage heart/tumor, tongue, liver and stomach."
+	id = "limbdesign_hemophage"
+	build_path = /obj/item/disk/design_disk/limbs/hemophage
+
+/obj/item/disk/design_disk/limbs/hemophage
+	name = "Hemophage Organ Design Disk"
+	limb_designs = list(/datum/design/hemophage_heart, /datum/design/hemophage_liver, /datum/design/hemophage_stomach, /datum/design/hemophage_tongue)

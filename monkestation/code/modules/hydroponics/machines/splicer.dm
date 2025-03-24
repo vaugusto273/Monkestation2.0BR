@@ -95,6 +95,14 @@
 	if(seed_2)
 		data["seed_2"] = list(seed_2.return_all_data())
 		has_seed_two = TRUE
+	if(has_seed_one && has_seed_two && !held_beaker)
+		data["seed_1"] = list(seed_1.return_all_data() + stats)
+		data["seed_2"] = list(seed_2.return_all_data())
+		has_seed_one = TRUE
+		has_seed_two = TRUE
+		data["damage_taken"] = seed_1.infusion_damage + seed_2.infusion_damage
+		data["potential_damage"] = potential_damage
+		data["combined_damage"] = (potential_damage + seed_1.infusion_damage + seed_2.infusion_damage)
 	if(held_beaker)
 		data["held_beaker"] = held_beaker.reagents
 		has_beaker = TRUE
@@ -185,8 +193,8 @@
 	new_seed.growthstages = first_seed.growthstages
 	new_seed.growing_icon = first_seed.growing_icon
 	new_seed.plant_icon_offset = first_seed.plant_icon_offset
-
 	new_seed.reagents_add = first_seed.reagents_add.Copy()
+	new_seed.infusion_damage += (first_seed.infusion_damage + second_seed.infusion_damage) + 25
 
 	for(var/datum/reagent/reag as anything in second_seed.reagents_add)
 		if(reag in new_seed.reagents_add)
@@ -228,7 +236,18 @@
 	for(var/reag_id in new_seed.reagents_add)
 		new_seed.genes += new /datum/plant_gene/reagent(reag_id, new_seed.reagents_add[reag_id])
 
+	if(new_seed.infusion_damage >= 100)
+		to_chat(usr, span_danger("The [first_seed.plantname] and [second_seed.plantname] were too damaged to splice together."))
+		seed_1 = null
+		seed_2 = null
+		new_seed = null
+		qdel(first_seed)
+		qdel(second_seed)
+		qdel(new_seed)
+
+		return
 	if(Adjacent(usr) && !issiliconoradminghost(usr))
+
 		if (!usr.put_in_hands(new_seed))
 			new_seed.forceMove(drop_location())
 	else
@@ -236,6 +255,7 @@
 
 	seed_1 = null
 	seed_2 = null
+
 
 	qdel(first_seed)
 	qdel(second_seed)

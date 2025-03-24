@@ -2,7 +2,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 
 /obj/item/mmi/posibrain
 	name = "positronic brain"
-	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves.<br>Can be transformed into an IPC brain with <b>Ctrl+Click</b>!"
+	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves. Can be slotted into the chest of synthetic crewmembers"
 	icon = 'icons/obj/assemblies/assemblies.dmi'
 	icon_state = "posibrain"
 	base_icon_state = "posibrain"
@@ -86,31 +86,6 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	ask_role = input_seed
 	update_appearance()
 
-/obj/item/mmi/posibrain/CtrlClick(mob/user)
-	if(!brainmob?.mind || !brainmob)
-		to_chat(user, span_notice("You press the button and release it, but nothing happens because the positronic brain is inactive."))
-		return
-	else if(brainmob.ckey == user.ckey)
-		to_chat(brainmob, span_notice("You cannot press your button itself, so nothing happens."))
-		return
-	to_ipc_posi(user)
-	to_chat(user, span_notice("You press the button to transform the positronic brain into an IPC brain."))
-
-/obj/item/mmi/posibrain/proc/to_ipc_posi(mob/user)
-	var/obj/item/organ/internal/brain/synth/brain = new /obj/item/organ/internal/brain/synth
-	brainmob.container = null //Reset brainmob mmi var.
-	brainmob.forceMove(brain) //Throw mob into brain.
-	brainmob.set_stat(DEAD)
-	brainmob.emp_damage = 0
-	brainmob.reset_perspective() //so the brainmob follows the brain organ instead of the mmi. And to update our vision
-	brain.brainmob = brainmob //Set the brain to use the brainmob
-	brainmob = null //Set mmi brainmob var to null
-	src.forceMove(drop_location())
-	if(Adjacent(user))
-		user.put_in_hands(brain)
-	brain.organ_flags &= ~ORGAN_FROZEN
-	brain = null //No more brain in here
-	qdel(src)
 
 /obj/item/mmi/posibrain/proc/check_success()
 	searching = FALSE
@@ -128,7 +103,8 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	activate(user)
 
 /obj/item/mmi/posibrain/proc/is_occupied()
-	if(brainmob.key)
+	// if(!brainmob && (brainmob.key || brainmob.stat in ELSE_CONSCIOUS))
+	if((brainmob && (brainmob.client || brainmob.get_ghost())) || decoy_override)
 		return TRUE
 	if(iscyborg(loc))
 		var/mob/living/silicon/robot/R = loc
@@ -156,6 +132,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	transfer_personality(user)
 
 /obj/item/mmi/posibrain/transfer_identity(mob/living/carbon/transfered_user)
+	..()
 	name = "[initial(name)] ([transfered_user])"
 	brainmob.name = transfered_user.real_name
 	brainmob.real_name = transfered_user.real_name
@@ -164,7 +141,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 			brainmob.stored_dna = new /datum/dna/stored(brainmob)
 		transfered_user.dna.copy_dna(brainmob.stored_dna)
 	brainmob.timeofhostdeath = transfered_user.timeofdeath
-	brainmob.set_stat(CONSCIOUS)
+	// brainmob.set_stat(CONSCIOUS)
 	if(brainmob.mind)
 		brainmob.mind.set_assigned_role(SSjob.GetJobType(posibrain_job_path))
 	if(transfered_user.mind)
@@ -200,13 +177,13 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 
 /obj/item/mmi/posibrain/examine(mob/user)
 	. = ..()
-	if(brainmob?.key)
+	if(brainmob?.key || brainmob?.client)
 		switch(brainmob.stat)
 			if(CONSCIOUS)
 				if(!brainmob.client)
 					. += "It appears to be in stand-by mode." //afk
 			if(DEAD)
-				. += span_deadsay("It appears to be completely inactive.")
+				. += span_deadsay("It appears to be inactive.")
 	else
 		. += "[dead_message]"
 		if(ask_role)
@@ -233,14 +210,35 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	if(searching)
 		icon_state = "[base_icon_state]-searching"
 		return
-	if(brainmob?.key)
+	if((brainmob && (brainmob.client || brainmob.get_ghost())) || decoy_override)
 		icon_state = "[base_icon_state]-occupied"
 		return
 	icon_state = "[base_icon_state]"
 	return
 
 /obj/item/mmi/posibrain/attackby(obj/item/O, mob/user, params)
-	return
+	// revive posi
+	var/obj/item/item = O
+	if (item.tool_behaviour == TOOL_MULTITOOL) //attempt to repair the brain
+		if (brainmob.stat == CONSCIOUS)
+			to_chat(user, span_warning("[src] is fine, no need to repair."))
+			return TRUE
+		if (DOING_INTERACTION(user, src))
+			to_chat(user, span_warning("you're already repairing [src]!"))
+			return TRUE
+		user.visible_message(span_notice("[user] slowly starts to repair [src] with [item]."), span_notice("You slowly start to repair [src] with [item]."))
+		var/did_repair = FALSE
+		if(item.use_tool(src, user, 3 SECONDS, volume = 50))
+			did_repair = TRUE
+			brainmob.set_stat(CONSCIOUS)
+			if(!brainmob.key)
+				brainmob.notify_ghost_cloning("Someone has fixed your MMI !", source = src)
+
+		if (did_repair)
+			user.visible_message(span_notice("[user] fully repairs [src] with [item], causing its warning light to stop flashing."), span_notice("You fully repair [src] with [item], causing its warning light to stop flashing."))
+		else
+			to_chat(user, span_warning("You failed to repair [src] with [item]!"))
+// end revive posi
 
 /obj/item/mmi/posibrain/add_mmi_overlay()
 	return

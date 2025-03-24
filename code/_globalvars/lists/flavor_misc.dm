@@ -241,6 +241,8 @@ GLOBAL_LIST_INIT(security_depts_prefs, sort_list(list(
 #define GDUFFELBAG "Grey Duffel Bag"
 #define GSATCHEL "Grey Satchel"
 #define LSATCHEL "Leather Satchel"
+#define BSATCHEL "Black Leather Satchel" //MONKESTATION
+#define RSATCHEL "Retro Satchel" //MONKESTATION
 GLOBAL_LIST_INIT(backpacklist, list(
 	DBACKPACK,
 	DDUFFELBAG,
@@ -249,6 +251,8 @@ GLOBAL_LIST_INIT(backpacklist, list(
 	GDUFFELBAG,
 	GSATCHEL,
 	LSATCHEL,
+	BSATCHEL, //MONKESTATION
+	RSATCHEL, //MONKESTATION
 ))
 
 	//Suit/Skirt

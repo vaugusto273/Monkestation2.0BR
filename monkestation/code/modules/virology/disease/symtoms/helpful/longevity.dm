@@ -4,6 +4,7 @@
 	stage = 4
 	badness = EFFECT_DANGER_HELPFUL
 	severity = 0
+	max_chance = 100
 	var/total_healed = 0
 
 /datum/symptom/immortal/activate(mob/living/carbon/mob)
@@ -13,7 +14,7 @@
 			wound.remove_wound()
 			break
 
-	var/heal_amt = 5 * multiplier
+	var/heal_amt = 2 * multiplier
 	var/current_health = mob.getBruteLoss()
 	if(current_health >= heal_amt)
 		total_healed += heal_amt * 0.2

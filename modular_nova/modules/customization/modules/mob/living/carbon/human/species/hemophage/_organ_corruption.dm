@@ -176,7 +176,7 @@
 	if(!currently_tumorless && corrupted_organ.owner)
 		UnregisterSignal(corrupted_organ.owner, COMSIG_LIVING_LIFE)
 
-	corrupted_organ.apply_organ_damage(CORRUPTED_ORGAN_DAMAGE_TUMORLESS * seconds_per_tick, required_organ_flag = ORGAN_TUMOR_CORRUPTED)
+	corrupted_organ.apply_organ_damage(CORRUPTED_ORGAN_DAMAGE_TUMORLESS * seconds_per_tick, required_organtype = ORGAN_TUMOR_CORRUPTED)
 
 	if(corrupted_organ.organ_flags & ORGAN_FAILING && corrupted_organ.owner)
 		UnregisterSignal(corrupted_organ.owner, COMSIG_LIVING_LIFE)

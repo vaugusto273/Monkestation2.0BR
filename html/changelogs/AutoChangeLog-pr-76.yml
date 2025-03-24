@@ -1,0 +1,7 @@
+author: "ElderFireCracker"
+delete-after: True
+changes:
+  - rscadd: "Added SEVA suit (as an advanced biosuit for medical/science depart)"
+  - rscadd: "SEVA Research Node"
+  - sound: "Added SEVA Voices"
+  - rscdel: "Removed motorcycle helmet (temp)"

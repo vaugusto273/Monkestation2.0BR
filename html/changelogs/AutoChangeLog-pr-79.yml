@@ -1,0 +1,6 @@
+author: "JohnnySilverhand123"
+delete-after: True
+changes:
+  - rscadd: "Added The Marked One boss fight to lavaland"
+  - rscadd: "Added a way to upgrade berserker armor using the remains of an Ash Drake, check your crafting list!"
+  - map: "Modified the Grand Arena to add The Marked One back to it"
