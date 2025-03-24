@@ -575,3 +575,73 @@ export const StandardizedPalette = (props: {
     </Flex>
   );
 };
+export const FeatureTriColorInput = (props: FeatureValueProps<string[]>) => {
+  const buttonFromValue = (index) => {
+    const color = props.value?.[index] || '#000000'; // Default color if value is undefined
+    return (
+      <Stack.Item>
+        <Button
+          onClick={() => {
+            props.act('set_tricolor_preference', {
+              preference: props.featureId,
+              value: index + 1,
+            });
+          }}
+        >
+          <Stack align="center" fill>
+            <Stack.Item>
+              <Box
+                style={{
+                  background: color.startsWith('#') ? color : `#${color}`,
+                  border: '2px solid white',
+                  boxSizing: 'content-box',
+                  height: '11px',
+                  width: '11px',
+                  ...(props.shrink
+                    ? {
+                        margin: '1px',
+                      }
+                    : {}),
+                }}
+              />
+            </Stack.Item>
+
+            {!props.shrink && <Stack.Item>Change</Stack.Item>}
+          </Stack>
+        </Button>
+      </Stack.Item>
+    );
+  };
+  return (
+    <Stack align="center" fill>
+      {buttonFromValue(0)}
+      {buttonFromValue(1)}
+      {buttonFromValue(2)}
+    </Stack>
+  );
+};
+
+export const FeatureTriBoolInput = (props: FeatureValueProps<boolean[]>) => {
+  const buttonFromValue = (index) => {
+    const checked = !!props.value?.[index]; // Default to false if value is undefined
+    return (
+      <Stack.Item align="center">
+        <Button.Checkbox
+          checked={checked}
+          onClick={() => {
+            const currentValue = [...(props.value || [])]; // Default to empty array if value is undefined
+            currentValue[index] = !currentValue[index];
+            props.handleSetValue(currentValue);
+          }}
+        />
+      </Stack.Item>
+    );
+  };
+  return (
+    <Stack align="center" fill>
+      {buttonFromValue(0)}
+      {buttonFromValue(1)}
+      {buttonFromValue(2)}
+    </Stack>
+  );
+};

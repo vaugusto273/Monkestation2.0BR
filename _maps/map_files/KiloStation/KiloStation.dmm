@@ -28541,8 +28541,10 @@
 /area/station/engineering/main)
 "iKo" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
-/obj/machinery/clonepod,
 /obj/machinery/digital_clock/directional/north,
+/obj/structure/closet/secure_closet/personal/patient{
+	name = "test subject's closet"
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "iKq" = (
@@ -62589,13 +62591,12 @@
 /area/station/maintenance/department/chapel/monastery)
 "tFq" = (
 /obj/machinery/light/directional/north,
-/obj/structure/table,
 /obj/machinery/requests_console/directional/north{
 	department = "Genetics";
 	name = "Genetics Requests Console"
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
-/obj/machinery/computer/cloning,
+/obj/machinery/computer/scan_consolenew,
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "tFH" = (

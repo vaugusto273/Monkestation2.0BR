@@ -794,6 +794,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.caps_list[source.dna.features["caps"]]
 				if("ipc_screen") // Monkestation Addition
 					accessory = GLOB.ipc_screens_list[source.dna.features["ipc_screen"]]
+				if("xenodorsal") // Novastation Addition
+					accessory = GLOB.xeno_dorsals_list[source.dna.features["xenodorsal"]]
 
 			if(!accessory || accessory.icon_state == "none")
 				continue

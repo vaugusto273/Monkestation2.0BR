@@ -10101,7 +10101,7 @@
 /area/station/engineering/atmospherics_engine)
 "cbj" = (
 /obj/effect/turf_decal/trimline/dark_green/filled/line,
-/obj/machinery/computer/cloning{
+/obj/machinery/computer/scan_consolenew{
 	dir = 1
 	},
 /turf/open/floor/iron/white,
@@ -46588,7 +46588,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/obj/machinery/clonepod,
+/obj/item/kirbyplants/random,
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "nzy" = (
