@@ -1,5 +1,6 @@
 /datum/color_palette/generic_colors
 	var/hair_color
+	var/mix_skin_tone
 	var/mutant_color
 	var/mutant_color_secondary
 	///Color of Monkey and Simian's fur, defaulted to Monkey-Brown.
@@ -8,6 +9,7 @@
 
 /datum/color_palette/generic_colors/apply_prefs(datum/preferences/incoming)
 	hair_color = incoming.read_preference(/datum/preference/color/hair_color)
+	mix_skin_tone = incoming.read_preference(/datum/preference/color/mix_skin_tone)
 	mutant_color = incoming.read_preference(/datum/preference/color/mutant_color)
 	mutant_color_secondary = incoming.read_preference(/datum/preference/color/mutant_color_secondary)
 	fur_color = incoming.read_preference(/datum/preference/color/fur_color)

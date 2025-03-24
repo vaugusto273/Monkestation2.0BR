@@ -157,6 +157,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_HAS_MARKINGS "has_markings"
 /// Species with this trait use skin tones for coloration
 #define TRAIT_USES_SKINTONES "uses_skintones"
+/// Species with this trait use skin tones and custon colors for coloration
+#define TRAIT_USES_MIXSKINTONES "uses_mixskintones"
 /// Species with this trait use mutant colors for coloration
 #define TRAIT_MUTANT_COLORS "mutcolors"
 /// Species with this trait use mutant colors for coloration

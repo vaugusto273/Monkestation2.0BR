@@ -3,11 +3,19 @@
 	id = SPECIES_HUMAN
 	mutant_bodyparts = list("wings" = "None")
 	inherent_traits = list(
-		TRAIT_USES_SKINTONES,
+		TRAIT_USES_MIXSKINTONES,
 	)
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	payday_modifier = 1
+	bodypart_overrides = list(
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/human,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/human,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/human,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/human,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/human,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/human,
+	)
 
 /datum/species/human/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.hairstyle = "Business Hair"
@@ -20,6 +28,15 @@
 /datum/species/human/get_species_description()
 	return "Humans are the dominant species in the known galaxy. \
 		Their kind extend from old Earth to the edges of known space."
+
+/datum/species/human/on_species_gain(mob/living/carbon/human/target)
+	. = ..()
+	if (target.dna.color_palettes[/datum/color_palette/generic_colors].mix_skin_tone in GLOB.skin_tones_colors)
+		for (var/obj/item/bodypart/L in target.bodyparts)
+			L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'
+	else
+		for (var/obj/item/bodypart/L in target.bodyparts)
+			L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodyparts.dmi'
 
 /datum/species/human/create_pref_unique_perks()
 	var/list/to_add = list()

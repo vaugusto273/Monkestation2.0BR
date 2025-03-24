@@ -16,7 +16,7 @@
 		TRAIT_NO_DNA_COPY,
 		TRAIT_NO_TRANSFORMATION_STING,
 		TRAIT_NO_HUSK,
-		TRAIT_USES_SKINTONES,
+		TRAIT_USES_MIXSKINTONES
 	)
 
 	mutant_organs = list(
@@ -82,6 +82,14 @@
 
 /datum/species/synth/on_species_gain(mob/living/carbon/C)
 	. = ..()
+	if (ishuman(C))
+		var/mob/living/carbon/human/target = C
+		if (target.dna.color_palettes[/datum/color_palette/generic_colors].mix_skin_tone in GLOB.skin_tones_colors)
+			for (var/obj/item/bodypart/L in target.bodyparts)
+				L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'
+		else
+			for (var/obj/item/bodypart/L in target.bodyparts)
+				L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodyparts.dmi'
 	var/obj/item/organ/internal/appendix/A = C.get_organ_slot("appendix") //See below.
 	if(A)
 		A.Remove(C)
