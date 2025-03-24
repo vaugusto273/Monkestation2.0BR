@@ -33,6 +33,21 @@ const eyePresets = {
   '#bbddee': 'Albino Blue',
 };
 
+const colorPresets = {
+  '#fff4e6': 'Albino',
+  '#ffe0d1': 'Porcelain',
+  '#fcccb3': 'Light peach',
+  '#e8b59b': 'Peach',
+  '#d9ae96': 'Light beige',
+  '#c79b8b': 'Olive',
+  '#ffdeb3': 'Ivory',
+  '#e3ba84': 'Beige',
+  '#c4915e': 'Light brown',
+  '#b87840': 'Brown',
+  '#754523': 'Medium brown',
+  '#471c18': 'Dark brown',
+};
+
 const hairPresets = {
   // these need to be short color (3 byte) compatible
   '#111111': 'Black',
@@ -106,7 +121,7 @@ export const eye_color: Feature<string> = {
   },
 };
 
-export const feature_mcolor: Feature<string> = {
+export const mix_skin_tone: Feature<string> = {
   name: 'Skin Tone',
   small_supplemental: false,
   predictable: false,
@@ -115,8 +130,8 @@ export const feature_mcolor: Feature<string> = {
 
     return (
       <StandardizedPalette
-        choices={Object.keys(eyePresets)}
-        displayNames={eyePresets}
+        choices={Object.keys(colorPresets)}
+        displayNames={colorPresets}
         onSetValue={handleSetValue}
         value={value}
         hex_values
@@ -285,10 +300,10 @@ export const feature_lizard_tail: FeatureChoiced = {
   component: FeatureDropdownInput,
 };
 
-// export const feature_mcolor: Feature<string> = {
-//   name: 'Mutant color',
-//   component: FeatureColorInput,
-// };
+export const feature_mcolor: Feature<string> = {
+  name: 'Mutant color',
+  component: FeatureColorInput,
+};
 
 export const feature_mcolor_secondary: Feature<string> = {
   name: 'Mutant Secondary color',

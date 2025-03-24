@@ -1,4 +1,6 @@
 // ~color source defines for sprite accessories
+/// Color of the sprite accessory will match the owner's mutant color with option
+#define MIX_SKIN_TONE "mix_skin_tone"
 /// Color of the sprite accessory will match the owner's mutant color, which is granted by certain species
 #define MUTANT_COLOR "mutant_color"
 /// Color of the sprite accessory will match the owner's hair color

@@ -262,6 +262,21 @@ GLOBAL_LIST_INIT(skin_tones, sort_list(list(
 	"african2"
 	)))
 
+GLOBAL_LIST_INIT(skin_tones_colors, list(
+		"#fff4e6",
+		"#ffe0d1",
+		"#fcccb3",
+		"#e8b59b",
+		"#d9ae96",
+		"#c79b8b",
+		"#ffdeb3",
+		"#e3ba84",
+		"#c4915e",
+		"#b87840",
+		"#754523",
+		"#471c18",
+		))
+
 GLOBAL_LIST_INIT(skin_tone_names, list(
 	"african1" = "Medium brown",
 	"african2" = "Dark brown",

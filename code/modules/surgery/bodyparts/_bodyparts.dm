@@ -925,7 +925,7 @@
 	limb_gender = (human_owner.physique == MALE) ? "m" : "f"
 	if(HAS_TRAIT(human_owner, TRAIT_USES_SKINTONES))
 		skin_tone = human_owner.skin_tone
-	else if(HAS_TRAIT(human_owner, TRAIT_MUTANT_COLORS))
+	else if(HAS_TRAIT(human_owner, TRAIT_MUTANT_COLORS)||HAS_TRAIT(human_owner, TRAIT_USES_MIXSKINTONES))
 		skin_tone = ""
 		if(palette)
 			var/datum/color_palette/located = human_owner.dna.color_palettes[palette]
