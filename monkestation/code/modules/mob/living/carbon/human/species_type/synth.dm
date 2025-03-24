@@ -84,13 +84,10 @@
 	. = ..()
 	if (ishuman(C))
 		var/mob/living/carbon/human/target = C
-		SEND_ADMINCHAT_MESSAGE(target.dna.color_palettes[/datum/color_palette/generic_colors].mix_skin_tone)
 		if (target.dna.color_palettes[/datum/color_palette/generic_colors].mix_skin_tone in GLOB.skin_tones_colors)
-			SEND_ADMINCHAT_MESSAGE(target.dna.species.bodypart_overrides)
 			for (var/obj/item/bodypart/L in target.bodyparts)
 				L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'
 		else
-			SEND_ADMINCHAT_MESSAGE("fato2")
 			for (var/obj/item/bodypart/L in target.bodyparts)
 				L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodyparts.dmi'
 	var/obj/item/organ/internal/appendix/A = C.get_organ_slot("appendix") //See below.
