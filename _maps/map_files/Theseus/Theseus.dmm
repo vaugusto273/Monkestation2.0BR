@@ -45694,13 +45694,13 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "nxW" = (
-/obj/machinery/computer/cloning,
 /obj/effect/turf_decal/tile/green/half{
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/light/directional/north,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/computer/scan_consolenew,
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "nxY" = (
@@ -51309,12 +51309,12 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical)
 "piu" = (
-/obj/machinery/clonepod,
 /obj/effect/turf_decal/tile/green/anticorner{
 	dir = 4
 	},
 /obj/effect/turf_decal/bot,
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/item/kirbyplants/organic/plant1,
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "piB" = (

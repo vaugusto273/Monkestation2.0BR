@@ -34462,7 +34462,7 @@
 /area/station/maintenance/department/science)
 "glu" = (
 /obj/machinery/light/directional/west,
-/obj/machinery/computer/cloning{
+/obj/machinery/computer/scan_consolenew{
 	dir = 4
 	},
 /turf/open/floor/iron/white/textured_large,
@@ -78593,7 +78593,7 @@
 /area/station/service/hydroponics/garden/abandoned)
 "xnJ" = (
 /obj/machinery/airalarm/directional/west,
-/obj/machinery/clonepod,
+/obj/item/kirbyplants/random,
 /turf/open/floor/iron/white/textured_large,
 /area/station/science/genetics)
 "xnY" = (
