@@ -11757,7 +11757,7 @@
 	department = "Genetics";
 	name = "Genetics Requests console"
 	},
-/obj/machinery/clonepod,
+/obj/item/kirbyplants/random,
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "dwH" = (
@@ -23180,7 +23180,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/light/cold/directional/west,
-/obj/machinery/computer/cloning{
+/obj/machinery/computer/scan_consolenew{
 	dir = 4
 	},
 /turf/open/floor/iron/white/textured_edge{

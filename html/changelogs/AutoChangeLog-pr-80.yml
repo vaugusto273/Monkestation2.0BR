@@ -1,0 +1,5 @@
+author: "JohnnySilverhand123"
+delete-after: True
+changes:
+  - rscadd: "Added the ability to quickly spawn players into the game using Ctrl+LMB."
+  - rscadd: "Added the Bluespace Tech outfit, a more IC way for Admins to intervene in the round."

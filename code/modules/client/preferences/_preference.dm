@@ -145,6 +145,12 @@ GLOBAL_LIST_INIT(preference_entries_by_key, init_preference_entries_by_key())
 	SHOULD_CALL_PARENT(FALSE)
 	CRASH("`create_default_value()` was not implemented on [type]!")
 
+/datum/preference/toggle/mutant_toggle
+	abstract_type = /datum/preference/toggle/mutant_toggle
+	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	savefile_identifier = PREFERENCE_CHARACTER
+	default_value = FALSE
+
 /// Produce a default, potentially random value for when no value for this
 /// preference is found in the savefile.
 /// Unlike create_default_value(), will provide the preferences object if you

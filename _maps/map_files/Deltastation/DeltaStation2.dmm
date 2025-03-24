@@ -25532,7 +25532,7 @@
 	pixel_x = 24;
 	pixel_y = -5
 	},
-/obj/machinery/clonepod,
+/obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "fZh" = (
@@ -85494,7 +85494,7 @@
 /obj/machinery/status_display/ai/directional/east,
 /obj/effect/turf_decal/bot/right,
 /obj/machinery/light/directional/east,
-/obj/machinery/computer/cloning{
+/obj/machinery/computer/scan_consolenew{
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
