@@ -21370,6 +21370,24 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron/diagonal,
 /area/station/science/breakroom)
+"fbe" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external{
+	name = "External Docking Port";
+	space_dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "fbg" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -48889,6 +48907,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "lxc" = (
@@ -65437,6 +65456,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "pyC" = (
@@ -137733,14 +137753,14 @@ aad
 aad
 aad
 qld
-pRJ
+fbe
 qld
 aad
 aaa
 aaa
 aad
 qld
-pRJ
+fbe
 qld
 aad
 aad
