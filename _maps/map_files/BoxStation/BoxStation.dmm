@@ -42775,6 +42775,20 @@
 "nLE" = (
 /turf/open/space,
 /area/space)
+"nLI" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/door/airlock/external{
+	name = "Docking Bay 2"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/dark/textured_large,
+/area/station/hallway/secondary/entry)
 "nLK" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -64408,6 +64422,18 @@
 /obj/machinery/duct,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
+"uPJ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/door/airlock/external{
+	name = "Docking Bay 2"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/dark/textured_large,
+/area/station/hallway/secondary/entry)
 "uPZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/wood{
@@ -81765,7 +81791,7 @@ dNu
 mQR
 qvz
 vkg
-nwe
+nLI
 ksa
 ksa
 ksa
@@ -81773,7 +81799,7 @@ ksa
 ksa
 ksa
 ksa
-qvz
+uPJ
 vkg
 nwe
 aHU
@@ -83564,7 +83590,7 @@ tUH
 mQR
 qvz
 ins
-nwe
+nLI
 ksa
 ksa
 ksa
@@ -83572,7 +83598,7 @@ ksa
 ksa
 ksa
 ksa
-qvz
+uPJ
 ins
 bLR
 aHU

@@ -7083,6 +7083,7 @@
 	name = "Port Docking Bay 1";
 	space_dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "bfY" = (
@@ -29976,6 +29977,7 @@
 	space_dir = 1
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "iuI" = (
@@ -37307,6 +37309,7 @@
 	name = "Port Docking Bay 1";
 	space_dir = 2
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "kHp" = (

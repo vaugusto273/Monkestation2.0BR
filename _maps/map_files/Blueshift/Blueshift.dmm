@@ -55639,6 +55639,7 @@
 	dir = 8
 	},
 /obj/structure/fans/tiny,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "kKp" = (

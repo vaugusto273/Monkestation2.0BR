@@ -22135,6 +22135,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "gFX" = (
@@ -32752,6 +32753,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "jKN" = (
@@ -41073,6 +41075,24 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/maintenance/central)
+"mdi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external{
+	name = "External Docking Port";
+	space_dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "mdl" = (
 /obj/effect/spawner/random/engineering/tracking_beacon,
 /turf/open/floor/plating/airless,
@@ -122033,14 +122053,14 @@ vUL
 vUL
 vUL
 uyy
-rpz
+mdi
 uyy
 vUL
 nhC
 nhC
 vUL
 uyy
-rpz
+mdi
 uyy
 vUL
 nBk
