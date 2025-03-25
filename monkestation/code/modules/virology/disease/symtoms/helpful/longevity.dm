@@ -14,7 +14,7 @@
 			wound.remove_wound()
 			break
 
-	var/heal_amt = 2 * multiplier
+	var/heal_amt = 5 * multiplier
 	var/current_health = mob.getBruteLoss()
 	if(current_health >= heal_amt)
 		total_healed += heal_amt * 0.2
