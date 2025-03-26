@@ -43628,6 +43628,7 @@
 /obj/structure/cable,
 /obj/machinery/duct,
 /obj/machinery/holopad,
+/obj/machinery/self_actualization_device,
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/surgery)
 "nZy" = (
