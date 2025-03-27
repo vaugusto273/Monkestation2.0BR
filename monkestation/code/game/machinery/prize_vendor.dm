@@ -259,7 +259,7 @@
 /obj/machinery/prize_vendor/pulse_prize
 	name = "Grand Prize Vendor"
 	desc = "The grand prize!"
-	dispense_list_override = list(/obj/item/gun/energy/pulse/prize = 1)
+	dispense_list_override = list(/obj/item/banhammer = 1)
 	ticket_cost = 250
 	circuit = /obj/item/circuitboard/machine/prize_vendor/pulse_prize
 

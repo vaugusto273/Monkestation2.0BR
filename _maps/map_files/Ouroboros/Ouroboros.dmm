@@ -32980,6 +32980,7 @@
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "jNw" = (
@@ -51965,6 +51966,7 @@
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/commons/storage/mining)
 "ppJ" = (
@@ -73937,6 +73939,11 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/aft)
+"vNI" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/station/commons/storage/mining)
 "vNK" = (
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /obj/machinery/atmospherics/pipe/smart/simple/dark/visible{
@@ -76558,6 +76565,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Primary Common Mining Dock Airlock"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/commons/storage/mining)
 "wAH" = (
@@ -76950,6 +76958,7 @@
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "wGj" = (
@@ -103585,7 +103594,7 @@ laO
 laO
 laO
 obu
-ugJ
+vNI
 wAo
 vFg
 kRe

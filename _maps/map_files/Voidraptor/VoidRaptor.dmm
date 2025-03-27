@@ -12744,6 +12744,7 @@
 	name = "Arrival Airlock";
 	space_dir = 2
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/catwalk_floor,
 /area/station/hallway/secondary/entry)
 "dJY" = (
@@ -30270,6 +30271,7 @@
 	name = "Arrival Airlock";
 	space_dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/catwalk_floor,
 /area/station/hallway/secondary/entry)
 "iEP" = (
@@ -81627,6 +81629,7 @@
 	name = "Arrival Airlock";
 	space_dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/catwalk_floor,
 /area/station/hallway/secondary/entry)
 "wDJ" = (

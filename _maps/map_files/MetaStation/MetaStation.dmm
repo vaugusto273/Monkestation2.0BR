@@ -36056,6 +36056,7 @@
 	name = "Arrival Airlock";
 	space_dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "myc" = (
@@ -58289,6 +58290,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/self_actualization_device,
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/surgery/theatre)
 "udp" = (
@@ -68449,6 +68451,7 @@
 	name = "Arrival Airlock";
 	space_dir = 2
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "xEU" = (
