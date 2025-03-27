@@ -84,6 +84,8 @@
 	. = ..()
 	if (ishuman(C))
 		var/mob/living/carbon/human/target = C
+		if (target.skin_tone != "")
+			target.dna.color_palettes[/datum/color_palette/generic_colors].mix_skin_tone = skintone2hex(target.skin_tone)
 		if (target.dna.color_palettes[/datum/color_palette/generic_colors].mix_skin_tone in GLOB.skin_tones_colors)
 			for (var/obj/item/bodypart/L in target.bodyparts)
 				L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'

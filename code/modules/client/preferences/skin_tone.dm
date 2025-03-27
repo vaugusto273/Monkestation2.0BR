@@ -39,6 +39,7 @@
 	return skintone2hex(random_skin_tone())
 
 /datum/preference/color/mix_skin_tone/apply_to_human(mob/living/carbon/human/target, value)
+	target.skin_tone = ""
 	if (value in GLOB.skin_tones_colors)
 		for (var/obj/item/bodypart/L in target.bodyparts)
 			L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'
