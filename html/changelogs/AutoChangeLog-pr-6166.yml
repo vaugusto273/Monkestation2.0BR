@@ -1,0 +1,4 @@
+author: "Ice-Type"
+delete-after: True
+changes:
+  - bugfix: "Sleeping carp and awakened dragon now apply stamina damage properly again! :)"
