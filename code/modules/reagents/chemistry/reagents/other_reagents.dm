@@ -60,7 +60,7 @@
 			/* // original
 			exposed_mob.reagents.add_reagent(/datum/reagent/toxin, reac_volume * 0.5)
 			*/
-         	// We do a max() here so that being injected with monkey blood when you're past 560u doesn't reset you back to 560
+			// We do a max() here so that being injected with monkey blood when you're past 560u doesn't reset you back to 560
 			var/max_blood_volume = data["monkey_origins"] ? max(exposed_mob.blood_volume, BLOOD_VOLUME_NORMAL) : BLOOD_VOLUME_MAXIMUM
 			exposed_mob.blood_volume = min(exposed_mob.blood_volume + round(reac_volume, 0.1), max_blood_volume)
 			// nova edit end
