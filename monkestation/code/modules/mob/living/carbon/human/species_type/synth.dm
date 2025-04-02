@@ -88,10 +88,12 @@
 			target.dna.color_palettes[/datum/color_palette/generic_colors].mix_skin_tone = skintone2hex(target.skin_tone)
 		if (target.dna.color_palettes[/datum/color_palette/generic_colors].mix_skin_tone in GLOB.skin_tones_colors)
 			for (var/obj/item/bodypart/L in target.bodyparts)
-				L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'
+				L.change_appearance('monkestation/icons/mob/species/synth/bodypartsold.dmi', greyscale = TRUE)
+				// L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'
 		else
 			for (var/obj/item/bodypart/L in target.bodyparts)
-				L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodyparts.dmi'
+				L.change_appearance('monkestation/icons/mob/species/synth/bodyparts.dmi', greyscale = TRUE)
+				// L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodyparts.dmi'
 	var/obj/item/organ/internal/appendix/A = C.get_organ_slot("appendix") //See below.
 	if(A)
 		A.Remove(C)

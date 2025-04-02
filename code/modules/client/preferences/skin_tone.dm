@@ -42,7 +42,9 @@
 	target.skin_tone = ""
 	if (value in GLOB.skin_tones_colors)
 		for (var/obj/item/bodypart/L in target.bodyparts)
-			L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'
+			L.change_appearance('monkestation/icons/mob/species/synth/bodypartsold.dmi', greyscale = TRUE)
+			// L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodypartsold.dmi'
 	else
 		for (var/obj/item/bodypart/L in target.bodyparts)
-			L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodyparts.dmi'
+			L.change_appearance('monkestation/icons/mob/species/synth/bodyparts.dmi', greyscale = TRUE)
+			// L.icon_greyscale = 'monkestation/icons/mob/species/synth/bodyparts.dmi'
