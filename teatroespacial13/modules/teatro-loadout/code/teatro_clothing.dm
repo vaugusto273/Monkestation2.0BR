@@ -55,6 +55,8 @@
 		span_notice("You activate the voice box: [selected_phrase]")
 	)
 
+	qdel(hd)
+
 	return TRUE
 
 /obj/item/clothing/head/hooded/sevasuit
