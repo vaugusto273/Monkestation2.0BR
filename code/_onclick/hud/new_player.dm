@@ -382,34 +382,34 @@
 	screen_loc ="TOP:-98,CENTER:+45"
 
 /atom/movable/screen/lobby/beantagonist
-    layer = LOBBY_BACKGROUND_LAYER
-    icon = 'icons/hud/lobby/antagback.dmi'
-    icon_state = "table"
-    screen_loc = "TOP:-126,CENTER:133"
+	layer = LOBBY_BACKGROUND_LAYER
+	icon = 'icons/hud/lobby/antagback.dmi'
+	icon_state = "table"
+	screen_loc = "TOP:-126,CENTER:133"
 
 /atom/movable/screen/lobby/button/beantagonist
-    icon = 'icons/hud/lobby/antag.dmi'
-    icon_state = "antagon"
-    base_icon_state = "antagon"
-    screen_loc = "TOP:-130,CENTER:137"
+	icon = 'icons/hud/lobby/antag.dmi'
+	icon_state = "antagon"
+	base_icon_state = "antagon"
+	screen_loc = "TOP:-130,CENTER:137"
 
 /atom/movable/screen/lobby/button/beantagonist/Click(location, control, params)
-    . = ..()
-    if(!.)
-        return
+	. = ..()
+	if(!.)
+		return
 
-    var/mob/dead/new_player/player = hud.mymob
-    if(!player?.client) // safety check
-        return
+	var/mob/dead/new_player/player = hud.mymob
+	if(!player?.client) // safety check
+		return
 
-    var/datum/preferences/prefs = player.client.prefs
+	var/datum/preferences/prefs = player.client.prefs
 
-    var/new_value = !prefs.read_preference(/datum/preference/toggle/beantagpref)
+	var/new_value = !prefs.read_preference(/datum/preference/toggle/beantagpref)
 
-    prefs.write_preference(GLOB.preference_entries[/datum/preference/toggle/beantagpref], new_value)
+	prefs.write_preference(GLOB.preference_entries[/datum/preference/toggle/beantagpref], new_value)
 
-    base_icon_state = new_value ? "antagon" : "antagoff"
-    update_appearance(UPDATE_ICON)
+	base_icon_state = new_value ? "antagon" : "antagoff"
+	update_appearance(UPDATE_ICON)
 
 /atom/movable/screen/lobby/button/crew_manifest
 	icon = 'icons/hud/lobby/manifest.dmi'

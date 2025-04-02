@@ -48,11 +48,11 @@
 
 
 /datum/bodypart_overlay/mutant/tail/tail_xeno
-    feature_key = "xenohybrid_tail"
-    layers = EXTERNAL_FRONT | EXTERNAL_BEHIND
-    color_source = ORGAN_COLOR_OVERRIDE
-    palette = /datum/color_palette/generic_colors
-    palette_key = MUTANT_COLOR
+	feature_key = "xenohybrid_tail"
+	layers = EXTERNAL_FRONT | EXTERNAL_BEHIND
+	color_source = ORGAN_COLOR_OVERRIDE
+	palette = /datum/color_palette/generic_colors
+	palette_key = MUTANT_COLOR
 
 // /datum/bodypart_overlay/mutant/tail/tail_xeno/override_color(rgb_value)
 // 	return draw_color
