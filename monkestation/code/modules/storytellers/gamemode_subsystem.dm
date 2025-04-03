@@ -331,6 +331,12 @@ SUBSYSTEM_DEF(gamemode)
 
 		if(job_ban && is_banned_from(candidate.ckey, list(job_ban, ROLE_SYNDICATE)))
 			continue
+		var/isinterds2 = FALSE
+		for(var/faction as anything in candidate.faction)
+			if(ROLE_INTERDYNE_PLANETARY_BASE == faction || ROLE_INTERDYNE_PLANETARY_BASE_ICEBOX == faction || ROLE_DS2 == faction)
+				isinterds2 = TRUE
+		if(isinterds2)
+			continue
 		if(!candidate.client.prefs.read_preference(/datum/preference/toggle/beantagpref))
 			continue
 		candidates += candidate
