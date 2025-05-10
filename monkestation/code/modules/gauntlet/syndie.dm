@@ -132,7 +132,7 @@
 		if(!iscarbon(owner))
 			return
 		var/mob/living/carbon/carbon_owner = owner
-		if(!isliving(hit_object))
+		if(!isliving(target))
 			return
 		var/mob/living/living_target = target
 		carbon_owner.visible_message(span_danger("[carbon_owner] rams into [living_target]!"))
