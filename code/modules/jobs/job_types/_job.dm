@@ -131,27 +131,20 @@
 	/// custom ringtone for this job
 	var/job_tone
 
-	/// Donar rank required for this job. Leave null for no requirement.
+	/// Donor rank required for this job. Leave null for no requirement.
 	//defines found in [code\__DEFINES\~monkestation\_patreon.dm]
-	var/job_req_donar = null //MONKESTATION EDIT
+	var/job_req_donor = null //MONKESTATION EDIT
 	//donator bypass for holidays
-	var/job_donar_bypass = null //MONKESTATION EDIT
+	var/job_donor_bypass = null //MONKESTATION EDIT
 
 /datum/job/New()
 	. = ..()
-	var/list/job_changes = SSmapping.config.job_changes
-	if(!job_changes[title])
-		return TRUE
-
-	var/list/job_positions_edits = job_changes[title]
-	if(!job_positions_edits)
-		return TRUE
-
-	if(isnum(job_positions_edits["spawn_positions"]))
-		spawn_positions = job_positions_edits["spawn_positions"]
-	if(isnum(job_positions_edits["total_positions"]))
-		total_positions = job_positions_edits["total_positions"]
-
+	var/new_spawn_positions = CHECK_MAP_JOB_CHANGE(title, "spawn_positions")
+	if(isnum(new_spawn_positions))
+		spawn_positions = new_spawn_positions
+	var/new_total_positions = CHECK_MAP_JOB_CHANGE(title, "total_positions")
+	if(isnum(new_total_positions))
+		total_positions = new_total_positions
 
 /// Executes after the mob has been spawned in the map. Client might not be yet in the mob, and is thus a separate variable.
 /datum/job/proc/after_spawn(mob/living/spawned, client/player_client)
@@ -300,19 +293,14 @@
  * If they have 0 spawn and total positions in the config, the job is entirely removed from occupations prefs for the round.
  */
 /datum/job/proc/map_check()
-	var/list/job_changes = SSmapping.config.job_changes
-	if(!job_changes[title]) //no edits made
-		return TRUE
-
-	var/list/job_positions_edits = job_changes[title]
-	if(!job_positions_edits)
-		return TRUE
-
 	var/available_roundstart = TRUE
 	var/available_latejoin = TRUE
-	if(!isnull(job_positions_edits["spawn_positions"]) && (job_positions_edits["spawn_positions"] == 0))
+
+	var/edited_spawn_positions = CHECK_MAP_JOB_CHANGE(title, "spawn_positions")
+	if(!isnull(edited_spawn_positions) && (edited_spawn_positions == 0))
 		available_roundstart = FALSE
-	if(!isnull(job_positions_edits["total_positions"]) && (job_positions_edits["total_positions"] == 0))
+	var/edited_total_positions = CHECK_MAP_JOB_CHANGE(title, "total_positions")
+	if(!isnull(edited_total_positions) && (edited_total_positions == 0))
 		available_latejoin = FALSE
 
 	if(!available_roundstart && !available_latejoin) //map config disabled the job
@@ -396,6 +384,10 @@
 				back = /obj/item/storage/backpack/duffelbag //Grey Duffel bag
 			if(LSATCHEL)
 				back = /obj/item/storage/backpack/satchel/leather //Leather Satchel
+			if(BSATCHEL)
+				back = /obj/item/storage/backpack/satchel/blackleather //Black Leather Satchel MONKESTATION
+			if(RSATCHEL)
+				back = /obj/item/storage/backpack/satchel/retro //Retro Satchel MONKESTATION
 			if(DSATCHEL)
 				back = satchel //Department satchel
 			if(DDUFFELBAG)
@@ -623,7 +615,8 @@
 		return
 	apply_pref_name(/datum/preference/name/ai, player_client) // This proc already checks if the player is appearance banned.
 	set_core_display_icon(null, player_client)
-
+	apply_pref_emote_display(player_client)
+	apply_pref_hologram_display(player_client)
 
 /mob/living/silicon/robot/apply_prefs_job(client/player_client, datum/job/job)
 	if(mmi)
