@@ -242,7 +242,7 @@
 			if(4)
 				if(living_in_range.can_block_magic(antimagic_flags))
 					continue
-				if(living_in_range.has_status_effect(/datum/status_effect/revenant_blight_protection))
+				if(HAS_TRAIT(mob, TRAIT_REVENANT_BLIGHT_PROTECTION))
 					continue
 				if(!ishuman(living_in_range))
 					continue
