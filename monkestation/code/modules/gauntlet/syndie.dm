@@ -96,7 +96,7 @@
 	background_icon_state = "syndie"
 	sound = 'sound/magic/repulse.ogg'
 	cooldown_time = 20 SECONDS
-	var/static/charge_strong = TRUE
+	var/charge_strong = TRUE
 	var/charging = FALSE
 
 /datum/action/cooldown/spell/infinity/syndie_bullcharge/Grant(mob/grant_to)
