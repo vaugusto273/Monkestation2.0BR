@@ -22540,7 +22540,7 @@
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/admin)
 "isy" = (
-/obj/machinery/hydroponics/soil,
+/obj/machinery/growing/soil,
 /turf/open/floor/grass,
 /area/centcom/thanos_farm)
 "itR" = (
@@ -28954,8 +28954,8 @@
 /turf/open/floor/circuit/green,
 /area/centcom/central_command_areas/adminroom)
 "uqO" = (
-/obj/machinery/hydroponics/soil,
 /obj/effect/landmark/start/thanos_portal,
+/obj/machinery/growing/soil,
 /turf/open/floor/grass,
 /area/centcom/thanos_farm)
 "urb" = (
