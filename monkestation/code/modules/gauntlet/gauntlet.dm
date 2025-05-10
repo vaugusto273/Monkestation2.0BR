@@ -70,7 +70,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	update_icon()
 	spells += new /datum/action/cooldown/spell/infinity/regenerate_gauntlet
 	spells += new /datum/action/cooldown/spell/aoe/shockwave
-	spells += new /datum/action/cooldown/spell/infinity/gauntlet_bullcharge
+	spells += new /datum/action/cooldown/spell/infinity/syndie_bullcharge/gauntlet
 	spells += new /datum/action/cooldown/spell/infinity/gauntlet_jump
 
 /obj/item/badmin_gauntlet/Destroy()
@@ -415,7 +415,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 						cargo_moneys.adjust_money(50000)
 					if(sci_moneys)
 						sci_moneys.adjust_money(50000)
-						SSresearch.science_tech.add_point_type(TECHWEB_POINT_TYPE_DEFAULT, 50000)
+						SSresearch.science_tech.add_point_type(TECHWEB_POINT_TYPE_GENERIC, 50000)
 					var/obj/structure/closet/supplypod/bluespacepod/sci_pod = new()
 					sci_pod.explosionSize = list(0,0,0,0)
 					var/list/materials_to_give_science = list(
