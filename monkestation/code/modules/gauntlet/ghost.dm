@@ -240,8 +240,13 @@
 				if(potential_turf)
 					do_teleport(living_in_range, potential_turf, channel = TELEPORT_CHANNEL_BLUESPACE)
 			if(4)
-				to_chat(living_in_range, span_danger("You feel sick..."))
-				living_in_range.ForceContractDisease(new /datum/disease/revblight)
+				if(living_in_range.can_block_magic(antimagic_flags))
+					continue
+				if(living_in_range.has_status_effect(/datum/status_effect/revenant_blight_protection))
+					continue
+				if(!ishuman(living_in_range))
+					continue
+				living_in_range.apply_status_effect(/datum/status_effect/revenant_blight)
 			if(5)
 				living_in_range.Stun(40)
 				living_in_range.petrify(3 MINUTES)
