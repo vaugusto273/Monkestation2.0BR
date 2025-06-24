@@ -428,16 +428,16 @@
 
 /datum/uplink_item/ammo/mech/bag
 	name = "Mech Support Kit Bag"
-	desc = "A duffel bag containing ammo for four full reloads of the scattershotm which is equipped on standard Dark Gygax and Mauler exosuits. Also comes with some support equipment for maintaining the mech, including tools and an inducer."
+	desc = "A duffel bag containing ammo for four full reloads of the scattershotm which is equipped on standard Dark Gygax exosuits. Also comes with some support equipment for maintaining the mech, including tools and an inducer. Contains a Bluespace Comprression kit for easier logistics."
 	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/mech
 	cost = 4
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/ammo/mauler/bag
 	name = "Mauler Ammo Bag"
-	desc = "A duffel bag containing ammo for three full reloads of the LMG, scattershot carbine, and SRM-8 missile laucher that are equipped on a standard Mauler exosuit."
+	desc = "A duffel bag containing ammo for three full reloads of the LMG and SRM-8 missile laucher that are equipped on a standard Mauler exosuit. Contains two Bluespace Comprression kits for easier logistics."
 	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/mauler
-	cost = 6
+	cost = 8
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/bombanana
@@ -613,6 +613,24 @@
 			and deployable smoke. Comes equipped with an LMG, scattershot carbine, missile rack, an antiprojectile armor booster and a Tesla energy array."
 	item = /obj/vehicle/sealed/mecha/marauder/mauler/loaded
 	cost = 140
+
+/datum/uplink_item/support/devitt
+	name = "Devitt Mk3 Light Tank"
+	desc = "An ancient tank found in the wearhouse, comes prepared with a cannon and machinegun. REQUIRES TWO CREWMEMBERS TO OPPERATE EFFECTIVELY."
+	item = /obj/vehicle/sealed/mecha/devitt
+	cost = 80
+
+/datum/uplink_item/support/lighttankammo
+	name = "40mm cannon ammo"
+	desc = "5 crated shells for use with the Devitt Mk3 light tank."
+	item = /obj/item/mecha_ammo/makeshift/lighttankammo
+	cost = 2
+
+/datum/uplink_item/support/lighttankmgammo
+	name = "12.7x70mm tank mg ammo"
+	desc = "60 rounds of 12.7x70mm for use with the Devitt Mk3 light tank."
+	item = /obj/item/mecha_ammo/makeshift/lighttankmg
+	cost = 1
 
 /datum/uplink_item/support/turretbox
 	name = "Disposable Sentry Gun"
@@ -834,3 +852,22 @@
 	cost = 5
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
 
+/datum/uplink_item/reinforcement/monkey_agent
+	name = "Simian Agent Reinforcements"
+	desc = "Call in an extremely well trained monkey secret agent from our Syndicate Banana Department. \
+		They've been trained to operate machinery and can read, but they can't speak Common."
+	item = /obj/item/antag_spawner/loadout/monkey_man
+	cost = 7
+	purchasable_from = UPLINK_CLOWN_OPS
+	restricted = TRUE
+	refundable = TRUE
+
+/datum/uplink_item/reinforcement/monkey_supplies
+	name = "Simian Agent Supplies"
+	desc = "Sometimes you need a bit more firepower than a rabid monkey. Such as a rabid, armed monkey! \
+		Monkeys can unpack this kit to recieve a bag with a bargain-bin gun, ammunition, and some miscellaneous supplies."
+	item = /obj/item/storage/toolbox/guncase/monkeycase
+	cost = 4
+	purchasable_from = UPLINK_CLOWN_OPS
+	restricted = TRUE
+	refundable = TRUE

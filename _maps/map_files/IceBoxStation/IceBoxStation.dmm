@@ -7674,9 +7674,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/cryopod{
-	max_integrity = 10000
-	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/execution/transfer)
 "cpA" = (
@@ -22658,6 +22655,7 @@
 /area/station/medical/medbay/central)
 "hgH" = (
 /obj/item/radio/intercom/prison/directional/west,
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/prison)
 "hgK" = (
@@ -25565,6 +25563,7 @@
 /area/mine/living_quarters)
 "ign" = (
 /obj/structure/railing,
+/obj/machinery/portable_atmospherics/pipe_scrubber,
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage)
 "igx" = (
@@ -32454,6 +32453,7 @@
 /obj/machinery/door/airlock/grunge{
 	name = "Bitrunner Den"
 	},
+/obj/effect/landmark/navigate_destination/common/bitrunner,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/bitden)
 "kpM" = (
@@ -34630,7 +34630,10 @@
 /turf/open/floor/plating,
 /area/station/security/prison/safe)
 "kZi" = (
-/obj/machinery/space_heater,
+/obj/machinery/cryopod{
+	dir = 1;
+	max_integrity = 10000
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/prison)
 "kZt" = (
@@ -41728,7 +41731,11 @@
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "nmI" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/computer/cryopod/directional/west{
+	pixel_x = -23;
+	dir = 4;
+	max_integrity = 10000
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/prison)
 "nmL" = (
@@ -54582,6 +54589,9 @@
 	c_tag = "Security - Permabrig Upper Hallway South";
 	network = list("ss13","prison")
 	},
+/obj/structure/sign/poster/official/obey/directional/south,
+/obj/machinery/requests_console/auto_name/directional/south,
+/obj/effect/mapping_helpers/requests_console/supplies,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/prison)
 "rlb" = (
@@ -65832,14 +65842,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
-"uZd" = (
-/obj/machinery/computer/cryopod/directional/west{
-	pixel_x = -23;
-	dir = 4;
-	max_integrity = 10000
-	},
-/turf/open/floor/iron/dark/textured,
-/area/station/security/execution/transfer)
 "uZn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -75469,6 +75471,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/freezer,
 /area/station/commons/toilet)
+"ybe" = (
+/obj/machinery/portable_atmospherics/pipe_scrubber,
+/turf/open/floor/glass/reinforced,
+/area/station/science/ordnance/office)
 "ybf" = (
 /obj/machinery/portable_atmospherics/pump,
 /turf/open/floor/iron/dark,
@@ -169712,7 +169718,7 @@ hUz
 bjp
 bjp
 bBn
-uZd
+ryu
 kZt
 ryu
 sUL
@@ -256404,7 +256410,7 @@ tIq
 tIq
 vaa
 xLq
-xLq
+ybe
 nsZ
 rDZ
 sFA

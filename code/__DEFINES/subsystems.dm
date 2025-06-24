@@ -184,8 +184,9 @@
 #define INIT_ORDER_XKEYSCORE -10
 #define INIT_ORDER_STICKY_BAN -10
 #define INIT_ORDER_LIGHTING -20
-#define INIT_ORDER_OUTDOOR_EFFECTS -21 //monkestation addition
-#define INIT_ORDER_SHUTTLE -22 //monkestation edit -21 > -22
+#define INIT_ORDER_STARLIGHT -21
+#define INIT_ORDER_OUTDOOR_EFFECTS -22
+#define INIT_ORDER_SHUTTLE -23
 #define INIT_ORDER_MINOR_MAPPING -40
 #define INIT_ORDER_PATH -50
 #define INIT_ORDER_EXPLOSIONS -69
@@ -206,8 +207,8 @@
 #define FIRE_PRIORITY_RESEARCH 10
 #define FIRE_PRIORITY_VIS 10
 #define FIRE_PRIORITY_AMBIENCE 10
-#define FIRE_PRIORITY_GLOWSHROOMS 10 // monkestation addition: glowshroom processing subsystem
-#define FIRE_PRIORITY_MEMORY_STATS 10 // monkestation addition: memory stats subsystem. uses a low priority as it takes a moment to fully profile memory.
+#define FIRE_PRIORITY_GLOWSHROOMS 10
+#define FIRE_PRIORITY_MEMORY_STATS 10
 #define FIRE_PRIORITY_GARBAGE 15
 #define FIRE_PRIORITY_DATABASE 16
 #define FIRE_PRIORITY_WET_FLOORS 20
@@ -230,10 +231,11 @@
 #define FIRE_PRIORITY_ACID 40
 #define FIRE_PRIORITY_BURNING 40
 #define FIRE_PRIORITY_DEFAULT 50
-#define FIRE_PRIORITY_PLEXORA 60 // monkestation addition: plexora
+#define FIRE_PRIORITY_PLEXORA 60
 #define FIRE_PRIORITY_PARALLAX 65
 #define FIRE_PRIORITY_INSTRUMENTS 80
 #define FIRE_PRIORITY_FLUIDS 80
+#define FIRE_PRIORITY_PRIORITY_EFFECTS 90
 #define FIRE_PRIORITY_STAMINA 95
 #define FIRE_PRIORITY_MOBS 100
 #define FIRE_PRIORITY_ASSETS 105

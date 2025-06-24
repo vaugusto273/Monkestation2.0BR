@@ -12903,7 +12903,6 @@
 "gmE" = (
 /obj/structure/table/reinforced,
 /obj/item/surgery_tray,
-/obj/structure/sign/poster/official/random/directional/south,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "gmL" = (
@@ -17473,6 +17472,7 @@
 /area/station/medical/medbay/central)
 "isB" = (
 /obj/machinery/light/directional/east,
+/obj/machinery/portable_atmospherics/pipe_scrubber,
 /turf/open/floor/iron,
 /area/station/science/ordnance/storage)
 "isN" = (
@@ -19224,8 +19224,13 @@
 /turf/open/floor/iron/white/diagonal,
 /area/station/service/kitchen)
 "jgV" = (
-/obj/effect/spawner/random/trash/box,
-/turf/open/floor/plating,
+/obj/structure/rack,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/iron/fifty,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
+/obj/structure/sign/poster/contraband/free_drone/directional/north,
+/turf/open/floor/iron/dark,
 /area/station/maintenance/department/engine/atmos)
 "jhe" = (
 /obj/structure/disposalpipe/segment,
@@ -24304,6 +24309,16 @@
 /obj/item/stack/sheet/iron/fifty,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
+"lFI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/delivery,
+/obj/machinery/drone_dispenser/preloaded,
+/obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/maintenance/department/engine/atmos)
 "lFV" = (
 /turf/open/floor/iron/stairs/left,
 /area/station/hallway/primary/central/fore)
@@ -26356,6 +26371,14 @@
 /obj/effect/turf_decal/trimline/brown/filled/corner,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
+"mGh" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/pipe_scrubber,
+/turf/open/floor/iron,
+/area/station/engineering/atmos)
 "mGt" = (
 /obj/structure/window/spawner/directional/south,
 /turf/open/floor/grass/lavaland{
@@ -27918,7 +27941,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Security - Prison Cryo"
 	},
-/obj/structure/frame/machine/secured,
+/obj/machinery/computer/cryopod/directional/north,
 /turf/open/floor/iron/freezer,
 /area/station/security/prison)
 "noo" = (
@@ -29420,7 +29443,7 @@
 /obj/effect/turf_decal/siding/green{
 	dir = 4
 	},
-/obj/structure/frame/machine/secured,
+/obj/machinery/cryopod/prison,
 /turf/open/floor/plating,
 /area/station/security/prison)
 "obj" = (
@@ -40503,7 +40526,7 @@
 /area/station/cargo/lobby)
 "trJ" = (
 /turf/open/space/basic,
-/area/shipbreak)
+/area/space/shipbreak)
 "tsu" = (
 /obj/machinery/fax{
 	fax_name = "Chief Medical Officer's Office";
@@ -131576,7 +131599,7 @@ lIo
 kxW
 kxW
 eiv
-rKh
+mGh
 nva
 mES
 qcv
@@ -133104,7 +133127,7 @@ lVE
 lVE
 lAv
 nSe
-fpt
+lFI
 ixh
 jvn
 pRz

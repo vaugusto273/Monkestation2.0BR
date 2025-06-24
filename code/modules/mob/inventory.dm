@@ -252,10 +252,10 @@
 /mob/proc/is_holding_items()
 	return !!locate(/obj/item) in held_items
 
-/mob/proc/drop_all_held_items()
+/mob/proc/drop_all_held_items(force = FALSE)
 	. = FALSE
 	for(var/obj/item/I in held_items)
-		. |= dropItemToGround(I)
+		. |= dropItemToGround(I, force)
 
 //Here lie drop_from_inventory and before_item_take, already forgotten and not missed.
 
@@ -519,6 +519,6 @@
 		var/atom/A = processing_list[++i]
 		if(A.atom_storage)
 			var/list/item_stuff = list()
-			A.atom_storage.return_inv(item_stuff)
+			item_stuff = A.atom_storage.return_inv()
 			processing_list += item_stuff
 	return processing_list

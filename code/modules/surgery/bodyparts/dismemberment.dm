@@ -34,7 +34,7 @@
 // MONKESTATION ADDITION START
 	if(isipc(owner))
 		owner.dna.features["ipc_screen"] = "Blank"
-		playsound(get_turf(owner), 'sound/vox_fem/swhitenoise.ogg', 60, TRUE)
+		playsound(get_turf(owner), 'sound/announcer/vox_fem/swhitenoise.ogg', 60, TRUE)
 // MONKESTATION ADDITION END
 
 	drop_limb()
@@ -158,6 +158,9 @@
 							continue
 						var/obj/item/bodypart/head/oozeling/oozhead = src
 						oozhead.eyes = null // Need this otherwise qdel on head deletes the eyes.
+					if(istype(lmbimplant, /obj/item/organ/internal/brain)) // Go figure rare interactions give humans oozling heads. This stops rr's for head dismemeberment.
+						var/obj/item/bodypart/head/oozeling/oozhead = src
+						oozhead.brain = null // Similar to eyes
 					to_chat(phantom_owner, span_notice("Something small falls out the [src]."))
 		qdel(src)
 		return
