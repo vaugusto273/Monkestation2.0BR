@@ -24,7 +24,7 @@
 	icon = 'monkestation/icons/obj/nanoguy.dmi'
 	worn_icon = 'monkestation/icons/mob/nanoguy.dmi'
 	icon_state = "ngsuit"
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/nano/nanoguy
+	hardsuit_helmet = /obj/item/clothing/head/helmet/space/hardsuit/nano/nanoguy
 
 /obj/item/clothing/head/helmet/space/hardsuit/nano/nanoguy
 	name = "Nanotrasen Nanotech Helmet"
