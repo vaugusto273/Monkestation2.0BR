@@ -74,19 +74,11 @@
 		return
 	var/mob/living/living_caster = cast_on
 	for(var/i = 1 to doppelganger_amount)
-		var/mob/living/simple_animal/hostile/illusion/doppelganger/doppelganger = new(cast_on.loc)
+		var/mob/living/simple_animal/hostile/illusion/escape/doppelganger = new(cast_on.loc)
 		doppelganger.setDir(cast_on.dir)
 		doppelganger.Copy_Parent(living_caster, 30 SECONDS, 100)
 		doppelganger.target = null
 		random_step(doppelganger, 5, 100)
-
-/mob/living/simple_animal/hostile/illusion/doppelganger
-	melee_damage_lower = 0
-	melee_damage_upper = 0
-	speed = -1
-	obj_damage = 0
-	vision_range = 0
-	environment_smash = ENVIRONMENT_SMASH_NONE
 
 /datum/action/cooldown/spell/infinity/shuffle
 	name = "Lag Stone: The Shuffle"
